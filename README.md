@@ -18,3 +18,6 @@ public class Hello {
 	}
 } // 자바
 ```
+```sql
+SELECT * FROM emp; -- SQL
+```
