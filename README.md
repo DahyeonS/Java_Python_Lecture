@@ -1,4 +1,4 @@
-# Python_Java_Lecture
+# Java_Python_Lecture
 
 파이썬 & 자바 강의 수강 노트
 
