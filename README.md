@@ -10,7 +10,6 @@ print("Hello, world!")
 ```
 ```R
 library(iris) # R
-print("Hello, world!")
 ```
 ```java
 public class Hello {
