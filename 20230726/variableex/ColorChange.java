@@ -7,7 +7,7 @@ public class ColorChange {
 		String cupB = "Green";
 		
 		// coding
-		String temp = cupA;
+		String temp = cupA; // String cupTemp = cupA;
 		cupA = cupB;
 		cupB = temp;
 		
