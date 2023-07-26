@@ -6,6 +6,7 @@ public class ColorChange {
 		String cupA = "Red";
 		String cupB = "Green";
 		
+		// coding
 		String temp = cupA;
 		cupA = cupB;
 		cupB = temp;
