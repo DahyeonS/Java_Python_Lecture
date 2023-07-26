@@ -30,10 +30,12 @@
 > ## 2023.7.26
 > *이클립스 사용법과 출력, 변수*
 > ```java
+> // 출력
 > System.out.println()
 > System.out.print()
 > System.out.printf()
 >
+> // 변수
 > int i = 0;
 > String s = "";
 > ```
