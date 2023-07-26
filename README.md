@@ -29,6 +29,14 @@
 
 > ## 2023.7.26
 > *이클립스 사용법과 출력, 변수*
+> ```java
+> System.out.println()
+> System.out.print()
+> System.out.printf()
+>
+> int i = 0;
+> String s = "";
+> ```
 > ### output
 >> #### hello
 >> - Hello.java
