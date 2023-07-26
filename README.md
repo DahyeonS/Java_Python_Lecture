@@ -28,4 +28,21 @@
 > - Hello.java
 
 > ## 2023.7.26
-> 
+> *이클립스 사용법과 출력, 변수*
+> ### output
+>> #### hello
+>> - Hello.java
+>
+>> #### printex
+>> - ColorPrintLn.java
+>> - ColorPrint.java
+>> - ColorPrintF.java
+>> - PrintTest.java
+>
+>> #### variableex
+>> - VariableDeclare.java
+>> - VariableDeclare2.java
+>> - VariableDeclare3.java
+>> - VariableDeclare4.java
+>> - ConstantVariableDeclare.java
+>> - ColorChange.java
