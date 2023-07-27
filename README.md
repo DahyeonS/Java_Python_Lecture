@@ -28,7 +28,7 @@
 > - Hello.java
 
 > ## 2023.7.26
-> *이클립스 사용법과 출력, 변수*
+> *이클립스 사용법과 자바 출력, 변수*
 > ```java
 > // 출력
 > System.out.println()
@@ -61,7 +61,13 @@
 > *자료형*
 > ```java
 > // 자료형
-> 
+> int i = 1; // 기본 자료형
+> long l = 1L;
+> float f = 0.1F;
+> double d = 0.1;
+> char a = 'a'; // 기본 자료형
+> String s = "abc"; // 참조 자료형
+> Date date = new Date(); // 참조 자료형
 > ```
 > ### output
 >> #### datatypeex
