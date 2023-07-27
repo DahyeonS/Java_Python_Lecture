@@ -80,3 +80,6 @@
 >> - VarCast.java
 >> - CharIsInt.java
 >> - StringAndChar.java
+>
+>> #### operatorex
+>> - ArithmethicEx.java
