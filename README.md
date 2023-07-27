@@ -66,6 +66,7 @@
 > float f = 0.1F;
 > double d = 0.1;
 > char a = 'a'; // 기본 자료형
+> 
 > String s = "abc"; // 참조 자료형
 > Date date = new Date(); // 참조 자료형
 > ```
