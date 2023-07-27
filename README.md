@@ -94,3 +94,5 @@
 >
 >> #### operatorex
 >> - ArithmethicEx.java
+>> - IncreaseDecreaseEx.java
+>> - ComparisonEx.java
