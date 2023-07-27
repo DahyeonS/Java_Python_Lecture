@@ -101,3 +101,7 @@
 >> - BitEx.java
 >> - ConditionalEx.java
 >> - StringEx.java
+>
+>> #### inputex
+>> - ScannerEx.java
+>> - ScannerTest.java
