@@ -58,7 +58,7 @@
 >> - ColorChange.java
 
 > ## 2023.7.27
-> **자료형과 연산자**
+> **자료형과 연산자와 스캐너**
 > ```java
 > // 자료형
 > int i = 1; // 기본 자료형
@@ -80,6 +80,18 @@
 > ++x;
 > x--;
 > --x;
+>
+> x == y && x == z;
+> x == y || x == z;
+> !(x == y);
+>
+> x += 1;
+> x -= 1;
+> x *= 2;
+> x /= 2;
+>
+> // 스캐너
+> Scanner scanner = new Scanner(System.in);
 > ```
 > ### *output*
 >> #### datatypeex
