@@ -96,3 +96,6 @@
 >> - ArithmethicEx.java
 >> - IncreaseDecreaseEx.java
 >> - ComparisonEx.java
+>> - LogicalEx.java
+>> - AssignEx.java
+>> - BitEx.java
