@@ -58,7 +58,7 @@
 >> - ColorChange.java
 
 > ## 2023.7.27
-> *자료형*
+> *자료형과 연산자*
 > ```java
 > // 자료형
 > int i = 1; // 기본 자료형
@@ -69,6 +69,17 @@
 > 
 > String s = "abc"; // 참조 자료형
 > Date date = new Date(); // 참조 자료형
+>
+> // 연산자
+> x + y;
+> x - y;
+> x * y;
+> x / y;
+>
+> x++;
+> ++x;
+> x--;
+> --x;
 > ```
 > ### output
 >> #### datatypeex
