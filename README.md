@@ -79,3 +79,4 @@
 >> - DateVar.java
 >> - VarCast.java
 >> - CharIsInt.java
+>> - StringAndChar.java
