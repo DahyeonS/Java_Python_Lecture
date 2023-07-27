@@ -100,3 +100,4 @@
 >> - AssignEx.java
 >> - BitEx.java
 >> - ConditionalEx.java
+>> - StringEx.java
