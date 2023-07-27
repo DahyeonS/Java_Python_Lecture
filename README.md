@@ -56,3 +56,19 @@
 >> - VariableDeclare4.java
 >> - ConstantVariableDeclare.java
 >> - ColorChange.java
+
+> ## 2023.7.27
+> *자료형*
+> ```java
+> // 자료형
+> 
+> ```
+> ### output
+>> #### datatypeex
+>> - IntVar.java
+>> - DoubleVar.java
+>> - BooleanVar.java
+>> - CharStringVar.java
+>> - DateVar.java
+>> - VarCast.java
+>> - CharIsInt.java
