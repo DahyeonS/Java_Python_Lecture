@@ -24,11 +24,11 @@
 
 > ## 2023.7.25
 > *명령프롬프트(cmd)와 경로(디렉토리)*
-> ### output
+> ### *output*
 > - Hello.java
 
 > ## 2023.7.26
-> *이클립스 사용법과 자바 출력, 변수*
+> **이클립스 사용법과 자바 출력, 변수**
 > ```java
 > // 출력
 > System.out.println()
@@ -39,7 +39,7 @@
 > int i = 0;
 > String s = "";
 > ```
-> ### output
+> ### *output*
 >> #### hello
 >> - Hello.java
 >
@@ -58,7 +58,7 @@
 >> - ColorChange.java
 
 > ## 2023.7.27
-> *자료형과 연산자*
+> **자료형과 연산자**
 > ```java
 > // 자료형
 > int i = 1; // 기본 자료형
@@ -81,7 +81,7 @@
 > x--;
 > --x;
 > ```
-> ### output
+> ### *output*
 >> #### datatypeex
 >> - IntVar.java
 >> - DoubleVar.java
