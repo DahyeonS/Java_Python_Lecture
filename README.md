@@ -31,9 +31,9 @@
 > **이클립스 사용법과 자바 출력, 변수**
 > ```java
 > // 출력
-> System.out.println()
-> System.out.print()
-> System.out.printf()
+> System.out.println();
+> System.out.print();
+> System.out.printf();
 >
 > // 변수
 > int i = 0;
