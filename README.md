@@ -121,6 +121,12 @@
 > ## 2023.7.28
 > **제어문**
 > ```java
+> if (true) {
+>   System.out.println(" ");
+> }
+> for (int i=0; i<10; i++) {
+>   System.out.println(i);
+> }
 > ```
 > ### *output*
 >> #### conditionalex
@@ -138,3 +144,4 @@
 >> - GuguDan.java
 >> - CumulateEx.java
 >> - ForEx2.java
+>> - ForTest.java
