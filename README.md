@@ -156,3 +156,6 @@
 >> - Ex02.java
 >> - Ex03.java
 >> - Ex04.java
+>> - Ex05.java
+>> - Ex06.java
+>> - Ex07.java
