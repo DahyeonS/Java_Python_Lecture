@@ -147,7 +147,7 @@
 >> - ForTest.java
 
 > ## 2023.7.31
-> **반복문**
+> **반복문과 메서드**
 > ```java
 > while (true) {
 >   x += y;
@@ -155,6 +155,11 @@
 > do {
 >   x += y;
 > } while (true);
+>
+> public static int add(int x) {
+>   int y += x;
+>   return y;
+> }
 > ```
 >> ### iterationex
 >> - Ex01.java
@@ -177,4 +182,11 @@
 >> - BaseBallGame.java
 >
 >> ### methodex
->> MethodReturnEx.java
+>> - MethodReturnEx.java
+>> - MyMath.java
+>> - MyMathMain.java
+>> - MethodReturnExit.java
+>> - MethodLocalVarEx.java
+>
+>> ### projectex
+>> - RockPaperScissorsGame.java
