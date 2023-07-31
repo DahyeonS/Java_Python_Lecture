@@ -149,6 +149,7 @@
 > ## 2023.7.31
 > **반복문과 메서드**
 > ```java
+> // 반복문
 > while (true) {
 >   x += y;
 > }
@@ -156,6 +157,7 @@
 >   x += y;
 > } while (true);
 >
+> // 메서드
 > public static int add(int x) {
 >   int y += x;
 >   return y;
