@@ -149,7 +149,9 @@
 > ## 2023.7.31
 > **반복문**
 > ```java
->
+> while (true) {
+>   x += y;
+> }
 > ```
 >> ### iterationex
 >> - Ex01.java
