@@ -79,7 +79,9 @@ public class ForTest {
 //		16 17 18 19 20
 //		21 22 23 24 25
 		for (int i=1; i<=25; i++) {
-			System.out.printf("%2d ", i);
+//			System.out.printf("%2d ", i);
+			System.out.print(i + " ");
+			if (i < 10) System.out.print(" ");
 			if (i % 5 == 0) {
 				System.out.println();
 				}
