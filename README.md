@@ -152,6 +152,9 @@
 > while (true) {
 >   x += y;
 > }
+> do {
+>   x += y;
+> } while (true);
 > ```
 >> ### iterationex
 >> - Ex01.java
