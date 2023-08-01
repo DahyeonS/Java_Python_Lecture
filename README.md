@@ -205,3 +205,6 @@
 >> - ArrayForEx.java
 >> - MainArgsEx.java
 >> - ArrayCopyEx.java
+>> - TwoDimArray.java
+>> - TwoDimForEx.java
+>> - ThreeDimEx.java
