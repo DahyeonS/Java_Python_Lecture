@@ -208,3 +208,7 @@
 >> - TwoDimArray.java
 >> - TwoDimForEx.java
 >> - ThreeDimEx.java
+>> - ArrayScopeEx.java
+>> - ArrayTest01.java
+>> - ArrayTest02.java
+>> - ArrayTest03.java
