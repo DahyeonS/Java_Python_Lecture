@@ -212,3 +212,6 @@
 >> - ArrayTest01.java
 >> - ArrayTest02.java
 >> - ArrayTest03.java
+>> - LottoOne.java
+>> - ArraySortEx.java
+>> - LottoFive.java
