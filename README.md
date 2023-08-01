@@ -197,7 +197,8 @@
 > ## 2023.8.1
 > **배열**
 > ```java
->
+> int[] arr1 = new int[3]; // 1차원
+> int[][] arr2 = new int[5][5]; // 2차원
 > ```
 > ### *output*
 >> #### arrayex
