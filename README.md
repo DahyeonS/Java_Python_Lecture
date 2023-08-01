@@ -139,7 +139,7 @@
 >> - SumEx.java
 >> - LeapYear.java
 >
->> ### iterationex
+>> #### iterationex
 >> - ForEx.java
 >> - GuguDan.java
 >> - CumulateEx.java
@@ -164,7 +164,7 @@
 > }
 > ```
 > ### *output*
->> ### iterationex
+>> #### iterationex
 >> - Ex01.java
 >> - Ex02.java
 >> - Ex03.java
@@ -184,14 +184,14 @@
 >> - InfiniteRandomEx.java
 >> - BaseBallGame.java
 >
->> ### methodex
+>> #### methodex
 >> - MethodReturnEx.java
 >> - MyMath.java
 >> - MyMathMain.java
 >> - MethodReturnExit.java
 >> - MethodLocalVarEx.java
 >
->> ### projectex
+>> #### projectex
 >> - RockPaperScissorsGame.java
 
 > ## 2023.8.1
@@ -200,3 +200,8 @@
 >
 > ```
 > ### *output*
+>> #### arrayex
+>> - Arrays.java
+>> - ArrayForEx.java
+>> - MainArgsEx.java
+>> - ArrayCopyEx.java
