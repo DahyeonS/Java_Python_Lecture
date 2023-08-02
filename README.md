@@ -224,16 +224,16 @@
 > ```
 > ### *output*
 >> #### arrayex
->> ArrayWord.java
+>> - ArrayWord.java
 >
 >> #### projectex
->> BaseBallGameArr.java
+>> - BaseBallGameArr.java
 >
 >> #### datastructureex
->> ArrayListEx.java
+>> - ArrayListEx.java
 >
 >> #### classex
->> Car.java
->> CarMain.java
->> MemberVarLocalVar.java
->> InstanceVarStaticVar.java
+>> - Car.java
+>> - CarMain.java
+>> - MemberVarLocalVar.java
+>> - InstanceVarStaticVar.java
