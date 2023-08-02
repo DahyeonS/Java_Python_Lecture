@@ -220,7 +220,21 @@
 > ## 2023.8.2
 > **ArrayList와 클래스**
 > ```java
+> // ArrayList
+> ArrayList data = new ArrayList();
 >
+> // 클래스
+> public class Hello {
+>    void PrintHello() {
+>     String hi = "Hi!";
+>   }
+> }
+>
+> public class Main {
+>	public static void main(String[] args) {
+>		Hello hello = new Hello();
+>   System.out.println(hello.hi);
+> }
 > ```
 > ### *output*
 >> #### arrayex
