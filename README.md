@@ -212,6 +212,10 @@
 >> - ArrayScopeEx.java
 >> - ArrayTest01.java
 >> - ArrayTest02.java
+>> - ArrayTest03.java
+>> - LottoOne.java
+>> - ArraySortEx.java
+>> - LottoFive.java
 
 > ## 2023.8.2
 > ** **
@@ -221,7 +225,3 @@
 > ### *output*
 >> #### projectex
 >> BaseBallGameArr.java
->> - ArrayTest03.java
->> - LottoOne.java
->> - ArraySortEx.java
->> - LottoFive.java
