@@ -223,5 +223,8 @@
 >
 > ```
 > ### *output*
+>> #### arrayex
+>> ArrayWord.java
+>
 >> #### projectex
 >> BaseBallGameArr.java
