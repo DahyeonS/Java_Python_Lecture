@@ -218,7 +218,7 @@
 >> - LottoFive.java
 
 > ## 2023.8.2
-> **ArrayList**
+> **ArrayList와 클래스**
 > ```java
 >
 > ```
@@ -237,6 +237,9 @@
 >> - CarMain.java
 >> - MemberVarLocalVar.java
 >> - InstanceVarStaticVar.java
+>> - StaticAndInstanceMethod.java
+>> - StaticAndInstanceMethodMain.java
+>> - VarArgument.java
 >
 >> #### hello
 >> - Bus.java
