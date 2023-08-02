@@ -218,7 +218,7 @@
 >> - LottoFive.java
 
 > ## 2023.8.2
-> ** **
+> **ArrayList**
 > ```java
 >
 > ```
