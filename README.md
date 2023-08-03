@@ -271,7 +271,7 @@
 >> - Dog.java
 >> - InitBlockEx.java
 >
->> #### animalpgk
+>> #### animalpkg
 >> - AnimalMain.java
 >>> ##### dogpkg
 >>> - PublicDog.java
