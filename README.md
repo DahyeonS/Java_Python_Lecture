@@ -259,9 +259,17 @@
 >> - Bus.java
 
 > ## 2023.8.3
-> **클래스와 패키지**
+> **생성자와 접근제어자**
 > ```java
+> // 생성자
+> public DogName(String name) {
+> 
+> }
 >
+> // 접근제어자
+> private class Secret {
+>
+> }
 > ```
 > ### output
 >> #### classex
