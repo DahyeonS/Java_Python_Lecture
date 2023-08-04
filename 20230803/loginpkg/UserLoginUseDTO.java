@@ -29,7 +29,7 @@ public class UserLoginUseDTO {
 //		기존과 동일
 		if (user.getId().equals(this.user.getId())) {
 			if (user.getPassword().equals(this.user.getPassword())) {
-				System.out.printf("Welcome!! %s(%s) \n", user.getId(), user.getRole());
+				System.out.printf("Welcome!! %s(%s) \n", this.user.getId(), this.user.getRole());
 				rs = true;
 			} else {
 				System.out.println("Login Fail - step 2");
