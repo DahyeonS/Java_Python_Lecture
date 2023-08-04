@@ -305,7 +305,18 @@
 > ## 2023.8.4
 > **클래스 상속**
 > ```java
+> // 부모클래스
+> public class Animal extends Object {
+>   private String name;
+>   private int age;
 >
+>   public Animal(String name, int age) {
+>     super(name, age)  
+>   }
+> }
+> 
+> // 자식클래스
+> public class Dog extends Animal {
 > ```
 > ### output
 >> #### flowerpkg
