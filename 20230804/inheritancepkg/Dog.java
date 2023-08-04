@@ -2,7 +2,7 @@ package inheritancepkg;
 
 public class Dog extends Animal {
 	public Dog() {
-//		super("바둑이", 3); // 상속 관계에서 값이 정해졌을 때 호출 필요
+//		super("바둑이", 3); // 부모 클래스의 변수는 super() 사용
 	}
 	
 	public Dog(String name, int age) {
