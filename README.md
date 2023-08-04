@@ -311,12 +311,17 @@
 >   private int age;
 >
 >   public Animal(String name, int age) {
->     super(name, age)  
+>     this.name = name;
+>     this.age = age;
 >   }
 > }
 > 
 > // 자식클래스
 > public class Dog extends Animal {
+>   public Dog(String name, int dog) {
+>      super(name, dog)
+>   }
+> }
 > ```
 > ### output
 >> #### flowerpkg
