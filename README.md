@@ -347,3 +347,12 @@
 >
 >> #### polymorphismpkg
 >> - AnimalPolyMain.java
+
+> ## *2023.8.6*
+> ### *output*
+>> #### *animalpkg*
+>>> ##### *dogpkg*
+>>> - *PublicProtectedDog.java*
+>>
+>>> #### *catpkg*
+>>> - *PublicProtectedDogUseCat.java*
