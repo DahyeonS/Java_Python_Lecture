@@ -355,4 +355,4 @@
 >>> - *PublicProtectedDog.java*
 >>
 >>> #### *catpkg*
->>> - *PublicProtectedDogUseCat.java*
+>>> - *ProtectedDogUseCat.java*
