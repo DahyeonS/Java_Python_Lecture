@@ -358,8 +358,10 @@
 >>> - *ProtectedDogUseCat.java*
 
 > ## 2023.8.7
-> ** **
+> **추상 클래스**
 > ```java
+> 
 > ```
 > ### output
->> #### 
+>> #### abstractpkg
+>> - AbstractClass.java
