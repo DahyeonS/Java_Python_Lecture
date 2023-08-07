@@ -358,9 +358,11 @@
 >>> - *ProtectedDogUseCat.java*
 
 > ## 2023.8.7
-> **추상 클래스**
+> **추상 클래스와 인터페이스**
 > ```java
-> 
+> // 추상 클래스
+>
+> // 인터페이스
 > ```
 > ### output
 >> #### abstractpkg
@@ -380,3 +382,6 @@
 >> - Plane.java
 >> - VehicleUse.java
 >> - VehicleMain.java
+>
+>> #### interfacepkg
+>> -
