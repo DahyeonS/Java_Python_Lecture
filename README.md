@@ -366,6 +366,9 @@
 > }
 > 
 > // 인터페이스
+> public interface Printer {
+>   void print();
+> }
 > ```
 > ### output
 >> #### abstractpkg
