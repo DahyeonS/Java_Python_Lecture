@@ -361,7 +361,10 @@
 > **추상 클래스와 인터페이스**
 > ```java
 > // 추상 클래스
->
+> public abstract class AbClass {
+>   abstract void abstractMethod();
+> }
+> 
 > // 인터페이스
 > ```
 > ### output
