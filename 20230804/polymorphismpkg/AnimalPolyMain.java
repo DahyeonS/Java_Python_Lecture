@@ -17,9 +17,17 @@ public class AnimalPolyMain {
 //		animalArr[2] = animal2;
 //		animalArr[3] = animal3;
 		
+		animal1.move();
+		animal2.move();
+		animal3.move();
+		
 		Dog dog = (Dog) animal1;
 		Cat cat = (Cat) animal2;
 		Eagle eagle = (Eagle) animal3;
+		
+		dog.move();
+		cat.move();
+		eagle.move();
 		
 		FinalAnimal finalAnimal = new FinalAnimal("fianl1", 4);
 	}
