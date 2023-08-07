@@ -397,3 +397,8 @@
 >> - IComplexerPrintScan.java
 >> - IComplexerPrintScanFax.java
 >> - ComplexMain3.java
+>> - GraphicCard.java
+>> - Amd.java
+>> - Nvidia.java
+>> - Computer.java
+>> - ComputerMain.java
