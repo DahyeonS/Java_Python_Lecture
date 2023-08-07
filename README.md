@@ -374,3 +374,8 @@
 >> - Circle.java
 >> - Rectangle.java
 >> - ShapeMain.java
+>> - Vehicle.java
+>> - Car.java
+>> - Ship.java
+>> - Plane.java
+>> - VehicleUse.java
