@@ -425,3 +425,7 @@
 >> - AnimalPrintMain.java
 >> - AnimalPolyMain.java
 >> - AnimalPolyArrayMain.java
+>> - AnimalPolyBirdsMain.java
+>> - AnimalPolyEatsMain.java
+>> - AnimalPolyBirdsArrayMain.java
+>> - AnimalPolyEatsArrayMain.java
