@@ -438,9 +438,11 @@
 >> - AnimalPolyArrayListMain.java
 
 > ## 2023.8.8
-> **예외**
+> **예외와 자바 API**
 > ```java
-> 
+> // 예외
+>
+> // 자바 API
 > ```
 > ### output
 >> #### exceptionpkg
