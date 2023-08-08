@@ -34,6 +34,7 @@ String s2 = "abcd";
 System.out.println(s1.equals(s2)); // true
 ```
 ### toString()
+문자열로 표현
 ```java
 // 클래스
 @Override
@@ -48,10 +49,38 @@ int arr[] = {1, 2, 3, 4};
 System.out.println(Arrays.toString(arr));
 ```
 ### clone()
+대상을 복사
 ```java
 String[] arr = {"홍길동", "이순신", "김유신", "안중근"}; // // ["홍길동", "이순신", "김유신", "안중근"]
 String[] arr2 = arr.clone(); // ["홍길동", "이순신", "김유신", "안중근"]
 
 System.out.println(arr == arr2); // 주소가 다름(false)
 System.out.println(arr.equals(arr2)); // false
+```
+### System class
+시스템 정보를 불러오는 클래스
+```java
+System.out.println(System.getProperty("java.version"));
+System.out.println(System.getProperty("java.home"));
+System.out.println(System.getProperty("os.name"));
+System.out.println(System.getProperty("file.separator"));
+System.out.println(System.getProperty("user.name"));
+System.out.println(System.getProperty("user.home"));
+		
+for (String key : System.getenv().keySet()) {
+  System.out.println(key + ": " + System.getenv(key));
+}
+```
+### Class class
+클래스의 정보를 불러오는 클래스
+```java
+EnvEx env = new EnvEx();
+Class c1 = env.getClass();
+System.out.println(c1.getName());
+System.out.println(c1.getPackageName());
+```
+### String class
+#### 문자열 주소 호출
+```java
+System.identityHashCode(str);
 ```
