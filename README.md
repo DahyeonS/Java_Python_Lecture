@@ -456,3 +456,4 @@
 >> - CloneEx.java
 >> - EnvEx.java
 >> - ClassEx.java
+>> - StringEx.java
