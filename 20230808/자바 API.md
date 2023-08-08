@@ -166,7 +166,7 @@ Integer.parseInt(str);
 
 append() 사용
 
-*String을 이용한 문자열 추가보다 연산시간이 크게 단축됨*
+*String을 이용한 연산보다 소요시간이 크게 단축됨*
 ```java
 StringBuffer sb1 = new StringBuffer("abcd");
 sb1.append("efg");
