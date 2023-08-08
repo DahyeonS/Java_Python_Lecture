@@ -47,3 +47,11 @@ System.out.println(f.toString());
 int arr[] = {1, 2, 3, 4};
 System.out.println(Arrays.toString(arr));
 ```
+### clone()
+```java
+String[] arr = {"홍길동", "이순신", "김유신", "안중근"}; // // ["홍길동", "이순신", "김유신", "안중근"]
+String[] arr2 = arr.clone(); // ["홍길동", "이순신", "김유신", "안중근"]
+
+System.out.println(arr == arr2); // 주소가 다름(false)
+System.out.println(arr.equals(arr2)); // false
+```
