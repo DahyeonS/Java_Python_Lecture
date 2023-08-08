@@ -84,11 +84,19 @@ System.out.println(c1.getPackageName());
 ```java
 System.identityHashCode(str);
 ```
-####
+#### *특정 인덱스의 문자열 호출*
 ```java
-System.out.println(str.charAt(6)); // 6번 인덱스의 문자 - M
-System.out.println(str.equals("Hello My Name is Hong Gil Dong")); // 문자열값 비교 - true
-System.out.println(str.indexOf("Hong")); // "Hong" 문자열의 위치(인덱스) - 17 (없으면 -1)
+System.out.println(str.charAt(6)); // 6번 인덱스의 문자
+```
+#### 문자열값 비교
+```java
+System.out.println(str.equals("Hello My Name is Hong Gil Dong"));
+```
+#### 특정 문자열의 위치(인덱스) 호출
+```java
+System.out.println(str.indexOf("Hong")); // "Hong" 문자열의 위치(없으면 -1)
+```
+```java
 System.out.println(str.substring(17)); // 17번 인덱스까지 문자열 앞부분 삭제 - Hong Gil Dong
 System.out.println(str.substring(6, 13)); // 6번부터 13번 인덱스까지 문자열 출력 - My Name
 System.out.println(str.toLowerCase()); // 문자열 소문자로 변경 - hello my name is hong gil dong
