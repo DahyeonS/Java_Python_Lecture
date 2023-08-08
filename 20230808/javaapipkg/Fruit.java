@@ -12,6 +12,6 @@ public class Fruit {
 	
 	@Override
 	public String toString() {
-		return super.toString();
+		return name + " / " + color;
 	}
 }
