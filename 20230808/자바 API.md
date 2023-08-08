@@ -233,3 +233,10 @@ r1.nextInt(6) + 1; // 1 ~ 7 사이의 정수
 r1.nextBoolean(); // true, false 중에 랜덤
 r.nextGaussian(); // 정규분포 범위 안에서 랜덤한 실수
 ```
+### Date class
+날짜와 시간을 다루는 클래스
+```java
+Date date = new Date(); // 현재 날짜
+SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss"); // 날짜를 원하는 형태로 출력
+String dateStr = sf.format(date); // 현재 날짜를 "연-월-일 시:분:초" 형식으로 적용
+```
