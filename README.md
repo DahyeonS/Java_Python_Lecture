@@ -459,3 +459,5 @@
 >> - StringEx.java
 >> - StringExMethod.java
 >> - StringParseEx.java
+>> - StringEx2.java
+>> - StringBufferTest.java
