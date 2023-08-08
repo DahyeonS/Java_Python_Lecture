@@ -124,22 +124,36 @@ System.out.println(str.startsWith("Hello")); // 문자열이 "Hello"부터 시�
 ```java
 System.out.println(str.endsWith("Dong")); // 문자열이 "Dong"으로 끝나는가?
 ```
-
+#### 문자열 변경 - replace()
 ```java
-System.out.println(str.replace("Hong", "Kim")); // "Hong"을 "Kim"으로 변경 - Hello My Name is Kim Gil Dong
-System.out.println(str.replaceAll("Name", "Nickname")); // "Name"을 "Nickname"으로 변경(replaceAll은 정규표현식 사용 가능 ex.[a-zA-z0-9]) - Hello My Nickname is Hong Gil Dong
-System.out.println(str.toString()); // 문자열로 출력 - Hello My Name is Hong Gil Dong
-		
-str = "   안녕 하세요,     반갑습니다.      ";
-System.out.println(str.trim()); // 앞뒤 공백 제거 - 안녕 하세요,     반갑습니다.
-System.out.println(str.replace(" ", "")); // 모든 공백 제거 - 안녕하세요,반갑습니다.
-		
+System.out.println(str.replace("Hong", "Kim")); // "Hong"을 "Kim"으로 변경
+```
+#### 문자열 변경 - replaceAll()
+정규표현식 사용 가능
+
+*정규표현식 예시) [a-z], [A-z], [0-9], [a-zA-z0-9]*
+```java
+System.out.println(str.replaceAll("Name", "Nickname")); // "Name"을 "Nickname"으로 변경
+```
+#### 문자열로 출력
+```java
+System.out.println(str.toString());
+```
+#### 앞뒤 공백 제거
+```java	
+System.out.println(str.trim());
+```
+#### 모든 공백 제거
+```java
+System.out.println(str.replace(" ", ""));
+```
+#### 숫자를 문자열로 변환
+```java		
 str = String.valueOf(10); // int 10을 문자열로 변환
 str = String.valueOf(10.5); // double 10.5를 문자열로 변환
-		
-str = "홍길동,이순신,유관순,안중근";
-String[] arr = str.split(",");
-for (int i=0; i<arr.length; i++) {
-	System.out.println(i + "번 인덱스 값 = " + arr[i]);
-}
+```
+#### 특정 구간을 기준으로 문자열 분리
+분리된 문자열은 배열로 저장
+```java
+str.split(","); // 컴마(,)를 기준으로 문자열 분리
 ```
