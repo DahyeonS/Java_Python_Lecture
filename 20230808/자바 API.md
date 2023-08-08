@@ -157,3 +157,17 @@ str = String.valueOf(10.5); // double 10.5를 문자열로 변환
 ```java
 str.split(","); // 컴마(,)를 기준으로 문자열 분리
 ```
+#### 문자열을 숫자로 변환
+```java
+Integer.parseInt(str);
+```
+#### StringBuffer
+기존 인스턴스를 유지한 채로 값을 추가할 수 있음
+
+append() 사용
+
+*String을 이용한 문자열 추가보다 연산시간이 크게 단축됨*
+```java
+StringBuffer sb1 = new StringBuffer("abcd");
+sb1.append("efg");
+```
