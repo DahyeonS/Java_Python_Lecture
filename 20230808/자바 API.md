@@ -96,14 +96,36 @@ System.out.println(str.equals("Hello My Name is Hong Gil Dong"));
 ```java
 System.out.println(str.indexOf("Hong")); // "Hong" 문자열의 위치(없으면 -1)
 ```
+#### 특정 인덱스부터 문자열 호출
 ```java
-System.out.println(str.substring(17)); // 17번 인덱스까지 문자열 앞부분 삭제 - Hong Gil Dong
-System.out.println(str.substring(6, 13)); // 6번부터 13번 인덱스까지 문자열 출력 - My Name
-System.out.println(str.toLowerCase()); // 문자열 소문자로 변경 - hello my name is hong gil dong
-System.out.println(str.toUpperCase()); // 문자열 대문자로 변경 - HELLO MY NAME IS HONG GIL DONG
-System.out.println(str.length()); // 문자열 길이 - 30
-System.out.println(str.startsWith("Hello")); // 문자열이 "Hello"부터 시작하는지 여부 - true
-System.out.println(str.endsWith("Dong")); // 문자열이 "Dong"으로 끝나는지 여부 - true
+System.out.println(str.substring(17)); // 17번 인덱스부터 문자열 출력
+```
+#### 특정 구간만 문자열 호출
+```java
+System.out.println(str.substring(6, 13)); // 6번부터 13번 인덱스까지 문자열 출력
+```
+#### 소문자로 변경
+```java
+System.out.println(str.toLowerCase());
+```
+#### 대문자로 변경
+```java
+System.out.println(str.toUpperCase());
+```
+#### 문자열 길이 호출
+```java
+System.out.println(str.length());
+```
+#### 특정 문자열로 시작하는지 여부
+```java
+System.out.println(str.startsWith("Hello")); // 문자열이 "Hello"부터 시작하는가?
+```
+#### 특정 문자열로 끝나는지 여부
+```java
+System.out.println(str.endsWith("Dong")); // 문자열이 "Dong"으로 끝나는가?
+```
+
+```java
 System.out.println(str.replace("Hong", "Kim")); // "Hong"을 "Kim"으로 변경 - Hello My Name is Kim Gil Dong
 System.out.println(str.replaceAll("Name", "Nickname")); // "Name"을 "Nickname"으로 변경(replaceAll은 정규표현식 사용 가능 ex.[a-zA-z0-9]) - Hello My Nickname is Hong Gil Dong
 System.out.println(str.toString()); // 문자열로 출력 - Hello My Name is Hong Gil Dong
