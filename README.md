@@ -449,6 +449,7 @@
 > }
 > 
 > // 자바 API
+> Random r = new Random();
 > ```
 > ### output
 >> #### exceptionpkg
