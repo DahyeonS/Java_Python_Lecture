@@ -98,59 +98,59 @@ str.indexOf("Hong"); // "Hong" 문자열의 위치(없으면 -1)
 ```
 #### 특정 인덱스부터 문자열 호출
 ```java
-str.substring(17); // 17번 인덱스부터 문자열 출력
+str.substring(17); // 17번 인덱스부터 문자열
 ```
 #### 특정 구간만 문자열 호출
 ```java
-System.out.println(str.substring(6, 13)); // 6번부터 13번 인덱스까지 문자열 출력
+str.substring(6, 13); // 6번부터 13번 인덱스까지 문자열
 ```
 #### 소문자로 변경
 ```java
-System.out.println(str.toLowerCase());
+str.toLowerCase();
 ```
 #### 대문자로 변경
 ```java
-System.out.println(str.toUpperCase());
+str.toUpperCase();
 ```
 #### 문자열 길이 호출
 ```java
-System.out.println(str.length());
+str.length();
 ```
 #### 특정 문자열로 시작하는지 여부
 ```java
-System.out.println(str.startsWith("Hello")); // 문자열이 "Hello"부터 시작하는가?
+str.startsWith("Hello"); // 문자열이 "Hello"부터 시작하는가?
 ```
 #### 특정 문자열로 끝나는지 여부
 ```java
-System.out.println(str.endsWith("Dong")); // 문자열이 "Dong"으로 끝나는가?
+str.endsWith("Dong"); // 문자열이 "Dong"으로 끝나는가?
 ```
 #### 문자열 변경 - replace()
 ```java
-System.out.println(str.replace("Hong", "Kim")); // "Hong"을 "Kim"으로 변경
+str.replace("Hong", "Kim"); // "Hong"을 "Kim"으로 변경
 ```
 #### 문자열 변경 - replaceAll()
 정규표현식 사용 가능
 
 *정규표현식 예시) [a-z], [A-z], [0-9], [a-zA-z0-9]*
 ```java
-System.out.println(str.replaceAll("Name", "Nickname")); // "Name"을 "Nickname"으로 변경
+str.replaceAll("Name", "Nickname"); // "Name"을 "Nickname"으로 변경
 ```
 #### 문자열로 출력
 ```java
-System.out.println(str.toString());
+str.toString();
 ```
 #### 앞뒤 공백 제거
 ```java	
-System.out.println(str.trim());
+str.trim();
 ```
 #### 모든 공백 제거
 ```java
-System.out.println(str.replace(" ", ""));
+str.replace(" ", "");
 ```
 #### 숫자를 문자열로 변환
 ```java		
-str = String.valueOf(10); // int 10을 문자열로 변환
-str = String.valueOf(10.5); // double 10.5를 문자열로 변환
+String.valueOf(10); // int 10을 문자열로 변환
+String.valueOf(10.5); // double 10.5를 문자열로 변환
 ```
 #### 특정 구간을 기준으로 문자열 분리
 분리된 문자열은 배열로 저장
@@ -173,37 +173,37 @@ sb1.append("efg");
 ```
 #### 절대값
 ```java
-System.out.println("Math.abs(-10) = " + Math.abs(-10)); // 10
+ Math.abs(-10); // 10
 ```
 #### 올림
 ```java
-System.out.println("Math.ceil(5.4) = " + Math.ceil(5.4)); // 6.0
+Math.ceil(5.4); // 6.0
 ```
 #### 내림
 ```java
-System.out.println("Math.floor(5.4) = " + Math.floor(5.4)); // 5.0
+Math.floor(5.4); // 5.0
 ```
 #### 최대값
 ```java
-System.out.println("Math.max(5, 4) = " + Math.max(5, 4)); // 5
+Math.max(5, 4); // 5
 ```
 #### 최소값
 ```java
-System.out.println("Math.min(5, 4) = " + Math.min(5, 4)); // 4
+ Math.min(5, 4); // 4
 ```
 #### 0 ~ 1 사이 소수
 ```java
-System.out.println("Math.random() = " + Math.random());
+Math.random();
 ```
 #### 짝수는 버림
 ```java
-System.out.println("Math.rint(4.5) = " + Math.rint(4.5)); // 4.0
+Math.rint(4.5); // 4.0
 ```
 #### 홀수는 올림
 ```java
-System.out.println("Math.rint(5.5) = " + Math.rint(5.5)); // 6.0
+Math.rint(5.5); // 6.0
 ```
 #### 반올림
 ```java
-System.out.println("Math.round(4.5) = " + Math.round(4.5)); // 5
+Math.round(4.5); // 5
 ```
