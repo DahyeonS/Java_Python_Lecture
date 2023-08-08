@@ -208,3 +208,14 @@ Math.rint(5.5); // 6.0
 ```java
 Math.round(4.5); // 5
 ```
+### Wrapper class
+구버전에서의 주요 클래스
+
+최신 버전에서는 자동 형변환이 가능해지면서 중요성이 떨어짐
+```java
+Integer.MAX_VALUE; // int의 최대값 - 2147483647
+Long.MAX_VALUE; // long의 최대값 - 9223372036854775807
+Float.MAX_VALUE; // float의 최대값 - 3.4028235E38
+Double.MAX_VALUE; // double의 최대값 -  1.7976931348623157E308
+Double.SIZE; // double의 크기 - 64비트
+```
