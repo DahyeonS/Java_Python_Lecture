@@ -230,4 +230,6 @@ Random r2 = new Random(42); // seed - 42
 r1.nextInt(); // 무작위 정수
 r1.nextInt(5); // 0 ~ 5 사이의 정수
 r1.nextInt(6) + 1; // 1 ~ 7 사이의 정수
+r1.nextBoolean(); // true, false 중에 랜덤
+r.nextGaussian(); // 정규분포 범위 안에서 랜덤한 실수
 ```
