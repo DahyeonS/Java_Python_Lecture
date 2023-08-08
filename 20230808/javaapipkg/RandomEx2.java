@@ -14,7 +14,7 @@ public class RandomEx2 {
 		}
 		*/
 		
-//		1 ~ 6 사이
+//		1 ~ 7 사이
 		for (int i=0; i<3; i++) {
 			System.out.println(r.nextInt(6) + 1);
 		}
