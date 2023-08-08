@@ -171,6 +171,7 @@ append() 사용
 StringBuffer sb1 = new StringBuffer("abcd");
 sb1.append("efg");
 ```
+### Math class
 #### 절대값
 ```java
  Math.abs(-10); // 10
