@@ -86,19 +86,19 @@ System.identityHashCode(str);
 ```
 #### *특정 인덱스의 문자열 호출*
 ```java
-System.out.println(str.charAt(6)); // 6번 인덱스의 문자
+str.charAt(6); // 6번 인덱스의 문자
 ```
 #### 문자열값 비교
 ```java
-System.out.println(str.equals("Hello My Name is Hong Gil Dong"));
+str.equals("Hello My Name is Hong Gil Dong");
 ```
 #### 특정 문자열의 위치(인덱스) 호출
 ```java
-System.out.println(str.indexOf("Hong")); // "Hong" 문자열의 위치(없으면 -1)
+str.indexOf("Hong"); // "Hong" 문자열의 위치(없으면 -1)
 ```
 #### 특정 인덱스부터 문자열 호출
 ```java
-System.out.println(str.substring(17)); // 17번 인덱스부터 문자열 출력
+str.substring(17); // 17번 인덱스부터 문자열 출력
 ```
 #### 특정 구간만 문자열 호출
 ```java
@@ -170,4 +170,40 @@ append() 사용
 ```java
 StringBuffer sb1 = new StringBuffer("abcd");
 sb1.append("efg");
+```
+#### 절대값
+```java
+System.out.println("Math.abs(-10) = " + Math.abs(-10)); // 10
+```
+#### 올림
+```java
+System.out.println("Math.ceil(5.4) = " + Math.ceil(5.4)); // 6.0
+```
+#### 내림
+```java
+System.out.println("Math.floor(5.4) = " + Math.floor(5.4)); // 5.0
+```
+#### 최대값
+```java
+System.out.println("Math.max(5, 4) = " + Math.max(5, 4)); // 5
+```
+#### 최소값
+```java
+System.out.println("Math.min(5, 4) = " + Math.min(5, 4)); // 4
+```
+#### 0 ~ 1 사이 소수
+```java
+System.out.println("Math.random() = " + Math.random());
+```
+#### 짝수는 버림
+```java
+System.out.println("Math.rint(4.5) = " + Math.rint(4.5)); // 4.0
+```
+#### 홀수는 올림
+```java
+System.out.println("Math.rint(5.5) = " + Math.rint(5.5)); // 6.0
+```
+#### 반올림
+```java
+System.out.println("Math.round(4.5) = " + Math.round(4.5)); // 5
 ```
