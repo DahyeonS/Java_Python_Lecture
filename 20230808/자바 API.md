@@ -219,3 +219,15 @@ Float.MAX_VALUE; // float의 최대값 - 3.4028235E38
 Double.MAX_VALUE; // double의 최대값 -  1.7976931348623157E308
 Double.SIZE; // double의 크기 - 64비트
 ```
+### Random class
+다양한 자료형의 랜덤한 숫자 호출
+
+seed를 설정하여 난수 고정 가능(값이 고정됨)\
+```java
+Random r1 = new Random();
+Random r2 = new Random(42); // seed - 42
+
+r1.nextInt(); // 무작위 정수
+r1.nextInt(5); // 0 ~ 5 사이의 정수
+r1.nextInt(6) + 1; // 1 ~ 7 사이의 정수
+```
