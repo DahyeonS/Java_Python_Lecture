@@ -457,3 +457,4 @@
 >> - EnvEx.java
 >> - ClassEx.java
 >> - StringEx.java
+>> - StringExMethod.java
