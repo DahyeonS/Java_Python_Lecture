@@ -458,3 +458,4 @@
 >> - ClassEx.java
 >> - StringEx.java
 >> - StringExMethod.java
+>> - StringParseEx.java
