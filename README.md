@@ -441,7 +441,13 @@
 > **예외와 자바 API**
 > ```java
 > // 예외
->
+> try {
+>   result = number / (int)(Math.random() * 10);
+>   System.out.println(result);
+> } catch (ArithmeticException e) {
+>   System.out.println("0");    
+> }
+> 
 > // 자바 API
 > ```
 > ### output
