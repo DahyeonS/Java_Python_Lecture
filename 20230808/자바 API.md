@@ -33,3 +33,17 @@ String s2 = "abcd";
 
 System.out.println(s1.equals(s2)); // true
 ```
+### toString()
+```java
+// 클래스
+@Override
+public String toString() {
+  return name + " / " + color;
+}
+
+System.out.println(f.toString());
+
+// 배열
+int arr[] = {1, 2, 3, 4};
+System.out.println(Arrays.toString(arr));
+```
