@@ -23,7 +23,7 @@
 > ```
 
 > ## 2023.7.25
-> **명령프롬프트(cmd)와 경로(디렉토리)**
+> **[명령프롬프트(cmd)와 경로(디렉토리)](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230725/%EA%B0%9C%EC%9A%94.md)**
 > ### *output*
 > - Hello.java
 
