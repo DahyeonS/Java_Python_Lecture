@@ -485,10 +485,10 @@
 > ```
 > ### output
 >> #### javaapipkg
->> CalendarEx.java
->> CalendarEx2.java
->> DecimalFormatEx.java
->> CalendarEx3.java
+>> - CalendarEx.java
+>> - CalendarEx2.java
+>> - DecimalFormatEx.java
+>> - CalendarEx3.java
 >
 >> #### collectionpkg
 >> - ListEx.java
