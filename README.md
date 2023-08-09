@@ -58,7 +58,7 @@
 >> - ColorChange.java
 
 > ## 2023.7.27
-> **자료형과 연산자와 스캐너**
+> **[자료형](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230727/%EC%9E%90%EB%A3%8C%ED%98%95.md)과 [연산자](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230727/%EC%97%B0%EC%82%B0%EC%9E%90.md)와 [스캐너](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230727/%EC%8A%A4%EC%BA%90%EB%84%88.md)**
 > ```java
 > // 자료형
 > int i = 1; // 기본 자료형
@@ -119,7 +119,7 @@
 >> - ScannerTest.java
 
 > ## 2023.7.28
-> **제어문**
+> **[제어문](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230728/%EC%A0%9C%EC%96%B4%EB%AC%B8.md)**
 > ```java
 > if (true) {
 >   System.out.println(" ");
@@ -147,7 +147,7 @@
 >> - ForTest.java
 
 > ## 2023.7.31
-> **반복문과 메서드**
+> **[반복문](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230728/%EC%A0%9C%EC%96%B4%EB%AC%B8.md#%EB%B0%98%EB%B3%B5%EB%AC%B8)과 [메서드](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230731/%EB%A9%94%EC%84%9C%EB%93%9C.md)**
 > ```java
 > // 반복문
 > while (true) {
@@ -195,7 +195,7 @@
 >> - RockPaperScissorsGame.java
 
 > ## 2023.8.1
-> **배열**
+> **[배열](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230801/%EB%B0%B0%EC%97%B4.md)**
 > ```java
 > int[] arr1 = new int[3]; // 1차원
 > int[][] arr2 = new int[5][5]; // 2차원
