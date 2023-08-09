@@ -495,3 +495,7 @@
 >> - ListStringEx.java
 >> - ListIntStringEx.java
 >> - VectorEx.java
+>> - ShapeListEx.java
+>> - Shape.java
+>> - Circle.java
+>> - Rectangle.java
