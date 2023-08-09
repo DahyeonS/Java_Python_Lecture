@@ -218,7 +218,7 @@
 >> - LottoFive.java
 
 > ## 2023.8.2
-> **ArrayList와 클래스**
+> **[ArrayList](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230802/ArrayList.md)와 [클래스](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230802/%ED%81%B4%EB%9E%98%EC%8A%A4.md)**
 > ```java
 > // ArrayList
 > ArrayList data = new ArrayList();
@@ -259,7 +259,7 @@
 >> - Bus.java
 
 > ## 2023.8.3
-> **생성자와 접근제어자**
+> **[생성자](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230802/%ED%81%B4%EB%9E%98%EC%8A%A4.md#%EC%83%9D%EC%84%B1%EC%9E%90)와 [접근제어자](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230803/%ED%8C%A8%ED%82%A4%EC%A7%80.md)**
 > ```java
 > // 생성자
 > public DogName(String name) {
@@ -303,7 +303,7 @@
 >> - UserLoginDTOMain.java
 
 > ## 2023.8.4
-> **클래스 상속**
+> **[클래스 상속](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230804/%ED%81%B4%EB%9E%98%EC%8A%A4%20%EC%83%81%EC%86%8D.md)**
 > ```java
 > // 부모클래스
 > public class Animal extends Object {
@@ -358,7 +358,7 @@
 >>> - *ProtectedDogUseCat.java*
 
 > ## 2023.8.7
-> **추상 클래스와 인터페이스**
+> **[추상 클래스](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230807/%EC%B6%94%EC%83%81%20%ED%81%B4%EB%9E%98%EC%8A%A4.md)와 [인터페이스](20230807/인터페이스.md)**
 > ```java
 > // 추상 클래스
 > public abstract class AbClass {
