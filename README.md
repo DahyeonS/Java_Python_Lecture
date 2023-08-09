@@ -479,7 +479,7 @@
 >> - DateEx.java
 
 > ## 2023.8.9
-> **[캘린더와 텍스트 클래스](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230808/%EC%9E%90%EB%B0%94%20API.md#calendar-class)와 [Collection](20230809/Collection.md)**
+> **[캘린더와 텍스트 클래스](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230808/%EC%9E%90%EB%B0%94%20API.md#calendar-class), [Collection](20230809/Collection.md)**
 > ```java
 > 
 > ```
