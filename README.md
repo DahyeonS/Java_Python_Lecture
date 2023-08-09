@@ -438,7 +438,7 @@
 >> - AnimalPolyArrayListMain.java
 
 > ## 2023.8.8
-> **[예외](20230808/예외.md)와 [자바 API](20230808/자바 API.md)**
+> **[예외](20230808/예외.md)와 [자바 API](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230808/%EC%9E%90%EB%B0%94%20API.md)**
 > ```java
 > // 예외
 > try {
