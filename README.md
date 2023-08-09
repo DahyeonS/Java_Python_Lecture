@@ -119,7 +119,7 @@
 >> - ScannerTest.java
 
 > ## 2023.7.28
-> **[제어문](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230728/%EC%A0%9C%EC%96%B4%EB%AC%B8.md)**
+> **[제어문](20230728/제어문.md)**
 > ```java
 > if (true) {
 >   System.out.println(" ");
@@ -147,7 +147,7 @@
 >> - ForTest.java
 
 > ## 2023.7.31
-> **[반복문](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230728/%EC%A0%9C%EC%96%B4%EB%AC%B8.md#%EB%B0%98%EB%B3%B5%EB%AC%B8)과 [메서드](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230731/%EB%A9%94%EC%84%9C%EB%93%9C.md)**
+> **[반복문](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230728/%EC%A0%9C%EC%96%B4%EB%AC%B8.md#%EB%B0%98%EB%B3%B5%EB%AC%B8)과 [메서드](20230731/메서드.md)**
 > ```java
 > // 반복문
 > while (true) {
@@ -195,7 +195,7 @@
 >> - RockPaperScissorsGame.java
 
 > ## 2023.8.1
-> **[배열](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230801/%EB%B0%B0%EC%97%B4.md)**
+> **[배열](20230801/배열.md)**
 > ```java
 > int[] arr1 = new int[3]; // 1차원
 > int[][] arr2 = new int[5][5]; // 2차원
@@ -218,7 +218,7 @@
 >> - LottoFive.java
 
 > ## 2023.8.2
-> **[ArrayList](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230802/ArrayList.md)와 [클래스](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230802/%ED%81%B4%EB%9E%98%EC%8A%A4.md)**
+> **[ArrayList](20230802/ArrayList.md)와 [클래스](20230802/클래스.md)**
 > ```java
 > // ArrayList
 > ArrayList data = new ArrayList();
@@ -259,7 +259,7 @@
 >> - Bus.java
 
 > ## 2023.8.3
-> **[생성자](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230802/%ED%81%B4%EB%9E%98%EC%8A%A4.md#%EC%83%9D%EC%84%B1%EC%9E%90)와 [접근제어자](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230803/%ED%8C%A8%ED%82%A4%EC%A7%80.md)**
+> **[생성자](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230802/%ED%81%B4%EB%9E%98%EC%8A%A4.md#%EC%83%9D%EC%84%B1%EC%9E%90)와 [접근제어자](20230803/패키지.md)**
 > ```java
 > // 생성자
 > public DogName(String name) {
