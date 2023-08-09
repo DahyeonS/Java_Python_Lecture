@@ -477,3 +477,11 @@
 >> - RandomEx.java
 >> - RandomEx2.java
 >> - DateEx.java
+
+> ## 2023.8.9
+> ** **
+> ```java
+> 
+> ```
+> ### output
+>> #### 
