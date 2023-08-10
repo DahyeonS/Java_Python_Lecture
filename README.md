@@ -271,7 +271,7 @@
 >
 > }
 > ```
-> ### output
+> ### *output*
 >> #### classex
 >> - PrintLnOverloading.java
 >> - MyMultiply.java
@@ -323,7 +323,7 @@
 >   }
 > }
 > ```
-> ### output
+> ### *output*
 >> #### flowerpkg
 >> - FlowerStore.java
 >> - Sunflower.java
@@ -370,7 +370,7 @@
 >   void print();
 > }
 > ```
-> ### output
+> ### *output*
 >> #### abstractpkg
 >> - AbstractClass.java
 >> - AbstractChildClass.java
@@ -451,7 +451,7 @@
 > // 자바 API
 > Random r = new Random();
 > ```
-> ### output
+> ### *output*
 >> #### exceptionpkg
 >> - ExceptionEx.java
 >> - Exception02.java
@@ -488,7 +488,7 @@
 > // Collection
 > 
 > ```
-> ### output
+> ### *output*
 >> #### javaapipkg
 >> - CalendarEx.java
 >> - CalendarEx2.java
@@ -527,7 +527,7 @@
 > // File I/O
 > 
 > ```
-> ### output
+> ### *output*
 >> #### collectionpkg
 >> - ArrayListCompareLinkedList.java
 >> - LottoUseSet.java
