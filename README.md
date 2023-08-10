@@ -549,3 +549,4 @@
 >> - FileInputStreamTest.java
 >> - ByteArrayInputStreamTest.java
 >> - FileOutputStreamTest.java
+>> - BufferReaderTest.java
