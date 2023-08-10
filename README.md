@@ -527,3 +527,4 @@
 > ### output
 >> #### collectionpkg
 >> - ArrayListCompareLinkedList.java
+>> - LottoUseSet.java
