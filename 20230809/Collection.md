@@ -19,11 +19,15 @@ Vector list = new Vector();
 list.addElement(3.4); // 값 추가
 list.contains(num); // 값의 유무 호출(없으면 -1, boolean으로도 호출 가능)
 ```
-#### ArrayList
+#### [ArrayList](20230802/ArrayList.md)
 읽기에서 주로 사용
 
-[참고](20230802/ArrayList.md)
-- LinkedList - 데이터를 추가, 삭제 작업을 주로 하는 경우에 사용
+index 기반으로 연속적인 데이터가 존재
+
+##### *LinkedList*
+데이터를 추가, 삭제 작업을 주로 하는 경우에 사용
+
+데이터끼리 서로 연결된 형태
 ### Set
 
 ## Map 인터페이스
