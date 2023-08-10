@@ -479,7 +479,7 @@
 >> - DateEx.java
 
 > ## 2023.8.9
-> **[캘린더와 DecimalFormat 클래스](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230808/%EC%9E%90%EB%B0%94%20API.md#calendar-class), [Collection](20230809/Collection.md)**
+> **[캘린더와 DecimalFormat 클래스](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230808/%EC%9E%90%EB%B0%94%20API.md#calendar-class), [List](20230809/Collection.md)**
 > ```java
 > // 캘린더
 > Calendar today = Calendar.getInstance();
@@ -487,8 +487,8 @@
 > // DCF
 > DecimalFormat df = new DecimalFormat("#,###.00");
 > 
-> // Collection
-> 
+> // List
+> List list = new ArrayList();
 > ```
 > ### *output*
 >> #### javaapipkg
@@ -522,8 +522,10 @@
 >> - AnimalUtil.java
 
 > ## 2023.8.10
-> **Collection과 [File I/O](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230810/File%20IO.md)**
+> **Set와 Map, [File I/O](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230810/File%20IO.md)**
 > ```java
+> // Set
+> 
 > // Map
 >
 > // File I/O
