@@ -520,7 +520,7 @@
 >> - AnimalUtil.java
 
 > ## 2023.8.10
-> **Collection과 File I/O**
+> **Collection과 [File I/O](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230810/File%20IO.md)**
 > ```java
 > // Map
 >
