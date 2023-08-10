@@ -246,6 +246,9 @@ String dateStr = sf.format(date); // 현재 날짜를 "연-월-일 시:분:초" 
 getInstance()로 먼저 인스턴스화를 한 후 실행(추상 클래스)
 
 Date 객체와 함께 사용
+```java
+Calendar today = Calendar.getInstance();
+```
 #### 올해 년도
 ```java
 today.get(Calendar.YEAR);
