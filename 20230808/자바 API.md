@@ -317,5 +317,6 @@ today.getActualMaximum(Calendar.DATE);
 
 다양한 출력 형태 지정
 ```java
-
+DecimalFormat df = new DecimalFormat("#,###.00"); // 천의 자리에서 콤마, 소수점 2번째 자리까지 출력
+SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss"); // 날짜를 "연-월-일 시:분:초" 형식으로 출력
 ```
