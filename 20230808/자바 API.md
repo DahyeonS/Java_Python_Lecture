@@ -311,3 +311,11 @@ today.get(Calendar.ZONE_OFFSET) / (60 * 60 * 1000);
 ```java
 today.getActualMaximum(Calendar.DATE);
 ```
+
+### DecimalFormat class
+텍스트 패키지 소속
+
+다양한 출력 형태 지정
+```java
+
+```
