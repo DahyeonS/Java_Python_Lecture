@@ -518,3 +518,12 @@
 >> - Egg.java
 >> - AnimalMain.java
 >> - AnimalUtil.java
+
+> ## 2023.8.10
+> ** **
+> ```java
+> 
+> ```
+> ### output
+>> #### collectionpkg
+>> - ArrayListCompareLinkedList.java
