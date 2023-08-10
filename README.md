@@ -520,7 +520,7 @@
 >> - AnimalUtil.java
 
 > ## 2023.8.10
-> **Collection**
+> **Collection과 File I/O**
 > ```java
 > 
 > ```
