@@ -541,3 +541,5 @@
 >> - Member.java
 >> - MemberNoGen.java
 >> - MemberGen.java
+>> - Generic2.java
+>> - GenericEx3.java
