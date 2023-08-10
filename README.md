@@ -522,11 +522,13 @@
 >> - AnimalUtil.java
 
 > ## 2023.8.10
-> **[Set와 Map](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230809/Collection.md#set), [File I/O](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230810/File%20IO.md)**
+> **[Set와 Map](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230809/Collection.md#set), Generic과 [File I/O](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230810/File%20IO.md)**
 > ```java
 > // Set
 > 
 > // Map
+>
+> // Generic
 >
 > // File I/O
 > 
