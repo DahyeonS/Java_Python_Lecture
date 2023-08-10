@@ -482,9 +482,11 @@
 > **[캘린더와 DecimalFormat 클래스](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230808/%EC%9E%90%EB%B0%94%20API.md#calendar-class), [Collection](20230809/Collection.md)**
 > ```java
 > // 캘린더
->
+> Calendar today = Calendar.getInstance();
+> 
 > // DCF
->
+> DecimalFormat df = new DecimalFormat("#,###.00");
+> 
 > // Collection
 > 
 > ```
