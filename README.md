@@ -531,3 +531,4 @@
 >> - IteratorEx.java
 >> - EnumerationEx.java
 >> - ListIteratorEx.java
+>> - HashMapEx.java
