@@ -598,7 +598,8 @@
 > Map map = new HashMap();
 > 
 > // Generic
->
+> List<String> StrOnly = new ArrayList<String>();
+> 
 > // File I/O
 > 
 > ```
