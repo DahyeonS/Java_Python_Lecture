@@ -33,7 +33,8 @@ index 기반으로 연속적인 데이터가 존재
 
 **순서가 유지되지 않고 중복 불가능**
 ```java
-
+Set lotto = new HashSet(); // 순서 정렬 X
+Set lotto2 = new TreeSet(); // 순서 정렬
 ```
 #### Iterator
 
