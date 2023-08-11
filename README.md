@@ -8,63 +8,63 @@
 [page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#2023724) 
 
 2023.7.25
-
+[main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#2023725)
 [page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#2023725)
 
 2023.7.26
-
+[main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#2023726)
 [page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#2023726)
 
 2023.7.27
-
+[main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#2023727)
 [page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#2023727)
 
 2023.7.28
-
+[main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#2023728)
 [page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#2023728)
 
 2023.7.31
-
+[main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#2023731)
 [page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#2023731)
 
 2023.8.1
-
+[main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#202381)
 [page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#202381)
 
 2023.8.2
-
+[main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#202382)
 [page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#202382)
 
 2023.8.3
-
+[main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#202383)
 [page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#202383)
 
 2023.8.4
-
+[main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#202384)
 [page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#202384)
 
 2023.8.6
-
+[main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#202386)
 [page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#202386)
 
 2023.8.7
-
+[main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#202387)
 [page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#202387)
 
 2023.8.8
-
+[main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#202388)
 [page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#202388)
 
 2023.8.9
-
+[main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#202389)
 [page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#202389)
 
 2023.8.10
-
+[main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#2023810)
 [page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#2023810)
 
 2023.8.11
-
+[main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#2023811)
 [page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#2023811)
 
 > ## 2023.7.24
