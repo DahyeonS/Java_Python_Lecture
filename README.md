@@ -525,6 +525,8 @@
 > **[Set와 Map](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230809/Collection.md#set), [Generic](20230810/Generic.md)과 [File I/O](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230810/File%20IO.md)**
 > ```java
 > // Set
+> Set set = new HashSet();
+> Iterator it = list.iterator();
 > 
 > // Map
 >
