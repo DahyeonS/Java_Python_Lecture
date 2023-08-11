@@ -37,8 +37,10 @@ Set lotto = new HashSet(); // 순서 정렬 X
 Set lotto2 = new TreeSet(); // 순서 정렬
 ```
 #### Iterator
-
+![Iterator1](http://www.taeyo.net/lecture/8_Board_taezi/lecture_03/images/03_07.gif)
+![Iterator2](http://www.taeyo.net/lecture/8_Board_taezi/lecture_03/images/03_08.gif)
 ##### Enumeration
+Iterator의 구버전
 
 ##### ListIterator
 
