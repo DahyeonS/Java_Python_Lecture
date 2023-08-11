@@ -584,3 +584,4 @@
 >> - ArrayToStream.java
 >> - StreamByBulider.java
 >> - StreamByGenerator.java
+>> - StreamByIterator.java
