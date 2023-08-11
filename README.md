@@ -586,3 +586,4 @@
 >> - StreamByGenerator.java
 >> - StreamByIterator.java
 >> - RandomToStream.java
+>> - FilterStream.java
