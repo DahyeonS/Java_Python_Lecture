@@ -582,4 +582,5 @@
 >
 >> #### streampkg
 >> - ArrayToStream.java
->> - StreambyBulider.java
+>> - StreamByBulider.java
+>> - StreamByGenerator.java
