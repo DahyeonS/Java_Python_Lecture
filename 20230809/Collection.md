@@ -19,7 +19,7 @@ Vector list = new Vector();
 list.addElement(3.4); // 값 추가
 list.contains(num); // 값의 유무 호출(없으면 -1, boolean으로도 호출 가능)
 ```
-#### [ArrayList](20230802/ArrayList.md)
+#### [ArrayList](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230802/ArrayList.md)
 읽기에서 주로 사용
 
 index 기반으로 연속적인 데이터가 존재
