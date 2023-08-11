@@ -579,3 +579,6 @@
 >> - LambdaFunctionEx.java
 >> - LambdaEx.java
 >> - IteratorEx.java
+>
+>> #### streampkg
+>> - ArrayToStream.java
