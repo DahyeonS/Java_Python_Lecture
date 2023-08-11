@@ -578,6 +578,4 @@
 >> #### lambdapkg
 >> - LambdaFunctionEx.java
 >> - LambdaEx.java
->
->> #### streampkg
->> - 
+>> - IteratorEx.java
