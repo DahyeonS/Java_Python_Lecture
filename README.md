@@ -595,7 +595,8 @@
 > Iterator it = list.iterator();
 > 
 > // Map
->
+> Map map = new HashMap();
+> 
 > // Generic
 >
 > // File I/O
