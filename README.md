@@ -565,7 +565,7 @@
 >> - BufferedFileWriterTest.java
 
 > ## 2023.8.11
-> ** **
+> **객체 입출력과 람다**
 > ```java
 > 
 > ```
