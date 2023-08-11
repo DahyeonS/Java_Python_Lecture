@@ -589,3 +589,5 @@
 >> - FilterStream.java
 >> - StreamFlatMap.java
 >> - StreamMap.java
+>> - StreamOrder.java
+>> - StreamOptional.java
