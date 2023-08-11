@@ -588,3 +588,4 @@
 >> - RandomToStream.java
 >> - FilterStream.java
 >> - StreamFlatMap.java
+>> - StreamMap.java
