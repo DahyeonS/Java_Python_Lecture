@@ -39,9 +39,25 @@ Set lotto2 = new TreeSet(); // 순서 정렬
 #### Iterator
 ![Iterator1](http://www.taeyo.net/lecture/8_Board_taezi/lecture_03/images/03_07.gif)
 ![Iterator2](http://www.taeyo.net/lecture/8_Board_taezi/lecture_03/images/03_08.gif)
+
+파일 시스템/데이터베이스에 저장되어 있는 객체를 호출하는 개념
+```java
+Iterator it = null;
+it = list.iterator(); // 벡터나 리스트 등을 변환 필요
+
+it.hasNext(); // 다음 포인터(커서에) 데이터가 존재하면 true, 존재하지 않으면 false
+it.hasPrevious(); // 이전 포인터(커서에) 데이터가 존재하면 true, 존재하지 않으면 false
+it.next(); // hasNext()가 true면 데이터 호출
+it.previous(); // hasPrevious()가 true면 데이터 호출
+```
 ##### Enumeration
 Iterator의 구버전
+```java
+Enumeration e = v.elements(); // 벡터를 변환
 
+et.hasMoreElements(); // Iterator의 hasNext()와 동일한 기능
+e.nextElement(); // Iterator의 next()와 동일한 기능
+```
 ##### ListIterator
 
 ## Map 인터페이스
