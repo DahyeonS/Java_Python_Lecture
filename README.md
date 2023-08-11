@@ -565,7 +565,7 @@
 >> - BufferedFileWriterTest.java
 
 > ## 2023.8.11
-> **객체 입출력과 람다**
+> **객체 입출력과 람다와 스트림**
 > ```java
 > 
 > ```
@@ -578,3 +578,6 @@
 >> #### lambdapkg
 >> - LambdaFunctionEx.java
 >> - LambdaEx.java
+>
+>> #### streampkg
+>> - 
