@@ -46,9 +46,7 @@ Iterator it = null;
 it = list.iterator(); // 벡터나 리스트 등을 변환 필요
 
 it.hasNext(); // 다음 포인터(커서에) 데이터가 존재하면 true, 존재하지 않으면 false
-it.hasPrevious(); // 이전 포인터(커서에) 데이터가 존재하면 true, 존재하지 않으면 false
 it.next(); // hasNext()가 true면 데이터 호출
-it.previous(); // hasPrevious()가 true면 데이터 호출
 ```
 ##### Enumeration
 Iterator의 구버전
@@ -59,5 +57,13 @@ et.hasMoreElements(); // Iterator의 hasNext()와 동일한 기능
 e.nextElement(); // Iterator의 next()와 동일한 기능
 ```
 ##### ListIterator
+Iterator의 하위 인터페이스
 
+양방향 호출 가능
+```java
+ListIterator lit = list.listIterator(); // 리스트를 변환
+
+it.hasPrevious(); // 이전 포인터(커서에) 데이터가 존재하면 true, 존재하지 않으면 false
+it.previous(); // hasPrevious()가 true면 데이터 호출
+```
 ## Map 인터페이스
