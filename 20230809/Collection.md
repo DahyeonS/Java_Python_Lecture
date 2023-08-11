@@ -67,3 +67,29 @@ it.hasPrevious(); // 이전 포인터(커서에) 데이터가 존재하면 true,
 it.previous(); // hasPrevious()가 true면 데이터 호출
 ```
 ## Map 인터페이스
+{키, 값}으로 이루어져 있음 *{key, value}*
+
+파이썬의 딕셔너리와 비슷
+
+key는 순서가 없고 중복 불가
+
+*사용 클래스: HashMap, TreeMap(key의 크기 순서), LinkedHashMap(key 순서)*
+```java
+Map map = new HashMap();
+
+map.put(key,value); // {key, value} 추가
+map.get(key); // key 호출
+map.size(); // 저장 갯수 호출
+
+Set keys = map.keySet(); // key들을 Set로 호출
+Iterator it = keys.iterator(); // key들을 Iterator로 호출
+
+map.values(); // value 호출
+Collection values = map.values(); // value들을 Collection으로 호출
+Iterator it = values.iterator(); // value들을 Iterator로 호출
+
+Set entry = map.entrySet(); // {키, 값}을 Set로 호출
+// Map.Entry 형태로 변환 후 출력 가능
+m.getKey(); // key만 호출
+m.getValue(); // value만 호출
+```
