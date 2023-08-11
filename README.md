@@ -565,7 +565,7 @@
 >> - BufferedFileWriterTest.java
 
 > ## 2023.8.11
-> **객체 입출력과 [람다](20230811/람다.md)와 [스트림](20230811/스트림.md)과 GUI**
+> **객체 입출력과 [람다](20230811/람다.md)와 [스트림](20230811/스트림.md)과 [GUI](20230811/GUI.md)**
 > ```java
 > // 객체 입출력
 >
@@ -601,4 +601,4 @@
 >> - AWTEx1.java
 >> - SwingEx.java
 >> - SwingLayout.java
->> - 
+>> - SwingEx1.java
