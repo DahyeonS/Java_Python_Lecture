@@ -587,3 +587,4 @@
 >> - StreamByIterator.java
 >> - RandomToStream.java
 >> - FilterStream.java
+>> - StreamFlatMap.java
