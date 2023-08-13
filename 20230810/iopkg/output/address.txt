@@ -1,3 +1,3 @@
 세종대왕,한양,king@e.com,010
 이순신,전라,lee@e.com,011
-홍길동,율국,hong@e.com,017
+홍길동,율곡,hong@e.com,017
