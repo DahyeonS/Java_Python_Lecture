@@ -106,4 +106,4 @@ OutputStreamWriter outWriter = new OutputStreamWriter(output);
 
 - *ObjectInputStream* - 객체를 읽어올 때 역직렬화
 
-[참고]([20230811/iopkg/SerializableUser.java](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230811/iopkg/SerializableUser.java)https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230811/iopkg/SerializableUser.java)
+[참고](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230811/iopkg/SerializableUser.java)
