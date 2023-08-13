@@ -643,7 +643,8 @@
 > objectos.writeObject(beforeUser);
 > 
 > // 람다
->
+> InterfaceEx ie1 = (int x, int y) -> x + y;
+> 
 > // 스트림
 >
 > // GUI
