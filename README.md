@@ -601,7 +601,8 @@
 > List<String> StrOnly = new ArrayList<String>();
 > 
 > // File I/O
-> 
+> FileInputStream fIn = new FileInputStream(path);
+> fIn.read();
 > ```
 > ### *output*
 >> #### collectionpkg
