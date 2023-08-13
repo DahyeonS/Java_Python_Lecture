@@ -94,3 +94,16 @@ OutputStraem의 문자 버전
 OutputStreamWriter outWriter = new OutputStreamWriter(output);
 ```
 ## 객체 입출력
+*직렬화* - 객체를 파일로 변환 후 연속되는 바이트로 네트워크에 출력
+
+*역직렬화* - 직렬화된 바이트를 객체로 변환
+### Serializable 인터페이스
+메소드 없이 직렬화할 객체에 구현(구현없이 직렬화 시도 시 예외 발생)
+
+*특정 변수를 직렬화 대상에서 제외할 시 transient 사용*
+
+- *ObjectOutputStream* - 객체를 출력할 때 직렬화
+
+- *ObjectInputStream* - 객체를 읽어올 때 역직렬화
+
+[참고](20230811/iopkg/SerializableUser.java)
