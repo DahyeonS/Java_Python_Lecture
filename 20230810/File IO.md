@@ -102,8 +102,16 @@ OutputStreamWriter outWriter = new OutputStreamWriter(output);
 
 *특정 변수를 직렬화 대상에서 제외할 시 transient 사용*
 
-- *ObjectOutputStream* - 객체를 출력할 때 직렬화
-
-- *ObjectInputStream* - 객체를 읽어올 때 역직렬화
-
 [참고](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230811/iopkg/SerializableUser.java)
+#### ObjectOutputStream
+객체를 출력할 때 직렬화
+```java
+ObjectOutputStream objectos = new ObjectOutputStream(fileos); // FileOutputStream로 호출한 객체를 실행
+objectos.writeObject(beforeUser); // beforeUser를 FileOutputStream으로 지정한 경로에 파일로 저장
+```
+#### ObjectInputStream
+객체를 읽어올 때 역직렬화
+```java
+ObjectInputStream objectis = new ObjectInputStream(fileis); // FileInputStream로 호출한 객체를 실행
+objectis.readObject(); // 지정된 경로에 있는 파일을 역직렬화
+```
