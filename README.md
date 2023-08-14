@@ -67,6 +67,10 @@
 [main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#2023811)
 [page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#2023811)
 
+2023.8.14
+[main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#2023814)
+[page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#2023814)
+
 > ## 2023.7.24
 >
 > **마크다운 예시**
