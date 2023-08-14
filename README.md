@@ -688,3 +688,5 @@
 > 
 > ### *output*
 >> #### memberarray
+>> - MemberArrayData.java
+>> - MemberDTO.java
