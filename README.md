@@ -697,3 +697,4 @@
 >> - MemberServiceImpl.java
 >> - MemberDAO.java
 >> - MemberDAOImpl.java
+>> - MemberView.java
