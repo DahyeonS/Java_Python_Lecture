@@ -605,7 +605,8 @@
 > List<String> StrOnly = new ArrayList<String>();
 > 
 > // File I/O
-> FileInputStream fIn = new FileInputStream(path);
+> FileInputStream fIn = null;
+> fIn = new FileInputStream(path);
 > fIn.read();
 > ```
 > ### *output*
@@ -643,7 +644,8 @@
 > **[객체 입출력](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230810/File%20IO.md#%EA%B0%9D%EC%B2%B4-%EC%9E%85%EC%B6%9C%EB%A0%A5)과 [람다](20230811/람다.md), [스트림](20230811/스트림.md)과 [GUI](20230811/GUI.md)**
 > ```java
 > // 객체 입출력
-> ObjectOutputStream objectos = new ObjectOutputStream(fileos);
+> ObjectOutputStream objectos = null;
+> objectos = new ObjectOutputStream(fileos);
 > objectos.writeObject(beforeUser);
 > 
 > // 람다
