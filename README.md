@@ -690,3 +690,4 @@
 >> #### memberarray
 >> - MemberArrayData.java
 >> - MemberDTO.java
+>> - MemberMain.java
