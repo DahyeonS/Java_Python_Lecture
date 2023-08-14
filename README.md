@@ -678,3 +678,11 @@
 >> - SwingEx.java
 >> - SwingLayout.java
 >> - SwingEx1.java
+
+> ## 2023.8.14
+> ** **
+> ```java
+> 
+> ```
+> ### *output*
+>> #### memberarray
