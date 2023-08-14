@@ -691,3 +691,4 @@
 >> - MemberArrayData.java
 >> - MemberDTO.java
 >> - MemberMain.java
+>> - MemberService.java
