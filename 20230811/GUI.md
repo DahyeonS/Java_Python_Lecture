@@ -127,3 +127,29 @@ SwingEx app = new SwingEx();
 > }
 > ```
 ### 이벤트 핸들링
+GUI 프로그램에서 발생하는 의미 있는 신호
+
+- ActionEvent - 컴포넌트에 정의된 행위가 발생할 때
+- MouseEvent - 마우스 액션이 발생할 때
+- KeyEvent - 컴포넌트 안에서 키 입력이 발생할 때
+- ComponentEvent - 컴포넌트 이동이나 크기 변경 등이 발생할 때
+- ContainEvent - 컴포넌트 추가나 삭제 등이 발생 할 때
+```java
+// 메서드 생성
+@Override
+public void actionPerformed(ActionEvent e) {
+	Object obj = e.getSource();
+
+	if(obj == button1) index--;
+	else if(obj == button2) index++;
+
+	if(index > 2) index = 0;
+	else if(index < 0) index = 2;
+
+        button3.setText(msgs[index]);
+}
+
+// 적용
+button1.addActionListener(this);
+button2.addActionListener(this);
+```
