@@ -56,6 +56,8 @@ SwingEx app = new SwingEx();
 > 가로로 배치
 >
 > 길이가 부족하면 다음 줄에 배치
+>
+> 창 크기에 따라 버튼의 위치가 달라짐
 > ```java
 > void flowLayout() {
 > 	p1.setLayout(new FlowLayout());
@@ -63,18 +65,53 @@ SwingEx app = new SwingEx();
 > 	p1.add(button2);
 > 	p1.add(button3);
 > 	p1.add(button4);
->	p1.add(button5);
+> 	p1.add(button5);
 > }
 > ```
 > #### GridLayout
->
-> ```java
-> ```
+> 가로×세로 격자 모양 배치
 > #### BorderLayout
+> 가운데 컴포넌트 중심으로 네 방향으로 배치
 >
+> 설정한 위치(동-서-남-북-중앙)로 버튼이 할당
 > ```java
+> void borderLayout() {
+> 	p1.setLayout(new BorderLayout());
+> 	p1.add(button1, BorderLayout.NORTH);
+> 	p1.add(button2, BorderLayout.WEST);
+> 	p1.add(button3, BorderLayout.EAST);
+> 	p1.add(button4, BorderLayout.SOUTH);
+> 	p1.add(button5, BorderLayout.CENTER);
+> }
 > ```
 > #### CardLayout
+> 탭 등으로 여러 개의 레이아웃들 중 하나만 보여줌
 >
+> 특정 버튼을 누르면 레이아웃 이동
 > ```java
+> void cardLayout() {
+> 	final CardLayout CARD = new CardLayout();
+> 	setLayout(CARD);
+> 	p1.add(button1);
+> 	p1.add(button2);
+> 	p1.add(button3);
+> 	p2.add(button4);
+> 	p2.add(button5);
+> 	add("p1", p1);
+> 	add("p2", p2);
+>
+> 	button3.addActionListener(new ActionListener() {
+> 		@Override
+> 		public void actionPerformed(ActionEvent e) {
+> 			CARD.show(getContentPane(), "p2");
+> 		}
+> 	}); // 버튼3을 누르면 레이아웃 이동
+>
+> 	button5.addActionListener(new ActionListener() {
+> 		@Override
+> 		public void actionPerformed(ActionEvent e) {
+> 			CARD.show(getContentPane(), "p1");
+> 		}
+> 	}); // 버튼 5를 누르면 레아아웃 이동
+> }
 > ```
