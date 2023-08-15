@@ -49,3 +49,32 @@ public SwingEx() {
 // 해당 메서드를 메인 메서드에 적용
 SwingEx app = new SwingEx();
 ```
+> ### *레이아웃*
+> #### FlowLayout
+> *기본 레이아웃*
+>
+> 가로로 배치
+>
+> 길이가 부족하면 다음 줄에 배치
+> ```java
+> void flowLayout() {
+> 	p1.setLayout(new FlowLayout());
+> 	p1.add(button1);
+> 	p1.add(button2);
+> 	p1.add(button3);
+> 	p1.add(button4);
+>	p1.add(button5);
+> }
+> ```
+> #### GridLayout
+>
+> ```java
+> ```
+> #### BorderLayout
+>
+> ```java
+> ```
+> #### CardLayout
+>
+> ```java
+> ```
