@@ -115,3 +115,14 @@ SwingEx app = new SwingEx();
 > 	}); // 버튼 5를 누르면 레아아웃 이동
 > }
 > ```
+> ```java
+> // 적용
+> public SwingLayout() {
+> 	super("Layout Showcase");
+> 	getContentPane().add(p1);
+> 	cardLayout();
+> 	setDefaultCloseOperation(EXIT_ON_CLOSE);
+> 	setSize(300, 200);
+> 	setVisible(true);
+> }
+> ```
