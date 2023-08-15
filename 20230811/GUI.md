@@ -35,5 +35,17 @@ class WindowCloseHandler extends WindowAdapter {
 ## Swing
 좀 더 다양한 컴포넌트 등을 추가한 새로운 툴킷
 ```java
+// 메서드 생성
+public SwingEx() {
+	super("Hello World"); // 프레임(창) 이름 설정
+	getContentPane().setLayout(new FlowLayout()); // 레이아웃 적용
+	JLabel label = new JLabel("Welcome to Swing!!"); // "Welcome to Swing" 문자열을 레이블로 생성
+	getContentPane().add(label); // 해당 레이블을 프레임 안에 출력
+	setDefaultCloseOperation(EXIT_ON_CLOSE); // 창닫기 실행
+	setSize(500, 500); // 프레임 사이즈 설정
+	setVisible(true); // 화면에 구현
+}
 
+// 해당 메서드를 메인 메서드에 적용
+SwingEx app = new SwingEx();
 ```
