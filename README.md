@@ -652,6 +652,8 @@
 > InterfaceEx ie1 = (int x, int y) -> x + y;
 > 
 > // 스트림
+> Stream<String> stream1 =  Arrays.stream(arr);
+> stream1.forEach(s -> System.out.print(s + " "));
 >
 > // GUI
 > 
