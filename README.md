@@ -71,6 +71,10 @@
 [main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#2023814)
 [page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#2023814)
 
+2023.8.16
+[main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#2023816)
+[page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#2023816)
+
 > ## 2023.7.24
 >
 > **마크다운 예시**
@@ -693,6 +697,20 @@
 > ### *output*
 >> #### memberarray
 >> - MemberArrayData.java
+>> - MemberDTO.java
+>> - MemberMain.java
+>> - MemberService.java
+>> - MemberServiceImpl.java
+>> - MemberDAO.java
+>> - MemberDAOImpl.java
+>> - MemberView.java
+
+> ## 2023.8.16
+> ** **
+> 
+> ### *output*
+>> #### memberarraylist
+>> - MemberArrayListData.java
 >> - MemberDTO.java
 >> - MemberMain.java
 >> - MemberService.java
