@@ -706,7 +706,7 @@
 >> - MemberView.java
 
 > ## 2023.8.16
-> ** **
+> **회원관리(ArrayList, File)**
 > 
 > ### *output*
 >> #### memberarraylist
