@@ -720,7 +720,6 @@
 >> - MemberView.java
 >
 >> #### memberfile
->> - MemberFile.java
 >> - MemberDTO.java
 >> - MemberMain.java
 >> - MemberService.java
