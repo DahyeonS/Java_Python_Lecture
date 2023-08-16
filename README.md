@@ -1,7 +1,7 @@
 # Java_Python_Lecture
 자바 & 파이썬 강의 수강 노트
 
-***Index***
+***목차***
 
 2023.7.24
 [main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#2023724)
