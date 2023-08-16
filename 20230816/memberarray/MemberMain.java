@@ -19,12 +19,10 @@ public class MemberMain {
 			System.out.println("7. 회원 이름으로 모두 검색");
 			System.out.println("9. 끝내기");
 			
-//			String command = sc.next();
 			int command = sc.nextInt();
 			MemberService service = new MemberServiceImpl();
 			
 //			Start
-//			switch (Integer.parseInt(command)) {
 			switch (command) {
 				case 1 :
 					service.memberInsert(sc);
@@ -66,16 +64,7 @@ public class MemberMain {
 					break;
 			}
 //			End
-//			if (command.equals("9")) break;
 			if (command == 9) break;
-			/*
-			if (command.equals("1")) System.out.println("1. 회원 가입");
-			else if (command.equals("2")) System.out.println("2. 회원 목록 보기");
-			else if (command.equals("3")) System.out.println("3. 회원 정보 수정");
-			else if (command.equals("4")) System.out.println("4. 회원 삭제");
-			else if (command.equals("9")) break;
-			 */
-			
 		}
 		sc.close();
 	}
