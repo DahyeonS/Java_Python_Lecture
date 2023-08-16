@@ -1,6 +1,5 @@
 package memberarray;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class MemberServiceImpl implements MemberService {
@@ -13,6 +12,14 @@ public class MemberServiceImpl implements MemberService {
 	@Override
 	public MemberDTO[] memberList() {
 		return this.dao.memberList();
+	}
+	
+	@Override
+	public MemberDTO[] memberList(Scanner sc) {
+		System.out.println("7. 회원 이름으로 모두 검색");
+		System.out.println("검색할 이름 입력: ");
+		String name = sc.next();
+		return this.dao.memberList(name);
 	}
 
 	@Override
@@ -81,18 +88,21 @@ public class MemberServiceImpl implements MemberService {
 	}
 
 	@Override
-	public void memberSearch(Scanner sc) {
-		System.out.println("5. 회원 이름으로 검색");
+	public int memberOne(Scanner sc) {
+		System.out.println("5. 회원 이름으로 검색(index)");
 		System.out.print("검색할 이름 입력 > ");
 		String name = sc.next();
 		int index = dao.memberNameIndex(name);
-		if (index >= 0) {
-			MemberDTO[] m = MemberArrayData.members;
-			System.out.printf("ID: %s, Password: %s, Name: %s, Age: %S \n", m[index].getId(), m[index].getPw(), m[index].getName(), m[index].getAge());
-		} else {
-			System.out.println("Member Not Found!!");
-			System.out.println("존재하지 않는 이름입니다.");
-		}
+		return index;
+	}
+
+	@Override
+	public MemberDTO memberDTOOne(Scanner sc) {
+		System.out.println("6. 회원 이름으로 검색(DTO)");
+		System.out.print("검색할 이름 입력 > ");
+		String name = sc.next();
+		MemberDTO member = dao.memberNameDTO(name);
+		return member;
 	}
 
 }

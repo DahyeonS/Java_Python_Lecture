@@ -23,8 +23,46 @@ public class MemberDAOImpl implements MemberDAO {
 	}
 
 	@Override
+	public MemberDTO memberNameDTO(String name) {
+		System.out.println(name);
+		MemberDTO[] m = MemberArrayData.members;
+		/*
+		for (int i=0; i<m.length; i++) {
+			if (name.equals(m[i].getName())) {
+				return m[i];
+			}
+		}
+		*/
+		for (MemberDTO dto : m) {
+			if (name.equals(dto.getName())) return dto;
+		}
+		return null;
+	}
+	
+	@Override
 	public MemberDTO[] memberList() {
 		return MemberArrayData.members;
+	}
+	
+	@Override
+	public MemberDTO[] memberList(String name) {
+//		1. count
+		int count = 0;
+		MemberDTO[] m = MemberArrayData.members;
+		for (MemberDTO dto : m) {
+			if (name.equals(dto.getName())) count++;
+		}
+//		2. DTO[count]
+		MemberDTO[] rs = new MemberDTO[count];
+		count = 0;
+//		3. 배열 복사
+		for (MemberDTO dto : m) {
+			if (name.equals(dto.getName())) {
+				rs[count] = dto;
+				count++;
+			}
+		}
+		return rs;
 	}
 
 	@Override

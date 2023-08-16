@@ -7,11 +7,30 @@ public class MemberView {
 		System.out.println("현재 회원 수: " + members.length);
 		
 		for (MemberDTO m : members) {
-			System.out.print("ID: " + m.getId() + " / ");
-			System.out.print("Password: " + m.getPw() + " / ");
-			System.out.print("name: " + m.getName() + " / ");
-			System.out.print("Age: " + m.getAge() + "\n");
-			System.out.println("=======================================================");
+//			System.out.print("ID: " + m.getId() + " / ");
+//			System.out.print("Password: " + m.getPw() + " / ");
+//			System.out.print("name: " + m.getName() + " / ");
+//			System.out.print("Age: " + m.getAge() + "\n");
+//			System.out.println("=======================================================");
+			memberPrint(m);
 		}
+	}
+
+	public static void memberPrint(int index) {
+		MemberDTO m = MemberArrayData.members[index];
+//		System.out.print("ID: " + m.getId() + " / ");
+//		System.out.print("Password: " + m.getPw() + " / ");
+//		System.out.print("name: " + m.getName() + " / ");
+//		System.out.print("Age: " + m.getAge() + "\n");
+//		System.out.println("=======================================================");
+		memberPrint(m);
+	}
+	
+	public static void memberPrint(MemberDTO m) {
+		System.out.print("ID: " + m.getId() + " / ");
+		System.out.print("Password: " + m.getPw() + " / ");
+		System.out.print("name: " + m.getName() + " / ");
+		System.out.print("Age: " + m.getAge() + "\n");
+		System.out.println("=======================================================");
 	}
 }

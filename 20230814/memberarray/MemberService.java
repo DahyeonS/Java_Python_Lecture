@@ -6,6 +6,11 @@ interface MemberService {
 	
 //	Member 목록 R
 	MemberDTO[] memberList();
+	MemberDTO[] memberList(Scanner sc);
+//	Member 이름 검색 1명 R
+	int memberOne(Scanner sc);
+//	Member 이름 검색 R
+	MemberDTO memberDTOOne(Scanner sc);
 //	Member 입력 C
 	void memberInsert(Scanner sc);
 //	Member 수정 U
@@ -13,6 +18,4 @@ interface MemberService {
 //	Member 삭제 D
 	void memberDelete(Scanner sc);
 	
-//	Member 검색
-	void memberSearch(Scanner sc);
 }
