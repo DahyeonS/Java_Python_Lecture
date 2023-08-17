@@ -75,6 +75,10 @@
 [main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#2023816)
 [page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#2023816)
 
+2023.8.17
+[main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#2023817)
+[page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#2023817)
+
 > ## 2023.7.24
 >
 > **마크다운 예시**
@@ -727,3 +731,8 @@
 >> - MemberDAO.java
 >> - MemberDAOImpl.java
 >> - MemberView.java
+
+> ## 2023.8.17
+> **데이터베이스**
+> 
+> ### *output*
