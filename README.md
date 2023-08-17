@@ -735,5 +735,17 @@
 > ## 2023.8.17
 > **[데이터베이스](20230817/데이터베이스.md)**
 > ```sql
+> -- DDL
+> CREATE TABLE member (
+> id TEXT,
+> pw TEXT,
+> name TEXT,
+> age INTEGER
+> );
+> DROP TABLE member;
 >
+> -- DML
+> INSERT INTO member(id, pw, name, age) VALUES ('11', '11', '11', 11);
+> SELECT * FROM member;
+> DELETE FROM member;
 > ```
