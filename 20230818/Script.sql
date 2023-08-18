@@ -102,4 +102,58 @@ SELECT name, height, AVG(height) OVER () AS mean FROM person;
 
 
 -- 표준편차
-SELECT name, height, AVG(height) OVER () AS mean, (height - AVG(height) OVER ()) 편차 FROM person;
+SELECT (height - AVG(height) OVER ()) 편차 FROM person;
+SELECT SUM('편차') FROM (SELECT name, height, AVG(height) OVER () AS mean, (height - AVG(height) OVER ()) 편차 FROM person);
+
+-- JOIN
+CREATE TABLE 노래 (
+	id INTEGER NOT NULL PRIMARY KEY,
+	제목 TEXT NOT NULL
+);
+
+CREATE TABLE 음반 (
+	id INTEGER NOT NULL PRIMARY KEY,
+	제목 TEXT NOT NULL,
+	연도 INTEGER
+);
+
+CREATE TABLE 수록곡 (
+	음반ID INTEGER NOT NULL,
+	노래ID INTEGER NOT NULL
+);
+
+INSERT INTO 노래 VALUES
+(1, '갸우뚱'),
+(2, 'Shuppy Shuppy'),
+(3, 'Control'),
+(4, '영러브'),
+(5, '한번만 안아줘'),
+(6, '반짝반짝'),
+(7, '기대해'),
+(8, 'I Don''t Mind'),
+(9, 'Easy go'),
+(10, '여자대통령');
+
+INSERT INTO 음반 VALUES
+(1, 'Girl''s Day Party #1', 2010),
+(2, 'Everyday', 2011),
+(3, 'Expectation', 2013),
+(4, '여자대통령', 2013);
+
+INSERT INTO 수록곡 VALUES 
+(1, 1),
+(1, 2),
+(1, 3),
+(2, 4),
+(2, 5),
+(2, 6),  -- Everyday - 반짝반짝
+(3, 7),
+(3, 8),
+(3, 9),
+(3, 6),  -- Expectation - 반짝반짝
+(3, 5),
+(4, 10);
+
+SELECT * FROM 음반;
+SELECT * FROM 노래;
+SELECT s.제목, 연도, 음반ID FROM 노래 s, 음반 m, 수록곡 n;
