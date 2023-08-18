@@ -43,12 +43,16 @@ SELECT name AS 이름, birthday 생일 FROM person; -- NAME 칼럼을 '이름'�
 
 #### ROUND
 ```SQL
-SELECT name, height, weight, ROUND(weight / (height * height * 0.0001), 1) bmi FROM person; -- 소수점 1자리까지 출력(자릿수를 정하지 않을 시 정수만 출력)
+SELECT name, height, weight,
+ROUND(weight / (height * height * 0.0001), 1) bmi FROM person; -- 소수점 1자리까지 출력(자릿수를 정하지 않을 시 정수만 출력)
 ```
 
 #### VIEW
 ```SQL
-CREATE VIEW brithdayview AS SELECT name, birthday bdate, SUBSTR(birthday, 1, 4) yyyy, SUBSTR(birthday, 6, 2) mm, SUBSTR(birthday, 9, 2) dd FROM person; -- BIRTHDAYVIEW라는 이름의 VIEW 생성
+CREATE VIEW brithdayview
+AS SELECT name, birthday bdate, SUBSTR(birthday, 1, 4) yyyy, SUBSTR(birthday, 6, 2) mm, SUBSTR(birthday, 9, 2) dd
+FROM person; -- BIRTHDAYVIEW라는 이름의 VIEW 생성
+
 SELECT * FROM brithdayview; -- VIEW 출력
 SELECT * FROM brithdayview WHERE yyyy > '1992'; -- 조건을 달아서 VIEW 출력
 ```
@@ -79,4 +83,17 @@ SELECT CURRENT_TIMESTAMP;
 ```SQL
 SELECT COUNT(id) FROM person; -- ID의 개수를 집계하여 출력(NULL 값은 집계되지 않음)
 SELECT MAX(height) FROM person; -- HEIGHT의 최대값 출력
+SELECT AVG(height) FROM person; -- NULL값을 제외한 HEIGHT의 평균
+```
+
+#### OVER
+SQLite 3.25 버전 이상에서만 사용 가능
+```SQL
+SELECT name, height, AVG(height) OVER () AS mean FROM person; -- 모든 행에 HEIGHT 평균값을 출력
+```
+
+#### JOIN
+```SQL
+SELECT 음반.제목, 노래.제목, 연도 FROM 수록곡
+INNER JOIN 음반 ON 수록곡.음반ID = 음반.id INNER JOIN 노래 ON 수록곡.노래ID = 노래.id; -- 각 테이블의 같은 값들끼리 묶어서 출력
 ```
