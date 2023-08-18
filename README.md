@@ -79,7 +79,7 @@
 [main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#2023817)
 [page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#2023817)
 
-2023.8.17
+2023.8.18
 [main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#2023818)
 [page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#2023818)
 
