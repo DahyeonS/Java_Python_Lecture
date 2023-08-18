@@ -4,6 +4,8 @@ SELECT * FROM person WHERE id = 5;
 SELECT * FROM person WHERE name = '박혜리';
 
 SELECT * FROM person WHERE birthday IS NULL;
+
+-- UPDATE
 UPDATE person SET name = '김아영' WHERE id = 5;
 UPDATE person SET birthday = '1986-06-09' WHERE id = 3;
 UPDATE person SET birthday = '1992-06-09' WHERE id = 4;
@@ -27,7 +29,7 @@ INSERT INTO pets VALUES (3, 'Ripley', 'Cat');
 INSERT INTO pets VALUES (4, 'Tom', 'Cat');
 SELECT * FROM pets;
 
--- 칼럼 추가
+-- 칼럼 추가 / 변경 / 삭제
 ALTER TABLE person ADD COLUMN new2 INTEGER NOT NULL DEFAULT 0; -- 칼럼 추가
 ALTER TABLE person DROP new2;
 ALTER TABLE person RENAME COLUMN new to height;
@@ -156,4 +158,4 @@ INSERT INTO 수록곡 VALUES
 
 SELECT * FROM 음반;
 SELECT * FROM 노래;
-SELECT s.제목, 연도, 음반ID FROM 노래 s, 음반 m, 수록곡 n;
+SELECT 음반.제목, 노래.제목, 연도 FROM 수록곡 INNER JOIN 음반 ON 수록곡.음반ID = 음반.id INNER JOIN 노래 ON 수록곡.노래ID = 노래.id;
