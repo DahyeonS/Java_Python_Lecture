@@ -757,6 +757,7 @@
 > ## 2023.8.18
 > **[SQL](20230818/SQL.md)**
 > ```sql
+> ALTER TABLE person ADD COLUMN new2 INTEGER NOT NULL DEFAULT 0;
 > ```
 > ### *output*
 >> - memberdb.sqbpro
