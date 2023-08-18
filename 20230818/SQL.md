@@ -35,3 +35,48 @@ ALTER TABLE person ADD COLUMN new2 INTEGER NOT NULL DEFAULT 0; -- PERSON 테이�
 ALTER TABLE person DROP new2; -- PERSON 테이블에서 NEW2 칼럼 삭제
 ALTER TABLE person RENAME COLUMN new to height; -- PERSON 테이블에서 NEW2 칼럼명을 HEIGHT로 변경
 ```
+
+#### AS
+```SQL
+SELECT name AS 이름, birthday 생일 FROM person; -- NAME 칼럼을 '이름'이라는 명칭으로 출력(출력값일 뿐 칼럼명이 달라지지 않음)
+```
+
+#### ROUND
+```SQL
+SELECT name, height, weight, ROUND(weight / (height * height * 0.0001), 1) bmi FROM person; -- 소수점 1자리까지 출력(자릿수를 정하지 않을 시 정수만 출력)
+```
+
+#### VIEW
+```SQL
+CREATE VIEW brithdayview AS SELECT name, birthday bdate, SUBSTR(birthday, 1, 4) yyyy, SUBSTR(birthday, 6, 2) mm, SUBSTR(birthday, 9, 2) dd FROM person; -- BIRTHDAYVIEW라는 이름의 VIEW 생성
+SELECT * FROM brithdayview; -- VIEW 출력
+SELECT * FROM brithdayview WHERE yyyy > '1992'; -- 조건을 달아서 VIEW 출력
+```
+
+#### CASE
+```SQL
+SELECT name, bdate, mm,
+CASE
+	WHEN mm = '01' THEN 'Jan.'
+	WHEN mm = '02' THEN 'Feb.'
+	WHEN mm = '03' THEN 'Mar.'
+	WHEN mm = '06' THEN 'Jun.'
+END as month
+FROM brithdayview; -- 조건에 따라 값을 다르게 출력
+```
+
+#### 날짜
+```SQL
+SELECT STRFTIME('%Y-%m-%d %H %M %S', 'now', 'localtime') as 'yyyy-mm-dd'; -- 'now' 현재 시간, 'localtime' 현지 시간 기준(GMT+9)
+
+-- 시스템 시간
+SELECT CURRENT_DATE;
+SELECT CURRENT_TIME;
+SELECT CURRENT_TIMESTAMP;
+```
+
+#### 집계함수
+```SQL
+SELECT COUNT(id) FROM person; -- ID의 개수를 집계하여 출력(NULL 값은 집계되지 않음)
+SELECT MAX(height) FROM person; -- HEIGHT의 최대값 출력
+```
