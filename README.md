@@ -749,3 +749,10 @@
 > SELECT * FROM member;
 > DELETE FROM member;
 > ```
+
+> ## 2023.8.18
+> **SQL**
+> ```sql
+> ```
+> ### *output*
+> 
