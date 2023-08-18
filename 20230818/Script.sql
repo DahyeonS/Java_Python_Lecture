@@ -50,3 +50,6 @@ UPDATE person SET weight = 46 WHERE id = 5;
 
 SELECT name, height, weight, ROUND(weight / (height * height * 0.0001), 1) bmi FROM person;
 
+CREATE VIEW brithdayview AS SELECT name, birthday bdate,
+SUBSTR(birthday, 1, 4), SUBSTR(birthday, 6, 2), SUBSTR(birthday, 9, 2) FROM person;
+SELECT * FROM brithdayview;
