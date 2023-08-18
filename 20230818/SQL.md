@@ -22,3 +22,16 @@ SELECT * FROM person WHERE name LIKE '%혜리'; -- 이름이 '혜리'로 끝나�
 SELECT * FROM person WHERE name LIKE '혜리%'; -- 이름이 '혜리'로 시작하는 데이터 전체
 SELECT * FROM person WHERE name LIKE '%혜리%'; -- 이름에 '혜리'가 포함된 데이터 전체
 ```
+
+#### INSERT
+```SQL
+INSERT INTO pets VALUES (1, 'Dr.Harris', 'Rabbit'); -- PETS 테이블에 데이터 추가
+```
+
+#### ALTER TABLE
+```SQL
+ALTER TABLE person ADD COLUMN new; -- PERSON 테이블에 NEW 칼럼 추가
+ALTER TABLE person ADD COLUMN new2 INTEGER NOT NULL DEFAULT 0; -- PERSON 테이블에 디폴트 값이 0이고 빈 값을 허용하지 않는 NEW2 칼럼 추가
+ALTER TABLE person DROP new2; -- PERSON 테이블에서 NEW2 칼럼 삭제
+ALTER TABLE person RENAME COLUMN new to height; -- PERSON 테이블에서 NEW2 칼럼명을 HEIGHT로 변경
+```
