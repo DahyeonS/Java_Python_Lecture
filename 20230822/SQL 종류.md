@@ -1,5 +1,5 @@
 # SQL 종류
-## SQlite
+## SQLite
 ```SQL
 SELECT * FROM bird_tracking_devices WHERE ROWID = 1;
 ```
