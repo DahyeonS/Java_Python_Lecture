@@ -771,7 +771,8 @@
 > ## 2023.8.21
 > **MSSQL**
 > ```sql
->  
+> SELECT TOP 3 * FROM Products;
 > ```
 > ### *output*
 >> - Script-2.sql
+>> - 상권 분석.sql
