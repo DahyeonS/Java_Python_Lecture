@@ -5,5 +5,5 @@
 ```
 ## MSSQL
 ```SQL
-
+SELECT TOP 3 * FROM Products;
 ```
