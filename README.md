@@ -83,6 +83,10 @@
 [main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#2023818)
 [page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#2023818)
 
+2023.8.21
+[main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#2023821)
+[page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#2023821)
+
 > ## 2023.7.24
 >
 > **마크다운 예시**
@@ -763,3 +767,11 @@
 >> - memberdb.sqbpro
 >> - Script.sql
 >> - Script-1.sql
+
+> ## 2023.8.21
+> ** **
+> ```sql
+>  
+> ```
+> ### *output*
+>> - 
