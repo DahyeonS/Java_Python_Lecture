@@ -70,6 +70,7 @@ FROM brithdayview; -- 조건에 따라 값을 다르게 출력
 ```
 
 #### 날짜
+SQLite 기준
 ```SQL
 SELECT STRFTIME('%Y-%m-%d %H %M %S', 'now', 'localtime') as 'yyyy-mm-dd'; -- 'now' 현재 시간, 'localtime' 현지 시간 기준(GMT+9)
 
