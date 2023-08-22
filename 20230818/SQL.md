@@ -101,9 +101,13 @@ INNER JOIN 음반 ON 수록곡.음반ID = 음반.id INNER JOIN 노래 ON 수록�
 ```
 ##### LEFT OUTER JOIN
 ```SQL
-
+SELECT * FROM payment p LEFT JOIN customer c ON c.customer_id = p.customer_id;
 ```
 ##### RIGHT OUTER JOIN
+```SQL
+SELECT * FROM customer c RIGHT JOIN payment p ON c.customer_id = p.customer_id ORDER BY c.customer_id;
+```
+##### SELF JOIN
 ```SQL
 
 ```
