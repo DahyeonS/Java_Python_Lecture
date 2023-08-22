@@ -19,8 +19,12 @@ bcolor varchar,
 fcolor varchar
 );
 
-select * from film order by film_id limit 10;
-select * from film order by film_id limit 10 offset 10;
+select * from film order by title fetch first row only;
+```
+## MySQL
+```SQL
+select * from film order by film_id limit 10; -- PostgreSQL도 가능
+select * from film order by film_id limit 10 offset 10; -- PostgreSQL도 가능
 ```
 ## Oracle
 ```SQL
