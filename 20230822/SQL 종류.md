@@ -10,7 +10,13 @@ SELECT TOP 3 * FROM Products;
 ## PostgreSQL
 - serial - int의 자동증가
 ```SQL
+create table t1 (
+id serial not null primary key,
+bcolor varchar,
+fcolor varchar
+);
 
+select * from film order by film_id limit 10;
 ```
 ## Oracle
 ```SQL
