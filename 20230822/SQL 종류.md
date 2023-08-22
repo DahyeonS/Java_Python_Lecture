@@ -20,6 +20,8 @@ fcolor varchar
 );
 
 select * from film order by title fetch first row only;
+
+select * from rental where cast(return_date as date) = '2005-05-27';
 ```
 ## MySQL
 ```SQL
