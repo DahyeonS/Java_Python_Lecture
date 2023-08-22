@@ -783,9 +783,9 @@
 >> - 조류 GPS.sql
 
 > ## 2023.8.22
-> ** **
+> **PostgreSQL**
 > ```sql
 > 
 > ```
 > ### *output*
->> - 
+>> - Script-3.sql
