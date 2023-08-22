@@ -783,7 +783,7 @@
 >> - 조류 GPS.sql
 
 > ## 2023.8.22
-> **PostgreSQL**
+> **[PostgreSQL](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230822/SQL%20%EC%A2%85%EB%A5%98.md#postgresql)**
 > ```sql
 > 
 > ```
