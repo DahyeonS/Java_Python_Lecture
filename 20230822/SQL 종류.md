@@ -23,7 +23,7 @@ select * from film order by title fetch first row only;
 
 select * from rental where cast(return_date as date) = '2005-05-27';
 
-select * from (select * from customer) a; // 서브 쿼리로 조인 시 별칭 필요
+select * from (select * from customer) a; -- 서브 쿼리로 조인 시 별칭 필요
 ```
 ## MySQL
 ```SQL
