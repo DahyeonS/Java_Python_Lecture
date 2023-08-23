@@ -795,7 +795,7 @@
 >> - Script-3.sql
 
 > ## 2023.8.23
-> **[서브쿼리]()**
+> **[서브쿼리](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230818/SQL.md#subquery)**
 > ```sql
 > 
 > ```
