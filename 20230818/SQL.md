@@ -122,9 +122,10 @@ SELECT staff_id, COUNT(payment_id) FROM payment p GROUP BY staff_id;
 SELECT brand, segment, SUM(quantity) FROM sales GROUP BY GROUPING SETS ((brand, segment), (brand), (segment), ());
 ```
 
-#### ROLL UP
+#### ROLLUP
+그룹 별 합계
 ```SQL
-
+SELECT brand, segment, SUM(quantity) FROM sales GROUP BY ROLLUP (brand, segment) ORDER BY brand, segment;
 ```
 
 #### CUBE
