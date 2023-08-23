@@ -118,16 +118,19 @@ SELECT * FROM film f1 INNER JOIN film f2 ON f1.film_id <> f2.film_id WHERE f1.le
 ```
 
 #### UNION
+합집합
 ```SQL
 
 ```
 
 #### INTERSECT
+교집합
 ```SQL
 
 ```
 
 #### EXCEPT
+차집합
 ```SQL
 
 ```
