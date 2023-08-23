@@ -789,7 +789,7 @@
 > ## 2023.8.22
 > **[PostgreSQL](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230822/SQL%20%EC%A2%85%EB%A5%98.md#postgresql)**
 > ```sql
-> select * from film order by film_id limit 10;
+> select * from film order by title fetch first row only;
 > ```
 > ### *output*
 >> - Script-3.sql
@@ -797,7 +797,7 @@
 > ## 2023.8.22
 > **[MySQL](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230822/SQL%20%EC%A2%85%EB%A5%98.md#mysql)**
 > ```sql
-> 
+> select * from film order by film_id limit 10;
 > ```
 > ### *output*
 >> - 
