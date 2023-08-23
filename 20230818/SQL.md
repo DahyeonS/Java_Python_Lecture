@@ -114,7 +114,12 @@ SELECT * FROM film f1 INNER JOIN film f2 ON f1.film_id <> f2.film_id WHERE f1.le
 
 #### GROUP BY
 ```SQL
+select staff_id, count(payment_id) from payment p group by staff_id;
+```
 
+#### GROUPING SET
+```SQL
+select brand, segment, sum(quantity) from sales group by grouping sets ((brand, segment), (brand), (segment), ());
 ```
 
 #### UNION
