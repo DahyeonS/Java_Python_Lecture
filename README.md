@@ -91,6 +91,10 @@
 [main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#2023822)
 [page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#2023822)
 
+2023.8.23
+[main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#2023823)
+[page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#2023823)
+
 > ## 2023.7.24
 >
 > **마크다운 예시**
@@ -789,3 +793,11 @@
 > ```
 > ### *output*
 >> - Script-3.sql
+
+> ## 2023.8.22
+> **[MySQL](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230822/SQL%20%EC%A2%85%EB%A5%98.md#mysql)**
+> ```sql
+> 
+> ```
+> ### *output*
+>> - 
