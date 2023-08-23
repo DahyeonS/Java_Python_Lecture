@@ -122,6 +122,56 @@ SELECT staff_id, COUNT(payment_id) FROM payment p GROUP BY staff_id;
 SELECT brand, segment, SUM(quantity) FROM sales GROUP BY GROUPING SETS ((brand, segment), (brand), (segment), ());
 ```
 
+#### ROLL UP
+```SQL
+
+```
+
+#### CUBE
+```SQL
+
+```
+
+#### OVER
+```SQL
+
+```
+
+#### ROW_NUMBER
+```SQL
+
+```
+
+#### RANK
+```SQL
+
+```
+
+#### DENSE_RANK
+```SQL
+
+```
+
+#### FIRST_VALUE
+```SQL
+
+```
+
+#### LAST_VALUE
+```SQL
+
+```
+
+#### LAG
+```SQL
+
+```
+
+#### LEAD
+```SQL
+
+```
+
 #### UNION
 합집합
 ```SQL
@@ -141,6 +191,21 @@ SELECT brand, segment, SUM(quantity) FROM sales GROUP BY GROUPING SETS ((brand, 
 ```
 
 #### SUBQUERY
+```SQL
+
+```
+
+#### ANY
+```SQL
+
+```
+
+#### ALL
+```SQL
+
+```
+
+#### EXISTS
 ```SQL
 
 ```
