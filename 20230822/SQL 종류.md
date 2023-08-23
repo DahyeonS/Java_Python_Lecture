@@ -10,7 +10,7 @@ SELECT CURRENT_TIMESTAMP;
 ```SQL
 SELECT TOP 3 * FROM Products;
 
-select * from rental where cast(return_date as date) = '2005-05-27';
+select * from rental where cast(return_date as date) = '2005-05-27'; -- PostgreSQL도 가능
 ```
 ## PostgreSQL
 - serial - int의 자동증가
