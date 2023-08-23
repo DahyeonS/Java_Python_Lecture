@@ -112,6 +112,11 @@ SELECT * FROM customer c RIGHT JOIN payment p ON c.customer_id = p.customer_id O
 SELECT * FROM film f1 INNER JOIN film f2 ON f1.film_id <> f2.film_id WHERE f1.length = f2.length;
 ```
 
+#### UNION
+```SQL
+
+```
+
 #### GROUP BY
 ```SQL
 
