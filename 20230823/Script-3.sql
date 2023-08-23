@@ -291,17 +291,22 @@ select group_name, avg(price) from product p inner join product_group pg on p.gr
 select product_name, price, group_name, avg(price) over(partition by pg.group_name) from product p inner join product_group pg on p.group_id = pg.group_id;
 
 -- row_number
-select a.product_name, b.group_name, a.price, row_number() over (partition by b.group_name order by a.price desc) from product a inner join product_group b on a.group_id = b.group_id; -- 그룹명 기준 가격 순위 출력
+select a.product_name, b.group_name, a.price,
+row_number() over (partition by b.group_name order by a.price desc) from product a inner join product_group b on a.group_id = b.group_id; -- 그룹명 기준 가격 순위 출력
 
 -- rank
-select a.product_name, b.group_name, a.price, rank() over (partition by b.group_name order by a.price desc) from product a inner join product_group b on a.group_id = b.group_id; -- 그룹명 기준 가격 순위 출력(중복 허용)
+select a.product_name, b.group_name, a.price,
+rank() over (partition by b.group_name order by a.price desc) from product a inner join product_group b on a.group_id = b.group_id; -- 그룹명 기준 가격 순위 출력(중복 허용)
 
 -- dense_rank
-select a.product_name, b.group_name, a.price, dense_rank() over (partition by b.group_name order by a.price desc) from product a inner join product_group b on a.group_id = b.group_id; -- 그룹명 기준 가격 순위 출력(중복 허용, 건너뛰기 없음)
+select a.product_name, b.group_name, a.price,
+dense_rank() over (partition by b.group_name order by a.price desc) from product a inner join product_group b on a.group_id = b.group_id; -- 그룹명 기준 가격 순위 출력(중복 허용, 건너뛰기 없음)
 
 -- first_value
-select a.product_name, b.group_name, a.price, first_value(price) over (partition by b.group_name order by a.price desc) from product a inner join product_group b on a.group_id = b.group_id; -- 그룹명 기준 가격의 첫번째 값 출력
-select a.product_name, b.group_name, a.price, first_value(price) over (partition by b.group_name) from product a inner join product_group b on a.group_id = b.group_id; -- 그룹명 기준 가격의 첫번째 값 출력
+select a.product_name, b.group_name, a.price,
+first_value(price) over (partition by b.group_name order by a.price desc) from product a inner join product_group b on a.group_id = b.group_id; -- 그룹명 기준 가격의 첫번째 값 출력
+select a.product_name, b.group_name, a.price,
+first_value(price) over (partition by b.group_name) from product a inner join product_group b on a.group_id = b.group_id; -- 그룹명 기준 가격의 첫번째 값 출력
 
 -- last_value
 select a.product_name, b.group_name, a.price,
@@ -309,15 +314,24 @@ last_value(price) over (partition by b.group_name order by a.price range between
 from product a inner join product_group b on a.group_id = b.group_id; -- 그룹명 기준 가격의 마지막 값 출력
 
 -- lag
-select a.product_name, b.group_name, a.price, lag(price, 1) over (partition by b.group_name order by a.price) as prev_price, price - lag(price, 1) over (partition by group_name order by price) as cur_pre_diff from product a inner join product_group b on a.group_id = b.group_id;
+select a.product_name, b.group_name, a.price,
+lag(price, 1) over (partition by b.group_name order by a.price) as prev_price, price - lag(price, 1) over (partition by group_name order by price) as cur_pre_diff
+from product a inner join product_group b on a.group_id = b.group_id;
 
 -- lead
-select a.product_name, b.group_name, a.price, lead(price, 1) over (partition by b.group_name order by a.price) as next_price, price - lead(price, 1) over (partition by group_name order by price) as next_cur_diff from product a inner join product_group b on a.group_id = b.group_id;
+select a.product_name, b.group_name, a.price,
+lead(price, 1) over (partition by b.group_name order by a.price) as next_price, price - lead(price, 1) over (partition by group_name order by price) as next_cur_diff
+from product a inner join product_group b on a.group_id = b.group_id;
 
 -- 년월일 기준 렌탈 횟수 출력
-select to_char(return_date, 'YYYY') y, to_char(return_date, 'MM') m, to_char(return_date, 'DD') d, count(rental_id) from rental group by rollup (to_char(return_date, 'YYYY'), to_char(return_date, 'MM'), to_char(return_date, 'DD'));
+select to_char(return_date, 'YYYY') y, to_char(return_date, 'MM') m, to_char(return_date, 'DD') d, count(rental_id)
+from rental group by rollup (to_char(return_date, 'YYYY'), to_char(return_date, 'MM'), to_char(return_date, 'DD'));
 
 -- rental 횟수가 많은 고객 정보 출력
-select r.customer_id, row_number() over(order by count(rental_id) desc), count(r.customer_id), max(first_name) as first_name, max(last_name) as last_name from rental r, customer c where r.customer_id = c.customer_id group by r.customer_id limit 1;
-select r.customer_id, row_number() over(order by count(rental_id) desc), count(r.customer_id), max(first_name) || ' ' || max(last_name) as name from rental r, customer c where r.customer_id = c.customer_id group by r.customer_id limit 1;
-select r.customer_id, row_number() over(order by count(rental_id) desc), count(r.customer_id), first_name || ' ' || last_name as name from rental r, customer c where r.customer_id = c.customer_id group by r.customer_id, first_name, last_name limit 1; -- 성능 떨어짐
+select r.customer_id, row_number() over(order by count(rental_id) desc), count(r.customer_id),
+max(first_name) as first_name, max(last_name) as last_name from rental r, customer c where r.customer_id = c.customer_id group by r.customer_id limit 1;
+select r.customer_id, row_number() over(order by count(rental_id) desc), count(r.customer_id),
+max(first_name) || ' ' || max(last_name) as name from rental r, customer c where r.customer_id = c.customer_id group by r.customer_id limit 1;
+
+select r.customer_id, row_number() over(order by count(rental_id) desc), count(r.customer_id), first_name || ' ' || last_name as name
+from rental r, customer c where r.customer_id = c.customer_id group by r.customer_id, first_name, last_name limit 1; -- 성능 떨어짐
