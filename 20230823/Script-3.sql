@@ -205,4 +205,119 @@ select * from film f1 inner join film f2 on f1.film_id <> f2.film_id where f1.le
 -- group by
 select customer_id, sum(amount) amout_sum from payment group by customer_id order by sum(amount) desc;
 select staff_id, count(payment_id) from payment p group by staff_id;
-select customer_id, sum(amount) amout_sum from payment group by customer_id having sum(amount) > 200 order by sum(amount) desc;
+select customer_id, sum(amount) amout_sum from payment group by customer_id having sum(amount) > 200;
+select store_id, count(customer_id) from customer group by store_id;
+
+-- 가게들이 있는 나라명, 도시명, 주소 추출
+select c2.country, c.city, a.address from address a, store s, city c, country c2 where a.address_id = s.address_id and a.city_id = c.city_id and c.country_id = c2.country_id;
+
+-- grouping set
+create table sales (
+	brand varchar not null,
+	segment varchar not null,
+	quantity int not null,
+	primary key(brand, segment)
+);
+
+insert into sales values
+('ABC', 'Premium', 100),
+('ABC', 'Basic', 200),
+('XYZ', 'Premium', 100),
+('XYZ', 'Basic', 300);
+
+select brand, sum(quantity) from sales group by brand;
+select segment, sum(quantity) from sales group by segment;
+select brand, segment, sum(quantity) from sales group by brand, segment;
+select sum(quantity) from sales;
+
+select brand, segment, sum(quantity) from sales group by brand, segment
+union all select brand, null, sum(quantity) from sales group by brand
+union all select null, segment, sum(quantity) from sales group by segment
+union all select null, null, sum(quantity) from sales;
+
+select brand, segment, sum(quantity) from sales group by
+grouping sets ((brand, segment), (brand), (segment), ());
+
+select grouping (brand) grouping_brand, grouping (segment) grouping_segment,
+brand, segment, sum(quantity) from sales group by
+grouping sets ((brand, segment), (brand), (segment), ());
+
+-- roll up
+select brand, segment, sum(quantity) from sales group by rollup (brand, segment) order by brand, segment; -- 그룹 별 합계
+select sum(quantity) from sales where brand = 'ABC';
+
+-- cube
+select brand, segment, sum(quantity) from sales group by cube (brand, segment) order by brand, segment; -- grouping set와 동일한 결과
+
+-- over
+create table product_group(
+	group_id serial primary key,
+	group_name varchar(255) not null
+);
+
+create table product (
+	product_id serial primary key,
+	product_name varchar(255) not null,
+	price decimal(11, 2), -- 정수와 소수를 입력 가능
+	group_id int not null,
+	foreign key(group_id) references product_group(group_id)
+);
+
+INSERT INTO PRODUCT_GROUP (GROUP_NAME)
+VALUES
+('Smartphone')
+, ('Laptop')
+, ('Tablet');
+
+INSERT INTO PRODUCT (PRODUCT_NAME,
+GROUP_ID,PRICE)
+VALUES
+('Microsoft Lumia', 1, 200)
+, ('HTC One', 1, 400)
+, ('Nexus', 1, 500)
+, ('iPhone', 1, 900)
+, ('HP Elite', 2, 1200)
+, ('Lenovo Thinkpad', 2, 700)
+, ('Sony VAIO', 2, 700)
+, ('Dell Vostro', 2, 800)
+, ('iPad', 3, 700)
+, ('Kindle Fire', 3, 150)
+, ('Samsung Galaxy Tab', 3, 200);
+
+select count(*) over(), * from product; -- group by 없이 코드 실행 가능
+
+select group_name, avg(price) from product p inner join product_group pg on p.group_id = pg.group_id group by group_name;
+
+select product_name, price, group_name, avg(price) over(partition by pg.group_name) from product p inner join product_group pg on p.group_id = pg.group_id;
+
+-- row_number
+select a.product_name, b.group_name, a.price, row_number() over (partition by b.group_name order by a.price desc) from product a inner join product_group b on a.group_id = b.group_id; -- 그룹명 기준 가격 순위 출력
+
+-- rank
+select a.product_name, b.group_name, a.price, rank() over (partition by b.group_name order by a.price desc) from product a inner join product_group b on a.group_id = b.group_id; -- 그룹명 기준 가격 순위 출력(중복 허용)
+
+-- dense_rank
+select a.product_name, b.group_name, a.price, dense_rank() over (partition by b.group_name order by a.price desc) from product a inner join product_group b on a.group_id = b.group_id; -- 그룹명 기준 가격 순위 출력(중복 허용, 건너뛰기 없음)
+
+-- first_value
+select a.product_name, b.group_name, a.price, first_value(price) over (partition by b.group_name order by a.price desc) from product a inner join product_group b on a.group_id = b.group_id; -- 그룹명 기준 가격의 첫번째 값 출력
+select a.product_name, b.group_name, a.price, first_value(price) over (partition by b.group_name) from product a inner join product_group b on a.group_id = b.group_id; -- 그룹명 기준 가격의 첫번째 값 출력
+
+-- last_value
+select a.product_name, b.group_name, a.price,
+last_value(price) over (partition by b.group_name order by a.price range between unbounded preceding and unbounded following)
+from product a inner join product_group b on a.group_id = b.group_id; -- 그룹명 기준 가격의 마지막 값 출력
+
+-- lag
+select a.product_name, b.group_name, a.price, lag(price, 1) over (partition by b.group_name order by a.price) as prev_price, price - lag(price, 1) over (partition by group_name order by price) as cur_pre_diff from product a inner join product_group b on a.group_id = b.group_id;
+
+-- lead
+select a.product_name, b.group_name, a.price, lead(price, 1) over (partition by b.group_name order by a.price) as next_price, price - lead(price, 1) over (partition by group_name order by price) as next_cur_diff from product a inner join product_group b on a.group_id = b.group_id;
+
+-- 년월일 기준 렌탈 횟수 출력
+select to_char(return_date, 'YYYY') y, to_char(return_date, 'MM') m, to_char(return_date, 'DD') d, count(rental_id) from rental group by rollup (to_char(return_date, 'YYYY'), to_char(return_date, 'MM'), to_char(return_date, 'DD'));
+
+-- rental 횟수가 많은 고객 정보 출력
+select r.customer_id, row_number() over(order by count(rental_id) desc), count(r.customer_id), max(first_name) as first_name, max(last_name) as last_name from rental r, customer c where r.customer_id = c.customer_id group by r.customer_id limit 1;
+select r.customer_id, row_number() over(order by count(rental_id) desc), count(r.customer_id), max(first_name) || ' ' || max(last_name) as name from rental r, customer c where r.customer_id = c.customer_id group by r.customer_id limit 1;
+select r.customer_id, row_number() over(order by count(rental_id) desc), count(r.customer_id), first_name || ' ' || last_name as name from rental r, customer c where r.customer_id = c.customer_id group by r.customer_id, first_name, last_name limit 1; -- 성능 떨어짐
