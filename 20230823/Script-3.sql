@@ -300,7 +300,7 @@ rank() over (partition by b.group_name order by a.price desc) from product a inn
 
 -- dense_rank
 select a.product_name, b.group_name, a.price,
-dense_rank() over (partition by b.group_name order by a.price desc) from product a inner join product_group b on a.group_id = b.group_id; -- 그룹명 기준 가격 순위 출력(중복 허용, 건너뛰기 없음)
+dense_rank() over (partition by b.group_name order by a.price desc) from product a inner join product_group b on a.group_id = b.group_id;-- 그룹명 기준 가격 순위 출력(중복 허용, 건너뛰기 없음)
 
 -- first_value
 select a.product_name, b.group_name, a.price,
@@ -335,3 +335,170 @@ max(first_name) || ' ' || max(last_name) as name from rental r, customer c where
 
 select r.customer_id, row_number() over(order by count(rental_id) desc), count(r.customer_id), first_name || ' ' || last_name as name
 from rental r, customer c where r.customer_id = c.customer_id group by r.customer_id, first_name, last_name limit 1; -- 성능 떨어짐
+
+-- intersect
+CREATE TABLE EMPLOYEES
+(
+EMPLOYEE_ID SERIAL PRIMARY KEY
+, EMPLOYEE_NAME VARCHAR (255) NOT NULL
+);
+
+CREATE TABLE KEYS
+(
+EMPLOYEE_ID INT PRIMARY KEY,
+EFFECTIVE_DATE DATE NOT NULL,
+FOREIGN KEY (EMPLOYEE_ID)
+REFERENCES EMPLOYEES (EMPLOYEE_ID)
+);
+
+CREATE TABLE HIPOS
+(
+EMPLOYEE_ID INT PRIMARY KEY,
+EFFECTIVE_DATE DATE NOT NULL,
+FOREIGN KEY (EMPLOYEE_ID)
+REFERENCES EMPLOYEES (EMPLOYEE_ID)
+);
+
+INSERT INTO EMPLOYEES (EMPLOYEE_NAME)
+VALUES
+('Joyce Edwards'),
+('Diane Collins'),
+('Alice Stewart'),
+('Julie Sanchez'),
+('Heather Morris'),
+('Teresa Rogers'),
+('Doris Reed'),
+('Gloria Cook'),
+('Evelyn Morgan'),
+('Jean Bell');
+
+select * from employees;
+
+INSERT INTO KEYS
+VALUES
+(1, '2000-02-01'),
+(2, '2001-06-01'),
+(5, '2002-01-01'),
+(7, '2005-06-01');
+
+INSERT INTO HIPOS
+VALUES
+(9, '2000-01-01'),
+(2, '2002-06-01'),
+(5, '2006-06-01'),
+(10, '2005-06-01');
+
+select * from keys;
+select * from hipos;
+
+select employee_id from keys intersect select employee_id from hipos; -- 교집합 출력
+select employee_id from keys intersect select employee_id from hipos order by employee_id desc;
+
+select k.employee_id from keys k, hipos h where k.employee_id = h.employee_id;
+
+-- except
+select employee_id from keys except select employee_id from hipos; -- 차집합 출력(특정 집합을 제외)
+
+-- 재고가 존재하는 영화의 필름ID, 영화제목
+select distinct i.film_id, title from inventory i, film f where i.film_id = f.film_id order by film_id;
+
+-- 재고가 존재하지 않는 영화의 필름ID, 영화제목
+select distinct film_id, title from film f except select distinct i.film_id, title from inventory i, film f where i.film_id = f.film_id order by film_id;
+
+-- subquery
+-- rantal rate보다 큰 정보 출력
+select avg(rental_rate) from film; -- 2.98
+select * from film where rental_rate > (select avg(rental_rate) from film) order by rental_rate, film_id;
+select * from film a, (select avg(rental_rate) avg_rate from film) b where a.rental_rate > b.avg_rate;
+
+select film_id, title, rental_rate from (select a.film_id, a.title, a.rental_rate, (select avg(l.rental_rate) from film l) avg_rate from film a) a where a.rental_rate > a.avg_rate;
+
+-- any
+select * from film where length >=
+any (select max(length) from film f, film_category c where f.film_id = c.film_id group by c.category_id order by c.category_id); -- 상영시간 별 최대값들 중 하나보다 큰 영화(하나라도 크면 만족)
+
+select * from film where film_id in (1, 2, 3);
+select * from film f1 where f1.film_id = any (select f2.film_id from film f2 where f2.film_id in (1, 2, 3));
+select * from film where film_id = any (select film_id from film order by film_id limit 3);
+
+-- all
+select * from film where length >=
+all (select max(length) from film f, film_category c where f.film_id = c.film_id group by c.category_id order by c.category_id); -- 상영시간 별 모든 최대값보다 큰 영화
+
+-- exists
+select first_name, last_name from customer c
+where exists (select 1 from payment p where p.customer_id = c.customer_id and p.amount > 11) -- 1은 아무 의미 없는 값, 서브쿼리 개별로 실행 불가
+order by first_name, last_name; -- 존재 여부 파악
+
+-- ansi(where -> inner join)
+select country, city, address from address a, store s, city c, country c2
+where a.address_id = s.address_id and a.city_id = c.city_id and c.country_id = c2.country_id;
+
+select country, city, address from address a
+inner join store s on a.address_id = s.address_id inner join city c on a.city_id = c.city_id inner join country c2 on c.country_id = c2.country_id;
+
+-- 테이블 스캔 줄이기
+select film_id, title, rental_rate from film where rental_rate > (select avg(rental_rate) from film) order by film_id;
+
+select distinct film_id, title, rental_rate from film a, (select avg(rental_rate) over () as avg_rate from film b) b where a.rental_rate > b.avg_rate order by film_id;
+
+select * from film_actor fa,
+(select distinct film_id, title, rental_rate from film a, (select avg(rental_rate) over () as avg_rate from film b) b where a.rental_rate > b.avg_rate) a
+where fa.film_id = a.film_id;
+
+select * from actor a,
+(select * from film_actor fa,
+(select distinct film_id, title, rental_rate from film a, (select avg(rental_rate) over () as avg_rate from film b) b where a.rental_rate > b.avg_rate) a
+where fa.film_id = a.film_id) b where a.actor_id = b.actor_id;
+
+select distinct actor_id from film_actor where actor_id in 
+(select a.actor_id from actor a,
+(select * from film_actor fa,
+(select distinct film_id, title, rental_rate from film a, (select avg(rental_rate) over () as avg_rate from film b) b where a.rental_rate > b.avg_rate) a
+where fa.film_id = a.film_id) b where a.actor_id = b.actor_id);
+
+-- 평균 이상 렌트된 영화의 배우 이름 출력
+select * from actor a where actor_id in
+(select distinct actor_id from film_actor fa, (select film_id from film where rental_rate > (select avg(rental_rate) from film)) a where fa.film_id = a.film_id);
+
+-- except 없이 쿼리 수정
+select FILM_ID, TITLE FROM FILM except select distinct INVENTORY.FILM_ID, TITLE FROM INVENTORY
+inner join FILM on FILM.FILM_ID = INVENTORY.FILM_ID ORDER by TITLE;
+
+select film_id, title from film where film_id not in (select distinct i.film_id from film f, inventory i where f.film_id = i.film_id) order by film_id;
+select film_id, title from film f where not exists (select 1 from film f2, inventory i where f2.film_id = i.film_id and f.film_id = f2.film_id) order by film_id;
+select film_id, title from film f where film_id != all (select distinct i.film_id from film f, inventory i where f.film_id = i.film_id) order by film_id;
+
+-- insert
+CREATE TABLE LINK (
+ID SERIAL PRIMARY KEY
+, URL VARCHAR (255) NOT NULL
+, NAME VARCHAR (255) NOT NULL
+, DESCRIPTION VARCHAR (255)
+, REL VARCHAR (50)
+);
+
+insert into link(url, name) values
+('http://naver.com', 'Naver'),
+('http://naver.com', 'Naver''website'), -- 따옴표 안에 ' 넣기 가능
+('http://google.com', 'Google'),
+('http://yahoo.com', 'Yahoo'),
+('http://bing.com', 'bing');
+
+create table link_tmp as select * from link where 0=1; -- 컬럼명만 동일한 빈 테이블 생성
+
+select * from link;
+select * from link_tmp;
+
+insert into link_tmp select * from link;
+drop table link_tmp;
+
+-- update
+alter table link add column last_update date;
+alter table link alter column last_update set default current_date;
+select * from link;
+
+update link set last_update = current_date;
+update link set last_update = default;
+update link set name = 'Bing' where id = 5;
+update link set description = name;
