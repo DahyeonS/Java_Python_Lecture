@@ -9,6 +9,8 @@ SELECT CURRENT_TIMESTAMP;
 ## MSSQL
 ```SQL
 SELECT TOP 3 * FROM Products;
+
+select * from rental where cast(return_date as date) = '2005-05-27';
 ```
 ## PostgreSQL
 - serial - int의 자동증가
@@ -20,8 +22,6 @@ fcolor varchar
 );
 
 select * from film order by title fetch first row only;
-
-select * from rental where cast(return_date as date) = '2005-05-27';
 
 select * from (select * from customer) a; -- 서브 쿼리로 조인 시 별칭 필요
 ```
