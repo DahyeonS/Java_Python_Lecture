@@ -94,23 +94,23 @@ SELECT name, height, AVG(height) OVER () AS mean FROM person; -- 모든 행에 H
 ```
 
 #### JOIN
-##### INNER JOIN
-```SQL
-SELECT 음반.제목, 노래.제목, 연도 FROM 수록곡
-INNER JOIN 음반 ON 수록곡.음반ID = 음반.id INNER JOIN 노래 ON 수록곡.노래ID = 노래.id; -- 각 테이블의 같은 값들끼리 묶어서 출력
-```
-##### LEFT OUTER JOIN
-```SQL
-SELECT * FROM payment p LEFT JOIN customer c ON c.customer_id = p.customer_id;
-```
-##### RIGHT OUTER JOIN
-```SQL
-SELECT * FROM customer c RIGHT JOIN payment p ON c.customer_id = p.customer_id ORDER BY c.customer_id;
-```
-##### SELF JOIN
-```SQL
-SELECT * FROM film f1 INNER JOIN film f2 ON f1.film_id <> f2.film_id WHERE f1.length = f2.length;
-```
+> ##### INNER JOIN
+> ```SQL
+> SELECT 음반.제목, 노래.제목, 연도 FROM 수록곡
+> INNER JOIN 음반 ON 수록곡.음반ID = 음반.id INNER JOIN 노래 ON 수록곡.노래ID = 노래.id; -- 각 테이블의 같은 값들끼리 묶어서 출력
+> ```
+> ##### LEFT OUTER JOIN
+> ```SQL
+> SELECT * FROM payment p LEFT JOIN customer c ON c.customer_id = p.customer_id;
+> ```
+> ##### RIGHT OUTER JOIN
+> ```SQL
+> SELECT * FROM customer c RIGHT JOIN payment p ON c.customer_id = p.customer_id ORDER BY c.customer_id;
+> ```
+> ##### SELF JOIN
+> ```SQL
+> SELECT * FROM film f1 INNER JOIN film f2 ON f1.film_id <> f2.film_id WHERE f1.length = f2.length;
+> ```
 
 #### GROUP BY
 ```SQL
@@ -193,21 +193,30 @@ FROM product a INNER JOIN product_group b ON a.group_id = b.group_id;
 ```
 
 #### UNION
-합집합
-```SQL
-
-```
+> 합집합
+> 
+> *실행 시 칼럼 갯수를 맞춰야 함*
+> ```SQL
+> SELECT * FROM basket_a UNION SELECT * FROM basket_b;
+> ```
+>
+> ##### UNION ALL
+> 중복 허용
+> ```SQL
+> SELECT brand, segment, SUM(quantity) FROM sales GROUP BY brand, segment
+> UNION ALL SELECT brand, NULL, SUM(quantity) FROM sales GROUP BY brand;
+> ```
 
 #### INTERSECT
 교집합
 ```SQL
-
+SELECT employee_id FROM keys INTERSECT SELECT employee_id FROM hipos;
 ```
 
 #### EXCEPT
 차집합
 ```SQL
-
+SELECT employee_id FROM keys EXCEPT SELECT employee_id FROM hipos;
 ```
 
 #### SUBQUERY
