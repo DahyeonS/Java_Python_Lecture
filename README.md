@@ -95,6 +95,10 @@
 [main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#2023823)
 [page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#2023823)
 
+2023.8.24
+[main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#2023824)
+[page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#2023824)
+
 > ## 2023.7.24
 >
 > **마크다운 예시**
@@ -796,6 +800,12 @@
 
 > ## 2023.8.23
 > **[서브쿼리](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230818/SQL.md#subquery)**
+> ```sql
+> 
+> ```
+
+> ## 2023.8.24
+> ** **
 > ```sql
 > 
 > ```
