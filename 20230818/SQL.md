@@ -130,42 +130,58 @@ SELECT brand, segment, SUM(quantity) FROM sales GROUP BY ROLLUP (brand, segment)
 
 #### CUBE
 ```SQL
-
+SELECT brand, segment, SUM(quantity) FROM sales
+GROUP BY CUBE (brand, segment) ORDER BY brand, segment; -- GROUPING SET와 동일한 결과
 ```
 
 #### OVER
 ```SQL
+SELECT COUNT(*) OVER(), * FROM product; -- group by 없이 코드 실행 가능
 
+SELECT product_name, price, group_name, AVG(price) OVER (PARTITION BY pg.group_name) FROM product p
+INNER JOIN product_group pg ON p.group_id = pg.group_id;
 ```
 
 #### ROW_NUMBER
 ```SQL
-
+SELECT a.product_name, b.group_name, a.price,
+ROW_NUMBER() OVER (PARTITION BY b.group_name ORDER BY a.price DESC)
+FROM product a INNER JOIN product_group b ON a.group_id = b.group_id; -- 그룹명 기준 가격 순위 출력
 ```
 
 #### RANK
 ```SQL
-
+SELECT a.product_name, b.group_name, a.price,
+RANK() OVER (PARTITION BY b.group_name ORDER BY a.price DESC)
+FROM product a INNER JOIN product_group b ON a.group_id = b.group_id; -- 그룹명 기준 가격 순위 출력(중복 허용)
 ```
 
 #### DENSE_RANK
 ```SQL
-
+SELECT a.product_name, b.group_name, a.price,
+DENSE_RANK() OVER (PARTITION BY b.group_name ORDER BY a.price desc)
+FROM product a INNER JOIN product_group b ON a.group_id = b.group_id;-- 그룹명 기준 가격 순위 출력(중복 허용, 건너뛰기 없음)
 ```
 
 #### FIRST_VALUE
 ```SQL
-
+SELECT a.product_name, b.group_name, a.price,
+FIRST_VALUE(price) OVER (PARTITION BY b.group_name)
+FROM product a INNER JOIN product_group b ON a.group_id = b.group_id; -- 그룹명 기준 가격의 첫번째 값 출력
 ```
 
 #### LAST_VALUE
 ```SQL
-
+SELECT a.product_name, b.group_name, a.price,
+LAST_VALUE(price) OVER (PARTITION BY b.group_name ORDER BY a.price RANGE BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING)
+FROM product a INNER JOIN product_group b ON a.group_id = b.group_id; -- 그룹명 기준 가격의 마지막 값 출력
 ```
 
 #### LAG
 ```SQL
-
+SELECT a.product_name, b.group_name, a.price,
+LAG(price, 1) OVER (PARTITION BY b.group_name ORDER BY a.price) AS prev_price
+FROM product a INNER JOIN product_group b ON a.group_id = b.group_id;
 ```
 
 #### LEAD
