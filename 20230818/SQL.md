@@ -221,20 +221,32 @@ SELECT employee_id FROM keys EXCEPT SELECT employee_id FROM hipos;
 
 #### SUBQUERY
 ```SQL
-
+SELECT * FROM film WHERE rental_rate > (SELECT AVG(rental_rate) FROM film) ORDER BY rental_rate, film_id;
 ```
 
 #### ANY
-```SQL
+OR 또는 IN과 비슷한 기능
 
+문자형 - 해당하는 값의 레코드를 출력
+
+숫자형 - 해당하는 범위에 진입하자마자 바로 레코드를 출력
+```SQL
+SELECT * FROM film WHERE length >=
+ANY (SELECT MAX(length) FROM film f, film_category c WHERE f.film_id = c.film_id GROUP BY c.category_id ORDER BY c.category_id);
 ```
 
 #### ALL
-```SQL
+AND와 비슷한 기능
 
+해당하는 모든 범위에 반드시 포함되는 레코드를 출력
+```SQL
+SELECT * FROM film WHERE length >=
+ALL (SELECT MAX(length) FROM film f, film_category c WHERE f.film_id = c.film_id GROUP BY c.category_id ORDER BY c.category_id);
 ```
 
 #### EXISTS
+해당 레코드가 존재하는지 여부
 ```SQL
-
+SELECT first_name, last_name FROM customer c
+WHERE EXISTS (SELECT 1 FROM payment p WHERE p.customer_id = c.customer_id AND p.amount > 11) -- 1은 아무 의미 없는 값, 서브쿼리 개별로 실행 불가
 ```
