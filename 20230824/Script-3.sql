@@ -517,3 +517,91 @@ VALUES
 ('Grand Luxury', 0.05)
 , ('Luxury', 0.06)
 , ('Mass', 0.1);
+
+drop table product;
+
+CREATE TABLE PRODUCT(
+ID SERIAL PRIMARY KEY
+, NAME VARCHAR NOT NULL
+, PRICE NUMERIC(10, 2)
+, NET_PRICE NUMERIC(10, 2)
+, SEGMENT_ID INT NOT NULL
+, FOREIGN KEY(SEGMENT_ID)
+REFERENCES PRODUCT_SEGMENT(ID)
+);
+
+INSERT INTO PRODUCT (NAME, PRICE, SEGMENT_ID)
+VALUES
+('K5', 804.89, 1)
+, ('K7', 228.55, 3)
+, ('K9', 366.45, 2)
+, ('SONATA', 145.33, 3)
+, ('SPARK', 551.77, 2)
+, ('AVANTE', 261.58, 3)
+, ('LOZTE', 519.62, 2)
+, ('SANTAFE', 843.31, 1)
+, ('TUSON', 254.18, 3)
+, ('TRAX', 427.78, 2)
+, ('ORANDO', 936.29, 1)
+, ('RAY', 910.34, 1)
+, ('MORNING', 208.33, 3)
+, ('VERNA', 985.45, 1)
+, ('K8', 841.26, 1)
+, ('TICO', 896.38, 1)
+, ('MATIZ', 575.74, 2)
+, ('SPORTAGE', 530.64, 2)
+, ('ACCENT', 892.43, 1)
+, ('TOSCA', 161.71, 3);
+
+update product set net_price = price;
+update product p set net_price = p.price - (p.price * ps.discount) from product_segment ps where ps.id = p.segment_id; -- 타 테이블 요소와 조인
+
+-- delete
+delete from link where id = 5;
+
+select * from link_tmp;
+delete from link_tmp a using link b where a.id = b.id;
+delete from link_tmp where id in (select id from link);
+
+-- truncate
+truncate link_tmp; -- 모든 값 삭제, 롤백 불가
+
+-- upsert
+CREATE TABLE CUSTOMERS
+(
+CUSTOMER_ID SERIAL PRIMARY KEY
+, NAME VARCHAR UNIQUE
+, EMAIL VARCHAR NOT NULL
+, ACTIVE BOOL NOT NULL DEFAULT TRUE
+);
+
+INSERT INTO CUSTOMERS (NAME, EMAIL)
+VALUES
+('IBM', 'contact@ibm.com'),
+('Microsoft', 'contact@microsoft.com'),
+('Intel', 'contact@intel.com');
+
+select * from customers;
+
+insert into customers(name, email) values
+('Microsoft', 'hotline@microsoft.com') on conflict (name) do nothing; -- 충돌이 나면 추가하지 않음
+
+insert into customers(name, email) values
+('Microsoft', 'hotline@microsoft.com') on conflict (name) do update
+set email = excluded.email || ';' || customers.email; -- 충돌이 나면 수정(기존 이메일 값에 새 값을 추가하는 방식)
+
+-- export
+COPY category(category_id, name, last_update) to 'C:\kdigital2307\data\db_category.csv' delimiter ',' csv header; -- csv 파일로 저장
+
+-- import
+create table category_import(
+	category_id serial not null,
+	"name" varchar(25) not null,
+	last_update timestamp not null default now(),
+	constraint category_import_pkey primary key (category_id)
+);
+
+copy category_import(category_id, "NAME", last_update) from 'C:\kdigital2307\data\db_category.csv' delimiter ',' csv header;
+copy category_import from 'C:\kdigital2307\data\db_category.csv' delimiter ',' csv header;
+
+select * from category_import;
