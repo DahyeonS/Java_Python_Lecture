@@ -180,7 +180,7 @@ FROM product a INNER JOIN product_group b ON a.group_id = b.group_id; -- 그룹�
 #### LAG
 ```SQL
 SELECT a.product_name, b.group_name, a.price,
-LAG(price, 1) OVER (PARTITION BY b.group_name ORDER BY a.price) AS prev_price
+LAG(price, 1) OVER (PARTITION BY b.group_name ORDER BY a.price) AS prev_price -- 1번째 이전 값 출력
 FROM product a INNER JOIN product_group b ON a.group_id = b.group_id;
 ```
 
