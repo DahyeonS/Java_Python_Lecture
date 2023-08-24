@@ -135,6 +135,7 @@ GROUP BY CUBE (brand, segment) ORDER BY brand, segment; -- GROUPING SET와 동�
 ```
 
 #### OVER
+PARTITION BY - 지정한 그룹 별로 순위를 나눔
 ```SQL
 SELECT COUNT(*) OVER(), * FROM product; -- group by 없이 코드 실행 가능
 
@@ -186,7 +187,9 @@ FROM product a INNER JOIN product_group b ON a.group_id = b.group_id;
 
 #### LEAD
 ```SQL
-
+SELECT a.product_name, b.group_name, a.price,
+LEAD(price, 1) OVER (PARTITION BY b.group_name order by a.price) AS next_price -- 1번째 이후 값 출력
+FROM product a INNER JOIN product_group b ON a.group_id = b.group_id;
 ```
 
 #### UNION
