@@ -103,7 +103,7 @@ group by programming_name, product_name order by programming_name;
 -- 8번
 select product_name, date_format(order_date, '%Y') order_year, sum(price * cnt) order_sum from product p
 left join product_order o on p.product_id = o.product_id group by product_name, date_format(order_date, '%Y')
-having sum(price * cnt) >= 5000;
+having sum(price * cnt) >= 5000 order by product_name;
 
 -- 9번
 select product_name, sum(case
