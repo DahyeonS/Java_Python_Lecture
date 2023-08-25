@@ -256,5 +256,5 @@ GROUP BY c.category_id ORDER BY c.category_id);
 ```SQL
 SELECT first_name, last_name FROM customer c
 WHERE EXISTS (SELECT 1 FROM payment p
-WHERE p.customer_id = c.customer_id AND p.amount > 11) -- 1은 아무 의미 없는 값, 서브쿼리 개별로 실행 불가
+WHERE p.customer_id = c.customer_id AND p.amount > 11); -- 1은 아무 의미 없는 값, 서브쿼리 개별로 실행 불가
 ```
