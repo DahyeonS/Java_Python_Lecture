@@ -17,15 +17,11 @@ SELECT * FROM person WHERE birthday IS NULL; -- 생일이 빈 값인 데이터 �
 > ```
 > ##### UPDATE JOIN
 > ```SQL
->
+> UPDATE product SET net_price = price;
+> 
+> UPDATE product p SET net_price = p.price - (p.price * ps.discount)
+> FROM product_segment ps WHERE ps.id = p.segment_id; -- 타 테이블 요소와 조인
 > ```
-
-#### LIKE
-```SQL
-SELECT * FROM person WHERE name LIKE '%혜리'; -- 이름이 '혜리'로 끝나는 데이터 전체
-SELECT * FROM person WHERE name LIKE '혜리%'; -- 이름이 '혜리'로 시작하는 데이터 전체
-SELECT * FROM person WHERE name LIKE '%혜리%'; -- 이름에 '혜리'가 포함된 데이터 전체
-```
 
 #### INSERT
 ```SQL
@@ -40,9 +36,23 @@ ALTER TABLE person DROP new2; -- PERSON 테이블에서 NEW2 칼럼 삭제
 ALTER TABLE person RENAME COLUMN new to height; -- PERSON 테이블에서 NEW2 칼럼명을 HEIGHT로 변경
 ```
 
+#### DELETE
+```SQL
+DELETE FROM link WHERE id = 5;
+DELETE FROM link_tmp a USING link b where a.id = b.id; -- ID가 같은 레코드 삭제
+DELETE FROM link_tmp WHERE id IN (SELECT id FROM link);
+```
+
 #### AS
 ```SQL
 SELECT name AS 이름, birthday 생일 FROM person; -- NAME 칼럼을 '이름'이라는 명칭으로 출력(출력값일 뿐 칼럼명이 달라지지 않음)
+```
+
+#### LIKE
+```SQL
+SELECT * FROM person WHERE name LIKE '%혜리'; -- 이름이 '혜리'로 끝나는 데이터 전체
+SELECT * FROM person WHERE name LIKE '혜리%'; -- 이름이 '혜리'로 시작하는 데이터 전체
+SELECT * FROM person WHERE name LIKE '%혜리%'; -- 이름에 '혜리'가 포함된 데이터 전체
 ```
 
 #### ROUND
