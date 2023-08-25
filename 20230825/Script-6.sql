@@ -139,7 +139,10 @@ and sc.course_id = c.course_id and student_name = '사길동');
 -- 16번
 select student_name from student s inner join student_course sc on s.student_id = sc.student_id
 where course_id in (select c.course_id from course c inner join professor p on c.professor_id = p.professor_id
-where date_format(start_date, '%Y-%c') = '2016-11' and professor_name = '다교수');
+where date_format(start_date, '%Y-%c') = '2016-11' and professor_name = '다교수'); -- date_format
+select student_name from student s inner join student_course sc on s.student_id = sc.student_id
+where course_id in (select c.course_id from course c inner join professor p on c.professor_id = p.professor_id
+where start_date like '2016-11%' and professor_name = '다교수'); -- like
 
 -- 17번
 select course_name, count(*) cnt from course c inner join student_course sc on c.course_id = sc.course_id
