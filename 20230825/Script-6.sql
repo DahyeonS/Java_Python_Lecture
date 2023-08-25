@@ -96,9 +96,9 @@ inner join department d on p.department_id = d.department_id where department_na
 
 -- 6번
 select department_name from student s inner join department d on s.department_id = d.department_id
-group by department_name order by count(student_id) desc limit 1;
+group by department_name order by count(student_id) desc limit 1; -- 조인
 select department_name from department where department_id =
-(select department_id from student group by department_id order by count(student_id) desc limit 1);
+(select department_id from student group by department_id order by count(student_id) desc limit 1); -- 서브쿼리
 
 -- 7번
 select student_name, department_name from student s inner join department d on s.department_id = d.department_id
