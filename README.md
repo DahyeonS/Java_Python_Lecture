@@ -811,7 +811,7 @@
 > ## 2023.8.24
 > **[가져오기와 내보내기](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230818/SQL.md#export)**
 > ```sql
-> 
+> COPY category TO 'C:\data\db_category.csv' DELIMITER ',' CSV HEADER;
 > ```
 
 > ## 2023.8.25
