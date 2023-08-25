@@ -11,14 +11,14 @@ SELECT * FROM person WHERE birthday IS NULL; -- 생일이 빈 값인 데이터 �
 ```
 
 #### UPDATE
-```SQL
-UPDATE person SET name = '김아영' WHERE id = 5; -- ID가 5인 사람의 이름을 '김아영'으로 변경
-UPDATE person SET birthday = '1986-06-09' WHERE id = 3; -- ID가 3인 사람의 생일을 '1986-06-09'로 변경
-```
-##### UPDATE JOIN
-```SQL
-
-```
+> ```SQL
+> UPDATE person SET name = '김아영' WHERE id = 5; -- ID가 5인 사람의 이름을 '김아영'으로 변경
+> UPDATE person SET birthday = '1986-06-09' WHERE id = 3; -- ID가 3인 사람의 생일을 '1986-06-09'로 변경
+> ```
+> ##### UPDATE JOIN
+> ```SQL
+>
+> ```
 
 #### LIKE
 ```SQL
