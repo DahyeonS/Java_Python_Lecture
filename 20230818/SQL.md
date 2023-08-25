@@ -10,6 +10,37 @@ SELECT * FROM person WHERE name = '박혜리'; -- 이름이 '박혜리'인 데�
 SELECT * FROM person WHERE birthday IS NULL; -- 생일이 빈 값인 데이터 전체
 ```
 
+#### CREATE TABLE
+```SQL
+CREATE TABLE account (
+	user_id SERIAL PRIMARY KEY,
+	-- SERIAL - PostgreSQL에서만 쓸 수 있는 자동 증가 정수
+	-- PRIMARY KEY - 기본키(중복 불가, NULL 불가
+	username VARCHAR(50) UNIQUE NOT NULL,
+	-- VARCHAR - 가변형 문자열
+	-- TEXT - 크기 제한이 없는 가변형 문자열
+	-- UNIQUE - 중복 불가
+	-- NOT NULL - NULL 불가
+	password VARCHAR(50) NOT NULL,
+	email VARCHAR(355) UNIQUE NOT NULL,
+	create_on TIMESTAMP NOT NULL,
+	-- TIMESTAMP - 현재 시간을 나타내는 DATE
+	last_on TIMESTAMP
+);
+
+CREATE TABLE account_role(
+	role_id INTEGER NOT NULL,
+	-- INTEGER - 정수
+	user_id INTEGER NOT NULL,
+	PRIMARY KEY (user_id, role_id), -- 2개 이상의 기본키를 설정할 때 주로 사용
+--	CONSTRAINT account_role_pkey PRIMARY KEY(user_id, role_id),
+	-- CONSTRAINT - 제약 조건 이름 설정 시 사용
+	CONSTRAINT account_role_account_fkey
+	FOREIGN KEY(user_id) references account(user_id), 
+	CONSTRAINT account_role_role_fkey FOREIGN KEY(role_id) references role(role_id)
+);
+```
+
 #### UPDATE
 > ```SQL
 > UPDATE person SET name = '김아영' WHERE id = 5; -- ID가 5인 사람의 이름을 '김아영'으로 변경
