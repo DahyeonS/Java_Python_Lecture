@@ -606,7 +606,7 @@ copy category_import from 'C:\kdigital2307\data\db_category.csv' delimiter ',' c
 
 select * from category_import;
 
--- 제약조건
+-- constraint
 create table account (
 	user_id serial primary key,
 	username varchar(50) unique not null,
