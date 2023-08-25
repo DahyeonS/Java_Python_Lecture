@@ -283,3 +283,17 @@ SELECT first_name, last_name FROM customer c
 WHERE EXISTS (SELECT 1 FROM payment p
 WHERE p.customer_id = c.customer_id AND p.amount > 11); -- 1은 아무 의미 없는 값, 서브쿼리 개별로 실행 불가
 ```
+
+#### EXPORT
+```SQL
+COPY category(category_id, name, last_update) TO
+'C:\kdigital2307\data\db_category.csv' DELIMITER ',' CSV HEADER; -- csv 파일로 저장
+
+COPY category TO 'C:\kdigital2307\data\db_category.csv' DELIMITER ',' CSV HEADER;
+```
+
+#### IMPORT
+```SQL
+COPY category_import FROM 'C:\kdigital2307\data\db_category.csv' DELIMITER ',' CSV HEADER; -- csv에서 불러오기
+COPY category_import(category_id, "NAME", last_update) FROM 'C:\kdigital2307\data\db_category.csv' DELIMITER ',' CSV HEADER;
+```
