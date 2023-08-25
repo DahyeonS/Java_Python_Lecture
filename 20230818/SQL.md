@@ -27,6 +27,11 @@ SELECT * FROM person WHERE name LIKE '혜리%'; -- 이름이 '혜리'로 시작�
 SELECT * FROM person WHERE name LIKE '%혜리%'; -- 이름에 '혜리'가 포함된 데이터 전체
 ```
 
+#### CREATE
+```SQL
+
+```
+
 #### INSERT
 ```SQL
 INSERT INTO pets VALUES (1, 'Dr.Harris', 'Rabbit'); -- PETS 테이블에 데이터 추가
