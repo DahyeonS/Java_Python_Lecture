@@ -875,4 +875,6 @@ values('Danny', 20000);
 
 rollback;
 
+commit;
+
 select * from tb_account_transaction_test;
