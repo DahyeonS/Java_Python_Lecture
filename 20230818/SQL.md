@@ -36,8 +36,10 @@ CREATE TABLE account_role(
 --	CONSTRAINT account_role_pkey PRIMARY KEY(user_id, role_id),
 	-- CONSTRAINT - 제약 조건 이름 설정 시 사용
 	CONSTRAINT account_role_account_fkey
-	FOREIGN KEY(user_id) references account(user_id), 
-	CONSTRAINT account_role_role_fkey FOREIGN KEY(role_id) references role(role_id)
+	FOREIGN KEY(user_id) REFERENCES account(user_id),
+	-- FOREIGN KEY - 외래키
+	-- REFERENCES - 외래키가 참조하는 대상
+	CONSTRAINT account_role_role_fkey FOREIGN KEY(role_id) REFERENCES role(role_id)
 );
 ```
 
