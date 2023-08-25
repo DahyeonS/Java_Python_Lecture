@@ -823,3 +823,4 @@
 >> - Script-4.sql
 >> - Script-5.sql
 >> - Script-6.sql
+>> - Script-7.sql
