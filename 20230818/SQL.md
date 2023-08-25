@@ -43,6 +43,21 @@ DELETE FROM link_tmp a USING link b where a.id = b.id; -- ID가 같은 레코드
 DELETE FROM link_tmp WHERE id IN (SELECT id FROM link);
 ```
 
+#### TRUNCATE
+```SQL
+TRUNCATE link_tmp; -- 모든 값 삭제, 롤백 불가
+```
+
+#### UPSERT
+```SQL
+INSERT INTO customers(name, email) VALUES
+('Microsoft', 'hotline@microsoft.com') ON CONFLICT (name) DO NOTHING; -- 충돌이 나면 추가하지 않음
+
+INSERT INTO customers(name, email) VALUES
+('Microsoft', 'hotline@microsoft.com') ON CONFLICT (name) DO UPDATE
+SET email = excluded.email || ';' || customers.email; -- 충돌이 나면 수정(기존 이메일 값에 새 값을 추가하는 방식)
+```
+
 #### AS
 ```SQL
 SELECT name AS 이름, birthday 생일 FROM person; -- NAME 칼럼을 '이름'이라는 명칭으로 출력(출력값일 뿐 칼럼명이 달라지지 않음)
