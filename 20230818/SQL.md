@@ -101,7 +101,8 @@ SELECT name, height, AVG(height) OVER () AS mean FROM person; -- 모든 행에 H
 > ##### INNER JOIN
 > ```SQL
 > SELECT 음반.제목, 노래.제목, 연도 FROM 수록곡
-> INNER JOIN 음반 ON 수록곡.음반ID = 음반.id INNER JOIN 노래 ON 수록곡.노래ID = 노래.id; -- 각 테이블의 같은 값들끼리 묶어서 출력
+> INNER JOIN 음반 ON 수록곡.음반ID = 음반.id
+> INNER JOIN 노래 ON 수록곡.노래ID = 노래.id; -- 각 테이블의 같은 값들끼리 묶어서 출력
 > ```
 > ##### LEFT OUTER JOIN
 > ```SQL
