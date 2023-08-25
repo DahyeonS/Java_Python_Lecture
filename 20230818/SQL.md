@@ -43,6 +43,26 @@ CREATE TABLE account_role(
 );
 ```
 
+#### TEMP TABLE
+임시 테이블
+
+DB가 연결됐을 때에만 존재하는 테이블
+
+DB의 연결이 끊기면 삭제됨
+```SQL
+CREATE TEMP TABLE tp_temp_test(cust_id int);
+```
+
+#### VIEW
+```SQL
+CREATE VIEW brithdayview
+AS SELECT name, birthday bdate, SUBSTR(birthday, 1, 4) yyyy, SUBSTR(birthday, 6, 2) mm, SUBSTR(birthday, 9, 2) dd
+FROM person; -- BIRTHDAYVIEW라는 이름의 VIEW 생성
+
+SELECT * FROM brithdayview; -- VIEW 출력
+SELECT * FROM brithdayview WHERE yyyy > '1992'; -- 조건을 달아서 VIEW 출력
+```
+
 #### UPDATE
 > ```SQL
 > UPDATE person SET name = '김아영' WHERE id = 5; -- ID가 5인 사람의 이름을 '김아영'으로 변경
@@ -59,6 +79,16 @@ CREATE TABLE account_role(
 #### INSERT
 ```SQL
 INSERT INTO pets VALUES (1, 'Dr.Harris', 'Rabbit'); -- PETS 테이블에 데이터 추가
+```
+
+#### UPSERT
+```SQL
+INSERT INTO customers(name, email) VALUES
+('Microsoft', 'hotline@microsoft.com') ON CONFLICT (name) DO NOTHING; -- 충돌이 나면 추가하지 않음
+
+INSERT INTO customers(name, email) VALUES
+('Microsoft', 'hotline@microsoft.com') ON CONFLICT (name) DO UPDATE
+SET email = excluded.email || ';' || customers.email; -- 충돌이 나면 수정(기존 이메일 값에 새 값을 추가하는 방식)
 ```
 
 #### ALTER TABLE
@@ -81,19 +111,41 @@ DELETE FROM link_tmp WHERE id IN (SELECT id FROM link);
 TRUNCATE link_tmp; -- 모든 값 삭제, 롤백 불가
 ```
 
-#### UPSERT
-```SQL
-INSERT INTO customers(name, email) VALUES
-('Microsoft', 'hotline@microsoft.com') ON CONFLICT (name) DO NOTHING; -- 충돌이 나면 추가하지 않음
-
-INSERT INTO customers(name, email) VALUES
-('Microsoft', 'hotline@microsoft.com') ON CONFLICT (name) DO UPDATE
-SET email = excluded.email || ';' || customers.email; -- 충돌이 나면 수정(기존 이메일 값에 새 값을 추가하는 방식)
-```
-
 #### AS
 ```SQL
 SELECT name AS 이름, birthday 생일 FROM person; -- NAME 칼럼을 '이름'이라는 명칭으로 출력(출력값일 뿐 칼럼명이 달라지지 않음)
+```
+
+#### DATE
+SQLite 기준
+```SQL
+SELECT STRFTIME('%Y-%m-%d %H %M %S', 'now', 'localtime') as 'yyyy-mm-dd'; -- 'now' 현재 시간, 'localtime' 현지 시간 기준(GMT+9)
+
+-- 시스템 시간
+SELECT CURRENT_DATE;
+SELECT CURRENT_TIME;
+SELECT CURRENT_TIMESTAMP;
+```
+PostgreSQL 기준
+```SQL
+SELECT NOW(); -- 현재 시간
+SELECT CURRENT_TIMESTAMP; -- 현지 시간
+
+SELECT NOW()::DATE; -- 현재 날짜 출력
+SELECT CURRENT_DATE;
+
+SELECT NOW()::TIME; -- 현재 시각 출력
+SELECT CURRENT_TIME;
+
+SELECT TO_CHAR(NOW()::DATE, 'dd/mm/yyyy');
+SELECT TO_CHAR(NOW()::DATE, 'yyyy-mm-dd');
+SELECT TO_CHAR(NOW()::DATE, 'yyyy년 mm월 dd일');
+
+SELECT first_name, last_name, NOW() - create_date FROM customer;
+SELECT first_name, last_name, TO_CHAR(NOW() - create_date, 'dd') FROM customer;
+
+SELECT EXTRACT (YEAR FROM create_date), EXTRACT (MONTH FROM create_date), EXTRACT (DAY FROM create_date) FROM customer;
+SELECT TO_CHAR(create_date, 'yyyy-mm-dd') FROM customer;
 ```
 
 #### LIKE
@@ -101,22 +153,6 @@ SELECT name AS 이름, birthday 생일 FROM person; -- NAME 칼럼을 '이름'�
 SELECT * FROM person WHERE name LIKE '%혜리'; -- 이름이 '혜리'로 끝나는 데이터 전체
 SELECT * FROM person WHERE name LIKE '혜리%'; -- 이름이 '혜리'로 시작하는 데이터 전체
 SELECT * FROM person WHERE name LIKE '%혜리%'; -- 이름에 '혜리'가 포함된 데이터 전체
-```
-
-#### ROUND
-```SQL
-SELECT name, height, weight,
-ROUND(weight / (height * height * 0.0001), 1) bmi FROM person; -- 소수점 1자리까지 출력(자릿수를 정하지 않을 시 정수만 출력)
-```
-
-#### VIEW
-```SQL
-CREATE VIEW brithdayview
-AS SELECT name, birthday bdate, SUBSTR(birthday, 1, 4) yyyy, SUBSTR(birthday, 6, 2) mm, SUBSTR(birthday, 9, 2) dd
-FROM person; -- BIRTHDAYVIEW라는 이름의 VIEW 생성
-
-SELECT * FROM brithdayview; -- VIEW 출력
-SELECT * FROM brithdayview WHERE yyyy > '1992'; -- 조건을 달아서 VIEW 출력
 ```
 
 #### CASE
@@ -131,15 +167,10 @@ END as month
 FROM brithdayview; -- 조건에 따라 값을 다르게 출력
 ```
 
-#### 날짜
-SQLite 기준
+#### ROUND
 ```SQL
-SELECT STRFTIME('%Y-%m-%d %H %M %S', 'now', 'localtime') as 'yyyy-mm-dd'; -- 'now' 현재 시간, 'localtime' 현지 시간 기준(GMT+9)
-
--- 시스템 시간
-SELECT CURRENT_DATE;
-SELECT CURRENT_TIME;
-SELECT CURRENT_TIMESTAMP;
+SELECT name, height, weight,
+ROUND(weight / (height * height * 0.0001), 1) bmi FROM person; -- 소수점 1자리까지 출력(자릿수를 정하지 않을 시 정수만 출력)
 ```
 
 #### 집계함수
@@ -147,12 +178,6 @@ SELECT CURRENT_TIMESTAMP;
 SELECT COUNT(id) FROM person; -- ID의 개수를 집계하여 출력(NULL 값은 집계되지 않음)
 SELECT MAX(height) FROM person; -- HEIGHT의 최대값 출력
 SELECT AVG(height) FROM person; -- NULL값을 제외한 HEIGHT의 평균
-```
-
-#### OVER
-SQLite 3.25 버전 이상에서만 사용 가능
-```SQL
-SELECT name, height, AVG(height) OVER () AS mean FROM person; -- 모든 행에 HEIGHT 평균값을 출력
 ```
 
 #### JOIN
@@ -198,8 +223,12 @@ GROUP BY CUBE (brand, segment) ORDER BY brand, segment; -- GROUPING SET와 동�
 ```
 
 #### OVER
+SQLite 3.25 버전 이상에서만 사용 가능
+
 PARTITION BY - 지정한 그룹 별로 순위를 나눔
 ```SQL
+SELECT name, height, AVG(height) OVER () AS mean FROM person; -- 모든 행에 HEIGHT 평균값을 출력
+
 SELECT COUNT(*) OVER(), * FROM product; -- group by 없이 코드 실행 가능
 
 SELECT product_name, price, group_name, AVG(price) OVER (PARTITION BY pg.group_name) FROM product p
