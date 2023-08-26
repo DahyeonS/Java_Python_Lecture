@@ -106,6 +106,18 @@ DELETE FROM link_tmp a USING link b where a.id = b.id; -- ID가 같은 레코드
 DELETE FROM link_tmp WHERE id IN (SELECT id FROM link);
 ```
 
+#### COMMIT
+변경사항을 모두 DB에 적용
+```SQL
+COMMIT;
+```
+
+#### ROLLBACK
+변경사항을 직전에 커밋한 시점으로 되돌림
+```SQL
+ROLLBACK;
+```
+
 #### TRUNCATE
 ```SQL
 TRUNCATE link_tmp; -- 모든 값 삭제, 롤백 불가
