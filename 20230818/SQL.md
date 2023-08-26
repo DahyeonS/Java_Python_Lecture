@@ -373,3 +373,15 @@ SELECT SUM(CASE WHEN gender = 1 TNEN 1 ELSE 0 END) /
 NULLIF(SUM(CASE WHEN gender = 2 THEN 1 ELSE 0 END), 0) * 100 AS "male/female ratio"
 FROM tb_member_nullif_test; -- nullif 함수를 이용해 값이 0이면 NULL을 반환
 ```
+
+#### CAST
+```SQL
+SELECT CAST('100' AS INTEGER); -- 문자열 '100'을 정수로 변환
+SELECT '100'::INTEGER;
+
+SELECT CAST('2023--08-25' AS DATE);
+SELECT '2023-08--25'::DATE;
+
+SELECT CAST('10.2' AS DOUBLE PRECISION);
+SELECT '10.2'::DOUBLE PRECISION;
+```
