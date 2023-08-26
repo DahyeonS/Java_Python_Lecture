@@ -357,7 +357,10 @@ COPY category TO 'C:\kdigital2307\data\db_category.csv' DELIMITER ',' CSV HEADER
 #### IMPORT
 ```SQL
 COPY category_import FROM 'C:\kdigital2307\data\db_category.csv' DELIMITER ',' CSV HEADER; -- csv에서 불러오기
+COPY category_import(category_id, "NAME", last_update) FROM 'C:\kdigital2307\data\db_category.csv' DELIMITER ',' CSV HEADER;
+```
 
 #### coalesce
-COPY category_import(category_id, "NAME", last_update) FROM 'C:\kdigital2307\data\db_category.csv' DELIMITER ',' CSV HEADER;
+```SQL
+
 ```
