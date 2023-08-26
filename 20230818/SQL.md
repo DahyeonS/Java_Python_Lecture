@@ -360,7 +360,8 @@ COPY category_import FROM 'C:\kdigital2307\data\db_category.csv' DELIMITER ',' C
 COPY category_import(category_id, "NAME", last_update) FROM 'C:\kdigital2307\data\db_category.csv' DELIMITER ',' CSV HEADER;
 ```
 
-#### coalesce
+#### COALESE
+NULL이 아닌 최초의 값을 호출
 ```SQL
-
+SELECT product, price, (price - COALESE(discount, 0)) net_price FROM tb_item_coalesce_test; -- NULL값 처리
 ```
