@@ -361,7 +361,15 @@ COPY category_import(category_id, "NAME", last_update) FROM 'C:\kdigital2307\dat
 ```
 
 #### COALESE
-NULL이 아닌 최초의 값을 호출
+NULL이 아닌 최초의 인수를 반환
 ```SQL
 SELECT product, price, (price - COALESE(discount, 0)) net_price FROM tb_item_coalesce_test; -- NULL값 처리
+```
+
+#### NULLIF
+대상이 조건에 맞으면 NULL을 반환
+```SQL
+SELECT SUM(CASE WHEN gender = 1 TNEN 1 ELSE 0 END) /
+NULLIF(SUM(CASE WHEN gender = 2 THEN 1 ELSE 0 END), 0) * 100 AS "male/female ratio"
+FROM tb_member_nullif_test; -- nullif 함수를 이용해 값이 0이면 NULL을 반환
 ```
