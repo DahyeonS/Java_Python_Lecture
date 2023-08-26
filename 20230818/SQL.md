@@ -388,7 +388,7 @@ SELECT '10.2'::DOUBLE PRECISION;
 
 #### WITH
 ```SQL
-WHTI tmp1 AS (
+WITH tmp1 AS (
 SELECT film_id, title, 
 CASE
 	WHEN length < 30 THEN 'SHORT'
