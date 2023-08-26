@@ -817,7 +817,8 @@
 > ## 2023.8.25
 > **트랜잭션과 [MySQL](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230822/SQL%20%EC%A2%85%EB%A5%98.md#mysql)**
 > ```sql
-> 
+> COMMIT;
+> ROLLBACK;
 > ```
 > ### *output*
 >> - Script-4.sql
