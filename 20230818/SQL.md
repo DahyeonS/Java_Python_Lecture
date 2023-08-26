@@ -385,3 +385,15 @@ SELECT '2023-08--25'::DATE;
 SELECT CAST('10.2' AS DOUBLE PRECISION);
 SELECT '10.2'::DOUBLE PRECISION;
 ```
+
+#### WITH
+```SQL
+WHTI tmp1 AS (
+SELECT film_id, title, 
+CASE
+	WHEN length < 30 THEN 'SHORT'
+	WHEN length >= 30 AND length < 90 THEN 'MEDIUM'
+	ELSE 'LONG'
+END AS length FROM film)
+SELECT * FROM tmp1; -- 임시 테이블 생성
+```
