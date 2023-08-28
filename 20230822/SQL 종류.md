@@ -32,5 +32,6 @@ select * from film order by film_id limit 10 offset 10; -- PostgreSQL도 가능
 ```
 ## Oracle
 ```SQL
-
+SELECT empno, ename, sal, deptno FROM emp
+MINUS SELECT empno, ename, sal, deptno FROM emp WHERE deptno = 10;
 ```
