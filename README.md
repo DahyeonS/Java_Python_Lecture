@@ -103,6 +103,10 @@
 [main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#2023825)
 [page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#2023825)
 
+2023.8.28
+[main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#2023828)
+[page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#2023828)
+
 > ## 2023.7.24
 >
 > **마크다운 예시**
@@ -825,3 +829,11 @@
 >> - Script-5.sql
 >> - Script-6.sql
 >> - Script-7.sql
+
+> ## 2023.8.28
+> **Oracle**
+> ```sql
+> 
+> ```
+> ### *output*
+>> - 
