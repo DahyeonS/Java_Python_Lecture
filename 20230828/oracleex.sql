@@ -249,19 +249,13 @@ SELECT * FROM (select deptno, job, sal from emp)
 PIVOT(MAX(sal) FOR job IN ('CLERK', 'SALESMAN', 'PRESIDENT'));
 
 -- UNPIVOT
-SELECT *
-  FROM(SELECT DEPTNO,
-              MAX(DECODE(JOB, 'CLERK' , SAL)) AS "CLERK",
-              MAX(DECODE(JOB, 'SALESMAN' , SAL)) AS "SALESMAN",
-              MAX(DECODE(JOB, 'PRESIDENT', SAL)) AS "PRESIDENT",
-              MAX(DECODE(JOB, 'MANAGER' , SAL)) AS "MANAGER",
-              MAX(DECODE(JOB, 'ANALYST' , SAL)) AS "ANALYST"
-         FROM EMP
-       GROUP BY DEPTNO
-       ORDER BY DEPTNO)
-UNPIVOT(
-   SAL FOR JOB IN (CLERK, SALESMAN, PRESIDENT, MANAGER,ANALYST))
-ORDER BY DEPTNO, JOB;
+SELECT * FROM (select deptno, max(DECODE(JOB, 'CLERK' , SAL)) AS CLERK,
+max(decode(job, 'SALESMAN' , sal)) as SALESMAN,
+max(decode(job, 'PRESIDENT', sal)) as PRESIDENT,
+max(decode(job, 'MANAGER' , sal)) as MANAGER,
+max(decode(job, 'ANALYST' , sal)) as ANALYST from emp group by deptno
+order by deptno) UNPIVOT (sal FOR job IN (CLERK, SALESMAN, PRESIDENT,
+MANAGER, ANALYST)) ORDER BY deptno, job;
 
 -- NATURAL JOIN
 SELECT * FROM emp e NATURAL JOIN dept d;
