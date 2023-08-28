@@ -164,3 +164,141 @@ SELECT * FROM emp WHERE hiredate > TO_DATE('1981/06/01', 'YYYY/MM/DD');
 
 -- NVL
 SELECT empno, ename, sal, sal+comm, NVL(comm, 0), sal + NVL(comm, 0) FROM emp;
+SELECT empno, ename, comm, NVL2(comm, 'O', 'X') FROM emp;
+
+-- CASE
+SELECT empno, ename, job, sal,
+CASE job
+    WHEN 'MANAGER' THEN sal * 1.1
+    WHEN 'SALESMAN' THEN sal * 1.05
+    WHEN 'ANALYST' THEN sal
+    ELSE sal * 1.03
+END AS upsal FROM emp;
+
+SELECT empno, ename, comm,
+CASE 
+    WHEN comm is null THEN sal * 1.1
+    WHEN comm = 0 THEN sal * 1.05
+    WHEN comm > 0 THEN sal
+    ELSE sal * 1.03
+END AS upsal FROM emp;
+
+-- DECODE
+SELECT empno, ename, job, sal, DECODE(job, 'MANAGER', sal * 11,
+'SALESMAN', sal * 1.05, 'ANALYST', sal * 1, sal * 1.03) AS upsal FROM emp;
+
+-- 집계함수
+SELECT SUM(DISTINCT sal), SUM(sal) FROM emp;
+SELECT COUNT(DISTINCT sal), COUNT(sal) FROM emp;
+SELECT ROUND(AVG(DISTINCT sal)), ROUND(AVG(sal)),
+ROUND(SUM(sal) / COUNT(sal)) FROM emp;
+
+SELECT DISTINCT deptno FROM emp;
+
+SELECT ROUND(AVG(sal)), '10' FROM emp WHERE deptno = 10;
+SELECT ROUND(AVG(sal)), '20' FROM emp WHERE deptno = 20;
+SELECT ROUND(AVG(sal)), '30' FROM emp WHERE deptno = 30;
+
+-- GROUP BY
+SELECT deptno, ROUND(AVG(sal)) FROM emp GROUP BY deptno;
+SELECT deptno, job, ROUND(AVG(sal)) FROM emp GROUP BY deptno, job
+ORDER BY deptno, job;
+
+-- HAVING
+SELECT deptno, job, ROUND(AVG(sal)) FROM emp GROUP BY deptno, job
+HAVING AVG(sal) > 2000 ORDER BY deptno, job;
+SELECT deptno, job, ROUND(AVG(sal)) FROM emp WHERE sal > 2000
+GROUP BY deptno, job ORDER BY deptno, job;
+
+-- ROLL UP
+SELECT deptno, job, COUNT(*), MAX(sal), SUM(sal), ROUND(AVG(sal)) FROM emp
+GROUP BY deptno, job ORDER BY deptno, job;
+SELECT deptno, job, COUNT(*), MAX(sal), SUM(sal), ROUND(AVG(sal)) FROM emp
+GROUP BY ROLLUP(deptno, job) ORDER BY deptno, job;
+
+-- CUBE
+SELECT deptno, job, COUNT(*), MAX(sal), SUM(sal), ROUND(AVG(sal)) FROM emp
+GROUP BY CUBE(deptno, job) ORDER BY deptno, job;
+
+-- GROUPING SETS
+SELECT deptno, job, COUNT(*) FROM emp GROUP BY GROUPING SETS(deptno, job);
+
+-- GROUPING
+SELECT deptno, job, COUNT(*), MAX(sal), SUM(sal), ROUND(AVG(sal)),
+GROUPING(deptno), GROUPING(job)
+FROM emp GROUP BY CUBE(deptno, job) ORDER BY deptno, job;
+
+SELECT DECODE(GROUPING(deptno), 1, 'ALL_DEPT', deptno) AS deptno,
+DECODE(GROUPING(job), 1, 'ALL_JOB', deptno) AS job, COUNT(*) FROM emp
+GROUP BY CUBE(deptno, job) ORDER BY deptno, job;
+
+-- LISTAGG
+SELECT deptno, ename FROM emp GROUP BY deptno, ename; -- 세로
+
+SELECT deptno,
+LISTAGG(ename, ',') WITHIN GROUP(ORDER BY sal DESC) AS enames
+FROM emp GROUP BY deptno;
+
+-- PIVOT
+SELECT deptno, job, MAX(sal) FROM emp GROUP BY deptno, job;
+
+SELECT * FROM (select deptno, job, sal from emp)
+PIVOT(MAX(sal) FOR deptno IN (10, 20 ,30));
+
+SELECT * FROM (select deptno, job, sal from emp)
+PIVOT(MAX(sal) FOR job IN ('CLERK', 'SALESMAN', 'PRESIDENT'));
+
+-- UNPIVOT
+SELECT *
+  FROM(SELECT DEPTNO,
+              MAX(DECODE(JOB, 'CLERK' , SAL)) AS "CLERK",
+              MAX(DECODE(JOB, 'SALESMAN' , SAL)) AS "SALESMAN",
+              MAX(DECODE(JOB, 'PRESIDENT', SAL)) AS "PRESIDENT",
+              MAX(DECODE(JOB, 'MANAGER' , SAL)) AS "MANAGER",
+              MAX(DECODE(JOB, 'ANALYST' , SAL)) AS "ANALYST"
+         FROM EMP
+       GROUP BY DEPTNO
+       ORDER BY DEPTNO)
+UNPIVOT(
+   SAL FOR JOB IN (CLERK, SALESMAN, PRESIDENT, MANAGER,ANALYST))
+ORDER BY DEPTNO, JOB;
+
+-- NATURAL JOIN
+SELECT * FROM emp e NATURAL JOIN dept d;
+SELECT * FROM emp e JOIN dept d ON e.deptno = d.deptno;
+SELECT * FROM emp e JOIN dept d USING (deptno);
+
+-- LEFT JOIN
+SELECT * FROM emp e1, emp e2 WHERE e1.mgr = e2.empno(+);
+SELECT * FROM emp e1 LEFT OUTER JOIN emp e2 ON e1.mgr = e2.empno;
+
+-- RIGHT JOIN
+SELECT * FROM emp e1, emp e2 WHERE e1.mgr(+) = e2.empno;
+SELECT * FROM emp e1 RIGHT OUTER JOIN emp e2 ON e1.mgr = e2.empno;
+
+-- SUBQUERY
+SELECT * FROM emp WHERE sal > (SELECT sal FROM emp WHERE ename = 'SCOTT');
+
+-- ANY
+SELECT deptno, SUM(sal) FROM emp WHERE sal < ANY(select max(sal) from emp)
+GROUP BY deptno;
+SELECT deptno, SUM(sal) FROM emp WHERE sal <
+ANY(select sal from emp where deptno = 30) GROUP BY deptno;
+
+-- ALL
+SELECT * FROM emp where sal < ALL (select sal from emp where deptno = 30);
+SELECT * FROM emp WHERE sal < (select min(sal) from emp where deptno = 30)
+ORDER BY sal, deptno;
+
+-- EXISTS
+SELECT * FROM emp WHERE EXISTS (select dname from dept where deptno = 10);
+SELECT * FROM EMP WHERE EXISTS (select dname from dept where deptno = 50);
+
+-- 비교할 열이 여러 개
+SELECT * FROM emp WHERE (deptno, sal) IN (select deptno, max(sal) from emp
+group by deptno);
+                         
+-- 인라인 뷰
+SELECT empno, ename, job, sal, (select grade from salgrade
+where e.sal between losal and hisal) AS salgrade, deptno,
+(select dname from dept d where e.deptno = d.deptno) AS dname FROM emp e;
