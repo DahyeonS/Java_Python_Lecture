@@ -831,7 +831,7 @@
 >> - Script-7.sql
 
 > ## 2023.8.28
-> **Oracle**
+> **[Oracle](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230822/SQL%20%EC%A2%85%EB%A5%98.md#oracle)**
 > ```sql
 > 
 > ```
