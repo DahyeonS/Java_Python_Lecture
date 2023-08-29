@@ -838,6 +838,7 @@
 > **[Oracle](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230822/SQL%20%EC%A2%85%EB%A5%98.md#oracle)**
 > ```sql
 > SELECT * FROM emp e1, emp e2 WHERE e1.mgr = e2.empno(+);
+> SELECT * FROM (SELECT * FROM emp e ORDER BY sal DESC) WHERE ROWNUM <= 5;
 > ```
 > ### *output*
 >> - Script-8.sql
