@@ -847,5 +847,19 @@
 > ## 2023.8.29
 > **PL/SQL**
 > ```sql
-> 
+> DECLARE
+>	  V_DEPT_ROW DEPT%ROWTYPE;
+>
+>	  CURSOR c1 IS
+>	    SELECT deptno, dname, loc INTO v_dept_row FROM dept;
+>
+> BEGIN
+>	
+>	  FOR c1_rec IN c1 LOOP
+>	    DBMS_OUTPUT.PUT_LINE('deptno: ' || c1_rec.deptno);
+>	    DBMS_OUTPUT.PUT_LINE('dname: ' || c1_rec.dname);
+>	    DBMS_OUTPUT.PUT_LINE('loc: ' || c1_rec.loc);
+>	  END LOOP;
+>	
+> END;
 > ```
