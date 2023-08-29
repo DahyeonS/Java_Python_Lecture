@@ -423,7 +423,7 @@ SELECT OWNER, CONSTRAINT_NAME, CONSTRAINT_TYPE, TABLE_NAME, R_OWNER, R_CONSTRAIN
 FROM USER_CONSTRAINTS
 WHERE TABLE_NAME IN ('EMP', 'DEPT');
 
--- RECORD(커맨드 출력용)
+-- RECORD
 SET SERVEROUTPUT ON; -- 결과 출력
 
 DECLARE
@@ -467,6 +467,30 @@ BEGIN
 		DBMS_OUTPUT.PUT_LINE('dname: ' || c1_rec.dname);
 		DBMS_OUTPUT.PUT_LINE('loc: ' || c1_rec.loc);
 	END LOOP;
+
+END;
+/
+
+-- 묵시적 커서
+SET SERVEROUTPUT ON;
+
+BEGIN
+   UPDATE DEPT SET DNAME='DATABASE' -- dept_record 테이블 로도 테스트
+    WHERE DEPTNO = 50;
+
+   DBMS_OUTPUT.PUT_LINE('갱신된 행의 수 : ' || SQL%ROWCOUNT);
+
+   IF (SQL%FOUND) THEN
+      DBMS_OUTPUT.PUT_LINE('갱신 대상 행 존재 여부 : true');
+   ELSE
+      DBMS_OUTPUT.PUT_LINE('갱신 대상 행 존재 여부 : false');
+   END IF;
+
+   IF (SQL%ISOPEN) THEN
+      DBMS_OUTPUT.PUT_LINE('커서의 OPEN 여부 : true');
+   ELSE
+      DBMS_OUTPUT.PUT_LINE('커서의 OPEN 여부 : false');
+   END IF;
 
 END;
 /
