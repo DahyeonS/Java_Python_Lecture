@@ -32,6 +32,17 @@ select * from film order by film_id limit 10 offset 10; -- PostgreSQL도 가능
 ```
 ## Oracle
 ```SQL
+CREATE TABLE emp_ddl(
+   empno NUMBER(4),
+   ename VARCHAR2(10), -- Oracle에서는 VARCHAR2를 사용
+   job VARCHAR2(9),
+   mgr NUMBER(4),
+   hiredate DATE,
+   sal NUMBER(7,2),
+   comm NUMBER(7,2),
+   deptno NUMBER(2)
+);
+
 SELECT empno, ename, sal, deptno FROM emp MINUS SELECT empno, ename, sal, deptno FROM emp WHERE deptno = 10;
 
 SELECT SYSDATE, SYSDATE + 1, SYSDATE - 1, ADD_MONTHS(SYSDATE, 3), ADD_MONTHS(SYSDATE, -3) FROM DUAL;
