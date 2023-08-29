@@ -419,3 +419,33 @@ DROP SEQUENCE seq_dept_sequence;
 -- CONSTRAINT
 SELECT OWNER, CONSTRAINT_NAME, CONSTRAINT_TYPE, TABLE_NAME FROM USER_CONSTRAINTS;
 
+SELECT OWNER, CONSTRAINT_NAME, CONSTRAINT_TYPE, TABLE_NAME, R_OWNER, R_CONSTRAINT_NAME
+FROM USER_CONSTRAINTS
+WHERE TABLE_NAME IN ('EMP', 'DEPT');
+
+-- RECORD(커맨드 출력용)
+SET SERVEROUTPUT ON; -- 결과 출력
+
+DECLARE
+    TYPE rec_dept IS RECORD(
+        deptno NUMBER(2) NOT NULL := 99, -- :=(DEFALUT, 할당 연산자), 99(2자리 수)
+        dname DEPT.DNAME%TYPE, -- 참조변수
+        loc DEPT.LOC%TYPE
+    );
+    
+dept_rec rec_dept; -- 레코드(rec_dept)형 변수 선언
+    
+BEGIN
+    dept_rec.deptno := 99;
+    dept_rec.dname := 'DATABASE';
+    dept_rec.loc := 'SEOUL';
+    INSERT INTO dept_record VALUES dept_rec;
+    
+    DBMS_OUTPUT.PUT_LINE('deptno: ' || dept_rec.deptno); -- print() 함수랑 비슷
+    DBMS_OUTPUT.PUT_LINE('dname: ' || dept_rec.dname);
+    DBMS_OUTPUT.PUT_LINE('loc: ' || dept_rec.loc);
+END;
+/
+
+CREATE TABLE dept_record AS SELECT * FROM dept;
+SELECT * FROM dept_record;
