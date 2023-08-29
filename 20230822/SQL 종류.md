@@ -48,4 +48,6 @@ SELECT empno, ename, sal, deptno FROM emp MINUS SELECT empno, ename, sal, deptno
 SELECT SYSDATE, SYSDATE + 1, SYSDATE - 1, ADD_MONTHS(SYSDATE, 3), ADD_MONTHS(SYSDATE, -3) FROM DUAL;
 
 SELECT * FROM emp e1, emp e2 WHERE e1.mgr = e2.empno(+);
+
+SELECT * FROM (SELECT * FROM emp e ORDER BY sal DESC) WHERE ROWNUM <= 5;
 ```
