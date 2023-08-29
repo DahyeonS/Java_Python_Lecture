@@ -449,3 +449,24 @@ END;
 
 CREATE TABLE dept_record AS SELECT * FROM dept;
 SELECT * FROM dept_record;
+
+-- CURSOR
+SET SERVEROUTPUT ON;
+
+DECLARE
+	v_deptno DEPT.DEPTNO%TYPE;
+
+	CURSOR c1(p_deptno DEPT.DEPTNO%TYPE) IS
+		SELECT deptno, dname, loc FROM dept WHERE deptno = p_deptno;
+
+BEGIN
+	v_deptno := &INPUT_DEPTNO;
+	
+	FOR c1_rec IN c1(v_deptno) LOOP
+		DBMS_OUTPUT.PUT_LINE('deptno: ' || c1_rec.deptno);
+		DBMS_OUTPUT.PUT_LINE('dname: ' || c1_rec.dname);
+		DBMS_OUTPUT.PUT_LINE('loc: ' || c1_rec.loc);
+	END LOOP;
+
+END;
+/

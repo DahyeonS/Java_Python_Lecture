@@ -187,3 +187,49 @@ BEGIN
 	END LOOP;
 	
 END;
+
+
+DECLARE
+	V_DEPT_ROW DEPT%ROWTYPE;
+
+	CURSOR c1(p_deptno DEPT.DEPTNO%TYPE) IS
+		SELECT deptno, dname, loc INTO v_dept_row FROM dept WHERE deptno = p_deptno;
+
+BEGIN
+	OPEN c1(10);
+	
+	LOOP
+		FETCH c1 INTO v_dept_row;
+	
+		EXIT WHEN c1%NOTFOUND;
+		
+		DBMS_OUTPUT.PUT_LINE('deptno: ' || v_dept_row.deptno);
+		DBMS_OUTPUT.PUT_LINE('dname: ' || v_dept_row.dname);
+		DBMS_OUTPUT.PUT_LINE('loc: ' || v_dept_row.loc);
+	END LOOP;
+
+	CLOSE c1;
+END;
+
+
+DECLARE
+	V_DEPT_ROW DEPT%ROWTYPE;
+
+	CURSOR c1(p_deptno DEPT.DEPTNO%TYPE) IS
+		SELECT deptno, dname, loc INTO v_dept_row FROM dept WHERE deptno = p_deptno;
+
+BEGIN
+	OPEN c1(20);
+	
+	LOOP
+		FETCH c1 INTO v_dept_row;
+	
+		EXIT WHEN c1%NOTFOUND;
+		
+		DBMS_OUTPUT.PUT_LINE('deptno: ' || v_dept_row.deptno);
+		DBMS_OUTPUT.PUT_LINE('dname: ' || v_dept_row.dname);
+		DBMS_OUTPUT.PUT_LINE('loc: ' || v_dept_row.loc);
+	END LOOP;
+
+	CLOSE c1;
+END;
