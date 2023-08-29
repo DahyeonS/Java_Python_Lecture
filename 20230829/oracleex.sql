@@ -38,8 +38,8 @@ SELECT * FROM emp WHERE sal BETWEEN 2000 AND 3000;
 SELECT * FROM emp WHERE sal < 2000 OR sal > 3000;
 SELECT * FROM emp WHERE sal NOT BETWEEN 2000 AND 3000;
 
--- ì™€ì¼ë“œ ì¹´ë“œ: _  1ê°œ ë¬¸ìž
--- ì™€ì¼ë“œ ì¹´ë“œ: % ëª¨ë“  ë¬¸ìž
+-- ¿ÍÀÏµå Ä«µå: _  1°³ ¹®ÀÚ
+-- ¿ÍÀÏµå Ä«µå: % ¸ðµç ¹®ÀÚ
 SELECT * FROM emp WHERE ename LIKE '_L%';
 SELECT * FROM emp WHERE ename LIKE 'A%';
 SELECT * FROM emp WHERE ename LIKE '%Z';
@@ -76,7 +76,7 @@ WHERE UPPER(ename) LIKE UPPER('scott');
 
 -- LENGTH
 SELECT ename, LENGTH(ename) FROM emp WHERE LENGTH(ename) > 5;
-SELECT LENGTH('í•œê¸€'), LENGTHB('í•œê¸€') FROM DUAL;
+SELECT LENGTH('ÇÑ±Û'), LENGTHB('ÇÑ±Û') FROM DUAL;
 
 -- SUBSTR
 SELECT job, SUBSTR(job, 1, 2), SUBSTR(job, 3, 2), SUBSTR(job, 3, 5) FROM emp;
@@ -137,11 +137,11 @@ TRUNC(MONTHS_BETWEEN(SYSDATE, hiredate)) AS month3 FROM EMP;
 
 -- NEXT_DAY
 SELECT TO_CHAR(SYSDATE, 'YYYY-MM-DD') now,
-TO_CHAR(NEXT_DAY(SYSDATE, 'ê¸ˆìš”ì¼'), 'YYYY-MM-DD') day1,
-TO_CHAR(NEXT_DAY(SYSDATE, 6), 'YYYY-MM-DD') day2 -- ì¼(1) ~ í† (7)
+TO_CHAR(NEXT_DAY(SYSDATE, '±Ý¿äÀÏ'), 'YYYY-MM-DD') day1,
+TO_CHAR(NEXT_DAY(SYSDATE, 6), 'YYYY-MM-DD') day2 -- ÀÏ(1) ~ Åä(7)
 FROM DUAL;
 
--- í˜•ë³€í™˜
+-- Çüº¯È¯
 SELECT empno, ename, empno + '500' FROM emp WHERE ename = 'SCOTT';
 
 -- TO_CHAR
@@ -187,7 +187,7 @@ END AS upsal FROM emp;
 SELECT empno, ename, job, sal, DECODE(job, 'MANAGER', sal * 11,
 'SALESMAN', sal * 1.05, 'ANALYST', sal * 1, sal * 1.03) AS upsal FROM emp;
 
--- ì§‘ê³„í•¨ìˆ˜
+-- Áý°èÇÔ¼ö
 SELECT SUM(DISTINCT sal), SUM(sal) FROM emp;
 SELECT COUNT(DISTINCT sal), COUNT(sal) FROM emp;
 SELECT ROUND(AVG(DISTINCT sal)), ROUND(AVG(sal)),
@@ -233,7 +233,7 @@ DECODE(GROUPING(job), 1, 'ALL_JOB', deptno) AS job, COUNT(*) FROM emp
 GROUP BY CUBE(deptno, job) ORDER BY deptno, job;
 
 -- LISTAGG
-SELECT deptno, ename FROM emp GROUP BY deptno, ename; -- ì„¸ë¡œ
+SELECT deptno, ename FROM emp GROUP BY deptno, ename; -- ¼¼·Î
 
 SELECT deptno,
 LISTAGG(ename, ',') WITHIN GROUP(ORDER BY sal DESC) AS enames
@@ -288,11 +288,11 @@ ORDER BY sal, deptno;
 SELECT * FROM emp WHERE EXISTS (select dname from dept where deptno = 10);
 SELECT * FROM EMP WHERE EXISTS (select dname from dept where deptno = 50);
 
--- ë¹„êµí•  ì—´ì´ ì—¬ëŸ¬ ê°œ
+-- ºñ±³ÇÒ ¿­ÀÌ ¿©·¯ °³
 SELECT * FROM emp WHERE (deptno, sal) IN (select deptno, max(sal) from emp
 group by deptno);
                          
--- ì¸ë¼ì¸ ë·°
+-- ÀÎ¶óÀÎ ºä
 SELECT empno, ename, job, sal, (select grade from salgrade
 where e.sal between losal and hisal) AS salgrade, deptno,
 (select dname from dept d where e.deptno = d.deptno) AS dname FROM emp e;
@@ -306,10 +306,10 @@ DELETE FROM dept_tcl WHERE dname = 'RESEARCH';
 
 SELECT * FROM dept_tcl;
 
-ROLLBACK; -- í…Œì´ë¸” ìƒì„± ì‹œì ìœ¼ë¡œ ëŒì•„ê°
-COMMIT; -- ë³€ê²½ì‚¬í•­ ì ìš©
+ROLLBACK; -- Å×ÀÌºí »ý¼º ½ÃÁ¡À¸·Î µ¹¾Æ°¨
+COMMIT; -- º¯°æ»çÇ× Àû¿ë
 
--- LOCK(ë³€ê²½ ì œí•œ)
+-- LOCK(º¯°æ Á¦ÇÑ)
 UPDATE DEPT_TCL SET DNAME = 'DATA' WHERE DEPTNO = 30;
 
 -- CREATE
@@ -324,7 +324,7 @@ CREATE TABLE emp_ddl(
    deptno NUMBER(2)
 );
 
-DESC emp_ddl; -- í…Œì´ë¸” ì •ë³´ í˜¸ì¶œ
+DESC emp_ddl; -- Å×ÀÌºí Á¤º¸ È£Ãâ
 
 -- ALTER
 CREATE TABLE emp_alter AS SELECT * FROM emp;
@@ -356,7 +356,7 @@ SELECT * FROM USER_TABLES;
 
 SELECT OWNER, TABLE_NAME FROM ALL_TABLES;
 
---SELECT * FROM DBA_TABLES; -- ì»¤ë§¨ë“œë¡œ ê´€ë¦¬ìž ì ‘ì†ì„ í•œ ë’¤ ìž…ë ¥
+--SELECT * FROM DBA_TABLES; -- Ä¿¸Çµå·Î °ü¸®ÀÚ Á¢¼ÓÀ» ÇÑ µÚ ÀÔ·Â
 
 -- INDEX
 SELECT * FROM USER_INDEXES;
@@ -392,5 +392,30 @@ WHERE ROWNUM >= 10;
 
 SELECT * FROM (SELECT * FROM emp e ORDER BY sal DESC) WHERE ROWNUM <= 5;
 
+-- SEQUENCE
+CREATE SEQUENCE seq_dept_sequence
+    INCREMENT BY 10 -- Áõ°¡°ª, »ý·« ½Ã 1
+    START WITH 10 -- ½ÃÀÛ°ª, »ý·« ½Ã 1
+    MAXVALUE 90 -- ÃÖ´ë°ª, »ý·« ½Ã 10^27
+    NOCYCLE; -- ¹Ýº¹ ½ÇÇà ¾øÀ½(»ý·« ½Ã ¹Ýº¹)
 
+-- CURRVAL(¸¶Áö¸· »ý¼º ¹øÈ£), NEXTVAL(¸¶Áö¸·+Áõ°¡°ª ¹øÈ£)
+CREATE TABLE dept_seq AS SELECT * FROM dept WHERE 1<>1;
+
+INSERT INTO dept_seq VALUES(seq_dept_sequence.NEXTVAL, 'DATABASE', 'SEOUL');
+INSERT INTO dept_seq VALUES(seq_dept_sequence.NEXTVAL, 'DATABASE1', 'SEOUL1');
+SELECT * FROM dept_seq;
+
+SELECT seq_dept_sequence.CURRVAL FROM DUAL;
+SELECT seq_dept_sequence.NEXTVAL FROM DUAL;
+
+ALTER SEQUENCE seq_dept_sequence
+    INCREMENT BY 3
+    MAXVALUE 99
+    CYCLE;
+    
+DROP SEQUENCE seq_dept_sequence;
+
+-- CONSTRAINT
+SELECT OWNER, CONSTRAINT_NAME, CONSTRAINT_TYPE, TABLE_NAME FROM USER_CONSTRAINTS;
 
