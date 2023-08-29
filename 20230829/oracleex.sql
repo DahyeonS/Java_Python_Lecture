@@ -297,7 +297,125 @@ SELECT empno, ename, job, sal, (select grade from salgrade
 where e.sal between losal and hisal) AS salgrade, deptno,
 (select dname from dept d where e.deptno = d.deptno) AS dname FROM emp e;
 
--- TRANSACTION
+-- COMMIT, ROLLBACK
 CREATE TABLE dept_tcl AS SELECT * FROM dept;
 
+INSERT INTO dept_tcl VALUES (50, 'DATABASE', 'SEOUL');
+UPDATE dept_tcl SET loc = 'BUSAN' WHERE deptno = 40;
+DELETE FROM dept_tcl WHERE dname = 'RESEARCH';
+
 SELECT * FROM dept_tcl;
+
+ROLLBACK; -- 테이블 생성 시점으로 돌아감
+COMMIT; -- 변경사항 적용
+
+-- LOCK(변경 제한)
+UPDATE DEPT_TCL SET DNAME = 'DATA' WHERE DEPTNO = 30;
+
+-- CREATE
+CREATE TABLE emp_ddl(
+   empno NUMBER(4),
+   ename VARCHAR2(10),
+   job VARCHAR2(9),
+   mgr NUMBER(4),
+   hiredate DATE,
+   sal NUMBER(7,2),
+   comm NUMBER(7,2),
+   deptno NUMBER(2)
+);
+
+DESC emp_ddl; -- 테이블 정보 호출
+
+-- ALTER
+CREATE TABLE emp_alter AS SELECT * FROM emp;
+SELECT * FROM emp_alter;
+
+ALTER TABLE emp_alter ADD hp VARCHAR2(20);
+ALTER TABLE emp_alter RENAME COLUMN hp TO tel;
+ALTER TABLE emp_alter MODIFY empno NUMBER(5);
+ALTER TABLE emp_alter DROP COLUMN tel;
+
+-- RENAME
+RENAME emp_alter TO emp_new;
+RENAME emp_new TO emp_rename;
+SELECT * FROM emp_rename;
+
+-- TRUNCATE
+TRUNCATE TABLE emp_rename;
+ROLLBACK;
+
+-- DROP
+DROP TABLE emp_rename;
+ROLLBACK;
+
+-- DATE DICTIONARY
+SELECT * FROM DICT;
+SELECT * FROM DICTIONARY;
+
+SELECT * FROM USER_TABLES;
+
+SELECT OWNER, TABLE_NAME FROM ALL_TABLES;
+
+SELECT * FROM DBA_TABLES; -- 커맨드로 관리자 접속을 한 뒤 입력
+
+-- INDEX
+SELECT * FROM USER_INDEXES;
+SELECT * FROM USER_IND_COLUMNS;
+
+CREATE INDEX idx_emp_sal ON emp(sal);
+DROP INDEX idx_emp_sal;
+
+-- VIEW
+CREATE VIEW vw_emp20 AS
+(SELECT empno, ename, job, deptno FROM emp WHERE deptno = 20);
+
+SELECT view_name, text_length, text FROM user_views;
+
+SELECT * FROM vw_emp20 WHERE job = 'CLERK';
+
+DROP VIEW vw_emp20;
+
+-- ROWNUM
+SELECT ROWNUM, e.* FROM emp e;
+SELECT ROWNUM, e.* FROM emp e ORDER BY sal DESC;
+SELECT ROWNUM, e.* FROM (SELECT rownum, e.* FROM emp e ORDER BY sal DESC) e;
+
+SELECT ROWNUM, e.* FROM (SELECT rownum, e.* FROM emp e ORDER BY sal DESC) e
+WHERE ROWNUM <= 3;
+
+SELECT ROWNUM, e.* FROM (SELECT rownum, e.* FROM emp e ORDER BY sal DESC) e
+WHERE ROWNUM BETWEEN 10 AND 12;
+SELECT ROWNUM, e.* FROM (SELECT rownum, e.* FROM emp e ORDER BY sal DESC) e
+WHERE ROWNUM >= 10 AND ROWNUM <= 12;
+SELECT ROWNUM, e.* FROM (SELECT rownum, e.* FROM emp e ORDER BY sal DESC) e
+WHERE ROWNUM >= 10;
+
+SELECT * FROM (SELECT * FROM emp e ORDER BY sal DESC) WHERE ROWNUM <= 5;
+
+-- SEQUENCE
+CREATE SEQUENCE seq_dept_sequence
+    INCREMENT BY 10 -- 증가값, 생략 시 1
+    START WITH 10 -- 시작값, 생략 시 1
+    MAXVALUE 90 -- 최대값, 생략 시 10^27
+    NOCYCLE; -- 반복 실행 없음(생략 시 반복)
+
+-- CURRVAL(마지막 생성 번호), NEXTVAL(마지막+증가값 번호)
+CREATE TABLE dept_seq AS SELECT * FROM dept WHERE 1<>1;
+
+INSERT INTO dept_seq VALUES(seq_dept_sequence.NEXTVAL, 'DATABASE', 'SEOUL');
+INSERT INTO dept_seq VALUES(seq_dept_sequence.NEXTVAL, 'DATABASE1', 'SEOUL1');
+SELECT * FROM dept_seq;
+
+SELECT seq_dept_sequence.CURRVAL FROM DUAL;
+SELECT seq_dept_sequence.NEXTVAL FROM DUAL;
+
+ALTER SEQUENCE seq_dept_sequence
+    INCREMENT BY 3
+    MAXVALUE 99
+    CYCLE;
+    
+DROP SEQUENCE seq_dept_sequence;
+
+-- CONSTRAINT
+SELECT OWNER, CONSTRAINT_NAME, CONSTRAINT_TYPE, TABLE_NAME FROM USER_CONSTRAINTS;
+
