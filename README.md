@@ -870,7 +870,7 @@
 > ```
 
 > ## 2023.8.30
-> **프로시저와 JDBC**
+> **프로시저와 [JDBC](20230830/JDBC.md)**
 > ```sql
 > CREATE OR REPLACE PROCEDURE pro_noparam
 > IS
