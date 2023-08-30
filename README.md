@@ -792,9 +792,9 @@
 > ALTER TABLE person ADD COLUMN new2 INTEGER NOT NULL DEFAULT 0;
 > ```
 > ### *output*
->> - memberdb.sqbpro
->> - Script.sql
->> - Script-1.sql
+> - memberdb.sqbpro
+> - Script.sql
+> - Script-1.sql
 
 > ## 2023.8.21
 > **[MSSQL](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230822/SQL%20%EC%A2%85%EB%A5%98.md#mssql)**
@@ -802,9 +802,9 @@
 > SELECT TOP 3 * FROM Products;
 > ```
 > ### *output*
->> - Script-2.sql
->> - 상권 분석.sql
->> - 조류 GPS.sql
+> - Script-2.sql
+> - 상권 분석.sql
+> - 조류 GPS.sql
 
 > ## 2023.8.22
 > **[PostgreSQL](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230822/SQL%20%EC%A2%85%EB%A5%98.md#postgresql)**
@@ -812,7 +812,7 @@
 > select * from film order by title fetch first row only;
 > ```
 > ### *output*
->> - Script-3.sql
+> - Script-3.sql
 
 > ## 2023.8.23
 > **[서브쿼리](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230818/SQL.md#subquery)**
@@ -833,10 +833,10 @@
 > ROLLBACK;
 > ```
 > ### *output*
->> - Script-4.sql
->> - Script-5.sql
->> - Script-6.sql
->> - Script-7.sql
+> - Script-4.sql
+> - Script-5.sql
+> - Script-6.sql
+> - Script-7.sql
 
 > ## 2023.8.28
 > **[Oracle](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230822/SQL%20%EC%A2%85%EB%A5%98.md#oracle)**
@@ -845,8 +845,8 @@
 > SELECT * FROM (SELECT * FROM emp e ORDER BY sal DESC) WHERE ROWNUM <= 5;
 > ```
 > ### *output*
->> - Script-8.sql
->> - oracleex.sql
+> - Script-8.sql
+> - oracleex.sql
 
 > ## 2023.8.29
 > **PL/SQL**
@@ -890,4 +890,5 @@
 >
 > ```
 > ### *output*
->> - 
+>> #### jdbcpkg
+>> -
