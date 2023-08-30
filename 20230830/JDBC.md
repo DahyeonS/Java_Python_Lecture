@@ -35,8 +35,46 @@ conn = DriverManager.getConnection(url, user, password);
 ```
 
 ### 4. SQL창 + 실행
+#### SELECT
 ```java
+// Statement
+String sql = "select count(*) cnt from country"; // 쿼리 작성
+stmt = conn.createStatement();
+rs = stmt.executeQuery(sql); // 쿼리 실행
 
+
+// PreparedStatement
+String param = "KOR";
+String sql = "select code, name, population from country";
+sql += " where code = ?";
+			
+stmt = conn.prepareStatement(sql);
+stmt.setString(1, param); // ?에 KOR 세팅
+rs = stmt.executeQuery(); // 쿼리 실행
+
+// ArrayList에 저장
+Map<String, String> country = new HashMap<String, String>();
+List<Map<String, String>> countryList = new ArrayList<Map<String,String>>();
+while (rs.next()) {
+  String code = rs.getString("code");
+  String name = rs.getString("name");
+  String population = rs.getInt("population") + "";
+  country.put("code", code);
+  country.put("name", name);
+  country.put("population", population);
+  countryList.add(country);
+}
+
+// Class로 생성한 변수에 저장
+CountryDto country = null;
+List<CountryDto> countryList = new ArrayList<CountryDto>();
+while (rs.next()) {
+  String code = rs.getString("code");
+	String name = rs.getString("name");
+	String population = rs.getInt("population") + "";
+	country = new CountryDto(code, name, population);
+	countryList.add(country);
+}
 ```
 
 ## 정리
