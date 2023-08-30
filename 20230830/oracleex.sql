@@ -552,3 +552,24 @@ BEGIN
 END pro_param_out;
 /
 
+DECLARE
+    v_ename EMP.ENAME%TYPE;
+    v_sal EMP.SAL%TYPE;
+BEGIN
+    pro_param_out(7788, v_ename, v_sal);
+    DBMS_OUTPUT.PUT_LINE('ename: ' || v_ename);
+    DBMS_OUTPUT.PUT_LINE('sal: ' || v_sal);
+END;
+/
+
+SELECT * FROM emp;
+
+DECLARE
+    v_ename EMP.ENAME%TYPE;
+    v_sal EMP.SAL%TYPE;
+BEGIN
+    pro_param_out(7369, v_ename, v_sal);
+    DBMS_OUTPUT.PUT_LINE('ename: ' || v_ename);
+    DBMS_OUTPUT.PUT_LINE('sal: ' || v_sal);
+END;
+/
