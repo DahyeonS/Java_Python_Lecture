@@ -869,9 +869,20 @@
 > ```
 
 > ## 2023.8.30
-> ** **
+> **프로시저**
 > ```sql
-> 
+> CREATE OR REPLACE PROCEDURE pro_noparam
+> IS
+>   v_empno NUMBER(4) := 7788;
+>   v_ename VARCHAR2(10);
+> BEGIN
+>   v_ename := 'SCOTT';
+>   DBMS_OUTPUT.PUT_LINE('v_empno: ' || v_empno);
+>   DBMS_OUTPUT.PUT_LINE('v_ename: ' || v_ename);
+> END;
+> /
+>
+> EXECUTE pro_noparam;
 > ```
 > ### *output*
 >> - 
