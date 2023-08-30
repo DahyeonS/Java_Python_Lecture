@@ -887,7 +887,9 @@
 > ```
 >
 > ```java
->
+> String sql = "select * cnt from country limit 5";
+> stmt = conn.createStatement();
+> rs = stmt.executeQuery(sql);
 > ```
 > ### *output*
 >
