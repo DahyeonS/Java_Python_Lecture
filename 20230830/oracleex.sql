@@ -512,7 +512,7 @@ EXECUTE pro_noparam;
 /*
 -파라미터-
 IN: 기본 값, 입력 값
-OUT:  출력 값(return value)
+OUT: 출력 값(return value)
 IN OUT: 입, 출력 값
 */
 
@@ -573,3 +573,79 @@ BEGIN
     DBMS_OUTPUT.PUT_LINE('sal: ' || v_sal);
 END;
 /
+
+CREATE OR REPLACE PROCEDURE pro_param_inout
+(
+    inout_no IN OUT NUMBER
+)
+IS
+BEGIN
+    inout_no := inout_no * 2;
+END pro_param_inout;
+/
+
+DECLARE
+    no NUMBER;
+BEGIN
+    no := 5;
+    pro_param_inout(no);
+    DBMS_OUTPUT.PUT_LINE('no: ' || no);
+END;
+/
+
+-- COMPILE ERROR
+CREATE OR REPLACE PROCEDURE pro_err
+IS
+    err_no NUMBER;
+BEGIN
+    err_no = 100;
+    DBMS_OUTPUT.PUT_LINE('err_no: ' || err_no);
+END;
+/
+
+SHOW ERROR;
+
+SELECT * FROM USER_ERRORS WHERE name = 'PRO_ERR';
+
+-- STORED FUNCTION
+CREATE OR REPLACE FUNCTION func_aftertax(
+    sal IN NUMBER
+)
+RETURN NUMBER
+IS
+    tax NUMBER := 0.05;
+BEGIN
+    RETURN ROUND(sal - (sal * tax));
+END func_aftertax;
+/
+
+SELECT func_aftertax(6000) FROM DUAL;
+SELECT empno, ename, sal, func_aftertax(sal) AS aftertax FROM emp;
+
+-- TRIGGER
+CREATE TABLE emp_trg AS SELECT * FROM emp;
+
+SELECT * FROM emp_trg;
+
+CREATE OR REPLACE TRIGGER trg_emp_nodml_weekend
+BEFORE
+INSERT OR UPDATE OR DELETE ON emp_trg
+BEGIN
+    IF TO_CHAR(SYSDATE, 'DY') IN ('토', '일') THEN
+        IF INSERTING THEN
+            RAISE_APPLICATION_ERROR(-2000, '주말 사원정보 추가 불가');
+        ELSIF UPDATING THEN
+            RAISE_APPLICATION_ERROR(-2001, '주말 사원정보 수정 불가');
+        ELSIF DELETING THEN
+            RAISE_APPLICATION_ERROR(-2002, '주말 사원정보 삭제 불가');
+        ELSE
+            RAISE_APPLICATION_ERROR(-2003, '주말 사원정보 변경 불가');
+        END IF;
+    END IF;
+END;
+/
+
+-- 주말에 실행하면 오류
+INSERT INTO emp_trg VALUES(1, 'hong', 'job', 1, '1980-12-17 00:00:00.000', 1, 1, 1);
+UPDATE emp_trg SET sal = 3500 WHERE empno = 7788;
+DELETE FROM emp_trg WHERE empno = 7369;
