@@ -649,3 +649,5 @@ END;
 INSERT INTO emp_trg VALUES(1, 'hong', 'job', 1, '1980-12-17 00:00:00.000', 1, 1, 1);
 UPDATE emp_trg SET sal = 3500 WHERE empno = 7788;
 DELETE FROM emp_trg WHERE empno = 7369;
+
+DROP TRIGGER trg_emp_nodml_weekend;
