@@ -870,7 +870,7 @@
 > ```
 
 > ## 2023.8.30
-> **프로시저**
+> **프로시저와 JDBC**
 > ```sql
 > CREATE OR REPLACE PROCEDURE pro_noparam
 > IS
@@ -884,6 +884,10 @@
 > /
 >
 > EXECUTE pro_noparam;
+> ```
+>
+> ```java
+>
 > ```
 > ### *output*
 >> - 
