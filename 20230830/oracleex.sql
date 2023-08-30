@@ -552,4 +552,3 @@ BEGIN
 END pro_param_out;
 /
 
-EXECUTE pro_param_out;
