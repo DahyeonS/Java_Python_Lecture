@@ -79,6 +79,9 @@ while (rs.next()) {
 
 #### UPDATE
 ```java
+// 데이터베이스 연결
+conn = JDBCUtil.getConnection(); // 드라이버 로드 후 데이터베이스에 연결하는 메서드 호출
+
 // 쿼리 작성
 String sql = "insert into member(id, pw, name, age) values (?, ?, ?, ?)";
 
@@ -100,7 +103,23 @@ try {
 
 #### DELETE
 ```java
+// 데이터베이스 연결
+conn = JDBCUtil.getConnection(); // 드라이버 로드 후 데이터베이스에 연결하는 메서드 호출
 
+// 쿼리 작성
+String sql = "delete from member where id = ?";
+
+// SQL 실행		
+try {
+  pstmt = conn.prepareStatement(sql);
+  pstmt.setString(1, id);
+
+  pstmt.executeUpdate(); // DELETE 작업 실행문
+} catch (SQLException e) {
+  e.printStackTrace();
+} finally {
+  JDBCUtil.close(pstmt, conn); // 세션을 닫는 메서드 호출
+}
 ```
 
 ## 정리
