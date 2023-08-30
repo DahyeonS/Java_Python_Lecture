@@ -5,14 +5,46 @@
 Java Project > Properties > Java Build Path > Libraies > Add External JARS > 드라이버파일 등록
 
 ### 1. 참조변수 설정
+```java
+Connection conn = null; // 드라이버 연결
+Statement stmt = null; // SQL 쿼리 실행(Statement)
+PreparedStatement stmt = null; // SQL 쿼리 실행(PreparedStatement)
+ResultSet rs = null; // SQL 쿼리 결과물
+```
 
+### 2. 드라이버 로딩
+```java
+String driver = "com.mysql.cj.jdbc.Driver"; // MySQL 연결용 드라이버 로드
+Class.forName(driver);
+```
+
+### 3. 데이터베이스 연결
+```java
+// url 작성
+String url = "jdbc:mysql://localhost:3306/kdigital2307";
+url += "?ServerTimezone=UTC";
+
+String url = "jdbc:mysql://localhost:3306/kdigital2307?ServerTimezone=UTC";
+
+// DB 연결 계정 설정
+String user = "root"; // 계정명
+String password = "rpass"; // 비밀번호
+
+// 데이터베이스 연동
+conn = DriverManager.getConnection(url, user, password);
+```
+
+### 4. SQL창 + 실행
+```java
+
+```
 
 ## 정리
 ```java
 // 1. 참조변수 설정
-Connection conn = null; // 드라이버 연결
-Statement stmt = null; // SQL 쿼리 실행
-ResultSet rs = null; // SQL 쿼리 결과물
+Connection conn = null;
+Statement stmt = null;
+ResultSet rs = null;
 try {
 // 2. 드라이버 로딩
   String driver = "com.mysql.cj.jdbc.Driver";
