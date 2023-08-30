@@ -1,7 +1,7 @@
 # JDBC
 데이터베이스에 연결 및 작업을 하기 위한 자바 표준 인터페이스
 
-### JDBC 드라이버 Build Path 설정
+### 0. JDBC 드라이버 Build Path 설정
 Java Project > Properties > Java Build Path > Libraies > Add External JARS > 드라이버파일 등록
 
 ### 1. 참조변수 설정
