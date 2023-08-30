@@ -77,6 +77,32 @@ while (rs.next()) {
 }
 ```
 
+#### UPDATE
+```java
+// 쿼리 작성
+String sql = "insert into member(id, pw, name, age) values (?, ?, ?, ?)";
+
+// SQL 실행
+try {
+  pstmt = conn.prepareStatement(sql);
+  pstmt.setString(1, member.getId());
+  pstmt.setString(2, member.getPw());
+  pstmt.setString(3, member.getName());
+  pstmt.setInt(4, member.getAge());
+			
+  pstmt.executeUpdate(); // UPDATE 작업 실행문, return 값이 업데이트 성공한 수
+} catch (SQLException e) {
+  e.printStackTrace();
+} finally {
+  JDBCUtil.close(pstmt, conn); // 세션을 닫는 메서드 호출
+}
+```
+
+#### DELETE
+```java
+
+```
+
 ## 정리
 ```java
 // 1. 참조변수 설정
