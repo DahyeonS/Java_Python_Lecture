@@ -738,7 +738,6 @@
 
 > ## 2023.8.14
 > **[회원관리](20230814/회원관리.md)**
-> 
 > ### *output*
 >> #### memberarray
 >> - MemberArrayData.java
@@ -752,7 +751,6 @@
 
 > ## 2023.8.16
 > **회원관리(ArrayList, File)**
-> 
 > ### *output*
 >> #### memberarraylist
 >> - MemberArrayListData.java
