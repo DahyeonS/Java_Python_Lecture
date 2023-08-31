@@ -66,13 +66,27 @@ public class MemberMain3 {
 					break;
 					
 				case 4 :
-					System.out.println("4. 회원 삭제");
-					
+					System.out.println("3. 회원 정보 수정");
+//					회원 정보 입력
 					System.out.print("ID 입력 > ");
 					id = sc.next();
 					dto = MemberStaticDAO.getMemberOne(id);
 					
-					if (dto != null) MemberStaticDAO.DeleteMember(dto);
+					if (dto != null) {
+//						수정 정보 입력
+						System.out.println("기존 Password: " + dto.getPw());
+						System.out.print("새로운 Password 입력 > ");
+						pw = sc.next();
+						System.out.println("기존 Name: " + dto.getName());
+						System.out.print("새로운 Name 입력 > ");
+						name = sc.next();
+						System.out.println("기존 Age: " + dto.getAge());
+						System.out.print("새로운 Age 입력 > ");
+						age = sc.nextInt();
+						
+						dto = new MemberDTO(id, pw, name, age);
+						MemberStaticDAO.UpdateMember(dto);
+					}
 					else System.out.println("Member Not Found!!");
 					break;
 					

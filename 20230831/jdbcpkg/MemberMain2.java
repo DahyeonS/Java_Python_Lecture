@@ -10,6 +10,134 @@ import java.util.List;
 import java.util.Scanner;
 
 public class MemberMain2 {
+	static void SearchMemberOne(MemberDTO dto) {
+		List<MemberDTO> members = new ArrayList<MemberDTO>();
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		
+		conn = MemberStaticDAO.getConnection();
+			
+//		2. SQL
+		String sql = "select * from member where name like ? limit 1";
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, dto.getName());
+			
+			rs = pstmt.executeQuery();
+			while (rs.next()) {
+				String id = rs.getString("id");
+				String pw = rs.getString("pw");
+				String name = rs.getString("name");
+				int age = rs.getInt("age");
+				dto = new MemberDTO(id, pw, name, age);
+				members.add(dto);
+			}
+			System.out.println("검색 결과");
+			System.out.println("================================");
+			for (MemberDTO m : members) {
+				System.out.print(m.getId() + " / ");
+				System.out.print(m.getPw() + " / ");
+				System.out.print(m.getName() + " / ");
+				System.out.println(m.getAge());
+				System.out.println("================================");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (pstmt != null) pstmt.close();
+				if (conn != null) conn.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+	
+	static void SearchMemberList(MemberDTO dto) {
+		List<MemberDTO> members = new ArrayList<MemberDTO>();
+		
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		
+		conn = MemberStaticDAO.getConnection();
+			
+//		2. SQL
+		String sql = "select * from member where name like ?";
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, dto.getName());
+			
+			rs = pstmt.executeQuery();
+			while (rs.next()) {
+				String id = rs.getString("id");
+				String pw = rs.getString("pw");
+				String name = rs.getString("name");
+				int age = rs.getInt("age");
+				dto = new MemberDTO(id, pw, name, age);
+				members.add(dto);
+			}
+			System.out.println("검색 결과");
+			System.out.println("================================");
+			for (MemberDTO m : members) {
+				System.out.print(m.getId() + " / ");
+				System.out.print(m.getPw() + " / ");
+				System.out.print(m.getName() + " / ");
+				System.out.println(m.getAge());
+				System.out.println("================================");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (pstmt != null) pstmt.close();
+				if (conn != null) conn.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+	
+	static MemberDTO getMemberOneName(String name) {
+		MemberDTO dto = null;
+		
+//		db
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		
+		conn = getConnection();
+		
+		String sql = "select * from member where name like ?";
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, name);
+			
+			rs = pstmt.executeQuery();
+			
+//			dto
+			while (rs.next()) {
+				String id = rs.getString("id");
+				String pw = rs.getString("pw");
+				name = rs.getString("name");
+				int age = rs.getInt("age");
+				dto = new MemberDTO(id, pw, name, age);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (rs != null) rs.close();
+				if (pstmt != null) pstmt.close();
+				if (conn != null) conn.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		
+		return dto;
+	}
 	
 	static void DeleteMember(MemberDTO dto) {
 		Connection conn = null;
@@ -41,26 +169,17 @@ public class MemberMain2 {
 	static void UpdateMember(MemberDTO dto) {
 		Connection conn = null;
 		PreparedStatement pstmt = null;
-		Scanner sc = new Scanner(System.in);
 		
 		conn = MemberMain2.getConnection();
-
-//		수정 정보 입력
-		System.out.print("Password 입력 > ");
-		String pw = sc.next();
-		System.out.print("Name 입력 > ");
-		String name = sc.next();
-		System.out.print("Age 입력 > ");
-		int age = sc.nextInt();
 		
 //		2. SQL
 		String sql = "update member set pw = ?, name = ?, age = ? where id = ?";
 		try {
 			pstmt = conn.prepareStatement(sql);
 			
-			pstmt.setString(1, pw);
-			pstmt.setString(2, name);
-			pstmt.setInt(3, age);
+			pstmt.setString(1, dto.getPw());
+			pstmt.setString(2, dto.getName());
+			pstmt.setInt(3, dto.getAge());
 			pstmt.setString(4, dto.getId());
 			
 			int result = pstmt.executeUpdate();
@@ -75,7 +194,6 @@ public class MemberMain2 {
 				e.printStackTrace();
 			}
 		}
-		sc.close();
 	}
 	
 	static void InsertMember(MemberDTO dto) {
@@ -266,7 +384,21 @@ public class MemberMain2 {
 					id = sc.next();
 					dto = MemberMain2.getMemberOne(id);
 					
-					if (dto != null) MemberMain2.UpdateMember(dto);
+					if (dto != null) {
+//						수정 정보 입력
+						System.out.println("기존 Password: " + dto.getPw());
+						System.out.print("새로운 Password 입력 > ");
+						pw = sc.next();
+						System.out.println("기존 Name: " + dto.getName());
+						System.out.print("새로운 Name 입력 > ");
+						name = sc.next();
+						System.out.println("기존 Age: " + dto.getAge());
+						System.out.print("새로운 Age 입력 > ");
+						age = sc.nextInt();
+						
+						dto = new MemberDTO(id, pw, name, age);
+						MemberMain2.UpdateMember(dto);
+					}
 					else System.out.println("Member Not Found!!");
 					break;
 					
@@ -284,135 +416,25 @@ public class MemberMain2 {
 				case 5 :
 					System.out.println("5. 회원 이름으로 검색");
 					
-					Connection conn = null;
-					PreparedStatement pstmt = null;
-					ResultSet rs = null;
-					
-					conn = MemberMain2.getConnection();
-
 //					이름 입력으로 사용자가 있다면 검색
 					System.out.print("이름 입력 > ");
 					name = sc.next();
-					String sql = "select * from member where name = ?";
-					try {
-						pstmt = conn.prepareStatement(sql);
-						
-						pstmt.setString(1, name);
-						rs = pstmt.executeQuery();
-						name = null;
-						
-						if (rs.next()) name = rs.getString("name");
-						
-						if (name != null) {
-//						2. SQL
-							sql = "select * from member where name like ? limit 1";
-							try {
-								pstmt = conn.prepareStatement(sql);
-								
-								pstmt.setString(1, name);
-								
-								List<MemberDTO> members = new ArrayList<MemberDTO>();
-								rs = pstmt.executeQuery();
-								while (rs.next()) {
-									id  = rs.getString("id");
-									pw = rs.getString("pw");
-									name = rs.getString("name");
-									age = rs.getInt("age");
-									dto = new MemberDTO(id, pw, name, age);
-									members.add(dto);
-								}
-								System.out.println("검색 결과");
-								System.out.println("================================");
-								for (MemberDTO m : members) {
-									System.out.print(m.getId() + " / ");
-									System.out.print(m.getPw() + " / ");
-									System.out.print(m.getName() + " / ");
-									System.out.println(m.getAge());
-									System.out.println("================================");
-								}
-							} catch (SQLException e) {
-								e.printStackTrace();
-							} finally {
-								try {
-									pstmt.close();
-									conn.close();
-								} catch (SQLException e) {
-									e.printStackTrace();
-								}
-							}
-						}
-						else {
-							System.out.println("Member Not Found!!");
-						}
-					} catch (SQLException e) {
-						e.printStackTrace();
-					}
+					
+					dto = MemberMain2.getMemberOneName(name);
+					if (dto != null) MemberMain2.SearchMemberOne(dto);
+					else System.out.println("Member Not Found!!");
 					break;
 					
 				case 6 :
-					conn = null;
-					pstmt = null;
-					rs = null;
+					System.out.println("6. 회원 이름으로 모두 검색");
 					
-					conn = MemberMain2.getConnection();
-
 //					이름 입력으로 사용자가 있다면 검색
 					System.out.print("이름 입력 > ");
 					name = sc.next();
-					sql = "select * from member where name = ?";
-					try {
-						pstmt = conn.prepareStatement(sql);
-						
-						pstmt.setString(1, name);
-						rs = pstmt.executeQuery();
-						name = null;
-						
-						if (rs.next()) name = rs.getString("name");
-						
-						if (name != null) {
-//						2. SQL
-							sql = "select * from member where name like ?";
-							try {
-								pstmt = conn.prepareStatement(sql);
-								
-								pstmt.setString(1, name);
-								
-								List<MemberDTO> members = new ArrayList<MemberDTO>();
-								rs = pstmt.executeQuery();
-								while (rs.next()) {
-									id = rs.getString("id");
-									pw = rs.getString("pw");
-									name = rs.getString("name");
-									age = rs.getInt("age");
-									dto = new MemberDTO(id, pw, name, age);
-									members.add(dto);
-								}
-								System.out.println("검색 결과");
-								System.out.println("================================");
-								for (MemberDTO m : members) {
-									System.out.print(m.getId() + " / ");
-									System.out.print(m.getPw() + " / ");
-									System.out.print(m.getName() + " / ");
-									System.out.println(m.getAge());
-									System.out.println("================================");
-								}
-							} catch (SQLException e) {
-								e.printStackTrace();
-							} finally {
-								try {
-									pstmt.close();
-									conn.close();
-								} catch (SQLException e) {
-									e.printStackTrace();
-								}
-							}
-						}
-						else {
-							System.out.println("Member Not Found!!");
-						}
-					} catch (SQLException e) {
-						e.printStackTrace();
-					}
+					
+					dto = MemberMain2.getMemberOneName(name);
+					if (dto != null) MemberMain2.SearchMemberList(dto);
+					else System.out.println("Member Not Found!!");
 					break;
 			}
 //			End

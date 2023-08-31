@@ -129,26 +129,17 @@ public class MemberStaticDAO {
 	static void UpdateMember(MemberDTO dto) {
 		Connection conn = null;
 		PreparedStatement pstmt = null;
-		Scanner sc = new Scanner(System.in);
 		
 		conn = getConnection();
-
-//		수정 정보 입력
-		System.out.print("Password 입력 > ");
-		String pw = sc.next();
-		System.out.print("Name 입력 > ");
-		String name = sc.next();
-		System.out.print("Age 입력 > ");
-		int age = sc.nextInt();
 		
 //		2. SQL
 		String sql = "update member set pw = ?, name = ?, age = ? where id = ?";
 		try {
 			pstmt = conn.prepareStatement(sql);
 			
-			pstmt.setString(1, pw);
-			pstmt.setString(2, name);
-			pstmt.setInt(3, age);
+			pstmt.setString(1, dto.getPw());
+			pstmt.setString(2, dto.getName());
+			pstmt.setInt(3, dto.getAge());
 			pstmt.setString(4, dto.getId());
 			
 			int result = pstmt.executeUpdate();
@@ -163,7 +154,6 @@ public class MemberStaticDAO {
 				e.printStackTrace();
 			}
 		}
-		sc.close();
 	}
 	
 	static void InsertMember(MemberDTO dto) {
