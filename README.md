@@ -705,7 +705,14 @@
 > stream1.forEach(s -> System.out.print(s + " "));
 >
 > // GUI
-> 
+> public SwingLayout() {
+>	  super("Layout Showcase");
+>	  getContentPane().add(p1);
+>	  cardLayout();
+>	  setDefaultCloseOperation(EXIT_ON_CLOSE);
+>	  setSize(300, 200);
+>	  setVisible(true);
+> }
 > ```
 > ### *output*
 >> #### iopkg
