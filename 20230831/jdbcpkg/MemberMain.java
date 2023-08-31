@@ -2,7 +2,9 @@ package jdbcpkg;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.util.List;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.Scanner;
 
 public class MemberMain {
@@ -27,15 +29,41 @@ public class MemberMain {
 					
 //					1. conn
 					Connection conn = null;
+					PreparedStatement pstmt = null;
+					ResultSet rs = null;
+					
 					String driver = "com.mysql.cj.jdbc.Driver";
 					try {
 						Class.forName(driver);
-						String url = "jdbc:mysql://localhost:3306/world?ServerTimezone=UTC";
+						String url = "jdbc:mysql://localhost:3306/kdigital2307?ServerTimezone=UTC";
 						String user = "root";
 						String password = "rpass";
 						conn = DriverManager.getConnection(url, user, password);
+						
+//					2. SQL
+						String sql = "select * from member";
+						pstmt = conn.prepareStatement(sql);
+						
+						rs = pstmt.executeQuery();
+						while (rs.next()) {
+							System.out.print(rs.getInt("idx") + " / ");
+							System.out.print(rs.getString("id") + " / ");
+							System.out.print(rs.getString("pw") + " / ");
+							System.out.print(rs.getString("name") + " / ");
+							System.out.print(rs.getInt("age") + " / ");
+							System.out.print(rs.getString("regdate") + "\n");
+							System.out.println("=====================================================");
+						}
 					} catch (Exception e) {
 						e.printStackTrace();
+					} finally {
+						try {
+							rs.close();
+							pstmt.close();
+							conn.close();
+						} catch (SQLException e) {
+							e.printStackTrace();
+						}
 					}
 					break;
 					
