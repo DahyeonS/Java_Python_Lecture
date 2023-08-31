@@ -918,12 +918,11 @@
 >> - MemberView.java
 
 > ## 2023.8.31
-> ** **
-> ```java
+> **JDBC**
 > 
-> ```
 > ### *output*
 >> #### jdbcpkg
 >> - MemberMain.java
 >> - MemberDTO.java
 >> - MemberMain2.java
+>> - MemberMain3.java
