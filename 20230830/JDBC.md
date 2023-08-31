@@ -70,10 +70,10 @@ CountryDto country = null;
 List<CountryDto> countryList = new ArrayList<CountryDto>();
 while (rs.next()) {
   String code = rs.getString("code");
-	String name = rs.getString("name");
-	String population = rs.getInt("population") + "";
-	country = new CountryDto(code, name, population);
-	countryList.add(country);
+  String name = rs.getString("name");
+  String population = rs.getInt("population") + "";
+  country = new CountryDto(code, name, population);
+  countryList.add(country);
 }
 ```
 
