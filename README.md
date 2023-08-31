@@ -923,4 +923,8 @@
 >> - MemberDTO.java
 >> - MemberMain2.java
 >> - MemberMain3.java
+>> - MemberStaticDAO.java
 >> - MemberDAO.java
+>> - MemberMain4.java
+>> - MemberServiceImpl.java
+>> - MemberService.java
