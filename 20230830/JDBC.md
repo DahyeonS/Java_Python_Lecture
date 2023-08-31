@@ -153,13 +153,13 @@ try {
     country.put("code", code);
     country.put("name", name);
     country.put("population", population);
-    countryList.add(country);
+    countryList.add(country); // 결과물 저장
   }
 } catch (Exception e) {
     e.printStackTrace();
 } finally {
   try {
-    if(rs != null) rs.close();
+    if(rs != null) rs.close(); // 세션 닫기
     if(stmt != null) stmt.close();
     if(conn != null) conn.close();
   } catch (SQLException e) {
