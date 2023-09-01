@@ -954,4 +954,3 @@
 >> - LoginServiceImpl.java
 >> - LoginDAO.java
 >> - LoginDAOImpl.java
->> - LoginData.java
