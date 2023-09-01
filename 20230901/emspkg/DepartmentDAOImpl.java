@@ -5,8 +5,10 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
-public class LoginDAOImpl implements LoginDAO {
+public class DepartmentDAOImpl implements DepartmentDAO {
 	private Connection conn;
 	private PreparedStatement pstmt;
 	private ResultSet rs;
@@ -51,31 +53,14 @@ public class LoginDAOImpl implements LoginDAO {
 	}
 
 	@Override
-	public void LoginInsert(LoginDTO dto) {
+	public boolean SearchDepartment(DepartmentDTO dto) {
 		conn = getConnection();
-		sql = "insert into login values (?, ?)";
+		sql = "select * from department where department_id = ? or department_name like ?";
 		
 		try {
 			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, dto.getId());
-			pstmt.setString(2, dto.getPw());
-			
-			pstmt.executeUpdate();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		} finally {
-			close(pstmt, conn);
-		}
-	}
-
-	@Override
-	public boolean LoginIndex(String id) {
-		conn = getConnection();
-		sql = "select * from login where id like ?";
-		
-		try {
-			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, id);
+			pstmt.setInt(1, dto.getId());
+			pstmt.setString(2, dto.getName());
 			
 			rs = pstmt.executeQuery();
 			if (rs.next()) return true;
@@ -89,13 +74,14 @@ public class LoginDAOImpl implements LoginDAO {
 	}
 
 	@Override
-	public void LoginDelete(LoginDTO dto) {
+	public void InsertDepartment(DepartmentDTO dto) {
 		conn = getConnection();
-		sql = "delete from login where id like ?";
+		sql = "insert into department values (?, ?)";
 		
 		try {
 			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, dto.getId());
+			pstmt.setInt(1, dto.getId());
+			pstmt.setString(2, dto.getName());
 			
 			pstmt.executeUpdate();
 		} catch (SQLException e) {
@@ -106,44 +92,33 @@ public class LoginDAOImpl implements LoginDAO {
 	}
 
 	@Override
-	public String PwCheck(String id) {
+	public List<DepartmentDTO> DepartmentList() {
+		List<DepartmentDTO> deptList = new ArrayList<DepartmentDTO>();
 		conn = getConnection();
-		sql = "select pw from login where id like ?";
+		sql = "select * from department";
 		
 		try {
 			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, id);
-			
 			rs = pstmt.executeQuery();
-			if (rs.next()) return rs.getString("pw");
+			
+			while (rs.next()) {
+				int id = rs.getInt("department_id");
+				String name = rs.getString("department_name");
+				DepartmentDTO d = new DepartmentDTO(id, name);
+				deptList.add(d);
+			}
+			System.out.println("학과 목록");
+			System.out.println("================================");
+			for (DepartmentDTO d : deptList) {
+				System.out.println(d.toString());
+				System.out.println("================================");
+			}
+			
 		} catch (SQLException e) {
 			e.printStackTrace();
-		} finally {
-			close(rs, pstmt, conn);
 		}
 		
 		return null;
-	}
-
-	@Override
-	public boolean Login(LoginDTO dto) {
-		conn = getConnection();
-		sql = "select * from login where id like ? and pw like ?";
-		
-		try {
-			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, dto.getId());
-			pstmt.setString(2, dto.getPw());
-			
-			rs = pstmt.executeQuery();
-			if (rs.next()) return true;
-		} catch (SQLException e) {
-			e.printStackTrace();
-		} finally {
-			close(rs, pstmt, conn);
-		}
-		
-		return false;
 	}
 
 }

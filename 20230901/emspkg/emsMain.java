@@ -49,15 +49,27 @@ public class emsMain {
 			System.out.print(">> ");
 			
 			int command = sc.nextInt();
+			emsService service = new emsServiceImpl();
 			
 			switch (command) {
 			case 1 : 
+				service.InsertDepartment(sc);
 				break;
 				
 			case 2 :
+				System.out.println("2. 학생 추가");
 				break;
 			
 			case 3 :
+				System.out.println("3. 교수 추가");
+				break;
+				
+			case 4 :
+				System.out.println("4. 과목 추가");
+				break;
+				
+			case 5 :
+				System.out.println("5. 수강 신청");
 				break;
 			}
 			if (command == 9) break;

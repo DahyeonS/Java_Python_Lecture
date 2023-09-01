@@ -3,15 +3,12 @@ package emspkg;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.List;
 
-public interface LoginDAO {
-	
-	void LoginInsert(LoginDTO dto);
-	void LoginDelete(LoginDTO dto);
-	
-	boolean Login(LoginDTO dto);
-	boolean LoginIndex(String id);
-	String PwCheck(String id);
+public interface DepartmentDAO {
+	List<DepartmentDTO> DepartmentList();
+	boolean SearchDepartment(DepartmentDTO dto);
+	void InsertDepartment(DepartmentDTO dto);
 	
 	Connection getConnection();
 	void close(ResultSet rs, PreparedStatement pstmt, Connection conn);
