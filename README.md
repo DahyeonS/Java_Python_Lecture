@@ -960,3 +960,6 @@
 >> - emsDAO.java
 >> - emsDAOImpl.java
 >> - StudentDTO.java
+>> - ProfessorDTO.java
+>> - CourseDTO.java
+>> - RegisterDTO.java
