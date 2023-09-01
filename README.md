@@ -119,6 +119,9 @@
 [main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#2023831)
 [page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#2023831)
 
+2023.9.1
+[main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#202391)
+[page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#202391)
 
 > ## 2023.7.24
 >
@@ -935,3 +938,9 @@
 >> - MemberMain4.java
 >> - MemberServiceImpl.java
 >> - MemberService.java
+
+> ## 2023.9.1
+> **JDBC**
+> ### *output*
+>> #### jdbcpkg
+>> - ConnTest5.java
