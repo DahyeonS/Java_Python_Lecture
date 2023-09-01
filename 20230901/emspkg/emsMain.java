@@ -9,8 +9,8 @@ public class emsMain {
 		boolean check = false;
 		
 		while (true) {
-			System.out.println("1. 회원 가입");
-			System.out.println("2. 로그인");
+			System.out.println("1. 로그인");
+			System.out.println("2. 회원 가입");
 			System.out.println("3. 회원 탈퇴");
 			System.out.println("9. 종료");
 			System.out.print(">> ");
@@ -20,14 +20,14 @@ public class emsMain {
 			
 			switch (command) {
 				case 1 : 
-					loginservice.LoginInsert(sc);
-					break;
-					
-				case 2 :
 					check = loginservice.Login(sc);
 					
 					if (check) command = 9;
 					else System.out.println("로그인 실패");
+					break;
+					
+				case 2 :
+					loginservice.LoginInsert(sc);
 					break;
 				
 				case 3 :
@@ -57,7 +57,7 @@ public class emsMain {
 				break;
 				
 			case 2 :
-				System.out.println("2. 학생 추가");
+				service.InsertStudent(sc);
 				break;
 			
 			case 3 :

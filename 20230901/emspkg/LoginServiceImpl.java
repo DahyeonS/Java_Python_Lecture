@@ -11,7 +11,7 @@ public class LoginServiceImpl implements LoginService {
 
 	@Override
 	public void LoginInsert(Scanner sc) {
-		System.out.println("1. 회원 가입");
+		System.out.println("2. 회원 가입");
 		System.out.print("ID 입력 > ");
 		String id = sc.next();
 		boolean check = dao.LoginIndex(id);
@@ -52,7 +52,7 @@ public class LoginServiceImpl implements LoginService {
 
 	@Override
 	public boolean Login(Scanner sc) {
-		System.out.println("2. 로그인");
+		System.out.println("1. 로그인");
 		System.out.print("ID 입력 > ");
 		String id = sc.next();
 		System.out.print("비밀번호 입력 > ");
