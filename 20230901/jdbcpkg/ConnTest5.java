@@ -23,29 +23,22 @@ public class ConnTest5 {
 			String driver = "oracle.jdbc.driver.OracleDriver";
 			Class.forName(driver);
 //		3. DB 연결
-			String url = "jdbc:mysql://localhost:3306/world?ServerTimezone=UTC";
-			String user = "root";
-			String password = "rpass";
+			String url = "jdbc:oracle:thin:@localhost:1521:xe";
+			String user = "scott";
+			String password = "tiger";
 			conn = DriverManager.getConnection(url, user, password);
-			
+			System.out.println("conn ok!!");
 //		4. SQL 창 + 실행
-			String param = "KOR";
-			String sql = "select code, name, population from country";
-			sql += " where code = ?";
+			String sql = "select * from dept";
 			
 			stmt = conn.prepareStatement(sql);
-			stmt.setString(1, param); // ?에 KOR 세팅
 			rs = stmt.executeQuery(); // 쿼리 실행
-			CountryDto country = null;
-			List<CountryDto> countryList = new ArrayList<CountryDto>();
 			while (rs.next()) {
-				String code = rs.getString("code");
-				String name = rs.getString("name");
-				String population = rs.getInt("population") + "";
-				country = new CountryDto(code, name, population);
-				countryList.add(country);
+				String deptno = rs.getString("deptno");
+				String dname = rs.getString("dname");
+				String loc = rs.getString("loc");
+				System.out.println(deptno + " / " + dname + " / " + loc);
 			}
-			for (CountryDto dto : countryList) System.out.println(dto);
 			
 		} catch (Exception e) {
 			e.printStackTrace();
