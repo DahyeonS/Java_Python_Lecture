@@ -21,38 +21,15 @@ public class StudentDTO {
 		return id;
 	}
 
-	public void setId(int id) {
-		this.id = id;
-	}
-
 	public String getName() {
 		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
 	}
 
 	public int getHeight() {
 		return height;
 	}
 
-	public void setHeight(int height) {
-		this.height = height;
-	}
-
 	public int getDeptid() {
 		return deptid;
 	}
-
-	public void setDeptid(int deptid) {
-		this.deptid = deptid;
-	}
-
-	@Override
-	public String toString() {
-		return "학생 ID: " + id + " / 학생이름: " + name + " / 신장: " + height + " / 학과 ID: " + deptid;
-	}
-	
-	
 }

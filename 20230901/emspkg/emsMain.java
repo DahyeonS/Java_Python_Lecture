@@ -9,6 +9,7 @@ public class emsMain {
 		boolean check = false;
 		
 		while (true) {
+			System.out.println("== 로그인 페이지 ==");
 			System.out.println("1. 로그인");
 			System.out.println("2. 회원 가입");
 			System.out.println("3. 회원 탈퇴");
@@ -22,7 +23,10 @@ public class emsMain {
 				case 1 : 
 					check = loginservice.Login(sc);
 					
-					if (check) command = 9;
+					if (check) {
+						command = 9;
+						System.out.println("환영합니다!");
+					}
 					else System.out.println("로그인 실패");
 					break;
 					
@@ -61,15 +65,15 @@ public class emsMain {
 				break;
 			
 			case 3 :
-				System.out.println("3. 교수 추가");
+				service.InsertProfessor(sc);
 				break;
 				
 			case 4 :
-				System.out.println("4. 과목 추가");
+				service.InsertCourse(sc);
 				break;
 				
 			case 5 :
-				System.out.println("5. 수강 신청");
+				service.RegisterCourse(sc);
 				break;
 			}
 			if (command == 9) break;

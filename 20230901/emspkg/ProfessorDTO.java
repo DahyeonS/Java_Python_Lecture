@@ -1,16 +1,18 @@
 package emspkg;
 
-public class DepartmentDTO {
+public class ProfessorDTO {
 	private int id;
 	private String name;
+	private int deptid;
 	
-	public DepartmentDTO() {
+	public ProfessorDTO() {
 	}
-	
-	public DepartmentDTO(int id, String name) {
+
+	public ProfessorDTO(int id, String name, int deptid) {
 		super();
 		this.id = id;
 		this.name = name;
+		this.deptid = deptid;
 	}
 
 	public int getId() {
@@ -21,8 +23,7 @@ public class DepartmentDTO {
 		return name;
 	}
 
-	@Override
-	public String toString() {
-		return "학과 ID: " + id + " / 학과명: " + name;
+	public int getDeptid() {
+		return deptid;
 	}
 }
