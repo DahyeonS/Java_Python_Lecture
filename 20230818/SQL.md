@@ -1,15 +1,5 @@
 # SQL
 
-#### SELECT
-```SQL
-SELECT * FROM person;
-
-SELECT * FROM person WHERE id = 5; -- ID가 5인 데이터 전체
-SELECT * FROM person WHERE name = '박혜리'; -- 이름이 '박혜리'인 데이터 전체
-
-SELECT * FROM person WHERE birthday IS NULL; -- 생일이 빈 값인 데이터 전체
-```
-
 #### CREATE TABLE
 ```SQL
 CREATE TABLE account (
@@ -63,6 +53,24 @@ SELECT * FROM brithdayview; -- VIEW 출력
 SELECT * FROM brithdayview WHERE yyyy > '1992'; -- 조건을 달아서 VIEW 출력
 ```
 
+#### ALTER TABLE
+```SQL
+ALTER TABLE person ADD COLUMN new; -- PERSON 테이블에 NEW 칼럼 추가
+ALTER TABLE person ADD COLUMN new2 INTEGER NOT NULL DEFAULT 0; -- PERSON 테이블에 디폴트 값이 0이고 빈 값을 허용하지 않는 NEW2 칼럼 추가
+ALTER TABLE person DROP new2; -- PERSON 테이블에서 NEW2 칼럼 삭제
+ALTER TABLE person RENAME COLUMN new to height; -- PERSON 테이블에서 NEW2 칼럼명을 HEIGHT로 변경
+```
+
+#### TRUNCATE
+```SQL
+TRUNCATE link_tmp; -- 모든 값 삭제, 롤백 불가
+```
+
+#### DROP TABLE
+```SQL
+DROP TABLE emp; -- 테이블 삭제, 롤백 불가
+```
+
 #### UPDATE
 > ```SQL
 > UPDATE person SET name = '김아영' WHERE id = 5; -- ID가 5인 사람의 이름을 '김아영'으로 변경
@@ -91,12 +99,14 @@ INSERT INTO customers(name, email) VALUES
 SET email = excluded.email || ';' || customers.email; -- 충돌이 나면 수정(기존 이메일 값에 새 값을 추가하는 방식)
 ```
 
-#### ALTER TABLE
+#### SELECT
 ```SQL
-ALTER TABLE person ADD COLUMN new; -- PERSON 테이블에 NEW 칼럼 추가
-ALTER TABLE person ADD COLUMN new2 INTEGER NOT NULL DEFAULT 0; -- PERSON 테이블에 디폴트 값이 0이고 빈 값을 허용하지 않는 NEW2 칼럼 추가
-ALTER TABLE person DROP new2; -- PERSON 테이블에서 NEW2 칼럼 삭제
-ALTER TABLE person RENAME COLUMN new to height; -- PERSON 테이블에서 NEW2 칼럼명을 HEIGHT로 변경
+SELECT * FROM person;
+
+SELECT * FROM person WHERE id = 5; -- ID가 5인 데이터 전체
+SELECT * FROM person WHERE name = '박혜리'; -- 이름이 '박혜리'인 데이터 전체
+
+SELECT * FROM person WHERE birthday IS NULL; -- 생일이 빈 값인 데이터 전체
 ```
 
 #### DELETE
@@ -116,11 +126,6 @@ COMMIT;
 변경사항을 직전에 커밋한 시점으로 되돌림
 ```SQL
 ROLLBACK;
-```
-
-#### TRUNCATE
-```SQL
-TRUNCATE link_tmp; -- 모든 값 삭제, 롤백 불가
 ```
 
 #### AS
