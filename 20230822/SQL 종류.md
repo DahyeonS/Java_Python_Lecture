@@ -43,6 +43,8 @@ CREATE TABLE emp_ddl(
    deptno NUMBER(2)
 );
 
+ALTER TABLE person ADD new;
+
 SELECT empno, ename, sal, deptno FROM emp MINUS SELECT empno, ename, sal, deptno FROM emp WHERE deptno = 10;
 
 SELECT SYSDATE, SYSDATE + 1, SYSDATE - 1, ADD_MONTHS(SYSDATE, 3), ADD_MONTHS(SYSDATE, -3) FROM DUAL;
