@@ -986,6 +986,12 @@
 >> - text_paragraph.html
 >> - text_content.html
 >> - text_anchor.html
+>> - text_anchorinner.html
+>> - text_font.html
+>> - list_unordered.html
+>> - nested_list.html
+>> - table_basic.html
+>> - table_span.html
 >
->> ### html
+>> ### html2
 >> - text_anchor.html
