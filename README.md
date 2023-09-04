@@ -993,6 +993,7 @@
 >> - table_basic.html
 >> - table_span.html
 >> - tableex.html
+>> - resumeex.html
 >
 >> ### html2
 >> - text_anchor.html
