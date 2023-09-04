@@ -975,3 +975,12 @@
 > - index0.html
 > - index1.html
 > - index.html
+>> ### css
+>> - style.css
+>
+>> ### js
+>> - script.js
+>
+>> ### html
+>> - text_header.html
+>> - text_paragraph.html
