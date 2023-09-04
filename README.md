@@ -992,6 +992,7 @@
 >> - nested_list.html
 >> - table_basic.html
 >> - table_span.html
+>> - tableex.html
 >
 >> ### html2
 >> - text_anchor.html
