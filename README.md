@@ -1007,7 +1007,7 @@
 >> - text_anchor.html
 
 > ## 2023.9.5
-> **html과 css**
+> **html과 [css](20230905/CSS.md)**
 > ```html
 >
 > ```
