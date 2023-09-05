@@ -1032,8 +1032,9 @@
 >> - form_textarea.html
 >> - space_block.html
 >> - space_semantic.html
+>> - formex.html
+>> - loginex.html
 >
 >> ### htmlcss
 >> - default_wildcard.html
 >> - default_idclass.html
->> - formex.html
