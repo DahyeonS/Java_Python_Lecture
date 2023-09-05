@@ -1035,6 +1035,7 @@
 >> - formex.html
 >> - loginex.html
 >> - selectex.html
+>> - postex.html
 >
 >> ### htmlcss
 >> - default_wildcard.html
