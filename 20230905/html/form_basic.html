@@ -3,13 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <title>form_basic.html</title>
+    <script>
+        function check(){
+            const form = document.sform; // form 체크
+            const form2 = document.getElementById('sform');
+            const form3 = document.querySelector('#sform');
+            if (form.id.value == "") {
+                alert("id는 필수값입니다.");
+                form.id.focus();
+                return;
+            }
+            form.submit();
+        }
+    </script>
 </head>
 <body>
     <h1>input type</h1>
-    <form action="" method="">
-        <input type="text" name="" value=""><br>
-        <input type="password" name="" value=""><br>
+    <form method="post" name="sform" id="sform">
+        <input type="text" name="id" value=""><br>
+        <input type="password" name="password" value=""><br>
         <input type="file" name="" value=""><br>
+        <input type="hidden" name="" value="비밀"><br>
+        <input type="button" value="전송하기" onclick="check();"><br>
+        <input type="reset" value="초기화"><br>
+        <input type="submit" name="제출하기"><br>
+        <button type="button">button</button><br>
+        <button type="submit">submit</button><br>
+        <input type="image" src="../imgs/cat/cat1.jpg">
     </form>
 </body>
 </html>

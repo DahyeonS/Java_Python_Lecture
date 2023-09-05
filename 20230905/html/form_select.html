@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>form_select.html</title>
+</head>
+<body>
+    <form action="">
+    <select name="choice" multiple="multiple">
+        <option value="1">김밥</option>
+        <option value="2">떡볶이</option>
+        <option value="3">순대</option>
+        <option value="4">어묵</option>
+    </select>
+    <button type="submit">submit</button>
+    </form>
+    <select>
+        <optgroup label="html5">
+            <option value="">M</option>
+            <option value="">C</option>
+            <option value="">D</option>
+        </optgroup>
+        <optgroup label="CSS3">
+            <option value="">A</option>
+            <option value="">3D</option>
+        </optgroup>
+    </select>
+    <hr>
+    <select onchange="location.href=this.value;">
+        <option>==select==</option>
+        <option value="http://www.naver.com">naver</option>
+        <option value="http://www.google.com">google</option>
+    </select>
+    <hr>
+    <select onchange="window.open(this.value);">
+        <option>==select==</option>
+        <option value="http://www.naver.com" selected="selected">naver</option>
+        <option value="http://www.google.com">google</option>
+    </select>
+</body>
+</html>
