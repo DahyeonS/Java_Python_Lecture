@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>selectex.html</title>
+    <style>
+        .title {text-align: left;}
+    </style>
+</head>
+<body>
+    <form action="p.jsp" method="get">
+        <table>
+            <tr>
+                <th class="title">시작 그룹</th>
+            </tr>
+            <tr>
+                <td><input type="radio" name="start" id="new" value="n">
+                <label for="new">새 탭 페이지 열기</label></td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="start" id="continue" value="c">
+                <label for="continue">중단한 위치에서 계속하기</label></td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="start" id="open" value="o">
+                <label for="open">특정 페이지 또는 페이지 모음 열기</label></td>
+            </tr>
+        </table>
+        <br>
+        <table>
+            <tr>
+                <th class="title">개인정보 및 보안</th>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="protect" id="sync" value="s">
+                <label for="sync">동기화 및 서비스</label></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="protect" id="login" value="l">
+                <label for="login">로그인 허용</label></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="protect" id="page" value="p">
+                <label for="page">페이지 미리 로드</label></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
