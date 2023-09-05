@@ -1034,6 +1034,7 @@
 >> - space_semantic.html
 >> - formex.html
 >> - loginex.html
+>> - selectex.html
 >
 >> ### htmlcss
 >> - default_wildcard.html
