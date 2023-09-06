@@ -1067,3 +1067,4 @@
 >> - float_basic.html
 >> - float_box.html
 >> - example1.html
+>> - example3.html
