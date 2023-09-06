@@ -2,17 +2,25 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>attribute_basic.html</title>
+    <title>desc_children.html</title>
     <style>
         input[type="text"] {background-color: red;}
         input[type="password"] {background-color: blue;}
 
-        #header h1 {color: blue;} /* ",":or , " ": (후손-자식, 손자 포함), ">": (바로 앞 후손-자식 한정) */
-        #section h1 {color: orange;}
+        #header > h1 {color: blue;}
+        #section > h1 {color: orange;}
+
+        h1:hover {color: red; background-color: purple;}
+        h1:active {color: green;}
     </style>
 </head>
 <body>
+    <h1><a href="#">반응 선택자</a></h1>
+
+    <hr>
+
     <div id="header">
+        <h2>Lorem ipsum</h2>
         <h1 class="title">Lorem ipsum</h1>
         <div id="nav">
             <h1>Navigation</h1>
@@ -22,7 +30,7 @@
         <h1 class="title">Lorem ipsum</h1>
         <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</p>
     </div>
-    
+
     <hr>
 
     <form action="">
