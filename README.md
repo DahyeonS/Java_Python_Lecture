@@ -1058,4 +1058,6 @@
 >> - desc_children.html
 >> - etc_state.html
 >> - div_box.html
->> - display_noneblack.html
+>> - display_noneblock.html
+>> - display_inline.html
+>> - backgraound_image.html
