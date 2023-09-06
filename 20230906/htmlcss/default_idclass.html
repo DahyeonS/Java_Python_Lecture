@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>default_idclass.html</title>
+    <style>
+        /*
+        div#header {width: 800px; background-color: red;
+            margin: 20px 10px 50px 10px;} /* 시계방향으로 Top-Left-Bottom-Right
+        div#footer {background-color: red;}
+        */
+        /*
+        * {margin: 0; padding: 0; border: 0;}
+        div {background-color: red;}
+        */
+        #header {width: 800px; margin: 0 auto; background-color: red;}
+        #wrap {width: 800px; margin: 0 auto; overflow: hidden;}
+        #aside {width: 200px; background: blue; float: left;}
+        #content {width: 600px; background: green; float: left;}
+        #footer {width: 800px; margin: 0 auto; background-color: red;}
+
+        h1.select {background-color: blue; color: white;}
+        li.select {color: red;}
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>#header</h1>
+    </div>
+
+    <div id="wrap">
+        <div id="aside">
+            <h1>#aside</h1>
+        </div>
+        <div id="content">
+            <h1>#content</h1>
+        </div>
+    </div>
+
+    <div id="footer">
+        <h1>#footer</h1>
+    </div>
+
+    <hr>
+
+    <h1 class="select">과일</h1>
+
+    <ul>
+        <li class="select">사과</li>
+        <li>바나나</li>
+        <li class="select">오렌지</li>
+        <li>감</li>
+    </ul>
+</body>
+</html>
