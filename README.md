@@ -1061,3 +1061,4 @@
 >> - display_noneblock.html
 >> - display_inline.html
 >> - backgraound_image.html
+>> - font_size.html
