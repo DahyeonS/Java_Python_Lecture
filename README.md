@@ -1068,3 +1068,4 @@
 >> - float_box.html
 >> - example1.html
 >> - example3.html
+>> - example6.html
