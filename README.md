@@ -1065,3 +1065,4 @@
 >> - font_button.html
 >> - position_basic.html
 >> - float_basic.html
+>> - float_box.html
