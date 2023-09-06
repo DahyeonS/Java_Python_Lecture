@@ -1071,3 +1071,6 @@
 >> - example6.html
 >> - at_media_rule.html
 >> - layoutex.html
+>> - simply_me.html
+>> - company.html
+>> - band.html
