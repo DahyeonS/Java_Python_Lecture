@@ -1088,3 +1088,6 @@
 > ### *output*
 >> htmljs
 >> - index.html
+>
+>> js
+>> - script2.js
