@@ -1087,8 +1087,11 @@
 > 
 > ### *output*
 >> htmljs
+>> - index0.html
 >> - index.html
 >
 >> js
 >> - script2.js
 >> - script3.js
+>> - script4.js
+>> - script5.js
