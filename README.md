@@ -1089,6 +1089,7 @@
 >> htmljs
 >> - index0.html
 >> - index1.html
+>> - index2.html
 >> - index.html
 >
 >> js
@@ -1097,3 +1098,4 @@
 >> - script4.js
 >> - script5.js
 >> - script6.js
+>> - script7.js
