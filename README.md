@@ -1091,6 +1091,7 @@
 >> - index2.html
 >> - index.html
 >> - jqindex.html
+>> - control_style.html
 >
 >> #### js
 >> - script2.js
