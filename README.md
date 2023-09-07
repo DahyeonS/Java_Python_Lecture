@@ -135,6 +135,10 @@
 [main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#202396)
 [page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#202396)
 
+2023.9.6
+[main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#202397)
+[page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#202397)
+
 > ## 2023.7.24
 >
 > **마크다운 예시**
@@ -1074,3 +1078,11 @@
 >> - simply_me.html
 >> - company.html
 >> - band.html
+
+> ## 2023.9.7
+> **자바스크립트**
+> ```javascript
+>
+> ```
+> 
+> ### *output*
