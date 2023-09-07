@@ -135,7 +135,7 @@
 [main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#202396)
 [page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#202396)
 
-2023.9.6
+2023.9.7
 [main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#202397)
 [page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#202397)
 
