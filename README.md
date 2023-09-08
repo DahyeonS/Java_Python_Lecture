@@ -1115,7 +1115,7 @@
 > 
 > ### *output*
 >> #### htmljs
->> - 
+>> - hello.html
 >
 >> #### js
->> - 
+>> - hello.js
