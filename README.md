@@ -1126,3 +1126,4 @@
 >> - script8.js
 >> - event.js
 >> - jqevent.js
+>> - scope.js
