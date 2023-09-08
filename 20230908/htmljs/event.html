@@ -7,7 +7,9 @@
 </head>
 <body>
     <!-- inline -->
-    <button onclick="alert('click');">Click</button>
-    <input type="button" value="Click" onclick="alert('click');">
+    <button id="btn1" onclick="buttonClick(this);">Click1</button>
+    <input id="btn2" type="button" value="Click2" onclick="buttonClick(this);">
+    <input id="btn3" type="button" value="Click3" onclick="count(this);">
+    <h1 id="cnt"></h1>
 </body>
 </html>
