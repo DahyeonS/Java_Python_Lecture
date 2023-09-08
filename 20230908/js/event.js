@@ -17,3 +17,15 @@ function count(obj) {
     obj.value = ++cnt;
     document.querySelector("#cnt").innerHTML = cnt;
 };
+
+window.onload = function() {
+    const btn4 = document.querySelector('#btn4')
+    btn4.onclick = function() {
+        document.querySelector("#cnt").innerHTML = 1000;
+    };
+    
+    const btn5 = document.querySelector('#btn5')
+    btn5.addEventListener('click', function() {
+        document.querySelector("#cnt").innerHTML = 10000;
+    });
+};
