@@ -1117,7 +1117,9 @@
 >> #### htmljs
 >> - hello.html
 >> - index3.html
+>> - event.html
 >
 >> #### js
 >> - hello.js
 >> - script8.js
+>> - event.js
