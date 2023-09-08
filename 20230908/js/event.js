@@ -28,4 +28,9 @@ window.onload = function() {
     btn5.addEventListener('click', function() {
         document.querySelector("#cnt").innerHTML = 10000;
     });
+
+    const divBox = document.querySelector('#box');
+    divBox.addEventListener('click', function(e) {
+        console.dir(e);
+    });
 };
