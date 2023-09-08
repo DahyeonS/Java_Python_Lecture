@@ -1116,6 +1116,8 @@
 > ### *output*
 >> #### htmljs
 >> - hello.html
+>> - index3.html
 >
 >> #### js
 >> - hello.js
+>> - script8.js
