@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function check() {
+            // ==, != -> 값 일치여부
+            // ===, !=== -> 자료타입 일치여부
+            if (document.joinForm.id.value === '') {
+                alert('ID를 넣어주세요!!');
+                document.joinForm.id.focus();
+                return;
+            };
+            
+            const form = document.joinForm;
+            if(form.id.value.length <= 5) {
+                alert('ID는 6글자 이상 넣어주세요!!');
+                form.id.value = '';
+                form.id.focus();
+                return;
+            };
+
+            if (form.pw.value.length === 0) {
+                alert('pw를 넣어주세요!!');
+                form.pw.focus();
+                return;
+            };
+
+            if (form.pw2.value.length === 0) {
+                alert('pw2를 넣어주세요!!');
+                form.pw.focus();
+                return;
+            };
+
+            if (form.pw2.value !== form.pw.value) {
+                alert('pw와 pw2는 같아야 합니다!!');
+                form.pw.value = '';
+                form.pw2.value = '';
+                form.pw.focus();
+                return;
+            };
+
+            form.action = "login.jsp";
+            form.submit();
+        };
+
+        function check2() {
+            // ==, != -> 값 일치여부
+            // ===, !=== -> 자료타입 일치여부
+            if (document.joinForm2.id.value === '') {
+                alert('ID를 넣어주세요!!');
+                document.joinForm2.id.focus();
+                return false;
+            };
+            
+            const form = document.joinForm2;
+            if(form.id.value.length <= 5) {
+                alert('ID는 6글자 이상 넣어주세요!!');
+                form.id.value = '';
+                form.id.focus();
+                return false;
+            };
+
+            if (form.pw.value.length === 0) {
+                alert('pw를 넣어주세요!!');
+                form.pw.focus();
+                return false;
+            };
+
+            if (form.pw2.value.length === 0) {
+                alert('pw2를 넣어주세요!!');
+                form.pw.focus();
+                return false;
+            };
+
+            if (form.pw2.value !== form.pw.value) {
+                alert('pw와 pw2는 같아야 합니다!!!!');
+                form.pw.value = '';
+                form.pw2.value = '';
+                form.pw.focus();
+                return false;
+            };
+
+            form.action = "login.jsp";
+        };
+    </script>
+    <title>formchecksubmit.html</title>
+</head>
+<body>
+    <h1>회원가입</h1>
+    <h2>button</h2>
+    <form name="joinForm" method="post">
+        id: <input type="text" id="id" placeholder="필수값입니다"> <br>
+        pw: <input type="password" id="pw" placeholder="필수값입니다"> <br>
+        pw2: <input type="password" id="pw2" placeholder="필수값입니다"> <br>
+        <button type="button" onclick="check()">Login</button>
+    </form>
+    
+    <hr>
+    
+    <h2>submit</h2>
+    <form name="joinForm2" method="post" onsubmit="return check2()">
+        id: <input type="text" id="id" placeholder="필수값입니다"> <br>
+        pw: <input type="password" id="pw" placeholder="필수값입니다"> <br>
+        pw2: <input type="password" id="pw2" placeholder="필수값입니다"> <br>
+        <button type="submit">Login</button>
+    </form>
+</body>
+</html>
