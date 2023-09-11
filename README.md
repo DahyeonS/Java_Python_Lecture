@@ -1150,7 +1150,9 @@
 >
 >> #### data
 >> - test.json
+>> - member.json
 >
 >> #### htmlajax
 >> - jsajax.html
 >> - jqueryajax.html
+>> - member.html
