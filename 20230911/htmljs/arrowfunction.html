@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrowfunction.html</title>
+    <script>
+        const pow = function(x) {return x*x};
+        console.log(pow(10));
+
+        const pow2 = x => x*x;
+        console.log(pow2(100));
+
+        const arr = [1, 2, 3];
+        let pow3 = arr.map(function(x) {
+            return x*x;
+        });
+        console.log(pow3);
+
+        let pow4 = arr.map(x => x*x);
+        console.log(pow4);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
