@@ -1146,3 +1146,4 @@
 >> #### htmljs
 >> - template.html
 >> - arrowfunction.html
+>> - objectassign.html
