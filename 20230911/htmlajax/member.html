@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>member.html</title>
+    <style>
+        tbody {
+            text-align: center;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
+    <script>
+        function getJson(param) {
+            $.ajax({
+                contentType: 'application/json',
+                type: 'GET',
+                url: '/data/member.json',
+                dataType: 'json',
+                success: function(data) {
+                    let tr = '';
+                    if (param === 0) {
+                        for (let item of data.member) {
+                            tr += `<tr><td>${item['idx']}</td><td>${item['name']}</td><td>${item['gender']}</td><td>${item['age']}</td></tr>`;
+                        }
+                        /*
+                        for (let i=0; i<data.member.length; i++) {
+                            const {idx, name, gender, age} = data.member[i];
+                                tr += `<tr><td>${idx}</td><td>${name}</td><td>${gender}</td><td>${age}</td>`;
+                        }
+                        */
+                    } else if (param === 1) {
+                        const {idx, name, gender, age} = data.member[0];
+                        tr += `<tr><td>${idx}</td><td>${name}</td><td>${gender}</td><td>${age}</td>`;
+                    } else if (param === 2) {
+                        const {idx, name, gender, age} = data.member[1];
+                        tr += `<tr><td>${idx}</td><td>${name}</td><td>${gender}</td><td>${age}</td>`;
+                    } else if (param === 3) {
+                        const {idx, name, gender, age} = data.member[2];
+                        tr += `<tr><td>${idx}</td><td>${name}</td><td>${gender}</td><td>${age}</td>`;
+                    }
+                    $('tbody').html(tr);
+                },
+                error: function(xhr, status, error) {
+                    console.log(xhr, status, error);
+                }
+            });
+        };
+
+        $(function() {
+            $('#all').on('click', () => {
+                getJson(0);
+            });
+            
+            $('#id1').on('click', () => {
+                getJson(1);
+            });
+
+            $('#id2').on('click', () => {
+                getJson(2);
+            });
+
+            $('#id3').on('click', () => {
+                getJson(3);
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Memeber List</h1>
+    <button id="all">All</button>
+    <button id="id1">ID1</button>
+    <button id="id2">ID2</button>
+    <button id="id3">ID3</button>
+    <table border="">
+        <thead>
+            <th>ID</th><th>Name</th><th>Gender</th><th>Age</th>
+        </thead>
+        <tbody>
+            <!-- <td>1</td><td>Name</td><td>Gender</td><td>Age</td>
+            <td>2</td><td>Name</td><td>Gender</td><td>Age</td>
+            <td>3</td><td>Name</td><td>Gender</td><td>Age</td> -->
+        </tbody>
+    </table>
+</body>
+</html>

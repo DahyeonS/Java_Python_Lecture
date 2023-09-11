@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>jsajax.html</title>
+    <title>jqueryajax.html</title>
     <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
     <script>
         function getJson(param) {
@@ -38,46 +38,23 @@
             });
         };
 
-        /*
-        const xhr = new XMLHttpRequest();
-        xhr.open('GET', '/data/test.json');
-        xhr.send();
-        xhr.onreadystatechange = function(e) {
-            if(xhr.readyState !== XMLHttpRequest.DONE) return;
-            if(xhr.status === 200) {
-                const data = JSON.parse(xhr.responseText);
-                console.dir(data);
-                const {name, gender, age} = data;
-                let li = '';
-                li += `<li>Name: ${name}</li>`;
-                li += `<li>Gender: ${gender}</li>`;
-                li += `<li>Age: ${age}</li>`;
-                const ul = document.querySelector('#area');
-                ul.innerHTML = li;
-            }
-        };
-        */
-        window.onload = () => {
-            const allBtn = document.querySelector('#all');
-            allBtn.onclick = () => {
+        $(function() {
+            $('#all').on('click', () => {
                 getJson('all');
-            };
+            });
 
-            const nameBtn = document.querySelector('#name');
-            nameBtn.onclick = () => {
+            $('#name').on('click', () => {
                 getJson('name');
-            };
+            });
 
-            const genderBtn = document.querySelector('#gender');
-            genderBtn.onclick = () => {
+            $('#gender').on('click', () => {
                 getJson('gender');
-            };
+            });
 
-            const ageBtn = document.querySelector('#age');
-            ageBtn.onclick = () => {
+            $('#age').on('click', () => {
                 getJson('age');
-            };
-        };
+            });
+        });
     </script>
 </head>
 <body>
