@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dogcat.html</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
+    <script>
+        function loadImg(param) {
+            var img = '';
+            if (param === 0) {
+                img = '<img src="/imgs/dog/dog1.jpg"></a>';
+            } else if (param === 1) {
+                img = '<img src="/imgs/dog/dog2.jpg"></a>';
+            } else if (param === 2) {
+                img = '<img src="/imgs/cat/cat1.jpg"></a>';
+            } else if (param === 3) {
+                img = '<img src="/imgs/cat/cat2.jpg"></a>';
+            }
+            $('#area').html(img);
+        };
+
+        $(function() {
+            $('#dog1').on('click', () => {
+                loadImg(0);
+            });
+            
+            $('#dog2').on('click', () => {
+                loadImg(1);
+            });
+
+            $('#cat1').on('click', () => {
+                loadImg(2);
+            });
+            
+            $('#cat2').on('click', () => {
+                loadImg(3);
+            });
+        });
+    </script>
+</head>
+<body>
+    <button id="dog1">Dog1</button>
+    <button id="dog2">Dog2</button>
+    <button id="cat1">Cat1</button>
+    <button id="cat2">Cat2</button>
+
+    <ul id="area"></ul>
+</body>
+</html>
