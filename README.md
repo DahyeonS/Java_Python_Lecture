@@ -1137,7 +1137,7 @@
 (js 과제 10 ~ 12장)
 
 ## 2023.9.11
-> ** **
+> **AJAX**
 > ```javascript
 >
 > ```
@@ -1150,3 +1150,6 @@
 >
 >> #### data
 >> - test.json
+>
+>> #### htmlajax
+>> - jsajax.html
