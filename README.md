@@ -1145,3 +1145,4 @@
 > ### *output*
 >> #### htmljs
 >> - template.html
+>> - arrowfunction.html
