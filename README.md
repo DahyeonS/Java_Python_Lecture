@@ -147,6 +147,10 @@
 [main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#2023911)
 [page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#2023911)
 
+2023.9.12
+[main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#2023912)
+[page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#2023912)
+
 > ## 2023.7.24
 >
 > **마크다운 예시**
@@ -1133,12 +1137,12 @@
 >> - jqevent.js
 >> - scope.js
 
-## 2023.9.9 ~ 2023.9.10
+## 2023.9.10
 (js 과제 10 ~ 12장)
 
 ## 2023.9.11
 > **AJAX**
-> ```javascript
+> ```html
 >
 > ```
 > 
@@ -1157,3 +1161,11 @@
 >> - jqueryajax.html
 >> - member.html
 >> - dogcat.html
+
+## 2023.9.12
+> **JSP**
+> ```html
+>
+> ```
+> 
+> ### *output*
