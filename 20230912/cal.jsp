@@ -31,7 +31,7 @@
 <title>cal.jsp</title>
 </head>
 <body>
-<h1>
+<h1>5칙연산 계산기
 <form>
 	<input type="text" name="num1" required="required">
 	<select name="sel">
