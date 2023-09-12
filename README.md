@@ -1178,3 +1178,6 @@
 > - useMethod.jsp
 > - a.jsp
 > - b.jsp
+> - post.jsp
+> - get.jsp
+> - form.jsp
