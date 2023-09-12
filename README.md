@@ -1171,3 +1171,6 @@
 > ```
 > 
 > ### *output*
+>> #### imgs
+>> - cat.html
+>> - dog.html
