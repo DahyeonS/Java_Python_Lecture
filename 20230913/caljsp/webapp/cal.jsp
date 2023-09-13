@@ -21,7 +21,7 @@
 %>
 
 <h1>5칙연산 계산기
-<form action="cal.jsp">
+<form action="cal.jsp" method="post">
 	<input type="text" name="a" required="required">
 	<select name="sel">
 		<option>+</option>
