@@ -27,11 +27,11 @@
 <title>add.jsp</title>
 </head>
 <body>
-<h1>곱하기
+<h1>나누기
 <form>
 	<input type="text" name="num1" required="required">
 	<select name="sel">
-		<option>*</option>
+		<option>/</option>
 	</select>
 	<input type="text" name="num2">
 	<input type="submit" value="계산하기" required="required">
