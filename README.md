@@ -1250,5 +1250,5 @@
 >>> - index.jsp
 >>
 >>> ##### java
->>>> ###### innerclass
+>>>> ###### member
 >>>> - MemberDTO.java
