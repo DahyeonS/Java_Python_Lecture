@@ -1247,6 +1247,7 @@
 >>> - viewParam.jsp
 >>> - memberFrom.jsp
 >>> - memberView.jsp
+>>> - index.jsp
 >>
 >>> ##### java
 >>>> ###### innerclass
