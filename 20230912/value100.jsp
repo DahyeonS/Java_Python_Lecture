@@ -12,7 +12,7 @@
 <body>
 <h1>value100</h1>
 
-<form action="value1000.jsp" method="get">
+<form action="value1000.jsp" method="post">
 100배값: <input type="text" name="value" value="<%=value*10%>" readonly="readonly">
 <input type="submit" value="다음">
 </form>

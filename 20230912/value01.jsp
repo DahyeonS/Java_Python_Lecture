@@ -16,7 +16,7 @@
 <body>
 <h1>value01</h1>
 
-<form action="value10.jsp" method="get">
+<form action="value10.jsp" method="post">
 값 입력: <input type="text" name="value">
 <input type="submit" name="제출">
 </form>
