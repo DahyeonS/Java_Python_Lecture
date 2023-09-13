@@ -6,6 +6,7 @@
 <a href="add_send.jsp">더하기(send)</a> |
 <a href="sub_send.jsp">빼기(send)</a> |
 <a href="mul_send.jsp">곱하기(send)</a> |
-<a href="div_send.jsp">나누기(send)</a>
+<a href="div_send.jsp">나누기(send)</a> |
+<a href="add_foward.jsp">더하기(foward)</a>
 </h2>
 <hr>
