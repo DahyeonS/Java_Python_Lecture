@@ -1245,7 +1245,7 @@
 >>> - request.jsp
 >>> - form.jsp
 >>> - viewParam.jsp
->>> - memberFrom.jsp
+>>> - memberForm.jsp
 >>> - memberView.jsp
 >>> - index.jsp
 >>
