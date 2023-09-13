@@ -1245,3 +1245,9 @@
 >>> - request.jsp
 >>> - form.jsp
 >>> - viewParam.jsp
+>>> - memberFrom.jsp
+>>> - memberView.jsp
+>>
+>>> ##### java
+>>>> ###### innerclass
+>>>> - MemberDTO.java
