@@ -1233,3 +1233,7 @@
 >>> - sub_send.jsp
 >>> - mul_send.jsp
 >>> - div_send.jsp
+>>> - add_foward.jsp
+>>> - mypage.jsp
+>>> - vip.jsp
+>>> - normal.jsp
