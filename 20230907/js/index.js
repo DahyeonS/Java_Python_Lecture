@@ -174,4 +174,94 @@ switch (device) {
 */
 
 // 05
+/*
+const a = 1;
+const b = 2;
+const sum = a + b;
+console.log(sum); // 3
 
+function add(a, b) {
+    return a + b;
+}
+const sum = add(1, 2);
+console.log(sum); // 3
+
+function add(a, b) {
+    return a + b;
+    console.log('호출이 되지 않는 코드!');
+}
+const sum = add(1, 2);
+console.log(sum); // 3
+
+function hello(name) {
+    console.log('Hello, ' + name + '!');
+}
+hello('velopert'); // Hello, velopert
+
+function hello(name) {
+    console.log(`Hello, ${name}`);
+}
+hello('velopert'); // Hello, velopert
+
+function getGrade(score) {
+    if (score === 100) return 'A+';
+    else if (score >= 90) return 'A';
+    else if (score === 89) return 'B+';
+    else if (score >= 80) return 'B';
+    else if (score === 79) return 'C+';
+    else if (score >= 70) return 'C';
+    else if (score === 69) return 'D+';
+    else if (score >= 60) return 'D';
+    else 'F';
+}
+const grade = getGrade(90);
+console.log(grade); // A
+
+const add = (a, b) => {
+    return a + b;
+}
+console.log(add(1, 2)); // 3
+
+const add = (a, b) => a + b;
+console.log(add(1, 2)); // 3
+
+const getGrade = score => {
+    if (score === 100) return 'A+';
+    else if (score >= 90) return 'A';
+    else if (score === 89) return 'B+';
+    else if (score >= 80) return 'B';
+    else if (score === 79) return 'C+';
+    else if (score >= 70) return 'C';
+    else if (score === 69) return 'D+';
+    else if (score >= 60) return 'D';
+    else return 'F';
+}
+const grade = getGrade(90);
+console.log(grade); // A
+*/
+// 06
+
+const dog = {
+    name: '멍멍이',
+    age: 2
+};
+console.log(dog.name); // 멍멍이
+console.log(dog.age); // 2
+
+const sample = {
+    'key with space': true
+}
+console.log(sample["key with space"]); // true
+
+const ironMan = {
+    name: '토니 스타크',
+    actor: '로버트 다우니 주니어',
+    alias: '아이언맨'
+}
+const captainAmerica = {
+    name: '스티브 로저스',
+    actor: '크리스 에반스',
+    alias: '캡틴 아메리카'
+}
+console.log(ironMan); // { name: '토니 스타크', actor: '로버트 다우니 주니어', alias: '아이언맨' }
+console.log(captainAmerica); // { name: '스티브 로저스', actor: '크리스 에반스', alias: '캡틴 아메리카' }
