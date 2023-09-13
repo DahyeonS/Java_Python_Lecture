@@ -27,6 +27,8 @@
 <title>add.jsp</title>
 </head>
 <body>
+<%@include file="menu.jsp" %>
+
 <h1>나누기
 <form>
 	<input type="text" name="num1" required="required">

@@ -27,6 +27,8 @@
 <title>add.jsp</title>
 </head>
 <body>
+<%@include file="menu.jsp" %>
+
 <h1>곱하기
 <form>
 	<input type="text" name="num1" required="required">

@@ -8,6 +8,7 @@
 </head>
 <body>
 <%@include file="menu.jsp" %>
+<%@include file="menu_send.jsp" %>
 <h1>계산기 사이트</h1>
 <h2>메뉴를 선택하세요.</h2>
 
