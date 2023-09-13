@@ -1230,3 +1230,6 @@
 >>> - div.jsp
 >>> - menu_send.jsp
 >>> - add_send.jsp
+>>> - sub_send.jsp
+>>> - mul_send.jsp
+>>> - div_send.jsp
