@@ -1268,3 +1268,5 @@
 >>> ##### webapp
 >>> - viewHeaderList.jsp
 >>> - jspComment.jsp
+>>> - page_scope_set.jsp
+>>> - page_scope_use.jsp
