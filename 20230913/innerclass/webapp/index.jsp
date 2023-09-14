@@ -7,7 +7,7 @@
 <title>index.jsp</title>
 </head>
 <body>
-<h1>Member</h1>
+<h1>Member Service</h1>
 <a href="memberForm.jsp">1. 회원가입</a>
 </body>
 </html>
