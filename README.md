@@ -1275,3 +1275,5 @@
 >>> - session_scope_set.jsp
 >>> - session_scope_use.jsp
 >>> - total_num.jsp
+>>> - login.jsp
+>>> - logout.jsp
