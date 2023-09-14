@@ -1270,3 +1270,5 @@
 >>> - jspComment.jsp
 >>> - page_scope_set.jsp
 >>> - page_scope_use.jsp
+>>> - request_scope_set.jsp
+>>> - request_scope_use.jsp
