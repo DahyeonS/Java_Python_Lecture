@@ -1152,7 +1152,6 @@
 ## 2023.9.10
 (js 과제 10 ~ 12장)
 > ### *output*
->> #### htmljs
 >> - control_text.html
 >> - control_attribute.html
 >> - control_body.html
