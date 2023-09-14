@@ -1272,3 +1272,5 @@
 >>> - page_scope_use.jsp
 >>> - request_scope_set.jsp
 >>> - request_scope_use.jsp
+>>> - session_scope_set.jsp
+>>> - session_scope_use.jsp
