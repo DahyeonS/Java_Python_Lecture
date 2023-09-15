@@ -1303,6 +1303,8 @@
 >>> - loginProc.jsp
 >>> - logout.jsp
 >>> - update.jsp
+>>> - updateProc.jsp
+>>> - loginCheck.jsp
 >>>> ###### conntest
 >>>> - ConnTest.jsp
 >>
