@@ -1307,6 +1307,7 @@
 >>> - loginCheck.jsp
 >>> - deleteProc.jsp
 >>> - delete.jsp
+>>> - memberList.jsp
 >>>> ###### conntest
 >>>> - ConnTest.jsp
 >>>> - ConnTestDAO.jsp
