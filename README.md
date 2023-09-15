@@ -1287,7 +1287,7 @@
 >>> - logout.jsp
 
 ## 2023.9.15
-> **[JSP DB연결](20230915/JSP DB연결.md)**
+> **[JSP DB연결](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230915/JSP%20DB%EC%97%B0%EA%B2%B0.md)**
 > ```jsp
 >
 > ```
