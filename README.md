@@ -1297,6 +1297,8 @@
 >>> ##### webapp
 >>> - index.jsp
 >>> - topmenu.jsp
+>>> - join.jsp
+>>> - joinProc.jsp
 >>>> ###### conntest
 >>>> - ConnTest.jsp
 >>
