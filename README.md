@@ -1296,3 +1296,7 @@
 >> #### myweb
 >>> ##### webapp
 >>> - ConnTest.jsp
+>>
+>>> ##### java
+>>>> ###### member
+>>>> - MemberDTO.java
