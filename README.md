@@ -1305,6 +1305,7 @@
 >>> - update.jsp
 >>> - updateProc.jsp
 >>> - loginCheck.jsp
+>>> - delete.jsp
 >>>> ###### conntest
 >>>> - ConnTest.jsp
 >>
