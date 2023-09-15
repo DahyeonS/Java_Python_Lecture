@@ -1301,6 +1301,8 @@
 >>> - joinProc.jsp
 >>> - login.jsp
 >>> - loginProc.jsp
+>>> - logout.jsp
+>>> - update.jsp
 >>>> ###### conntest
 >>>> - ConnTest.jsp
 >>
