@@ -1305,10 +1305,12 @@
 >>> - update.jsp
 >>> - updateProc.jsp
 >>> - loginCheck.jsp
->>> - delete.jsp
+>>> - deleteProc.jsp
 >>>> ###### conntest
 >>>> - ConnTest.jsp
+>>>> - ConnTestDAO.jsp
 >>
 >>> ##### java
 >>>> ###### member
 >>>> - MemberDTO.java
+>>>> - MemberDAO.java
