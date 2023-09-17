@@ -1160,6 +1160,8 @@
 >> - control_attribute.html
 >> - control_body.html
 >> - reference_validate.html
+>> - jqAnimate_fade.html
+>> - jqAnimate_animate.html
 
 ## 2023.9.11
 > **[AJAX](20230911/AJAX.md)**
