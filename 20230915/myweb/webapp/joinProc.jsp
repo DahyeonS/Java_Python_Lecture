@@ -1,5 +1,5 @@
 <%@page import="member.MemberDTO"%>
-<%@page import="member.memberDAO"%>
+<%@page import="member.MemberDAO"%>
 <%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.PreparedStatement"%>
 <%@page import="java.sql.Connection"%>
@@ -13,7 +13,7 @@
 	int age = Integer.parseInt(request.getParameter("age"));
 	MemberDTO dto = new MemberDTO(id, pw, name, age);
 	
-	memberDAO dao = new memberDAO();
+	MemberDAO dao = new MemberDAO();
 	int rs = dao.insert(dto);
 %>
 <script>

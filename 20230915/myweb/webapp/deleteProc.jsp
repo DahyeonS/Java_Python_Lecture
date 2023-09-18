@@ -1,4 +1,4 @@
-<%@page import="member.memberDAO"%>
+<%@page import="member.MemberDAO"%>
 <%@page import="member.MemberDTO"%>
 <%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.PreparedStatement"%>
@@ -15,7 +15,7 @@
 	MemberDTO dto = new MemberDTO();
 	dto.setId(id);
 	
-	memberDAO dao = new memberDAO();
+	MemberDAO dao = new MemberDAO();
 	dto = dao.getMember(dto);
 	
 	if (dto.getPw().equals(pw)) rs = dao.delete(dto);
