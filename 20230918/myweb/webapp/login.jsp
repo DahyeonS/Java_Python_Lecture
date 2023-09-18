@@ -5,6 +5,9 @@
 <head>
 <meta charset="UTF-8">
 <title>login.jsp</title>
+<% if (request.getAttribute("rs") != null) { %>
+		<script>alert('회원가입을 축하드립니다!!')</script>
+<%	} %>
 </head>
 <body>
 <%@include file="topmenu.jsp" %>
