@@ -154,11 +154,7 @@ public class memberDAO {
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
-			try {
-				close(conn, pstmt);
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
+			close(conn, pstmt);
 		}
 		return rs;
 	}
@@ -180,11 +176,7 @@ public class memberDAO {
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
-			try {
-				close(conn, pstmt);
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
+			close(conn, pstmt);
 		}
 		return rs;
 	}
