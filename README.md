@@ -1349,6 +1349,7 @@
 >>> - join.jsp
 >>> - update.jsp
 >>> - delete.jsp
+>>> - makejson.jsp
 >>
 >>> ##### java
 >>>> ###### member
