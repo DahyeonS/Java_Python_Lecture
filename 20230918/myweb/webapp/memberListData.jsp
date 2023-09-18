@@ -14,8 +14,12 @@
 	JsonArray jsonArray = new JsonArray();
 	for (MemberDTO dto : list) {
 		JsonObject jsonObject = new JsonObject();
+		jsonObject.addProperty("idx", dto.getIdx());
 		jsonObject.addProperty("id", dto.getId());
 		jsonObject.addProperty("pw", dto.getPw());
+		jsonObject.addProperty("name", dto.getName());
+		jsonObject.addProperty("age", dto.getAge());
+		jsonObject.addProperty("regdate", dto.getRegdate());
 		jsonArray.add(jsonObject);
 	}
 	

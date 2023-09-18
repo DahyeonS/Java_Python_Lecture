@@ -5,6 +5,49 @@
 <head>
 <meta charset="UTF-8">
 <title>join.jsp</title>
+<script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
+<script>
+	function idCheck(param) {
+	    $.ajax({
+	        contentType: 'application/json',
+	        type: 'GET',
+	        url: 'memberListData.jsp',
+	        dataType: 'json',
+	        success: function(data) {
+		        let check = false;
+	            for (item of data) {
+		            const id = item.id;
+	            	if (param === id) {
+	            		check = true;
+	            		break;
+	            	}
+	            }
+		        let td = '';
+	            if (check) {
+	            	$('#success').hide();
+	    	        $('#fail').show();
+	            	td += '<td colspan="2">사용불가능한 아이디입니다.</td>';
+	            	$('#fail').html(td);
+	            } else {
+	    	        $('#fail').hide();
+	            	$('#success').show();
+	            	td += '<td colspan="2">사용가능한 아이디입니다.</td>';
+	            	$('#success').html(td);
+	            }
+	        },
+	        error: function(xhr, status, error) {
+	            console.log(xhr, status, error);
+	        }
+	    });
+	};
+	
+	$(document).ready(function() {
+		$('#check').click(function() {
+			const idInput = id.value
+			idCheck(idInput);
+		});
+	});
+</script>
 </head>
 <body>
 <%@include file="topmenu.jsp" %>
@@ -12,7 +55,14 @@
 <hr>
 <form action="joinProc" method="post">
 	<table border="1">
-		<tr><th>ID</th><td><input type="text" name="id"></td></tr>
+		<tr><th>ID</th>
+		<td>
+		<input type="text" name="id" id="id">
+		<input id="check" type="button" value="ID Check">
+		</td></tr>
+		
+		<tr id="success"></tr>
+		<tr id="fail"></tr>
 		<tr><th>PW</th><td><input type="password" name="pw"></td></tr>
 		<tr><th>PW2</th><td><input type="password" name="pw2"></td></tr>
 		<tr><th>Name</th><td><input type="text" name="name"></td></tr>

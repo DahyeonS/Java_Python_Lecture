@@ -22,7 +22,13 @@
 	        url: 'memberListData.jsp',
 	        dataType: 'json',
 	        success: function(data) {
-	            console.log(data);
+	            // for (item of data) console.log(item);
+		        let tr = '';
+	            for (item of data) {
+		            const {idx, id, pw, name, age, regdate} = item;
+		            tr += '<tr style="text-align: center;"><td>' + idx + '</td><td>' + id + '</td><td>' + pw + '</td><td>' + name + '</td><td>' + age + '</td><td>' + regdate + '</td></tr>';
+	            }
+	            $('tbody').html(tr);
 	        },
 	        error: function(xhr, status, error) {
 	            console.log(xhr, status, error);
