@@ -21,16 +21,14 @@ public class DeleteProc extends HttpServlet {
 		HttpSession session = request.getSession();
 		String id = (String)session.getAttribute("id");
 		String pw = request.getParameter("pw");
-		int rs = 0;
 		
 		MemberDTO dto = new MemberDTO();
 		dto.setId(id);
 		MemberDAO dao = new MemberDAO();
 		dto = dao.getMember(dto);
 		
-		if (dto.getPw().equals(pw)) rs = dao.delete(dto);
-		
-		if (rs == 1) {
+		if (dto.getPw().equals(pw)) {
+			dao.delete(dto);
 			session.invalidate();
 			response.sendRedirect("index.jsp");
 		} else response.sendRedirect("delete.jsp");

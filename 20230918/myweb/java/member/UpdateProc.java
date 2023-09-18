@@ -29,6 +29,7 @@ public class UpdateProc extends HttpServlet {
 		MemberDAO dao = new MemberDAO();
 		int rs = dao.update(dto);
 		
+		session.setAttribute("name", name);
 		request.setAttribute("rs", rs);
 		RequestDispatcher dispatcher = request.getRequestDispatcher("update.jsp");
 		dispatcher.forward(request, response);
