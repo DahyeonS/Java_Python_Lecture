@@ -17,8 +17,20 @@
 </html>
 ```
 - *h1, h2, h3...* - 소제목(숫자가 커질 수록 크기가 작아짐)
+```html
+<h1>가장 중요한 제목</h1>
+<h2>그 다음 중요한 제목</h2>
+<h3>그 그다음 중요한 제목</h3>
+```
 - *p1, p2, p3...* - 단락
+```html
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+<p2>Integer nibh tellus, tristique quis blandit quis, consequat in nunc.</p>
+```
 - *img* - 이미지 삽입
+```html
+<img src="./daum.png"> <!--src에 들어갈 링크/파일명 등 들어갈 이미지를 넣음-->
+```
 - *hr* - 줄 바꿈
 - *br* - 구분선 추가
 - *a* - 하이퍼링크
