@@ -26,7 +26,7 @@
 	alert('회원탈퇴가 되었습니다. 그동안 감사했습니다.');
 	location.href = 'index.jsp';
 <% } else { %>
-	alert('죄송합니다. 잠시 후에 다시 해주세요.');
+	alert('비밀번호를 다시 확인해주세요.');
 	history.back();
 <% } %>
 </script>
