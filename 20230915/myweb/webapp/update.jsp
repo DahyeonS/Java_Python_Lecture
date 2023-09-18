@@ -22,12 +22,15 @@
 <head>
 <meta charset="UTF-8">
 <title>update.jsp</title>
+<% if (request.getAttribute("rs") != null) { %>
+	<script>alert('회원정보가 수정되었습니다.');</script>
+<% } %>
 </head>
 <body>
 <%@include file="topmenu.jsp" %>
 <h2>회원정보 수정</h2>
 <hr>
-<form action="updateProc.jsp" method="post">
+<form action="updateProc" method="post">
 	<table border="1">
 		<tr><th>ID</th><td><%=dto.getId() %></td></tr>
 		<tr><th>PW</th><td><input type="text" name="pw" value="<%=dto.getPw()%>"></td></tr>

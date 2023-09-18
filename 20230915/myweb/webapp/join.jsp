@@ -10,7 +10,7 @@
 <%@include file="topmenu.jsp" %>
 <h2>회원가입</h2>
 <hr>
-<form action="joinProc.jsp" method="post">
+<form action="joinProc" method="post">
 	<table border="1">
 		<tr><th>ID</th><td><input type="text" name="id"></td></tr>
 		<tr><th>PW</th><td><input type="password" name="pw"></td></tr>
