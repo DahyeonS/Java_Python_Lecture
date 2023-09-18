@@ -1350,6 +1350,8 @@
 >>> - update.jsp
 >>> - delete.jsp
 >>> - makejson.jsp
+>>> - topmenu.jsp
+>>> - memberListJson.jsp
 >>
 >>> ##### java
 >>>> ###### member
