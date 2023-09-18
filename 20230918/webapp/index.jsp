@@ -9,7 +9,7 @@
 <body>
 <h1>
 <a href="hello?id=hong">get</a>
-<form action="hi" method="post">
+<form action="Hello" method="post">
 <input type="text" name="id">
 <input type="submit" value="post">
 </form>
