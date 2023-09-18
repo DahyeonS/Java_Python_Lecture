@@ -8,5 +8,6 @@
 </head>
 <body>
 <%@include file="topmenu.jsp" %>
+<h2>Home</h2>
 </body>
 </html>
