@@ -1301,6 +1301,7 @@
 >
 > ### *output*
 >> #### myweb
+>> - pom.xml
 >>> ##### webapp
 >>> - index.jsp
 >>> - topmenu.jsp
@@ -1342,6 +1343,7 @@
 >>>> - web.xml
 >
 >> #### myweb
+>> - pom.xml
 >>> ##### webapp
 >>> - login.jsp
 >>> - join.jsp
