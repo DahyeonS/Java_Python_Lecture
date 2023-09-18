@@ -1345,8 +1345,12 @@
 >>> ##### webapp
 >>> - login.jsp
 >>> - join.jsp
+>>> - update.jsp
+>>> - delete.jsp
 >>
 >>> ##### java
 >>>> ###### member
 >>>> - LoginProc.java
 >>>> - JoinProc.java
+>>>> - UpdateProc.java
+>>>> - DeleteProc.java
