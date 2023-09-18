@@ -1344,7 +1344,9 @@
 >> #### myweb
 >>> ##### webapp
 >>> - login.jsp
+>>> - join.jsp
 >>
 >>> ##### java
 >>>> ###### member
 >>>> - LoginProc.java
+>>>> - JoinProc.java
