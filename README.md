@@ -1352,6 +1352,7 @@
 >>> - makejson.jsp
 >>> - topmenu.jsp
 >>> - memberListJson.jsp
+>>> - memberListData.jsp
 >>
 >>> ##### java
 >>>> ###### member
