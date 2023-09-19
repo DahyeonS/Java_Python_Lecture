@@ -12,31 +12,20 @@
 	    $.ajax({
 	        contentType: 'application/json',
 	        type: 'GET',
-	        url: 'memberListData.jsp',
-	        data: params,
+	        url: 'getMemberJson.jsp',
+	        data: {id:id},
 	        dataType: 'json',
 	        success: function(data) {
-	        	console.log(data);
-		        let check = false;
-		        /*
-	            for (item of data) {
-		            const id = item.id;
-	            	if (param === id) {
-	            		check = true;
-	            		break;
-	            	}
-	            }
-		        */
 		        let td = '';
-	            if (check) {
-	            	$('#success').hide();
+		        if(data['rs'] === '1') {
+	   				$('#success').hide();
 	    	        $('#fail').show();
-	            	td += '<td colspan="2">사용불가능한 아이디입니다.</td>';
+	            	td = '<td colspan="2">사용불가능한 아이디입니다.</td>';
 	            	$('#fail').html(td);
 	            } else {
-	    	        $('#fail').hide();
+	    			$('#fail').hide();
 	            	$('#success').show();
-	            	td += '<td colspan="2">사용가능한 아이디입니다.</td>';
+	            	td = '<td colspan="2">사용가능한 아이디입니다.</td>';
 	            	$('#success').html(td);
 	            }
 	        },
@@ -46,9 +35,10 @@
 	    });
 	};
 	
-	$(document).ready(function() {
+	$(function idCheck() {
 		$('#check').click(function() {
 			const idInput = id.value;
+			console.log(ipInput);
 			if(idInput === '') {
 				alert('id는 필수값입니다.');
 				form.id.focus();
