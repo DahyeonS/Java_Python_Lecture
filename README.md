@@ -1378,3 +1378,4 @@
 >>> - idCheck.jsp
 >>> - joinAjax.jsp
 >>> - joinJson.jsp
+>>> - memberSearchJson.jsp
