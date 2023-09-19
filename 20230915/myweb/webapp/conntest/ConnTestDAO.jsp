@@ -1,4 +1,4 @@
-<%@page import="member.memberDAO"%>
+<%@page import="member.MemberDAO"%>
 <%@page import="java.util.List"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="member.MemberDTO"%>
@@ -9,7 +9,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
-	memberDAO dao = new memberDAO();
+	MemberDAO dao = new MemberDAO();
 	List<MemberDTO> list = dao.getMemberList();
 %>
 <!DOCTYPE html>
