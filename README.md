@@ -1365,7 +1365,7 @@
 >>>> - UpdateProc.java
 >>>> - DeleteProc.java
 
-## 2023.9.17
+## 2023.9.19
 > ** **
 > ```jsp
 >
