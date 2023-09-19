@@ -1379,3 +1379,9 @@
 >>> - joinAjax.jsp
 >>> - joinJson.jsp
 >>> - getMemberNameJson.jsp
+>>> - loginAjax.jsp
+>>> - loginJson.jsp
+>>> - updateAjax.jsp
+>>> - updateJson.jsp
+>>> - deleteAjax.jsp
+>>> - deleteJson.jsp
