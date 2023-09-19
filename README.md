@@ -1376,3 +1376,5 @@
 >>> ##### webapp
 >>> - getMemberJson.jsp
 >>> - idCheck.jsp
+>>> - joinAjax.jsp
+>>> - joinJson.jsp
