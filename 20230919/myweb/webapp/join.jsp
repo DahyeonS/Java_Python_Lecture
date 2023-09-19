@@ -8,12 +8,11 @@
 <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
 <script>
 	function idCheck(param) {
-		const params = {id:param}
 	    $.ajax({
 	        contentType: 'application/json',
 	        type: 'GET',
 	        url: 'getMemberJson.jsp',
-	        data: {id:id},
+	        data: {id:param},
 	        dataType: 'json',
 	        success: function(data) {
 		        let td = '';
@@ -35,13 +34,12 @@
 	    });
 	};
 	
-	$(function idCheck() {
+	$(document).ready(function() {
 		$('#check').click(function() {
-			const idInput = id.value;
-			console.log(ipInput);
+			const idInput = $('#id').val();
 			if(idInput === '') {
 				alert('id는 필수값입니다.');
-				form.id.focus();
+				$('#id').focus();
 				return;
 			}
 			idCheck(idInput);
@@ -53,7 +51,7 @@
 <%@include file="topmenu.jsp" %>
 <h2>회원가입</h2>
 <hr>
-<form action="joinProc" method="post">
+<form name="joinForm" action="joinProc" method="post">
 	<table border="1">
 		<tr><th>ID</th>
 		<td>
