@@ -141,6 +141,17 @@ public class DispatcherController extends HttpServlet {
 		} else if (action.equals("/getMemberNameJson.do")) {
 			RequestDispatcher dispatcher = request.getRequestDispatcher("getMemberNameJson.jsp");
 			dispatcher.forward(request, response);
+		} else if (action.equals("/memberListJstl.do")) {
+			System.out.println(action); // /memberList.do
+//			데이터 생성
+			MemberDAO dao = new MemberDAO();
+			List<MemberDTO> list = dao.getMemberList();
+			
+//			데이터 전송
+			request.setAttribute("list", list);
+			String viewName = "memberListJstl.jsp";
+			RequestDispatcher rd = request.getRequestDispatcher(viewName);
+			rd.forward(request, response);
 		}
 	}
 
