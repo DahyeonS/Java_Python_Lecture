@@ -45,4 +45,7 @@
 <!--href에 링크 입력-->
 <a href="http://naver.com">네이버</a><br>
 <a href="http://daum.net">다음</a>
+<!--href에 파일 위치 입력-->
+<a href="/html/text_content.html">content</a> <!--절대경로-->
+<a href="../html/text_content.html">content</a> <!-- 상대경로 -->
 ```
