@@ -20,6 +20,7 @@
 <a href="index.do">Home</a> |
 <a href="memberList.do">회원목록</a> |
 <a href="memberListJson.do">회원목록(JSON)</a> |
+<a href="memberListJstl.do">회원목록(JSTL)</a> |
 
 <% if (session.getAttribute("id") == null) { %>
 	<a href="join.do">회원가입</a> |
