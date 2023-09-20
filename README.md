@@ -1408,6 +1408,7 @@
 >>>> - sessionUse.jsp
 >>>> - scope.jsp
 >>>> - memberListJstl.jsp
+>>>> - memberListViewJstl.jsp
 >>
 >>> ##### java
 >>>> ###### member
