@@ -106,25 +106,25 @@ Lorem ipsum dolor <sup> sit amet</sup>
 > *colspan* - 
 ```html
 <table border="1">
-        <thead>
-            <tr>
-                <th></th>
-                <th>월</th>
-                <th>화</th>
-                <th>수</th>
-                <th>목</th>
-                <th>금</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>1교시</td>
-                <td>영어</td>
-                <td>국어</td>
-                <td>과학</td>
-                <td>미술</td>
-                <td>기술</td>
-            </tr>
-        </tbody>
-    </table>
+    <thead>
+        <tr>
+            <th></th>
+            <th>월</th>
+            <th>화</th>
+            <th>수</th>
+            <th>목</th>
+            <th>금</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1교시</td>
+            <td>영어</td>
+            <td>국어</td>
+            <td>과학</td>
+            <td>미술</td>
+            <td>기술</td>
+        </tr>
+    </tbody>
+</table>
 ```
