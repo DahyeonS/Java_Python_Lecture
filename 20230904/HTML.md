@@ -77,3 +77,19 @@ Lorem ipsum dolor <sup> sit amet</sup>
 ```html
 <del>Lorem ipsum dolor sit amet</del>
 ```
+- *ul* - 글머리 기호
+```html
+<ul id="store" class="fruit"> <!--순서 없음-->
+        <li>사과</li>
+        <li>바나나</li>
+        <li>오렌지</li>
+</ul>
+```
+- *ol* - 번호 매기기
+```html
+<ol id="store" class="fruit"> <!--순서 있음-->
+        <li>사과</li> <!--1번-->
+        <li>바나나</li> <!--2번-->
+        <li>오렌지</li> <!--3번-->
+</ol>
+```
