@@ -99,6 +99,10 @@ Lorem ipsum dolor <sup> sit amet</sup>
 > - tr
 > - th
 > - td
+> 
+> *rowspan* -
+> 
+> *colspan* - 
 ```html
 <table border="1">
         <thead>
