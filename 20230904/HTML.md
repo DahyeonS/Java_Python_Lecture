@@ -49,3 +49,31 @@
 <a href="/html/text_content.html">content</a> <!--절대경로-->
 <a href="../html/text_content.html">content</a> <!-- 상대경로 -->
 ```
+- *b* - 굵게(볼드체)
+```html
+<b>Lorem ipsum dolor sit amet</b>
+```
+- *i* - 기울게(이탤릭체)
+```html
+<i>Lorem ipsum dolor sit amet</i>
+```
+- *small* - 작게
+```html
+<small>Lorem ipsum dolor sit amet</small>
+```
+- *sub* - 작게(아래로 이동)
+```html
+Lorem ipsum dolor <sub> sit amet</sub>
+```
+- *sup* - 작게(위로 이동)
+```html
+Lorem ipsum dolor <sup> sit amet</sup>
+```
+- *ins* - 밑줄
+```html
+<ins>Lorem ipsum dolor sit amet</ins>
+```
+- *del* - 취소선
+```html
+<del>Lorem ipsum dolor sit amet</del>
+```
