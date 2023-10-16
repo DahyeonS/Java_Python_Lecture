@@ -30,6 +30,12 @@
 - *img* - 이미지 삽입
 ```html
 <img src="./daum.png"> <!--src에 들어갈 링크/파일명 등 들어갈 이미지 입력-->
+<h2>절대 경로 img</h2>
+<img src="/imgs/dog/dog1.jpg">
+<img src="/imgs/cat/cat1.jpg">
+<h2>상대 경로 img</h2>
+<img src="./imgs/dog/dog2.jpg">
+<img src="./imgs/cat/cat2.jpg">
 ```
 - *hr* - 구분선 추가
 - *br* - 줄 바꿈
@@ -127,4 +133,17 @@ Lorem ipsum dolor <sup> sit amet</sup>
         </tr>
     </tbody>
 </table>
+```
+
+- *audio* - 오디오(음원) 삽입
+```html
+<audio src="https://rintiantta.github.io/academy-html/example/chapter_3/Kalimba.mp3" controls="controls"></audio>
+```
+
+- *video* - 비디오 삽입
+```html
+<video width="320" controls="controls" poster="http://placehold.it/320x180">
+    <source src="https://rintiantta.github.io/academy-html/example/chapter_3/Wildlife.mp4" type="video/mp4">
+</video>
+
 ```
