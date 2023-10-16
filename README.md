@@ -301,7 +301,7 @@
 >> - ScannerTest.java
 
 ## 2023.7.28
-> **[제어문](20230728/제어문.md)**
+> **[제어문](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230728/%EC%A0%9C%EC%96%B4%EB%AC%B8.md)**
 > ```java
 > if (true) {
 >   System.out.println(" ");
@@ -329,7 +329,7 @@
 >> - ForTest.java
 
 ## 2023.7.31
-> **[반복문](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230728/%EC%A0%9C%EC%96%B4%EB%AC%B8.md#%EB%B0%98%EB%B3%B5%EB%AC%B8)과 [메서드](20230731/메서드.md)**
+> **[반복문](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230728/%EC%A0%9C%EC%96%B4%EB%AC%B8.md#%EB%B0%98%EB%B3%B5%EB%AC%B8)과 [메서드](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230731/%EB%A9%94%EC%84%9C%EB%93%9C.md)**
 > ```java
 > // 반복문
 > while (true) {
@@ -377,7 +377,7 @@
 >> - RockPaperScissorsGame.java
 
 ## 2023.8.1
-> **[배열](20230801/배열.md)**
+> **[배열](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230801/%EB%B0%B0%EC%97%B4.md)**
 > ```java
 > int[] arr1 = new int[3]; // 1차원
 > int[][] arr2 = new int[5][5]; // 2차원
@@ -400,7 +400,7 @@
 >> - LottoFive.java
 
 ## 2023.8.2
-> **[ArrayList](20230802/ArrayList.md)와 [클래스](20230802/클래스.md)**
+> **[ArrayList](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230802/ArrayList.md)와 [클래스](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230802/%ED%81%B4%EB%9E%98%EC%8A%A4.md)**
 > ```java
 > // ArrayList
 > ArrayList data = new ArrayList();
@@ -441,7 +441,7 @@
 >> - Bus.java
 
 ## 2023.8.3
-> **[생성자](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230802/%ED%81%B4%EB%9E%98%EC%8A%A4.md#%EC%83%9D%EC%84%B1%EC%9E%90)와 [접근제어자](20230803/패키지.md)**
+> **[생성자](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230802/%ED%81%B4%EB%9E%98%EC%8A%A4.md#%EC%83%9D%EC%84%B1%EC%9E%90)와 [접근제어자](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230803/%ED%8C%A8%ED%82%A4%EC%A7%80.md)**
 > ```java
 > // 생성자
 > public DogName(String name) {
@@ -540,7 +540,7 @@
 >>> - *ProtectedDogUseCat.java*
 
 ## 2023.8.7
-> **[추상 클래스](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230807/%EC%B6%94%EC%83%81%20%ED%81%B4%EB%9E%98%EC%8A%A4.md)와 [인터페이스](20230807/인터페이스.md)**
+> **[추상 클래스](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230807/%EC%B6%94%EC%83%81%20%ED%81%B4%EB%9E%98%EC%8A%A4.md)와 [인터페이스](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230807/%EC%9D%B8%ED%84%B0%ED%8E%98%EC%9D%B4%EC%8A%A4.md)**
 > ```java
 > // 추상 클래스
 > public abstract class AbClass {
@@ -620,7 +620,7 @@
 >> - AnimalPolyArrayListMain.java
 
 ## 2023.8.8
-> **[예외](20230808/예외.md)와 [자바 API](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230808/%EC%9E%90%EB%B0%94%20API.md)**
+> **[예외](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230808/%EC%98%88%EC%99%B8.md)와 [자바 API](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230808/%EC%9E%90%EB%B0%94%20API.md)**
 > ```java
 > // 예외
 > try {
@@ -661,7 +661,7 @@
 >> - DateEx.java
 
 ## 2023.8.9
-> **[캘린더와 DecimalFormat 클래스](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230808/%EC%9E%90%EB%B0%94%20API.md#calendar-class), [List](20230809/Collection.md)**
+> **[캘린더와 DecimalFormat 클래스](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230808/%EC%9E%90%EB%B0%94%20API.md#calendar-class), [List](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230809/Collection.md)**
 > ```java
 > // 캘린더
 > Calendar today = Calendar.getInstance();
@@ -753,7 +753,7 @@
 >> - BufferedFileWriterTest.java
 
 ## 2023.8.11
-> **[객체 입출력](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230810/File%20IO.md#%EA%B0%9D%EC%B2%B4-%EC%9E%85%EC%B6%9C%EB%A0%A5)과 [람다](20230811/람다.md), [스트림](20230811/스트림.md)과 [GUI](20230811/GUI.md)**
+> **[객체 입출력](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230810/File%20IO.md#%EA%B0%9D%EC%B2%B4-%EC%9E%85%EC%B6%9C%EB%A0%A5)과 [람다](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230811/%EB%9E%8C%EB%8B%A4.md), [스트림](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230811/%EC%8A%A4%ED%8A%B8%EB%A6%BC.md)과 [GUI](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230811/GUI.md)**
 > ```java
 > // 객체 입출력
 > ObjectOutputStream objectos = null;
@@ -807,7 +807,7 @@
 >> - SwingEx1.java
 
 ## 2023.8.14
-> **[회원관리](20230814)**
+> **[회원관리](https://github.com/DahyeonS/Java_Python_Lecture/tree/main/20230814)**
 > ### *output*
 >> #### memberarray
 >> - MemberArrayData.java
@@ -842,7 +842,7 @@
 >> - MemberView.java
 
 ## 2023.8.17
-> **[데이터베이스](20230817/데이터베이스.md)**
+> **[데이터베이스](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230817/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4.md)**
 > ```sql
 > -- DDL
 > CREATE TABLE member (
@@ -860,7 +860,7 @@
 > ```
 
 ## 2023.8.18
-> **[SQL](20230818/SQL.md)**
+> **[SQL](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230818/SQL.md)**
 > ```sql
 > ALTER TABLE person ADD COLUMN new2 INTEGER NOT NULL DEFAULT 0;
 > ```
@@ -944,7 +944,7 @@
 > ```
 
 ## 2023.8.30
-> **프로시저와 [JDBC](20230830/JDBC.md)**
+> **프로시저와 [JDBC](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230830/JDBC.md)**
 > ```sql
 > CREATE OR REPLACE PROCEDURE pro_noparam
 > IS
@@ -1025,7 +1025,7 @@
 >> - RegisterDTO.java
 
 ## 2023.9.4
-> **[html](20230904/HTML.md)**
+> **[html](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230904/HTML.md)**
 > ```html
 >
 > ```
@@ -1058,7 +1058,7 @@
 >> - text_anchor.html
 
 ## 2023.9.5
-> **html과 [css](20230905/CSS.md)**
+> **html과 [css](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230905/CSS.md)**
 > ```html
 >
 > ```
@@ -1123,7 +1123,7 @@
 >> - band.html
 
 ## 2023.9.7
-> **[자바스크립트](20230907/자바스크립트.md)**
+> **[자바스크립트](https://github.com/DahyeonS/Java_Python_Lecture/tree/main/20230907)**
 > ```javascript
 >
 > ```
@@ -1180,7 +1180,7 @@
 >> - jqAnimate_animate.html
 
 ## 2023.9.11
-> **[AJAX](20230911/AJAX.md)**
+> **[AJAX](https://github.com/DahyeonS/Java_Python_Lecture/tree/main/20230911)**
 > ```html
 >
 > ```
@@ -1204,7 +1204,7 @@
 >> - dogcat.html
 
 ## 2023.9.12
-> **[JSP](20230912/JSP.md)**
+> **[JSP](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230912/JSP.md)**
 > ```jsp
 >
 > ```
