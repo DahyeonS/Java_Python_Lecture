@@ -22,7 +22,7 @@
 <h2>그 다음 중요한 제목</h2>
 <h3>그 그다음 중요한 제목</h3>
 ```
-- *p1, p2, p3...* - 단락
+- *p, p1, p2, p3...* - 단락
 ```html
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 <p2>Integer nibh tellus, tristique quis blandit quis, consequat in nunc.</p>
@@ -196,8 +196,8 @@ Lorem ipsum dolor <sup> sit amet</sup>
 </textarea>
 ```
 
-- *pre* - 
-- *code* - 
+- *pre* - 사용자가 입력한 그대로 문자를 출력
+- *code* - 프로그래밍 언어 코드를 출력
 ```html
 <pre>
     <code>
@@ -207,4 +207,40 @@ Lorem ipsum dolor <sup> sit amet</sup>
         dddd
     </code>
 </pre>
+```
+
+- *div* - 
+```html
+<div>
+    <h1>HTML Basic</h1>
+</div>
+```
+
+- *header* -
+- *nav* - 
+- *section* - 
+- *article* - 
+- *footer* - 
+```html
+<header>
+    <h1>HTML Basic</h1>
+</header>
+<nav>
+    <ul>
+        <li><a href="#">menu 1</a></li>
+        <li><a href="#">menu 2</a></li>
+        <li><a href="#">menu 3</a></li>
+    </ul>
+</nav>
+<section>
+    <article>
+        <h1>Lorem ipsum dolor sit amet</h1>
+    </article>
+    <article>
+        <h1>Lorem ipsum dolor sit amet</h1>
+    </article>
+</section>
+<footer>
+    <span>서울특별시 강서구 내발산동</span>
+</footer>
 ```
