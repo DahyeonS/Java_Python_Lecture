@@ -4,8 +4,8 @@
 ***목차***
 
 2023.7.24
-[main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#20230724)
-[page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#20230724) 
+[main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#2023724)
+[page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#2023724) 
 
 2023.7.25
 [main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#2023725)
@@ -183,7 +183,7 @@
 [main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#20231016)
 [page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#20231016)
 
-> ## 2023.7.24
+## 2023.7.24
 >
 > **마크다운 예시**
 > ```python
@@ -204,7 +204,7 @@
 > SELECT * FROM emp; -- SQL
 > ```
 
-> ## 2023.7.25
+## 2023.7.25
 > **[명령프롬프트(cmd)와 경로(디렉토리)](20230725/개요.md)**
 > ### *output*
 > - Hello.java
@@ -239,7 +239,7 @@
 >> - ConstantVariableDeclare.java
 >> - ColorChange.java
 
-> ## 2023.7.27
+## 2023.7.27
 > **[자료형](20230727/자료형.md)과 [연산자](20230727/연산자.md)와 [스캐너](20230727/스캐너.md)**
 > ```java
 > // 자료형
@@ -300,7 +300,7 @@
 >> - ScannerEx.java
 >> - ScannerTest.java
 
-> ## 2023.7.28
+## 2023.7.28
 > **[제어문](20230728/제어문.md)**
 > ```java
 > if (true) {
@@ -328,7 +328,7 @@
 >> - ForEx2.java
 >> - ForTest.java
 
-> ## 2023.7.31
+## 2023.7.31
 > **[반복문](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230728/%EC%A0%9C%EC%96%B4%EB%AC%B8.md#%EB%B0%98%EB%B3%B5%EB%AC%B8)과 [메서드](20230731/메서드.md)**
 > ```java
 > // 반복문
@@ -376,7 +376,7 @@
 >> #### projectex
 >> - RockPaperScissorsGame.java
 
-> ## 2023.8.1
+## 2023.8.1
 > **[배열](20230801/배열.md)**
 > ```java
 > int[] arr1 = new int[3]; // 1차원
@@ -399,7 +399,7 @@
 >> - ArraySortEx.java
 >> - LottoFive.java
 
-> ## 2023.8.2
+## 2023.8.2
 > **[ArrayList](20230802/ArrayList.md)와 [클래스](20230802/클래스.md)**
 > ```java
 > // ArrayList
@@ -440,7 +440,7 @@
 >> #### hello
 >> - Bus.java
 
-> ## 2023.8.3
+## 2023.8.3
 > **[생성자](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230802/%ED%81%B4%EB%9E%98%EC%8A%A4.md#%EC%83%9D%EC%84%B1%EC%9E%90)와 [접근제어자](20230803/패키지.md)**
 > ```java
 > // 생성자
@@ -484,7 +484,7 @@
 >> - UserLoginUseDTO.java
 >> - UserLoginDTOMain.java
 
-> ## 2023.8.4
+## 2023.8.4
 > **[클래스 상속](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230804/%ED%81%B4%EB%9E%98%EC%8A%A4%20%EC%83%81%EC%86%8D.md)**
 > ```java
 > // 부모클래스
@@ -539,7 +539,7 @@
 >>> #### *catpkg*
 >>> - *ProtectedDogUseCat.java*
 
-> ## 2023.8.7
+## 2023.8.7
 > **[추상 클래스](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230807/%EC%B6%94%EC%83%81%20%ED%81%B4%EB%9E%98%EC%8A%A4.md)와 [인터페이스](20230807/인터페이스.md)**
 > ```java
 > // 추상 클래스
@@ -619,7 +619,7 @@
 >> - AnimalPolyEatsArrayMain.java
 >> - AnimalPolyArrayListMain.java
 
-> ## 2023.8.8
+## 2023.8.8
 > **[예외](20230808/예외.md)와 [자바 API](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230808/%EC%9E%90%EB%B0%94%20API.md)**
 > ```java
 > // 예외
@@ -660,7 +660,7 @@
 >> - RandomEx2.java
 >> - DateEx.java
 
-> ## 2023.8.9
+## 2023.8.9
 > **[캘린더와 DecimalFormat 클래스](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230808/%EC%9E%90%EB%B0%94%20API.md#calendar-class), [List](20230809/Collection.md)**
 > ```java
 > // 캘린더
@@ -703,7 +703,7 @@
 >> - AnimalMain.java
 >> - AnimalUtil.java
 
-> ## 2023.8.10
+## 2023.8.10
 > **[Set와 Map](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230809/Collection.md#set), [Generic](20230810/Generic.md)과 [File I/O](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230810/File%20IO.md)**
 > ```java
 > // Set
@@ -752,7 +752,7 @@
 >> - FileWriterTest.java
 >> - BufferedFileWriterTest.java
 
-> ## 2023.8.11
+## 2023.8.11
 > **[객체 입출력](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230810/File%20IO.md#%EA%B0%9D%EC%B2%B4-%EC%9E%85%EC%B6%9C%EB%A0%A5)과 [람다](20230811/람다.md), [스트림](20230811/스트림.md)과 [GUI](20230811/GUI.md)**
 > ```java
 > // 객체 입출력
@@ -806,7 +806,7 @@
 >> - SwingLayout.java
 >> - SwingEx1.java
 
-> ## 2023.8.14
+## 2023.8.14
 > **[회원관리](20230814)**
 > ### *output*
 >> #### memberarray
@@ -819,7 +819,7 @@
 >> - MemberDAOImpl.java
 >> - MemberView.java
 
-> ## 2023.8.16
+## 2023.8.16
 > **회원관리(ArrayList, File)**
 > ### *output*
 >> #### memberarraylist
@@ -841,7 +841,7 @@
 >> - MemberDAOImpl.java
 >> - MemberView.java
 
-> ## 2023.8.17
+## 2023.8.17
 > **[데이터베이스](20230817/데이터베이스.md)**
 > ```sql
 > -- DDL
@@ -859,7 +859,7 @@
 > DELETE FROM member;
 > ```
 
-> ## 2023.8.18
+## 2023.8.18
 > **[SQL](20230818/SQL.md)**
 > ```sql
 > ALTER TABLE person ADD COLUMN new2 INTEGER NOT NULL DEFAULT 0;
@@ -879,7 +879,7 @@
 > - 상권 분석.sql
 > - 조류 GPS.sql
 
-> ## 2023.8.22
+## 2023.8.22
 > **[PostgreSQL](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230822/SQL%20%EC%A2%85%EB%A5%98.md#postgresql)**
 > ```sql
 > select * from film order by title fetch first row only;
@@ -887,19 +887,19 @@
 > ### *output*
 > - Script-3.sql
 
-> ## 2023.8.23
+## 2023.8.23
 > **[서브쿼리](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230818/SQL.md#subquery)**
 > ```sql
 > SELECT * FROM film WHERE rental_rate > (SELECT AVG(rental_rate) FROM film);
 > ```
 
-> ## 2023.8.24
+## 2023.8.24
 > **[가져오기와 내보내기](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230818/SQL.md#export)**
 > ```sql
 > COPY category TO 'C:\data\db_category.csv' DELIMITER ',' CSV HEADER;
 > ```
 
-> ## 2023.8.25
+## 2023.8.25
 > **트랜잭션과 [MySQL](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230822/SQL%20%EC%A2%85%EB%A5%98.md#mysql)**
 > ```sql
 > COMMIT;
@@ -911,7 +911,7 @@
 > - Script-6.sql
 > - Script-7.sql
 
-> ## 2023.8.28
+## 2023.8.28
 > **[Oracle](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230822/SQL%20%EC%A2%85%EB%A5%98.md#oracle)**
 > ```sql
 > ALTER TABLE person ADD new;
@@ -922,7 +922,7 @@
 > - Script-8.sql
 > - oracleex.sql
 
-> ## 2023.8.29
+## 2023.8.29
 > **PL/SQL**
 > ```sql
 > DECLARE
@@ -943,7 +943,7 @@
 > /
 > ```
 
-> ## 2023.8.30
+## 2023.8.30
 > **프로시저와 [JDBC](20230830/JDBC.md)**
 > ```sql
 > CREATE OR REPLACE PROCEDURE pro_noparam
@@ -985,7 +985,7 @@
 >> - MemberDAOImpl.java
 >> - MemberView.java
 
-> ## 2023.8.31
+## 2023.8.31
 > **JDBC**
 > ### *output*
 >> #### jdbcpkg
@@ -999,7 +999,7 @@
 >> - MemberServiceImpl.java
 >> - MemberService.java
 
-> ## 2023.9.1
+## 2023.9.1
 > **JDBC**
 > ### *output*
 > - Script-9.sql
@@ -1024,7 +1024,7 @@
 >> - CourseDTO.java
 >> - RegisterDTO.java
 
-> ## 2023.9.4
+## 2023.9.4
 > **[html](20230904/HTML.md)**
 > ```html
 >
@@ -1057,7 +1057,7 @@
 >> #### html2
 >> - text_anchor.html
 
-> ## 2023.9.5
+## 2023.9.5
 > **html과 [css](20230905/CSS.md)**
 > ```html
 >
@@ -1093,7 +1093,7 @@
 >> - default_wildcard.html
 >> - default_idclass.html
 
-> ## 2023.9.6
+## 2023.9.6
 > **css**
 > ```html
 >
@@ -1122,7 +1122,7 @@
 >> - company.html
 >> - band.html
 
-> ## 2023.9.7
+## 2023.9.7
 > **[자바스크립트](20230907/자바스크립트.md)**
 > ```javascript
 >
@@ -1147,7 +1147,7 @@
 >> - jqscript.js
 >> - index.js
 
-> ## 2023.9.8
+## 2023.9.8
 > **자바스크립트**
 > ```javascript
 >
