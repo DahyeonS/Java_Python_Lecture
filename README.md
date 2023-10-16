@@ -1027,7 +1027,16 @@
 ## 2023.9.4
 > **[html](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230904/HTML.md)**
 > ```html
->
+> <!DOCTYPE html>
+> <html lang="ko">
+> <head>
+>     <meta charset="UTF-8">
+>     <title>Hello</title>
+> </head>
+> <body>
+>     <h1>Hello World!!</h1>
+> </body>
+> </html>
 > ```
 > 
 > ### *output*
