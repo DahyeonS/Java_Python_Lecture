@@ -1025,7 +1025,7 @@
 >> - RegisterDTO.java
 
 ## 2023.9.4
-> **[html](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230904/HTML.md)**
+> **[HTML](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230904/HTML.md)**
 > ```html
 > <!DOCTYPE html>
 > <html lang="ko">
@@ -1067,14 +1067,15 @@
 >> - text_anchor.html
 
 ## 2023.9.5
-> **html과 [css](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230905/CSS.md)**
+> **HTML과 [css](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230905/CSS.md)**
 > ```html
-> <form method="post" name="sform" id="sform"> <!-- method는 전달 방식(get, post) -->
->    <input type="text" name="id" value=""><br> <!-- 텍스트 형식 --> <!-- value는 입력 값 -->
->    <input type="password" name="password" value=""><br> <!-- 비밀번호 형식(입력 값이 마스킹됨) -->
->    <input type="button" value="전송하기" onclick="check();"><br> <!-- 버튼 형식 -->
->    <input type="reset" value="초기화"><br> <!-- 초기화 버튼 형식 -->
->    <input type="submit" name="제출하기"><br> <!-- 제출 버튼 형식(클릭 시 입력 값을 다른 페이지로 전송) --> 
+> <!-- HTML -->
+> <form method="post" name="sform" id="sform">
+>    <input type="text" name="id" value=""><br>
+>    <input type="password" name="password" value=""><br>
+>    <input type="button" value="전송하기" onclick="check();"><br>
+>    <input type="reset" value="초기화"><br>
+>    <input type="submit" name="제출하기"><br>
 > </form>
 > ```
 > 
