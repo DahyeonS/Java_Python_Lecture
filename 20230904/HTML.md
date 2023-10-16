@@ -149,7 +149,7 @@ Lorem ipsum dolor <sup> sit amet</sup>
 
 - *form* - 폼 서식(다른 페이지로 값 전달 가능)
 - *input* - 입력 기능
-- *select* - 
+- *select* - 선택지 기능
 ```html
 <form method="post" name="sform" id="sform"> <!-- method는 전달 방식(get, post) -->
     <input type="text" name="id" value=""><br> <!-- 텍스트 형식 --> <!-- value는 입력 값 -->
@@ -164,14 +164,14 @@ Lorem ipsum dolor <sup> sit amet</sup>
     <label for="man">남자</label> <!-- 선택지의 이름 -->
     <input id="dog" type="checkbox" name="animal" value="d"> <!-- 체크박스 형식 -->
     <label for="dog">개</label> <!-- 체크박스의 이름 -->
-    <select name="choice" multiple="multiple"> <!--  -->
-        <option value="1">김밥</option> <!--  -->
+    <select name="choice" multiple="multiple"> <!-- multiple은 스크롤 없이 전체를 보여줌 -->
+        <option value="1">김밥</option> <!-- 선택지의 단위 -->
         <option value="2">떡볶이</option>
         <option value="3">순대</option>
         <option value="4">어묵</option>
     </select>
     <select>
-        <optgroup label="html5"> <!--  -->
+        <optgroup label="html5"> <!-- 선택지들을 그룹으로 묶음 -->
             <option value="">M</option>
             <option value="">C</option>
             <option value="">D</option>
@@ -187,4 +187,24 @@ Lorem ipsum dolor <sup> sit amet</sup>
         <option value="http://www.google.com">google</option>
     </select>
 </form>
+```
+
+- *textarea* - 
+```html
+<textarea cols="50" rows="10">
+        abcdabcd
+</textarea>
+```
+
+- *pre* - 
+- *code* - 
+```html
+<pre>
+    <code>
+        aaaa
+        bbbb
+        cccc
+        dddd
+    </code>
+</pre>
 ```
