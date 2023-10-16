@@ -209,18 +209,18 @@ Lorem ipsum dolor <sup> sit amet</sup>
 </pre>
 ```
 
-- *div* - 
+- *div* - 요소를 나누는 파트
 ```html
 <div>
     <h1>HTML Basic</h1>
 </div>
 ```
 
-- *header* -
-- *nav* - 
-- *section* - 
-- *article* - 
-- *footer* - 
+- *header* - 컨텐츠의 제목
+- *nav* - div와 비슷하나, 탐색 등의 네비게이션 요소를 정의할 때 사용
+- *section* - 컨텐츠의 일반적인 섹션
+- *article* - 컨텐츠에 포함된 독립적인 섹션(잡지, 신문, 논문, 에세이, 블로그 등)
+- *footer* - 컨텐츠의 밑부분(저자, 링크, 저작권 정보 등을 표시)
 ```html
 <header>
     <h1>HTML Basic</h1>
