@@ -149,6 +149,7 @@ Lorem ipsum dolor <sup> sit amet</sup>
 
 - *form* - 폼 서식(다른 페이지로 값 전달 가능)
 - *input* - 입력 기능
+- *select* - 
 ```html
 <form method="post" name="sform" id="sform"> <!-- method는 전달 방식(get, post) -->
     <input type="text" name="id" value=""><br> <!-- 텍스트 형식 --> <!-- value는 입력 값 -->
@@ -159,5 +160,31 @@ Lorem ipsum dolor <sup> sit amet</sup>
     <input type="reset" value="초기화"><br> <!-- 초기화 버튼 형식 -->
     <input type="submit" name="제출하기"><br> <!-- 제출 버튼 형식(클릭 시 입력 값을 다른 페이지로 전송) -->
     <input type="image" src="../imgs/cat/cat1.jpg"> <!-- 이미지 형식 -->
+    <input id="man" type="radio" name="gender" value="m"> <!-- 선택지 버튼 형식 -->
+    <label for="man">남자</label> <!-- 선택지의 이름 -->
+    <input id="dog" type="checkbox" name="animal" value="d"> <!-- 체크박스 형식 -->
+    <label for="dog">개</label> <!-- 체크박스의 이름 -->
+    <select name="choice" multiple="multiple"> <!--  -->
+        <option value="1">김밥</option> <!--  -->
+        <option value="2">떡볶이</option>
+        <option value="3">순대</option>
+        <option value="4">어묵</option>
+    </select>
+    <select>
+        <optgroup label="html5"> <!--  -->
+            <option value="">M</option>
+            <option value="">C</option>
+            <option value="">D</option>
+        </optgroup>
+        <optgroup label="CSS3">
+            <option value="">A</option>
+            <option value="">3D</option>
+        </optgroup>
+    </select>
+    <select onchange="location.href=this.value;"> <!-- onchange는 선택 시 작동(현재 "window.open(this.value);"와 같은 기능) -->
+        <option>==select==</option>
+        <option value="http://www.naver.com">naver</option>
+        <option value="http://www.google.com">google</option>
+    </select>
 </form>
 ```
