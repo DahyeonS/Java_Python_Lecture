@@ -205,12 +205,12 @@
 > ```
 
 ## 2023.7.25
-> **[명령프롬프트(cmd)와 경로(디렉토리)](20230725/개요.md)**
+> **[명령프롬프트(cmd)와 경로(디렉토리)](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230725/%EA%B0%9C%EC%9A%94.md)**
 > ### *output*
 > - Hello.java
 
 > ## 2023.7.26
-> **[이클립스 사용법](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230726/%EC%9D%B4%ED%81%B4%EB%A6%BD%EC%8A%A4%20%EC%82%AC%EC%9A%A9%EB%B2%95.md)과 자바 [출력](20230726/출력.md), [변수](20230726/변수.md)**
+> **[이클립스 사용법](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230726/%EC%9D%B4%ED%81%B4%EB%A6%BD%EC%8A%A4%20%EC%82%AC%EC%9A%A9%EB%B2%95.md)과 자바 [출력](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230726/%EC%B6%9C%EB%A0%A5.md), [변수](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230726/%EB%B3%80%EC%88%98.md)**
 > ```java
 > // 출력
 > System.out.println();
@@ -240,7 +240,7 @@
 >> - ColorChange.java
 
 ## 2023.7.27
-> **[자료형](20230727/자료형.md)과 [연산자](20230727/연산자.md)와 [스캐너](20230727/스캐너.md)**
+> **[자료형](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230727/%EC%9E%90%EB%A3%8C%ED%98%95.md)과 [연산자](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230727/%EC%97%B0%EC%82%B0%EC%9E%90.md)와 [스캐너](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230727/%EC%8A%A4%EC%BA%90%EB%84%88.md)**
 > ```java
 > // 자료형
 > int i = 1; // 기본 자료형
