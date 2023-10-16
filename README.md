@@ -704,7 +704,7 @@
 >> - AnimalUtil.java
 
 ## 2023.8.10
-> **[Set와 Map](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230809/Collection.md#set), [Generic](20230810/Generic.md)과 [File I/O](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230810/File%20IO.md)**
+> **[Set와 Map](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230809/Collection.md#set), [Generic](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230810/Generic.md)과 [File I/O](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230810/File%20IO.md)**
 > ```java
 > // Set
 > Set set = new HashSet();
