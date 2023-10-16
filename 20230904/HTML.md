@@ -95,15 +95,15 @@ Lorem ipsum dolor <sup> sit amet</sup>
 </ol>
 ```
 - *table* - 테이블(도표)
-> - thead
-> - tbody
-> - tr
-> - th
-> - td
+> - thead - 테이블의 head 부분(제목 등)
+> - tbody - 테이블의 body 부분(내용물)
+> - tr - 테이블의 열(가로줄)
+> - th - 열의 제목
+> - td - 열의 내용
 > 
-> *rowspan* -
+> *rowspan* - 행을 합침
 > 
-> *colspan* - 
+> *colspan* - 열을 합침
 ```html
 <table border="1">
     <thead>
