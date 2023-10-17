@@ -4,9 +4,7 @@
 ***목차***
 
 <details>
-<summary>7월
-
-</summary>
+<summary>7월</summary>
 <div markdown="1">
 2023.7.24
 [main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#2023724)
