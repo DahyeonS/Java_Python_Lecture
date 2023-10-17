@@ -1498,4 +1498,6 @@
 >>>> - TV
 >>>> - BeanFactory
 >>>> - TVUser3
+>>>> - SonySpeaker
+>>>> - TVUser4
 
