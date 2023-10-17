@@ -4,10 +4,10 @@
 ***목차***
 
 <details>
-<summary>7월</summary>
+<summary>7월
+
+</summary>
 <div markdown="1">
-
-
 2023.7.24
 [main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#2023724)
 [page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#2023724) 
@@ -37,8 +37,6 @@
 <details>
 <summary>8월</summary>
 <div markdown="1">
-
-
 2023.8.1
 [main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#202381)
 [page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#202381)
@@ -136,8 +134,6 @@
 <details>
 <summary>9월</summary>
 <div markdown="1">
-
-
 2023.9.1
 [main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#202391)
 [page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#202391)
@@ -203,8 +199,6 @@
 <details>
 <summary>10월</summary>
 <div markdown="1">
-
-
 2023.10.16
 [main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#20231016)
 [page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#20231016)
