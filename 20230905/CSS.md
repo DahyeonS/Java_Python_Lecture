@@ -11,5 +11,10 @@ CSS는 HTML의 요소를 꾸며주는 역할
 * {color: red;}
 h1 {color: green;}
 p {background-color: brown;}
+#header {width: 800px; margin: 0 auto; background-color: red;}
 </style>
 ```
+*는 전체를 선택
+h1, p 등의 요소를 입력하면 해당하는 요소 전체가 적용됨
+#으로 시작하는 경우 해당하는 id를, .으로 시작하는 경우 해당하는 class를 가진 요소만 적용됨
+
