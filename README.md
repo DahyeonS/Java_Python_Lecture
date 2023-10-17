@@ -1509,6 +1509,7 @@
 >>>> - TVUser4
 >>>> - Speaker
 >>>> - AppleSpeaker
+>>>> - Remocon
 >>
 >>> ##### resources
 >>>> - appContext.xml
