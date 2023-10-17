@@ -12,7 +12,9 @@ public class TVUser4 {
 		tv.volumeUp();
 		tv1.volumeDown();
 		
-		
+		TV lg = (TV)factory.getBean("lg");
+		lg.volumeDown();
+		lg.volumeUp();
 	}
 	
 }
