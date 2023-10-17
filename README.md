@@ -5,8 +5,8 @@
 
 <details>
 <summary>7월</summary>
-
 <div markdown="1">
+
 
 2023.7.24
 [main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#2023724)
@@ -31,15 +31,13 @@
 2023.7.31
 [main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#2023731)
 [page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#2023731)
-
 </div>
-
 </details>
 
 <details>
 <summary>8월</summary>
-
 <div markdown="1">
+
 
 2023.8.1
 [main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#202381)
@@ -132,14 +130,13 @@
 2023.8.31
 [main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#2023831)
 [page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#2023831)
-
 </div>
-
 </details>
 
 <details>
 <summary>9월</summary>
 <div markdown="1">
+
 
 2023.9.1
 [main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#202391)
@@ -200,16 +197,13 @@
 2023.9.20
 [main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#2023920)
 [page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#2023920)
-
 </div>
 </details>
 
-
-
 <details>
 <summary>10월</summary>
-
 <div markdown="1">
+
 
 2023.10.16
 [main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#20231016)
@@ -218,9 +212,7 @@
 2023.10.17
 [main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#20231017)
 [page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#20231017)
-
 </div>
-
 </details>
 
 ## 2023.7.24
