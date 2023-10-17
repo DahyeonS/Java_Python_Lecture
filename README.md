@@ -183,7 +183,7 @@
 [main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#20231016)
 [page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#20231016)
 
-2023.10.16
+2023.10.17
 [main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#20231017)
 [page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#20231017)
 
@@ -1449,10 +1449,10 @@
 >>>> - DispatcherController.java
 
 ## 2023.10.16
-> **파일 업로드**
+> **[JSP 파일 업로드](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231016/JSP%20%ED%8C%8C%EC%9D%BC%20%EC%97%85%EB%A1%9C%EB%93%9C.md)와 [MyBatis](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231016/MyBatis.md)**
 
 ## 2023.10.17
-> **Spring**
+> **[Spring](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231017/Spring.md)**
 > 
 >> ### *output*
 >>
