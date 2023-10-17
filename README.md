@@ -1482,7 +1482,9 @@
 ## 2023.10.17
 > **[Spring](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231017/Spring.md)**
 > 
->> ### *output*
+> ### *output*
+>> - pom.xml
+>>
 >> #### springweb
 >>> ##### java
 >>>> ###### lomboktest
@@ -1503,5 +1505,5 @@
 >>>> - Speaker
 >>>> - AppleSpeaker
 >>
->>> ##### source
+>>> ##### resources
 >>>> - appContext.xml

@@ -1,4 +1,4 @@
-package loctest;
+package ioctest;
 
 public class TVUser2 {
 	

@@ -1,8 +1,6 @@
 package ioctest;
 
-public interface TV {
-	public void powerOn();
-	public void powerOff();
+public interface Speaker {
 	public void volumeUp();
 	public void volumeDown();
 }
