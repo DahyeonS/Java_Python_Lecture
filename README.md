@@ -1490,7 +1490,7 @@
 >>>> - UserTest
 >>>> - UserDTO2
 >>>
->>>> ###### loctest
+>>>> ###### ioctest
 >>>> - SamsungTV
 >>>> - LGTV
 >>>> - TVUser
