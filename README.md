@@ -1483,9 +1483,8 @@
 > **[Spring](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231017/Spring.md)**
 > 
 > ### *output*
->> - pom.xml
->>
 >> #### springweb
+>> - pom.xml
 >>> ##### java
 >>>> ###### lomboktest
 >>>> - UserDTO
