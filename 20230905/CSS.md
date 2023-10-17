@@ -12,9 +12,23 @@ CSS는 HTML의 요소를 꾸며주는 역할
 h1 {color: green;}
 p {background-color: brown;}
 #header {width: 800px; margin: 0 auto; background-color: red;}
+.content {width: 800px; margin: 0 auto; background-color: red;}
+#header > p {font-weight: bold;} /* header id를 가진 요소에 속한 p가 대상 */
 </style>
+
+<body>
+    <h1>
+    <p>
+    <div id="header">
+        <p>
+    </div>
+    <div class="content">
+        <p>
+    </div>
+</body>
 ```
-*는 전체를 선택
-h1, p 등의 요소를 입력하면 해당하는 요소 전체가 적용됨
-#으로 시작하는 경우 해당하는 id를, .으로 시작하는 경우 해당하는 class를 가진 요소만 적용됨
+- *는 전체를 선택
+- h1, p 등의 요소를 입력하면 해당하는 요소 전체가 적용됨
+- #으로 시작하는 경우 해당하는 id를, .으로 시작하는 경우 해당하는 class를 가진 요소만 적용됨
+- >를 사용해 자식 요소를 선택 가능
 
