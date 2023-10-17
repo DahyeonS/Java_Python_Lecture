@@ -1077,6 +1077,15 @@
 >    <input type="reset" value="초기화"><br>
 >    <input type="submit" name="제출하기"><br>
 > </form>
+>
+> <!-- CSS -->
+> <style>
+> * {color: red;}
+> h1 {color: green;}
+> p {background-color: brown;}
+> #header {width: 800px; margin: 0 auto; background-color: red;}
+> .content {width: 800px; margin: 0 auto; background-color: red;}
+> </style>
 > ```
 > 
 > ### *output*
