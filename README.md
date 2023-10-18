@@ -1252,7 +1252,7 @@
 >> - band.html
 
 ## 2023.9.7
-> **[자바스크립트](https://github.com/DahyeonS/Java_Python_Lecture/tree/main/20230907)**
+> **[자바스크립트](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230907/JavaScript.md)**
 > ```javascript
 >
 > ```
