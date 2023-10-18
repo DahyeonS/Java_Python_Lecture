@@ -1503,7 +1503,7 @@
 >>> - deleteJson.jsp
 
 ## 2023.9.20
-> **MVC**
+> **MVC / JSTL**
 > ```jsp
 >
 > ```
