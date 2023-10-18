@@ -1529,6 +1529,9 @@
 
 ## 2023.10.16
 > **[JSP 파일 업로드](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231016/JSP%20%ED%8C%8C%EC%9D%BC%20%EC%97%85%EB%A1%9C%EB%93%9C.md)와 [MyBatis](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231016/MyBatis.md)**
+> ```jsp
+>
+> ```
 
 ## 2023.10.17
 > **[Spring](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231017/Spring.md)**
@@ -1567,3 +1570,6 @@
 
 ## 2023.10.18
 > **Spring**
+> ```
+>
+> ```
