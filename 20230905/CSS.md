@@ -21,10 +21,10 @@ CSS는 HTML의 요소를 꾸며주는 역할
         #header > p {font-weight: bold;} /* ">": (바로 앞 후손-자식 한정) */
 
         input:enabled {background-color: aquamarine;} /* 해당 input이 사용 가능할 때만 적용 */
-        li:first-child { border-radius: 10px 0 0 10px; } /* 첫번째 자식 선택자만 적용 */
-        li:last-child { border-radius: 0 10px 10px 0; } /* 마지막 자식 선택자만 적용 */
-        li:nth-child(2n) { background-color: #FF0003; } /* 짝수 자식 선택자만 적용 */
-        li:nth-child(2n+1) { background-color:#800000; } /* 홀수 자식 선택자만 적용 */
+        li:first-child {border-radius: 10px 0 0 10px;} /* 첫번째 자식 선택자만 적용 */
+        li:last-child {border-radius: 0 10px 10px 0;} /* 마지막 자식 선택자만 적용 */
+        li:nth-child(2n) {background-color: #FF0003;} /* 짝수 자식 선택자만 적용 */
+        li:nth-child(2n+1) {background-color:#800000;} /* 홀수 자식 선택자만 적용 */
     </style>
 </head>
 
@@ -151,3 +151,87 @@ CSS는 HTML의 요소를 꾸며주는 역할
 </body>
 ```
 - font 및 text로 글씨를 설정
+- font-size는 글씨 크기
+- font-family는 글씨체(여러 개 설정 가능)
+- font-style은 기울기, font-weight는 굵기
+- text-align은 글씨 정렬(왼쪽, 가운데, 오른쪽)
+
+```html
+<head>
+    <style>
+        .button {
+            width: 150px;
+            height: 70px;
+            background-color: #FF6A00;
+            border: 10px solid #FFFFFF;
+            border-radius: 30px;
+            box-shadow: 5px 5px 5px #A9A9A9;
+        }
+
+        .button > a {
+            display: block;
+            line-height: 70px;
+        }
+    </style>
+</head>
+<body>
+    <div class="button">
+        <a href="#">Click</a>
+    </div>
+</body>
+```
+- line-height는 글씨의 높이 조정(도형의 높이와 같아야 가운데 정렬 가능)
+
+```html
+<head>
+    <style>
+        a {text-decoration: none;} /* 링크 밑줄 없음 */
+    </style>
+</head>
+<body>
+    <h1>
+        <a href="#">Lorem ipsum dolor amet</a>
+    </h1>
+</body>
+```
+- a태그(링크)에서 text-decoration으로 밑줄 설정 가능(색깔은 color로 설정)
+
+### 위치 설정
+```html
+    <style>
+        .box {
+            width: 100px; height: 100px;
+            position: absolute;
+        }
+        .box:nth-child(1) {
+            background-color: red;
+            left: 10px; top: 10px;
+            z-index: 999;
+        }
+        .box:nth-child(2) {
+            background-color: green;
+            left: 50px; top: 50px;
+            z-index: 50;
+        }
+        .box:nth-child(3) {
+            background-color: blue;
+            left: 90px; top: 90px;
+        }
+        body > div {
+            width: 400px; height: 100px;
+            border: 3px solid black;
+            position: relative;
+            overflow-y: scroll;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lorem ipusm dolor amet</h1>
+    <div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    <h1>Lorem ipusm dolor amet</h1>
+</body>
+```
