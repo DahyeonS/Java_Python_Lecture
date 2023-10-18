@@ -92,15 +92,16 @@ CSS는 HTML의 요소를 꾸며주는 역할
 </body>
 ```
 - border는 윤곽선 설정
-- **margin은 객체의 외부 여백**
+- **margin은 객체(대상)의 외부 여백**
+- **padding은 객체(대상)의 내부 여백**
 
 ### 표시 유무
 ```html
 <head>
     <style>
         #box {display: none;} /* 보이지 않음 */
-        #box {display: block;} /* 다른 대상과 다른 줄에서 보여줌 */
-        #box {display: inline;} /* 다른 대상과 같은 줄에서 보여줌 */
+        #box {display: block;} /* 다른 요소들과 다른 줄에서 보여줌 */
+        #box {display: inline;} /* 다른 요소들과 같은 줄에서 보여줌 */
     </style>
 </head>
 <body>
@@ -197,32 +198,33 @@ CSS는 HTML의 요소를 꾸며주는 역할
 - a태그(링크)에서 text-decoration으로 밑줄 설정 가능(색깔은 color로 설정)
 
 ### 위치 설정
+#### position
 ```html
 <head>
     <style>
         .box {
             width: 100px; height: 100px;
-            position: absolute;
+            position: absolute; /* 부모 요소의 위치를 기준으로 삼음(여기서는 body) */
         }
-        .box:nth-child(1) {
+        .box:nth-child(1) { /* 첫번째 상자 */
             background-color: red;
             left: 10px; top: 10px;
-            z-index: 999;
+            z-index: 999; /* 맨 앞 */
         }
-        .box:nth-child(2) {
+        .box:nth-child(2) { /* 두번째 상자 */
             background-color: green;
             left: 50px; top: 50px;
-            z-index: 50;
+            z-index: 50; /* 빨강보다 뒤, 파랑보다 앞 */
         }
-        .box:nth-child(3) {
+        .box:nth-child(3) { /* 세번째 상자 */
             background-color: blue;
             left: 90px; top: 90px;
         }
         body > div {
             width: 400px; height: 100px;
-            border: 3px solid black;
-            position: relative;
-            overflow-y: scroll;
+            border: 3px solid black; /* 3px 굵기의 검은 실선 */
+            position: relative; /* 자식 요소의 기준점이 됨(여기서는 box 클래스 요소들) */
+            overflow-y: scroll; /* 넘치는 부분은 스크롤을 이용해 보여줌 */
         }
     </style>
 </head>
@@ -236,3 +238,59 @@ CSS는 HTML의 요소를 꾸며주는 역할
     <h1>Lorem ipusm dolor amet</h1>
 </body>
 ```
+- position, left, top, right, bottom으로 위치 설정
+- z-index로 대상의 순서를 조정(숫자가 다른 대상보다 높을 수록 앞으로 나옴)
+- overflow는 대상의 크기가 보여주는 범위를 초과했을 때 어떻게 처리할지 설정함
+
+#### float
+```html
+<head>
+    <style>
+        .img {float: right;}
+    </style>
+</head>
+<body>
+    <img class="img" src="../imgs/cat/cat1.jpg">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+</body>
+```
+- float는 화면 크기에 따라 자동으로 위치가 조정(오른쪽으로 설정할 경우 항상 오른쪽에 출력)
+
+```html
+<head>
+    <style>
+        .box {
+            width: 100px; height: 100px;
+            background-color: red;
+            margin: 10px; padding: 10px;
+            float: left; /* 왼쪽 수평 정렬 */
+        }
+    </style>
+</head>
+<body>
+    <div class="box">1</div>
+    <div class="box">2</div>
+</body>
+```
+- float를 이용해 여러 대상을 한 줄에 수평으로 정렬 가능
+
+#### 그림자 설정
+```html
+<head>
+    <style>
+        .box {
+            border: 3px solid black;
+            box-shadow: 10px 10px 30px black;
+        }
+        h1 {
+            text-shadow: 5px 5px 5px black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lorem ipsum dolor amet</h1>
+    <hr>
+    <div class="box"></div>
+</body>
+```
+- box-shadow 및 text-shadow를 이용해 상자 또는 그림자의 위치와 색상을 설정 가능
