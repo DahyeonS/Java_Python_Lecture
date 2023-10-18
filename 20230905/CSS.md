@@ -51,7 +51,8 @@ CSS는 HTML의 요소를 꾸며주는 역할
 - 공백이나 , 또는 ">"를 사용해 자식 요소를 선택 가능
 - :는 상태 또는 구조를 선택
 
-## 크기와 패딩 조정
+## 스타일 설정
+### 선, 색, 크기와 여백 조정
 ```html
 <head>
     <style>
@@ -92,3 +93,40 @@ CSS는 HTML의 요소를 꾸며주는 역할
 ```
 - border는 윤곽선 설정
 - **margin은 객체의 외부 여백**
+
+### 표시 유무
+```html
+<head>
+    <style>
+        #box {display: none;} /* 보이지 않음 */
+        #box {display: block;} /* 다른 대상과 다른 줄에서 보여줌 */
+        #box {display: inline;} /* 다른 대상과 같은 줄에서 보여줌 */
+    </style>
+</head>
+<body>
+    <span>더미 객체</span>
+    <div id="box">대상 객체</div>
+    <span>더미 객체</span>
+</body>
+```
+- display는 대상을 보여주는 방식을 설정
+
+### 배경에 이미지 삽입
+```html
+<head>
+    <style>
+        body {
+            background-image: url(../imgs/cat/cat1.jpg); /* 배경 이미지 삽입 */
+            background-repeat: no-repeat; /* 배경 이미지 반복 없음 */
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+```
+
+### 글씨 조정
+```html
+
+```
