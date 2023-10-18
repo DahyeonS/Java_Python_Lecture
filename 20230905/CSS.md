@@ -94,7 +94,6 @@ CSS는 HTML의 요소를 꾸며주는 역할
 - border는 윤곽선 설정
 - **margin은 객체의 외부 여백**
 
-
 ### 표시 유무
 ```html
 <head>
@@ -112,7 +111,6 @@ CSS는 HTML의 요소를 꾸며주는 역할
 ```
 - display는 대상을 보여주는 방식을 설정
 
-
 ### 배경에 이미지 삽입
 ```html
 <head>
@@ -120,6 +118,11 @@ CSS는 HTML의 요소를 꾸며주는 역할
         body {
             background-image: url(../imgs/cat/cat1.jpg); /* 배경 이미지 삽입 */
             background-repeat: no-repeat; /* 배경 이미지 반복 없음 */
+            background-size: 100% 250px; /* 배경 이미지 크기 */
+            background-attachment: scroll; /* 스크롤 시 배경 이미지도 같이 스크롤 */
+            background-attachment: fixed; /* 스크롤 시에도 배경 이미지 고정 */
+            background-position: bottom; /* 배경 이미지 위치(아래) */
+            background-position: 0px 50%; /* 배경 이미지 위치(중앙) */
         }
     </style>
 </head>
@@ -128,8 +131,23 @@ CSS는 HTML의 요소를 꾸며주는 역할
 </body>
 ```
 
-
 ### 글씨 조정
 ```html
-
+<head>
+    <style>
+        .a {font-size: 32px; font-family:'Lucida Sans';}
+        .b {font-size: 2em; font-style: italic;}
+        .c {font-size: large; font-weight: bold;}
+        .d {font-size: small; text-align: right;}
+        h1 {text-align: center;}
+    </style>
+</head>
+<body>
+    <h1>Lorem ipsum</h1>
+    <p class="a">Lorem ipsum</p>
+    <p class="b">Lorem ipsum</p>
+    <p class="c">Lorem ipsum</p>
+    <p class="d">Lorem ipsum</p>
+</body>
 ```
+- font 및 text로 글씨를 설정
