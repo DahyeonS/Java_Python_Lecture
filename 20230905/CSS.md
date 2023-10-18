@@ -295,7 +295,7 @@ CSS는 HTML의 요소를 꾸며주는 역할
 ```
 - box-shadow 및 text-shadow를 이용해 상자 또는 그림자의 위치와 색상을 설정 가능
 
-## 반응형 웹 설정
+## *반응형 웹 설정*
 ```html
 <head>
     <style>
