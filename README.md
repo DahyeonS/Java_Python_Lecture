@@ -1204,7 +1204,28 @@
 ## 2023.9.6
 > **css**
 > ```html
+> <head>
+>   <style>
+>       .button {
+>           width: 150px;
+>           height: 70px;
+>           background-color: #FF6A00;
+>           border: 10px solid #FFFFFF;
+>           border-radius: 30px;
+>           box-shadow: 5px 5px 5px #A9A9A9;
+>       }
 >
+>       .button > a {
+>           display: block;
+>           line-height: 70px;
+>       }
+>    </style>
+> </head>
+> <body>
+>   <div class="button">
+>       <a href="#">Click</a>
+>   </div>
+> </body>
 > ```
 > 
 > ### *output*
