@@ -198,6 +198,7 @@ CSS는 HTML의 요소를 꾸며주는 역할
 
 ### 위치 설정
 ```html
+<head>
     <style>
         .box {
             width: 100px; height: 100px;
