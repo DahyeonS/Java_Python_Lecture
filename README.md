@@ -1547,23 +1547,23 @@
 >>>>>> - HelloService.java
 >>>
 >>>> ###### lomboktest
->>>> - UserDTO
->>>> - UserTest
->>>> - UserDTO2
+>>>> - UserDTO.java
+>>>> - UserTest.java
+>>>> - UserDTO2.java
 >>>
 >>>> ###### ioctest
->>>> - SamsungTV
->>>> - LGTV
->>>> - TVUser
->>>> - TVUser2
->>>> - TV
->>>> - BeanFactory
->>>> - TVUser3
->>>> - SonySpeaker
->>>> - TVUser4
->>>> - Speaker
->>>> - AppleSpeaker
->>>> - Remocon
+>>>> - SamsungTV.java
+>>>> - LGTV.java
+>>>> - TVUser.java
+>>>> - TVUser2.java
+>>>> - TV.java
+>>>> - BeanFactory.java
+>>>> - TVUser3.java
+>>>> - SonySpeaker.java
+>>>> - TVUser4.java
+>>>> - Speaker.java
+>>>> - AppleSpeaker.java
+>>>> - Remocon.java
 >>
 >>> ##### resources
 >>>> - appContext.xml
