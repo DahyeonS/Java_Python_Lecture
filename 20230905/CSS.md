@@ -56,9 +56,9 @@ li:nth-child(2n+1) { background-color:#800000; } /* 홀수 자식 선택자만 �
 <head>
 <style>
     .tmp {
-        background-color: red;
-        width: 100px; height: 100px;
-        border-radius: 50px 25px 50px 24px;
+        background-color: red; /* 배경색 - 빨강 */
+        width: 100px; height: 100px; /* 100px 크기의 정사각형 */
+        border-radius: 50px 25px 50px 24px; /* 순서는 반시계방향(위 - 오른쪽 - 아래 - 왼쪽) */
     }
 </style>
 </head>
@@ -67,3 +67,6 @@ li:nth-child(2n+1) { background-color:#800000; } /* 홀수 자식 선택자만 �
     <div class="tmp">d</div>
 </body>
 ```
+- color(글자)나 background-color(바탕)으로 색깔을 설정
+- width는 너비, height는 높이
+- border-radius는 외곽선의 둥근 정도
