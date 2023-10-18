@@ -294,3 +294,35 @@ CSS는 HTML의 요소를 꾸며주는 역할
 </body>
 ```
 - box-shadow 및 text-shadow를 이용해 상자 또는 그림자의 위치와 색상을 설정 가능
+
+## 반응형 웹 설정
+```html
+<head>
+    <style>
+        @media screen { /* 화면 출력 */
+            body {background-color: black; color: white;}
+        }
+
+        @media print { /* 프린트 출력 */
+            body {background-color: white; color: black;}
+        }
+
+        @media(max-width: 499px) { /* 스마트폰 화면 출력 */
+            body{background: red;}
+        }
+
+        @media(max-width: 500px) and (max_width: 799px){ /* 태블릿 pc 화면 출력 */
+            body{background: green;}
+        }
+
+        @media(min-width: 800px) { /* 데스크톱 화면 출력 */
+            body {background: blue;}
+        }
+    </style>
+</head>
+<body>
+    <h1>Lorem ipsum dolor sit amet</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+</body>
+```
+- @media를 이용해 여러 가지 기종들에 맞춘 화면을 출력할 수 있음
