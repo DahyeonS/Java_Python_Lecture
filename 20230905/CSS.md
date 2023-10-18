@@ -8,24 +8,24 @@ CSS는 HTML의 요소를 꾸며주는 역할
 ## 선택자 사용법
 ```html
 <head>
-<style>
-* {color: red;}
+    <style>
+        * {color: red;}
 
-h1 {color: green;}
-p {background-color: brown;}
+        h1 {color: green;}
+        p {background-color: brown;}
 
-#header {width: 800px; margin: 0 auto; background-color: red;}
-.content {width: 800px; margin: 0 auto; background-color: red;}
+        #header {width: 800px; margin: 0 auto; background-color: red;}
+        .content {width: 800px; margin: 0 auto; background-color: red;}
 
-#header h1 {color: blue;} /* ",":or , " ": (후손-자식, 손자 포함)*/
-#header > p {font-weight: bold;} /* ">": (바로 앞 후손-자식 한정) */
+        #header h1 {color: blue;} /* ",":or , " ": (후손-자식, 손자 포함)*/
+        #header > p {font-weight: bold;} /* ">": (바로 앞 후손-자식 한정) */
 
-input:enabled {background-color: aquamarine;} /* 해당 input이 사용 가능할 때만 적용 */
-li:first-child { border-radius: 10px 0 0 10px; } /* 첫번째 자식 선택자만 적용 */
-li:last-child { border-radius: 0 10px 10px 0; } /* 마지막 자식 선택자만 적용 */
-li:nth-child(2n) { background-color: #FF0003; } /* 짝수 자식 선택자만 적용 */
-li:nth-child(2n+1) { background-color:#800000; } /* 홀수 자식 선택자만 적용 */
-</style>
+        input:enabled {background-color: aquamarine;} /* 해당 input이 사용 가능할 때만 적용 */
+        li:first-child { border-radius: 10px 0 0 10px; } /* 첫번째 자식 선택자만 적용 */
+        li:last-child { border-radius: 0 10px 10px 0; } /* 마지막 자식 선택자만 적용 */
+        li:nth-child(2n) { background-color: #FF0003; } /* 짝수 자식 선택자만 적용 */
+        li:nth-child(2n+1) { background-color:#800000; } /* 홀수 자식 선택자만 적용 */
+    </style>
 </head>
 
 <body>
@@ -54,13 +54,13 @@ li:nth-child(2n+1) { background-color:#800000; } /* 홀수 자식 선택자만 �
 ## 크기와 패딩 조정
 ```html
 <head>
-<style>
-    .tmp {
-        background-color: red; /* 배경색 - 빨강 */
-        width: 100px; height: 100px; /* 100px 크기의 정사각형 */
-        border-radius: 50px 25px 50px 24px; /* 순서는 반시계방향(위 - 오른쪽 - 아래 - 왼쪽) */
-    }
-</style>
+    <style>
+        .tmp {
+            background-color: red; /* 배경색 - 빨강 */
+            width: 100px; height: 100px; /* 100px 크기의 정사각형 */
+            border-radius: 50px 25px 50px 24px; /* 순서는 반시계방향(위 - 오른쪽 - 아래 - 왼쪽) */
+        }
+    </style>
 </head>
 
 <body>
@@ -70,3 +70,25 @@ li:nth-child(2n+1) { background-color:#800000; } /* 홀수 자식 선택자만 �
 - color(글자)나 background-color(바탕)으로 색깔을 설정
 - width는 너비, height는 높이
 - border-radius는 외곽선의 둥근 정도
+
+```html
+<head>
+    <style>
+        .box {
+            width: 100%;
+            border-width: thick; /* 윤곽선을 굵게 */
+            border-style: dashed; /* 점선 */
+            border-color: black; /* 검은 선 */
+            border-radius: 20px;
+            margin-bottom: 20px; /* 외부 여백 */
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>Lorem ipsum dolor amet</h1>
+    </div>
+</body>
+```
+- border는 윤곽선 설정
+- **margin은 객체의 외부 여백**
