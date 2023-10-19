@@ -1598,13 +1598,6 @@
 > ```
 >
 > ```
-
-## 2023.10.19
-> **Spring AJAX, Spring MyBatis**
-> ```
-> 
-> ```
->
 > ### *output*
 >> #### membertest
 >> - pom.xml
@@ -1638,3 +1631,12 @@
 >>>>>> - login.jsp
 >>>>>> - update.jsp
 >>>>>> - logincheck.js
+
+## 2023.10.19
+> **Spring AJAX, Spring MyBatis**
+> ```
+> 
+> ```
+>
+> ### *output*
+>> 
