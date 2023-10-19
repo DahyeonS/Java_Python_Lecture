@@ -1639,4 +1639,16 @@
 > ```
 >
 > ### *output*
->> 
+>> #### membertest
+>>> ##### java
+>>>> ###### com
+>>>>> ###### myweb
+>>>>>>> ###### web
+>>>>>>> - MemberControllerAjax.java
+>>
+>>> ##### webapp
+>>>> ###### WEB-INF
+>>>>> ###### views
+>>>>>> ###### member
+>>>>>> - delete.jsp
+>>>>>> - memberList.jsp
