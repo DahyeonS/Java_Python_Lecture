@@ -1633,7 +1633,7 @@
 >>>>>> - loginCheck.jsp
 
 ## 2023.10.19
-> **Spring AJAX, Spring MyBatis**
+> **[Spring AJAX](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231019/Spring%20AJAX.md), [Spring MyBatis](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231019/Spring%20MyBatis.md)**
 > ```
 > 
 > ```
