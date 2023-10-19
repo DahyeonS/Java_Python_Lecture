@@ -1628,7 +1628,7 @@
 >>>>> ###### spring
 >>>>>> ###### appServlet
 >>>>>> - servlet-context.xml
->>>>>
+>>>>
 >>>>> ###### views
 >>>>> - index.jsp
 >>>>> - topmenu.jsp
