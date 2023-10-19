@@ -1600,10 +1600,41 @@
 > ```
 
 ## 2023.10.19
-> ** **
+> **Spring AJAX, Spring MyBatis**
 > ```
 > 
 > ```
 >
 > ### *output*
->> 
+>> #### membertest
+>> - pom.xml
+>>
+>>> ##### java
+>>>> ###### com
+>>>>>> ###### myweb
+>>>>>>> ###### web
+>>>>>>> - HomeController.java
+>>>>>>> - MemberController.java
+>>>>>>> - MemberDTO.java
+>>>>>>> - MemberService.java
+>>>>>>> - MemberServiceImpl.java
+>>>>>>> - MemberDAO.java
+>>>>>>> - MemberDAOImpl.java
+>>
+>>> ##### webapp
+>>>> ###### WEB-INF
+>>>> - web.xml
+>>>>
+>>>>> ###### spring
+>>>>>> ###### appServlet
+>>>>>> - servlet-context.xml
+>>>>
+>>>>> ###### views
+>>>>> - index.jsp
+>>>>> - topmenu.jsp
+>>>>>
+>>>>>> ###### member
+>>>>>> - join.jsp
+>>>>>> - login.jsp
+>>>>>> - update.jsp
+>>>>>> - logincheck.js
