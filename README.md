@@ -1629,12 +1629,12 @@
 >>>>>> ###### appServlet
 >>>>>> - servlet-context.xml
 >>>>>
->>>>> ###### views
->>>>> - index.jsp
->>>>> - topmenu.jsp
->>>>>
->>>>>> ###### member
->>>>>> - join.jsp
->>>>>> - login.jsp
->>>>>> - update.jsp
->>>>>> - logincheck.js
+>>>>>> ###### views
+>>>>>> - index.jsp
+>>>>>> - topmenu.jsp
+>>>>>>
+>>>>>>> ###### member
+>>>>>>> - join.jsp
+>>>>>>> - login.jsp
+>>>>>>> - update.jsp
+>>>>>>> - logincheck.js
