@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>회원정보수정</title>
-<script src="logincheck.js"></script>
+<%@include file="loginCheck.jsp"%>
 <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
 </head>
 <%@include file="../topmenu.jsp"%>

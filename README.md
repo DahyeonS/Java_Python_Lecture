@@ -1630,7 +1630,7 @@
 >>>>>> - join.jsp
 >>>>>> - login.jsp
 >>>>>> - update.jsp
->>>>>> - logincheck.js
+>>>>>> - loginCheck.jsp
 
 ## 2023.10.19
 > **Spring AJAX, Spring MyBatis**
