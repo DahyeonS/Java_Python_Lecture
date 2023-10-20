@@ -1657,10 +1657,31 @@
 >>>>>> - delete.jsp
 >>>>>> - memberList.jsp
 
-## 2023.10.20
-> **리눅스 개발환경**
-> ```
-> 
-> ```
-> 
+## 2023.10.20 
 > ### *output*
+>> #### membertest
+>>> ##### java
+>>>> ###### com
+>>>>> ###### myweb
+>>>>>>> ###### web
+>>>>>>> - MemberControllerMybatis.java
+>>>>>>> - MemberMybatisService.java
+>>>>>>> - MemberMybatisServiceImpl.java
+>>>>>>
+>>>>>>> ###### mybatis
+>>>>>>>> ###### mapper
+>>>>>>>> - MemberMapper.java
+>>
+>>> ##### webapp
+>>>> ###### WEB-INF
+>>>>> ###### spring
+>>>>> - root-context.xml
+>>
+>>> ##### resources
+>>>> ###### com
+>>>>> ###### myweb
+>>>>>> ###### mybatis
+>>>>>> - mybatis-config.xml
+>>>>>>
+>>>>>>> ###### mapper
+>>>>>>> - MemberMapper.xml
