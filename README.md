@@ -222,6 +222,10 @@
 [main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#20231019)
 [page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#20231019)
 
+2023.10.20
+[main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#20231020)
+[page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#20231020)
+
 </div>
 </details>
 
@@ -1652,3 +1656,11 @@
 >>>>>> ###### member
 >>>>>> - delete.jsp
 >>>>>> - memberList.jsp
+
+## 2023.10.20
+> **리눅스 개발환경**
+> ```
+> 
+> ```
+>
+> ### *output*
