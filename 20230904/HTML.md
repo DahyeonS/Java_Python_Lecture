@@ -233,14 +233,16 @@ Lorem ipsum dolor <sup> sit amet</sup>
         <li><a href="#">menu 3</a></li>
     </ul>
 </nav>
-<section>
-    <article>
-        <h1>Lorem ipsum dolor sit amet</h1>
-    </article>
-    <article>
-        <h1>Lorem ipsum dolor sit amet</h1>
-    </article>
-</section>
+<main>
+    <section>
+        <article>
+            <h1>Lorem ipsum dolor sit amet</h1>
+        </article>
+        <article>
+            <h1>Lorem ipsum dolor sit amet</h1>
+        </article>
+    </section>
+</main>
 <footer>
     <span>서울특별시 강서구 내발산동</span>
 </footer>
