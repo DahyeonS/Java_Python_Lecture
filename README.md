@@ -296,7 +296,7 @@
 > ```
 
 ## 2023.7.25
-> **[명령프롬프트(cmd)와 경로(디렉토리)](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230725/%EA%B0%9C%EC%9A%94.md)**
+> **[명령프롬프트(cmd)와 경로(디렉토리)](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230725/%ED%99%98%EA%B2%BD%EC%84%A4%EC%A0%95%20%EB%B0%8F%20%EB%AA%85%EB%A0%B9%20%ED%94%84%EB%A1%AC%ED%94%84%ED%8A%B8.md)**
 > ### *output*
 > - Hello.java
 
