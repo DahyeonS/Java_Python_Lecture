@@ -147,6 +147,29 @@ person.eat('밥');
 ```
 
 ## 선택자
+- 1. name으로 선택
+```javascript
+const form = document.checkForm;
+const checkId = form.checkId;
+checkId.value = 'hong'; // checkID의 값을 채움
+```
+
+- 2. id로 선택
+```javascript
+document.getElementById("checkId").value = 'hong2';
+document.getElementById("checkForm").style.display = 'none';
+```
+
+- 3. jquery dom library
+```javascript
+$('#checkId').val('hong3'); // $(선택자).함수;
+$('#checkForm').hide();
+$('#checkForm').show();
+```
+
+- 4. querySelector
 ```javascript
 const userid = document.querySelector('#userid');
+document.querySelector('#checkId').value = 'hong4';
+document.querySelector('h1').style.backgroundColor = 'red';
 ```
