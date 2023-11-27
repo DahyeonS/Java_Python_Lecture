@@ -286,5 +286,63 @@ dog3.say(); // 댕댕
 
 ## 이벤트 함수
 ```javascript
+// onload 함수
+window.onload = function() {
+    const btn4 = document.querySelector('#btn4')
+    btn4.onclick = function() {
+        document.querySelector("#cnt").innerHTML = 1000;
+    };
+    
+    const btn5 = document.querySelector('#btn5')
+    btn5.addEventListener('click', function() {
+        document.querySelector("#cnt").innerHTML = 10000;
+    });
 
+    const divBox = document.querySelector('#box');
+    divBox.addEventListener('click', function(e) {
+        console.dir(e);
+    });
+};
+
+// JQuery
+$(function() {
+    let cnt = 0;
+    $('#btn1').click(function() {
+        $(this).text(++cnt);
+        $('#cnt').text(cnt);
+    });
+
+    $("#box").css({
+        width: 100,
+        height: 100,
+        background: 'orange'
+    })
+    .on('click', function(e) {
+        $(this).css('background', 'red');
+    })
+    .on('mouseenter', function(e) {
+        $(this).css('background', 'blue');
+    })
+    .on('mouseleave', function(e) {
+        $(this).css('background', 'orange');
+    });
+});
+```
+
+## 범위
+함수 내에서 선언한 변수는 함수 내에서만 적용
+```javascript
+function func() {
+    a = 10;
+}
+var a = 100;
+console.log(a); // 100
+
+function outerFunc() {
+    var x = 10;
+    var innerFunc = function() {console.log(x)};
+    return innerFunc
+}
+var inner = outerFunc();
+inner(); // 10
 ```
