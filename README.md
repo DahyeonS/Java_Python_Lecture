@@ -1294,7 +1294,13 @@
 ## 2023.9.8
 > **[자바스크립트](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230907/JavaScript.md#%EA%B0%9D%EC%B2%B4-%ED%81%B4%EB%9E%98%EC%8A%A4-%EC%83%81%EC%86%8D)**
 > ```javascript
->
+> $(function() {
+>   let cnt = 0;
+>   $('#btn1').click(function() {
+>       $(this).text(++cnt);
+>       $('#cnt').text(cnt);
+>   });
+> });
 > ```
 > 
 > ### *output*
