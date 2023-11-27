@@ -79,16 +79,32 @@ for (let i of items) console.log(i);
 // for in
 for (let i in items) console.log(i); // 인덱스값 호출
 for (let i in items) console.log(items[i]); // 값 호출
+```
 
-// 키-값
+### 키-값 선언
+```javascript
 const obj = {
     a: 1,
     b: 2,
     c: 3
 };
 
-console.log(obj.a);
-console.log(obj['b']);
+console.log(obj.a); // 1
+console.log(obj['b']); // 2
 
 for (let key in obj) console.log(key, obj[key]);
+
+const obj = {
+    a: 1,
+    b: 2,
+    c: 3,
+    getAge: function() {
+        return this.a;
+    }
+};
+```
+
+## 함수 호출
+```javascript
+
 ```
