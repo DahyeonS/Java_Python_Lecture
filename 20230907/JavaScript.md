@@ -235,3 +235,8 @@ $(function() {
     $('#list').html(tr);;
 });
 ```
+
+## 객체 클래스 상속
+```javascript
+
+```
