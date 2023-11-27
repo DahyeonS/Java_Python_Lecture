@@ -81,29 +81,6 @@ for (let i in items) console.log(i); // 인덱스값 호출
 for (let i in items) console.log(items[i]); // 값 호출
 ```
 
-### 키-값 선언
-```javascript
-const obj = {
-    a: 1,
-    b: 2,
-    c: 3
-};
-
-console.log(obj.a); // 1
-console.log(obj['b']); // 2
-
-for (let key in obj) console.log(key, obj[key]);
-
-const obj = {
-    a: 1,
-    b: 2,
-    c: 3,
-    getAge: function() {
-        return this.a;
-    }
-};
-```
-
 ## 함수 호출
 ```javascript
 // 첫번째 방법
@@ -119,4 +96,57 @@ function func2() {
     console.log("func2() called");
 };
 func2();
+
+function f(x = 1, y = 1) { // 자료형 없이 매개변수 선언
+    return x * x;
+}
+
+console.log(f(3)); // 매개변수 개수가 달라도 작동
+
+// 콜백 함수
+function callTenTimes(callback) {
+    for (let i=0; i<10; i++) callback();
+};
+
+const callback = function() {
+    console.log('callback() called');
+};
+
+callTenTimes(callback);
+```
+
+### 객체
+```javascript
+const obj = {
+    a: 1,
+    b: 2,
+    c: 3
+}; // 객체 선언
+
+console.log(obj.a); // 1
+console.log(obj['b']); // 2
+
+for (let key in obj) console.log(key, obj[key]);
+
+const obj = {
+    a: 1,
+    b: 2,
+    c: 3,
+    getAge: function() {
+        return this.a;
+    }
+};
+
+var person = {
+    name: '윤인성',
+    eat: function(food) {
+        console.log(this.name + '이 ' + food + '을/를 먹습니다.');
+    }
+};
+person.eat('밥');
+```
+
+## 선택자
+```javascript
+const userid = document.querySelector('#userid');
 ```
