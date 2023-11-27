@@ -233,7 +233,9 @@
 <summary>11월</summary>
 <div markdown="1">
 
-
+2023.11.27
+[main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#20231127)
+[page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#20231127)
 
 </div>
 </details>
@@ -1698,3 +1700,6 @@
 >>>>>>
 >>>>>>> ###### mapper
 >>>>>>> - MemberMapper.xml
+
+## 2023.11.27
+[Linux](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231127/%EB%A6%AC%EB%88%85%EC%8A%A4%20%EC%82%AC%EC%9A%A9%EB%B2%95.md)
