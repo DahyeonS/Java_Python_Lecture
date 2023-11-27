@@ -250,4 +250,41 @@ Animal.prototype.say = function() {
     console.log(this.sound);
 };
 
+function Dog(name, sound) {
+    Animal.call(this, '개', name, sound);
+};
+Dog.prototype = Animal.prototype;
+
+const dog = new Dog('멍멍이', '멍멍');
+dog.say(); // 멍멍
+
+// 클래스 상속
+class Animal2 {
+    constructor(type, name, sound) {
+        this.type = type;
+        this.name = name;
+        this.sound = sound;
+    };
+
+    say() {
+        console.log(this.sound);
+    };
+};
+
+const dog2 = new Animal2('dog', '멍멍이', '멍멍');
+dog2.say(); // 멍멍
+
+class Dog2 extends Animal2 {
+    constructor(name, sound) {
+        super('개', name, sound);
+    };
+};
+
+const dog3 = new Dog2('댕댕이', '댕댕');
+dog3.say(); // 댕댕
+```
+
+## 이벤트 함수
+```javascript
+
 ```
