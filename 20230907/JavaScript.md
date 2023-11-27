@@ -106,5 +106,17 @@ const obj = {
 
 ## 함수 호출
 ```javascript
+// 첫번째 방법
+// func(); // 함수 호출(선언하지 않으면 오류)
+const func = function() {
+    console.log("func() called");
+};
+func(); // 함수 호출
 
+// 두번째 방법(호이스팅 가능)
+func2(); // 선언하지 않아도 작동
+function func2() {
+    console.log("func2() called");
+};
+func2();
 ```
