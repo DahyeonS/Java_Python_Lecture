@@ -1702,4 +1702,4 @@
 >>>>>>> - MemberMapper.xml
 
 ## 2023.11.27
-> [Linux](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231127/%EB%A6%AC%EB%88%85%EC%8A%A4%20%EC%82%AC%EC%9A%A9%EB%B2%95.md)
+> [Linux 사용법](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231127/%EB%A6%AC%EB%88%85%EC%8A%A4%20%EC%82%AC%EC%9A%A9%EB%B2%95.md)
