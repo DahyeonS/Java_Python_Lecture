@@ -173,3 +173,65 @@ const userid = document.querySelector('#userid');
 document.querySelector('#checkId').value = 'hong4';
 document.querySelector('h1').style.backgroundColor = 'red';
 ```
+
+### 스타일 변경
+```javascript
+// 내장 함수
+window.onload = function() {
+    document.querySelector('h1').style.backgroundColor = 'red';
+    document.querySelector('h2').style.color = 'green';
+};
+
+window.onload = function() {
+    $("h1").css("backgroundColor", "yellow");
+    $("h2").css("color", "yellow");
+};
+
+// jquery 함수
+$(document).ready(function(){
+    document.querySelector('h1').style.backgroundColor = 'yellow';
+    document.querySelector('h2').style.color = 'green';
+});
+
+$(document).ready(function(){
+    $("h1").css("backgroundColor", "yellow");
+    $("h2").css("color", "yellow");
+});
+
+// jquery 함수(단축)
+$(function(){
+    document.querySelector('h1').style.backgroundColor = 'yellow';
+    document.querySelector('h2').style.color = 'green';
+});
+
+$(function(){
+    $("h1").css("backgroundColor", "yellow");
+    $("h2").css("color", "yellow");
+});
+```
+
+### HTML 적용
+```javascript
+window.onload = function() {
+    let tr = '';
+    tr += '<tr>';
+    tr += '<td>1</td><td>2</td><td>3</td>';
+    tr += '</tr>';
+
+    const table = document.querySelector('#list');
+    table.innerHTML = tr;
+};
+
+$(function() {
+    $('h1').css('background','red');
+    $('h1').css('color', 'orange');
+    $('h1').html('From JavaScript');
+    
+    let tr = '';
+    tr += '<tr>';
+    tr += '<td>1</td><td>2</td><td>3</td>';
+    tr += '</tr>';
+
+    $('#list').html(tr);;
+});
+```
