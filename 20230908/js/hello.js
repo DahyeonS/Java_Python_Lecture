@@ -1,5 +1,4 @@
 // 객체 class 상속
-//  1.
 /*
 const obj1 = {
     id: 'hong',
