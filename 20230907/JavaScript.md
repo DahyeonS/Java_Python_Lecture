@@ -238,5 +238,16 @@ $(function() {
 
 ## 객체 클래스 상속
 ```javascript
+// 생성자 선언
+function Animal(type, name, sound) {
+    this.type = type;
+    this.name = name;
+    this.sound = sound;
+};
+
+// 생성자 추가
+Animal.prototype.say = function() {
+    console.log(this.sound);
+};
 
 ```
