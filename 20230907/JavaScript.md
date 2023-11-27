@@ -65,4 +65,30 @@ else console.log("오후");
 let output = 0;
 for (let i=0; i<=100; i++) output += i; // 1부터 100까지의 합
 console.log(output); // 5050
+
+const items = ['item1', 'item2', 'item3'];
+
+// forEach: Array
+items.forEach(function(item) {
+    console.log(item);
+});
+
+// for of
+for (let i of items) console.log(i);
+
+// for in
+for (let i in items) console.log(i); // 인덱스값 호출
+for (let i in items) console.log(items[i]); // 값 호출
+
+// 키-값
+const obj = {
+    a: 1,
+    b: 2,
+    c: 3
+};
+
+console.log(obj.a);
+console.log(obj['b']);
+
+for (let key in obj) console.log(key, obj[key]);
 ```
