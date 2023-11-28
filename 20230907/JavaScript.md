@@ -46,6 +46,10 @@ console.log(array[3]); // 라
 
 // 배열 요소 개수
 console.log(array.length); // 4
+
+// ...
+const nums = [1, 2, 3, 4, 5];
+const anotherNums = [...nums, 1000, ...nums]; // [1, 2, 3, 4, 5, 1000, 1, 2, 3, 4, 5]
 ```
 
 ## 조건문
@@ -345,4 +349,45 @@ function outerFunc() {
 }
 var inner = outerFunc();
 inner(); // 10
+```
+
+## 억음 부호
+```javascript
+const first = 'hong';
+const last = 'gildong';
+
+let tr = '<tr><td>' + first + '</td><td>' + last + '</td></tr>';
+let tr2 = `<tr><td>${first}</td><td>${last}</td></tr>`
+
+console.log(tr); // <tr><td>hong</td><td>gildong</td></tr>
+console.log(tr2); // <tr><td>hong</td><td>gildong</td></tr>
+
+const ironMan = {
+    name: '토니 스타크',
+    actor: '로버트 다우니 주니어',
+    alias: '아이언맨'
+};
+
+function print({name, actor, alias}) {
+    const text = `${alias}(${name}) 역할을 맡는 배우는 ${actor}입니다`;
+    console.log(text); // 아이언맨(토니 스타크) 역할을 맡는 배우는 로버트 다우니 주니어입니다
+};
+```
+
+## 화살표 함수
+```javascript
+const pow = function(x) {return x*x};
+console.log(pow(10)); // 100
+
+const pow2 = x => x*x;
+console.log(pow2(100)); // 10000
+
+const arr = [1, 2, 3];
+let pow3 = arr.map(function(x) {
+    return x*x;
+});
+console.log(pow3); // [1, 4, 9]
+
+let pow4 = arr.map(x => x*x);
+console.log(pow4); // [1, 4, 9]
 ```
