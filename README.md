@@ -1342,7 +1342,9 @@
 >       dataType: 'json',
 >       success: function(data) {
 >           let tr = '';
->           for (let item of data.member) tr += `<tr><td>${item['idx']}</td><td>${item['name']}</td><td>${item['gender']}</td><td>${item['age']}</td></tr>`;
+>           for (let item of data.member) {
+>               tr += `<tr><td>${item['idx']}</td><td>${item['name']}</td><td>${item['gender']}</td><td>${item['age']}</td></tr>`;
+>           }
 >           $('tbody').html(tr);
 >       }
 >       error: function(xhr, status, error) {
