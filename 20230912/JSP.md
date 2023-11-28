@@ -16,7 +16,7 @@ Java + HTML
     %>
 
     <h2>
-    Before: a = <%=a %>, b = <%=b %>
+        Before: a = <%=a %>, b = <%=b %>
     </h2>
 </body>
 ```
