@@ -1632,7 +1632,7 @@
 
 ## 2023.10.18
 > **[Spring을 이용한 회원관리](https://github.com/DahyeonS/Java_Python_Lecture/tree/main/20231018)**
-> ```
+> ```jsp
 >
 > ```
 > ### *output*
@@ -1671,7 +1671,7 @@
 
 ## 2023.10.19
 > **[Spring AJAX](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231019/Spring%20AJAX.md), [Spring MyBatis](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231019/Spring%20MyBatis.md)**
-> ```
+> ```jsp
 > 
 > ```
 >
