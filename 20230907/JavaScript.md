@@ -390,4 +390,10 @@ console.log(pow3); // [1, 4, 9]
 
 let pow4 = arr.map(x => x*x);
 console.log(pow4); // [1, 4, 9]
+
+$(function() {
+    $('#dog1').on('click', () => { // 클릭 시 실행
+        loadImg(0);
+    });
+});
 ```
