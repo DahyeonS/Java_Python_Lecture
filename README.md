@@ -1333,8 +1333,23 @@
 
 ## 2023.9.11
 > **[AJAX](https://github.com/DahyeonS/Java_Python_Lecture/tree/main/20230911)**
-> ```html
->
+> ```javascript
+> function getJson(param) {
+>   $.ajax({
+>       contentType: 'application/json',
+>       type: 'GET',
+>       url: '/data/member.json',
+>       dataType: 'json',
+>       success: function(data) {
+>           let tr = '';
+>           for (let item of data.member) tr += `<tr><td>${item['idx']}</td><td>${item['name']}</td><td>${item['gender']}</td><td>${item['age']}</td></tr>`;
+>           $('tbody').html(tr);
+>       }
+>       error: function(xhr, status, error) {
+>           console.log(xhr, status, error);
+>       }
+>   });
+> };
 > ```
 > 
 > ### *output*
