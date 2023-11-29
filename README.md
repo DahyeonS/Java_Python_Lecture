@@ -1380,7 +1380,17 @@
 ## 2023.9.12
 > **[JSP](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230912/JSP.md)**
 > ```jsp
+> <body>
+>   <%
+>       int a = 10;
+>       int b = 20;
+>       int temp = 0;
+>   %>
 >
+>   <h2>
+>       Before: a = <%=a %>, b = <%=b %>
+>   </h2>
+> </body>
 > ```
 > 
 > ### *output*
