@@ -1,6 +1,0 @@
-a = 11111111111111111111111111111111111111111111111111111
-print(a)
-
-var1 = 'hello python'
-print(var1)
-print(id(var1))
