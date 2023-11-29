@@ -1415,7 +1415,7 @@
 >>> - cal.jsp
 
 ## 2023.9.13
-> **JSP**
+> **[JSP](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230912/JSP.md#%EB%A9%94%EC%86%8C%EB%93%9C-%EC%B2%98%EB%A6%AC)**
 > ```jsp
 > <jsp:useBean id="dto" class="hellojsp.CalDTO"></jsp:useBean>
 > <jsp:setProperty property="*" name="dto"/>
