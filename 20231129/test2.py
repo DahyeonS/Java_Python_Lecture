@@ -99,4 +99,15 @@ print(a, b) # 10 20
 
 a, b = b, a
 (a, b) = (b, a)
+
 print(a, b) # 20 10
+
+# 패킹(packing) 할당
+lst = [1, 2, 3, 4, 5] # 리스트
+print(lst[0]) # 1
+
+v1, *v2 = lst # 첫번째 요소만 v1, 나머지는 v2(*는 제외한 나머지)
+print(v1, v2) # 1 [2, 3, 4, 5]
+
+*v1, v2, v3 = lst
+print(v1, v2, v3) # [1, 2, 3] 4 5
