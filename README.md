@@ -1474,7 +1474,7 @@
 >>>> - MemberDTO.java
 
 ## 2023.9.14
-> **JSP**
+> **[JSP](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230912/JSP.md#%EC%A3%BC%EC%84%9D)**
 > ```jsp
 >
 > ```
