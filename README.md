@@ -1729,5 +1729,13 @@
 ## 2023.11.29
 > **파이썬 입문**
 > ```python
+> a = 10
+> b = 20
+> print(a, b) # 10 20
 >
+> a, b = b, a
+> print(a, b) # 20 10
 > ```
+> ### *output*
+> - test.py
+> - variable.py
