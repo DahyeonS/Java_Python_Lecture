@@ -4,7 +4,7 @@
 <%
 	int ia = 0;
 	int ib = 0;
-	// 반복문이 없으면 오류 발생
+	// 조건문이 없으면 오류 발생
 	if(!(request.getParameter("aaa") == null || request.getParameter("bbb") == null)) {
 		String a = request.getParameter("aaa");
 		String b = request.getParameter("bbb");
