@@ -1417,7 +1417,12 @@
 ## 2023.9.13
 > **JSP**
 > ```jsp
->
+> <jsp:useBean id="dto" class="hellojsp.CalDTO"></jsp:useBean>
+> <jsp:setProperty property="*" name="dto"/>
+> <jsp:useBean id="cs" class="hellojsp.CalService"></jsp:useBean>
+> <%
+>   dto = cs.cal(dto);
+> %>
 > ```
 > 
 > ### *output*
