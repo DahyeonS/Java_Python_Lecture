@@ -46,6 +46,20 @@
     </body>
 </html>
 ```
+```jsp
+<%
+	int ia = 0;
+	int ib = 0;
+	// 조건문이 없으면 오류 발생
+	if(!(request.getParameter("aaa") == null || request.getParameter("bbb") == null)) {
+		String a = request.getParameter("aaa");
+		String b = request.getParameter("bbb");
+		
+		ia = Integer.parseInt(a);
+		ib = Integer.parseInt(b);
+	}
+%>
+```
 
 ## 조건문 처리
 - Java로 처리
