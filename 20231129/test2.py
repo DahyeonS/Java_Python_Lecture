@@ -111,3 +111,37 @@ print(v1, v2) # 1 [2, 3, 4, 5]
 
 *v1, v2, v3 = lst
 print(v1, v2, v3) # [1, 2, 3] 4 5
+
+i = input('숫자 입력: ')
+print(i)
+
+a = int(input('숫자 입력: '))
+b = int(input('숫자 입력: '))
+c = a + b
+print(c)
+
+print(help(print))
+print(1, end='\t')
+print(2) # 1	2
+print(1, 2, 3, 4, sep=',') # 1,2,3,4
+
+print('★', end='')
+print('★', end='')
+print('★', end='')
+print('★', end='')
+print('★')
+
+print('★' * 5)
+
+f = format(3.14159, '8.3f') # 8자리, 소수점 3자리 실수
+print(f) #    3.142
+
+f = format(12345, '10d') # 10자리 실수
+print(f) #      12345
+
+f = format(12345, '3,d')
+print(f) # 12,345
+
+a = 10; b = 20
+tot = a + b
+print('10 + 20 = %d' %tot) # 10 + 20 = 30
