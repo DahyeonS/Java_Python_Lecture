@@ -1727,7 +1727,7 @@
 > **[Linux 사용법](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231127/%EB%A6%AC%EB%88%85%EC%8A%A4%20%EC%82%AC%EC%9A%A9%EB%B2%95.md)**
 
 ## 2023.11.29
-> **파이썬 입문**
+> **[파이썬 입문](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231129/%ED%8C%8C%EC%9D%B4%EC%8D%AC%20%EC%9E%85%EB%AC%B8.md)**
 > ```python
 > a = 10
 > b = 20
