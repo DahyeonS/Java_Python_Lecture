@@ -1762,7 +1762,7 @@
 > - loop.py
 
 ## 2023.11.30
-> **[파이썬 입문]()과 [주피터 노트북](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231130/%EC%A3%BC%ED%94%BC%ED%84%B0%20%EB%85%B8%ED%8A%B8%EB%B6%81.md)**
+> **[파이썬 입문]()과 [주피터 노트북](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231130/%EC%A3%BC%ED%94%BC%ED%84%B0%20%EB%85%B8%ED%8A%B8%EB%B6%81.md), [자료구조]()**
 > ```python
 > 
 > ```
