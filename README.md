@@ -1769,3 +1769,6 @@
 > ### *output*
 > - random_var.py
 > - for.py
+>
+>> #### jupyter
+>> - test.ipynb
