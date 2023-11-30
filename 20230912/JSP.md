@@ -178,6 +178,8 @@ Sel: <%=dto2.getSel() %>,
 
 ## 세션과 리퀘스트
 ```jsp
-request.getParameter(); // 리퀘스트
-(String)request.getAttribute() // 세션
+<% 
+	request.getParameter(); // 리퀘스트
+	(String)request.getAttribute() // 세션
+%>
 ```
