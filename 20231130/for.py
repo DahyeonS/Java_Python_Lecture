@@ -13,3 +13,21 @@ l = [1, 2, 3, 4, 5]
 for e in l :
     if e % 2 == 1 :
         print(e, end=' ') # 1 3 5
+
+n = range(5)
+print(n) # range(0, 5)
+
+nl = list(n)
+print(nl) # [0, 1, 2, 3, 4]
+
+for i in n :
+    print(i, end=' ') # 0 1 2 3 4
+
+n = range(0, 5, 2)
+for i in n :
+    print(i, end=' ') # 0 2 4
+
+l = [10, 20, 30, 40, 50]
+for i in range(len(l)) :
+    print(l[i], end=' ') # 10 20 30 40 50
+
