@@ -19,3 +19,6 @@ if '이순신' in names :
     print('ok')
 else :
     print('no')
+
+r = random.randint(0, 10)
+print(r)
