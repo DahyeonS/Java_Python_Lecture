@@ -188,3 +188,12 @@ Sel: <%=dto2.getSel() %>,
 	String pets[] = request.getParameterValues("pet"); // 여러 개의 값을 가져올 수 있음
 %>
 ```
+```jsp
+클라이언트 IP: <%=request.getRemoteAddr() %>
+요청프로토콜: <%=request.getProtocol() %>
+요청 Method: <%=request.getMethod() %>
+URI: <%=request.getRequestURI() %>
+컨텍스트 root명: <%=request.getContextPath() %>
+서버이름: <%=request.getServerName() %>
+서버포트: <%=request.getServerPort() %>
+```
