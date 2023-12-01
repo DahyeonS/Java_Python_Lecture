@@ -1482,7 +1482,10 @@
 ## 2023.9.14
 > **[리퀘스트와 세션](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230914/%EB%A6%AC%ED%80%98%EC%8A%A4%ED%8A%B8%EC%99%80%20%EC%84%B8%EC%85%98.md)**
 > ```jsp
->
+> <% 
+>   request.getParameter(); // 리퀘스트
+>   (String)request.getAttribute() // 세션
+> %>
 > ```
 > 
 > ### *output*
