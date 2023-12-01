@@ -1,7 +1,7 @@
 # 숫자 맞추기 게임
 import random
 
-com = random.randint(1, 11)
+com = random.randint(1, 10)
 cnt = 0
 
 while True :
@@ -101,7 +101,7 @@ print(lotto)
 lotto5 = []
 lotto = set()
 while True :
-    lotto.add(random.randint(1, 46))
+    lotto.add(random.randint(1, 45))
     if len(lotto) == 6 :
         lotto5.append(lotto)
         lotto = set()
@@ -111,7 +111,7 @@ print(lotto5)
 
 # list 사용
 lotto_num = []
-for i in range(1, 46) :
+for i in range(1, 45) :
     lotto_num.append(i)
 
 lotto5 = []
