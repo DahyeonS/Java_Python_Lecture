@@ -252,7 +252,9 @@
 <summary>12월</summary>
 <div markdown="1">
 
-
+2023.12.1
+[main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#2023121)
+[page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#2023121)
 
 </div>
 </details>
@@ -1772,3 +1774,15 @@
 >
 >> #### jupyter
 >> - test.ipynb
+
+## 2023.12.1
+> **[자료구조]()**
+> ```python
+>
+> ```
+> ### *output*
+> - baseball_game.py
+>
+>> #### jupyter
+>> - listforrange.ipynb
+>> - 231201.ipynb
