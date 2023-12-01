@@ -175,11 +175,3 @@ Sel: <%=dto2.getSel() %>,
 <%-- JSP Comment 콘솔에 보이지 않는 주석 --%>
 <!-- HTML Comment 콘솔에 보이는 주석 -->
 ```
-
-## 세션과 리퀘스트
-```jsp
-<% 
-	request.getParameter(); // 리퀘스트
-	(String)request.getAttribute() // 세션
-%>
-```
