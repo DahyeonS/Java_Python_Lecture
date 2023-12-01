@@ -177,3 +177,14 @@ Sel: <%=dto2.getSel() %>,
 ```
 
 ## 파라미터
+- 주소창을 통해 전달받은 값(쿼리스트링)을 요청하여 처리
+- 주소창을 통한 전송은 Form을 통한 submit, a태그의 href 등이 있음
+- 요청받은 파라미터 값은 문자열 형태
+```jsp
+<%
+	request.setCharacterEncoding("utf-8");
+
+	String id = request.getParameter("id"); // 주소창을 통해 전달받은 값을 가져옴
+	String pets[] = request.getParameterValues("pet"); // 여러 개의 값을 가져올 수 있음
+%>
+```
