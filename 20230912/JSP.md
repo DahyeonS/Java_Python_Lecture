@@ -175,3 +175,5 @@ Sel: <%=dto2.getSel() %>,
 <%-- JSP Comment 콘솔에 보이지 않는 주석 --%>
 <!-- HTML Comment 콘솔에 보이는 주석 -->
 ```
+
+## 파라미터
