@@ -1480,7 +1480,7 @@
 >>>> - MemberDTO.java
 
 ## 2023.9.14
-> **[리퀘스트와 세션](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230914/%EB%A6%AC%ED%80%98%EC%8A%A4%ED%8A%B8%EC%99%80%20%EC%84%B8%EC%85%98.md)**
+> **[파라미터 전달](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230914/%ED%8C%8C%EB%9D%BC%EB%AF%B8%ED%84%B0%20%EC%A0%84%EB%8B%AC.md)**
 > ```jsp
 > <% 
 >   (String)pageContext.getAttribute(); // 페이지
