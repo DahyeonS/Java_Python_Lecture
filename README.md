@@ -1778,7 +1778,7 @@
 ## 2023.12.1
 > **[자료구조](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231130/%ED%8C%8C%EC%9D%B4%EC%8D%AC%20%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0.md#dict)**
 > ```python
->
+> 
 > ```
 > ### *output*
 > - baseball_game.py
