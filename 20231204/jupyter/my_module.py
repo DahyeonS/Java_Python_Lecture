@@ -4,5 +4,5 @@ class My_class :
     def my_method(self) :
         print('My Method')
 
-    def my_def(self) :
-        print('My Def')
+def my_def() :
+    print('My Def')
