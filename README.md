@@ -1490,6 +1490,7 @@
 >   (String)pageContext.getAttribute(); // 페이지
 >   request.getParameter(); // 리퀘스트
 >   (String)request.getAttribute() // 세션
+>   application.getAttribute(); // 어플리케이션
 > %>
 > ```
 > 
