@@ -1809,3 +1809,4 @@
 >>
 >>> ##### my_package
 >>> - my_module2.py
+>>> - scattering.py
