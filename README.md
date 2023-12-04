@@ -256,6 +256,10 @@
 [main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#2023121)
 [page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#2023121)
 
+2023.12.4
+[main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#2023124)
+[page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#2023124)
+
 </div>
 </details>
 
@@ -1780,7 +1784,7 @@
 >> - test.ipynb
 
 ## 2023.12.1
-> **[자료구조](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231130/%ED%8C%8C%EC%9D%B4%EC%8D%AC%20%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0.md#dict)**
+> **[자료구조](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231130/%ED%8C%8C%EC%9D%B4%EC%8D%AC%20%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0.md#dict)와 [함수](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231201/%ED%95%A8%EC%88%98.md)**
 > ```python
 > 
 > ```
@@ -1790,3 +1794,14 @@
 >> #### jupyter
 >> - listforrange.ipynb
 >> - 231201.ipynb
+
+## 2023.12.4
+> **[함수]()와 [클래스](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231204/%ED%81%B4%EB%9E%98%EC%8A%A4.md)**
+> ```python
+> 
+> ```
+> ### *output*
+> - 
+>
+>> #### jupyter
+>> - 231204.ipynb
