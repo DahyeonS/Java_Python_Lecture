@@ -2,7 +2,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
-
 	String scope = (String)session.getAttribute("scope"); // Page
 	String scope2 = request.getParameter("scope"); // Null
 	
