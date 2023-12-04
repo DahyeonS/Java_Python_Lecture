@@ -1796,7 +1796,7 @@
 >> - 231201.ipynb
 
 ## 2023.12.4
-> **[함수]()와 [클래스](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231204/%ED%81%B4%EB%9E%98%EC%8A%A4.md)**
+> **[함수]()와 [클래스](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231204/%ED%81%B4%EB%9E%98%EC%8A%A4.md)와 [파일 처리](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231204/%ED%8C%8C%EC%9D%BC%20%EC%B2%98%EB%A6%AC.md)**
 > ```python
 > 
 > ```
