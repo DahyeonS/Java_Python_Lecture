@@ -1695,14 +1695,14 @@
 >>> ##### java
 >>>> ###### com
 >>>>> ###### myweb
->>>>>>> ###### web
->>>>>>> - HomeController.java
->>>>>>> - MemberController.java
->>>>>>> - MemberDTO.java
->>>>>>> - MemberService.java
->>>>>>> - MemberServiceImpl.java
->>>>>>> - MemberDAO.java
->>>>>>> - MemberDAOImpl.java
+>>>>>> ###### web
+>>>>>> - HomeController.java
+>>>>>> - MemberController.java
+>>>>>> - MemberDTO.java
+>>>>>> - MemberService.java
+>>>>>> - MemberServiceImpl.java
+>>>>>> - MemberDAO.java
+>>>>>> - MemberDAOImpl.java
 >>
 >>> ##### webapp
 >>>> ###### WEB-INF
@@ -1733,8 +1733,8 @@
 >>> ##### java
 >>>> ###### com
 >>>>> ###### myweb
->>>>>>> ###### web
->>>>>>> - MemberControllerAjax.java
+>>>>>> ###### web
+>>>>>> - MemberControllerAjax.java
 >>
 >>> ##### webapp
 >>>> ###### WEB-INF
@@ -1749,14 +1749,14 @@
 >>> ##### java
 >>>> ###### com
 >>>>> ###### myweb
->>>>>>> ###### web
->>>>>>> - MemberControllerMybatis.java
->>>>>>> - MemberMybatisService.java
->>>>>>> - MemberMybatisServiceImpl.java
->>>>>>
->>>>>>> ###### mybatis
->>>>>>>> ###### mapper
->>>>>>>> - MemberMapper.java
+>>>>>> ###### web
+>>>>>> - MemberControllerMybatis.java
+>>>>>> - MemberMybatisService.java
+>>>>>> - MemberMybatisServiceImpl.java
+>>>>>
+>>>>>> ###### mybatis
+>>>>>>> ###### mapper
+>>>>>>> - MemberMapper.java
 >>
 >>> ##### webapp
 >>>> ###### WEB-INF
