@@ -1350,7 +1350,7 @@
 >> - jqAnimate_animate.html
 
 ## 2023.9.11
-> **[AJAX](https://github.com/DahyeonS/Java_Python_Lecture/tree/main/20230911)**
+> **[AJAX](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230911/AJAX.md)**
 > ```javascript
 > function getJson(param) {
 >   $.ajax({
