@@ -7,12 +7,12 @@
   
   <!-- servlet 설정 -->
   <servlet>
-  	<servlet-name>Hello</servlet-name>
-  	<servlet-class>helloservlet.Hello</servlet-class>
+    <servlet-name>Hello</servlet-name>
+    <servlet-class>helloservlet.Hello</servlet-class>
   </servlet>
   <servlet-mapping>
-  	<servlet-name>Hello</servlet-name>
-  	<url-pattern>/hello</url-pattern>
+    <servlet-name>Hello</servlet-name>
+    <url-pattern>/hello</url-pattern>
   </servlet-mapping>
   
 </web-app>
