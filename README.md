@@ -1606,7 +1606,10 @@
 ## 2023.9.19
 > **[JSP AJAX](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230919/JSP%20AJAX.md)**
 > ```jsp
->
+> <%
+>   JsonObject jsonObject = new JsonObject();
+>   jsonObject.addProperty("rs", rs);
+> %>
 > ```
 >
 > ### *output*
