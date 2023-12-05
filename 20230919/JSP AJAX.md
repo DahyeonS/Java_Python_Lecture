@@ -3,27 +3,31 @@
 - 새로고침 없이 실행 가능
 
 ### JSON 변환
-```java
-JsonObject jsonObject = new JsonObject();
-jsonObject.addProperty("rs", rs);
+```jsp
+<%
+    JsonObject jsonObject = new JsonObject();
+    jsonObject.addProperty("rs", rs);
+%>
 ```
 
 ### 여러 개의 값을 변환 후 전송
-```java
-JsonArray jsonArray = new JsonArray();
-// JSON으로 변환
-for (MemberDTO dto : list) {
-	JsonObject jsonObject = new JsonObject();
-	jsonObject.addProperty("idx", dto.getIdx());
-	jsonObject.addProperty("id", dto.getId());
-	jsonObject.addProperty("pw", dto.getPw());
-	jsonObject.addProperty("name", dto.getName());
-	jsonObject.addProperty("age", dto.getAge());
-	jsonObject.addProperty("regdate", dto.getRegdate());
-	jsonArray.add(jsonObject);
-}
+```jsp
+<%
+    JsonArray jsonArray = new JsonArray();
+    // JSON으로 변환
+    for (MemberDTO dto : list) {
+        JsonObject jsonObject = new JsonObject();
+        jsonObject.addProperty("idx", dto.getIdx());
+        jsonObject.addProperty("id", dto.getId());
+        jsonObject.addProperty("pw", dto.getPw());
+        jsonObject.addProperty("name", dto.getName());
+        jsonObject.addProperty("age", dto.getAge());
+        jsonObject.addProperty("regdate", dto.getRegdate());
+        jsonArray.add(jsonObject);
+    }
 
-out.print(jsonArray.toString()); // JSON 전송
+    out.print(jsonArray.toString()); // JSON 전송
+%>
 ```
 
 ## 실행 과정
