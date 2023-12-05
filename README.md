@@ -1817,7 +1817,7 @@
 >>> - scattering.py
 
 ## 2023.12.5
-> **[파일 처리]()**
+> **[파일 처리]()와 [DB 연결](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231205/DB%20%EC%97%B0%EA%B2%B0.md)**
 > ```python
 >
 > ```
