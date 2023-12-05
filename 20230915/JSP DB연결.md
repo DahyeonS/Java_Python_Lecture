@@ -68,10 +68,28 @@ try { // try-catch문으로 처리
 ## DB 작업
 DAO에서 작업
 
-## SELECT
+### *연결 메소드*
+```java
 
-## INSERT
+```
 
-## UPDATE
+## executeQuery
+- SELECT문이 해당
+- 결과값을 오브젝트로 반환
 
-## DELETE
+### *전체 검색*
+```java
+
+```
+
+### *조건 검색*
+```java
+
+```
+
+## executeUpdate
+- INSERT, UPDATE, DELETE문이 해당
+- 결과값을 정수(변경된 줄 갯수)로 반환
+```java
+
+```
