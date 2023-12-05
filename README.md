@@ -1561,7 +1561,7 @@
 >>>> - MemberDAO.java
 
 ## 2023.9.18
-> **서블릿**
+> **[서블릿](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230918/%EC%84%9C%EB%B8%94%EB%A6%BF.md)**
 > ```jsp
 >
 > ```
