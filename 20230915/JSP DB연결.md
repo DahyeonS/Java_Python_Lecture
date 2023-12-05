@@ -30,8 +30,8 @@ try { // try-catch문으로 처리
 	String driver = "com.mysql.cj.jdbc.Driver"; // SQL 드라이버(MySQL, 오라클 등)
 	Class.forName(driver);
 	
-	String url = "jdbc:mysql://localhost:3306/kdigital2307?ServerTimezone=UTC"; // DB 접속 주소
     // "jdbc:SQL종류://연결포트/데이터베이스?ServerTimezone=UTC"
+	String url = "jdbc:mysql://localhost:3306/kdigital2307?ServerTimezone=UTC"; // DB 접속 주소
 	String user = "root"; // 사용자명
 	String password = "rpass"; // 비밀번호
 	
