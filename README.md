@@ -1597,7 +1597,7 @@
 >>>> - DeleteProc.java
 
 ## 2023.9.19
-> **JSP AJAX**
+> **[JSP AJAX](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230919/JSP%20AJAX.md)**
 > ```jsp
 >
 > ```
@@ -1618,7 +1618,7 @@
 >>> - deleteJson.jsp
 
 ## 2023.9.20
-> **MVC / JSTL**
+> **[MVC / JSTL](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230920/MVC.md)**
 > ```jsp
 >
 > ```
