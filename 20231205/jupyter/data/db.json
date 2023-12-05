@@ -1,1 +1,1 @@
-{"_default": {}}
+{"_default": {}, "fruits": {"1": {"type": "apple", "count": 7}, "2": {"type": "peach", "count": 3}}}
