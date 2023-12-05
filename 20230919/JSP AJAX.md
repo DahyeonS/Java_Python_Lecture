@@ -61,7 +61,7 @@ function updateJson() {
 };
 ```
 
-### 자바
+### JSP
 - 시스템 처리 후 결과값을 JSON 형태로 전송
 ```jsp
 <%
