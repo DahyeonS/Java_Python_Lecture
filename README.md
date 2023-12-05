@@ -1646,7 +1646,6 @@
 >>>> - scope.jsp
 >>>> - memberListJstl.jsp
 >>>> - memberListViewJstl.jsp
->>>> - memberListJstl.jsp
 >>
 >>> ##### java
 >>>> ###### member
