@@ -9,10 +9,10 @@
 <body>
 <h1>
 <a href="hello?id=hong">get</a>
+</h1>
 <form action="hi" method="post">
 <input type="text" name="id">
 <input type="submit" value="post">
 </form>
-</h1>
 </body>
 </html>
