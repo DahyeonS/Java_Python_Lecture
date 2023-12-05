@@ -79,7 +79,6 @@
 			<td colspan="4">Member Not Found!!</td>
 		</tr>
 	<% } %>
-	
 </table>
 </body>
 </html>
