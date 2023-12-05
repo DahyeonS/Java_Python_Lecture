@@ -1515,8 +1515,23 @@
 
 ## 2023.9.15
 > **[JSP DB연결](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230915/JSP%20DB%EC%97%B0%EA%B2%B0.md)**
-> ```jsp
->
+> ```java
+> private Connection getConnection() {
+>   Connection conn = null;
+>	String driver = "com.mysql.cj.jdbc.Driver";
+>	try {
+>		Class.forName(driver);
+>		
+>		String url = "jdbc:mysql://localhost:3306/kdigital2307?ServerTimezone=UTC";
+>		String user = "root";
+>		String password = "rpass";
+>		
+>		conn = DriverManager.getConnection(url, user, password);
+>	} catch (Exception e) {
+>		e.printStackTrace();
+>	}
+>	return conn;
+> }
 > ```
 >
 > ### *output*
