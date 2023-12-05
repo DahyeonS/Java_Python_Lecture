@@ -206,6 +206,6 @@ public int update(MemberDTO dto) {
 	} finally {
 		close(conn, pstmt);
 	}
-	return rs;
+	return rs; // 결과 반환
 }
 ```
