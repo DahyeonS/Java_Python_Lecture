@@ -21,26 +21,26 @@
 ```
 3. Java를 이용해서 데이터베이스 연결
 ```java
-Connection conn = null;
-PreparedStatement pstmt = null;
-ResultSet rs = null;
-List<MemberDTO> list = new ArrayList<MemberDTO>();
+Connection conn = null; // DB 연결
+PreparedStatement pstmt = null; // 쿼리
+ResultSet rs = null; // 요청받은 DB 데이터
+List<MemberDTO> list = new ArrayList<MemberDTO>(); // DB 데이터를 담을 리스트
 
-try {
-	String driver = "com.mysql.cj.jdbc.Driver";
+try { // try-catch문으로 처리
+	String driver = "com.mysql.cj.jdbc.Driver"; // SQL 드라이버(MySQL, 오라클 등)
 	Class.forName(driver);
 	
-	String url = "jdbc:mysql://localhost:3306/kdigital2307?ServerTimezone=UTC";
-	String user = "root";
-	String password = "rpass";
+	String url = "jdbc:mysql://localhost:3306/kdigital2307?ServerTimezone=UTC"; // DB 접속 주소(jdbc:SQL종류://연결포트/데이터베이스?ServerTimezone=UTC)
+	String user = "root"; // 사용자명
+	String password = "rpass"; // 비밀번호
 	
-	conn = DriverManager.getConnection(url, user, password);
+	conn = DriverManager.getConnection(url, user, password); // DB 연결
 	out.print("Conn OK!! <br>");
 	
-	String sql = "select * from member order by idx desc";
-	pstmt = conn.prepareStatement(sql);
+	String sql = "select * from member order by idx desc"; // 쿼리 작성
+	pstmt = conn.prepareStatement(sql); // 쿼리 실행
 	
-	rs = pstmt.executeQuery();
+	rs = pstmt.executeQuery(); // 쿼리 결과물 요청
 	while (rs.next()) {
 		String id = rs.getString("id");
     	String pw = rs.getString("pw");
@@ -49,11 +49,11 @@ try {
 		MemberDTO dto = null;
 		
 		dto = new MemberDTO(id, pw, name, age);
-		list.add(dto);
+		list.add(dto); // 쿼리 결과값 저장
 	}
 } catch (Exception e) {
 	e.printStackTrace();
-} finally {
+} finally { // 작업 후 DB 연결 종료
 	try {
 		if (rs != null) rs.close();
 		if (pstmt != null) pstmt.close();
