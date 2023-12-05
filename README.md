@@ -1562,8 +1562,15 @@
 
 ## 2023.9.18
 > **[서블릿](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230918/%EC%84%9C%EB%B8%94%EB%A6%BF.md)**
-> ```jsp
->
+> ```java
+> protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+>   String id = request.getParameter("id");
+>	
+>	response.setContentType("text/html; charset=UTF-8"); // UTF-8 설정
+>	PrintWriter pw = response.getWriter(); // HTML로 출력
+>	pw.println("<html lang='ko'><title> servlet test </title>");
+>	pw.println("<body><h1>Servlet Test</h1><h2>GET ID: " + id + "</h2></body></html>");
+> }
 > ```
 >
 > ### *output*
