@@ -260,6 +260,10 @@
 [main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#2023124)
 [page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#2023124)
 
+2023.12.5
+[main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#2023125)
+[page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#2023125)
+
 </div>
 </details>
 
@@ -1811,3 +1815,16 @@
 >>> ##### my_package
 >>> - my_module2.py
 >>> - scattering.py
+
+## 2023.12.5
+> **[파일 처리]()**
+> ```python
+>
+> ```
+> ### *output*
+>> #### jupyter
+>> - 231205.ipynb
+>>
+>>> ##### data
+>>> - ftest.txt
+>>> - ftest2.txt
