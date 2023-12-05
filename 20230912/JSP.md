@@ -4,7 +4,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 ```
-- Java + HTML
+- HTML + Java
 - Web에서 전송받은 값을 Java로 처리할 수 있음
 - <% %>(쿼리), <%@ @%>(임포트), <%= %>(값), <%! %>(메소드)으로 사용
 
