@@ -264,6 +264,10 @@
 [main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#2023125)
 [page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#2023125)
 
+2023.12.6
+[main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#2023126)
+[page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#2023126)
+
 </div>
 </details>
 
@@ -1856,3 +1860,10 @@
 >>> - python.db
 >>> - db.json
 >>> - lotto.json
+
+## 2023.12.6
+> **[정규표현식]()**
+> ```python
+>
+> ```
+> ### *output*
