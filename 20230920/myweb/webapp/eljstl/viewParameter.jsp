@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>viewParameter.jap</title>
+<title>viewParameter.jsp</title>
 </head>
 <body>
 <h1>EL param</h1>
