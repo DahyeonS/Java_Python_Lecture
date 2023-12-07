@@ -1636,7 +1636,7 @@
 >>> - deleteJson.jsp
 
 ## 2023.9.20
-> **[MVC](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230920/MVC.md)와 [JSTL](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230920/JSTL.md)**
+> **[MVC](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230920/MVC.md)와 [EL / JSTL](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230920/JSTL.md)**
 > ```jsp
 >
 > ```
