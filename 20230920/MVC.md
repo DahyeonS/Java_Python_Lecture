@@ -3,7 +3,7 @@
 
 - 모델 - 자바의 DTO, DAO 클래스
 - 뷰 - JSP 페이지
-- 컨트롤러 - Servlet
+- 컨트롤러 - 서블릿
 
 ### pom.xml 설정
 ```xml
