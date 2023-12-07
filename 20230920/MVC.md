@@ -1,5 +1,22 @@
 # MVC
+웹 페이지를 모델(Model), 뷰(View), 컨트롤러(Controller)로 나눠서 처리하는 방식
 
+- 모델 - 자바의 DTO, DAO 클래스
+- 뷰 - JSP 페이지
+- 컨트롤러 - Servlet
+
+### pom.xml 설정
+```xml
+<dependencies>
+    <dependency>
+    	<groupId>javax.servlet</groupId>
+    	<artifactId>jstl</artifactId>
+    	<version>1.2</version>
+	</dependency>
+</dependencies>
+```
+
+## 컨트롤러
 ```java
 @WebServlet("*.do") // 주소창이 .do로 끝나면 실행
 public class DispatcherController extends HttpServlet {
