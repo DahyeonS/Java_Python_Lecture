@@ -268,6 +268,10 @@
 [main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#2023126)
 [page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#2023126)
 
+2023.12.7
+[main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#2023127)
+[page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#2023127)
+
 </div>
 </details>
 
@@ -1869,3 +1873,12 @@
 > ### *output*
 >> #### jupyter
 >> - 231206.ipynb 
+
+## 2023.12.7
+> **[크롤링](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231207/%ED%81%AC%EB%A1%A4%EB%A7%81.md)**
+> ```python
+>
+> ```
+> ### *output*
+>> #### jupyter
+>> - 231207.ipynb 
