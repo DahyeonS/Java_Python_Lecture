@@ -2,6 +2,17 @@
 - 자바에서 값을 JSON 형태로 보낸 뒤, JSP를 통해 전달받은 값을 처리
 - 새로고침 없이 실행 가능
 
+### pom.xml 설정
+```xml
+<dependencies>
+	<dependency>
+		<groupId>com.google.code.gson</groupId>
+		<artifactId>gson</artifactId>
+		<version>2.10.1</version>
+	</dependency>
+</dependencies>
+```
+
 ### JSON 변환
 ```jsp
 <%
