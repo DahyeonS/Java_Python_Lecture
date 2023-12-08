@@ -1877,6 +1877,7 @@
 > ### *output*
 >> #### jupyter
 >> - 231206.ipynb 
+>> - 231206-2.ipynb 
 
 ## 2023.12.7
 > **[크롤링](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231207/%ED%81%AC%EB%A1%A4%EB%A7%81.md)**
@@ -1895,3 +1896,4 @@
 > ### *output*
 >> #### jupyter
 >> - 231208.ipynb 
+>> - 231208-2.ipynb 
