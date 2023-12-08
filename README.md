@@ -1889,7 +1889,7 @@
 >> - 231207.ipynb 
 
 ## 2023.12.8
-> **[XML](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231208/XML.md)**
+> **[XML / JSON 크롤링](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231208/XML_JSON_%ED%81%AC%EB%A1%A4%EB%A7%81.md)**
 > ```python
 >
 > ```
