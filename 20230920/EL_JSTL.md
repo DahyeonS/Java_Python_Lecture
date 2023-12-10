@@ -40,3 +40,7 @@ EL scope: ${scope}
 ```
 
 ## JSTL
+- EL을 활용한 조건식 등이 가능
+```jsp
+
+```
