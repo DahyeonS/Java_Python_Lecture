@@ -5,17 +5,6 @@
 - 뷰 - JSP 페이지
 - 컨트롤러 - 서블릿
 
-### pom.xml 설정
-```xml
-<dependencies>
-    <dependency>
-    	<groupId>javax.servlet</groupId>
-    	<artifactId>jstl</artifactId>
-    	<version>1.2</version>
-	</dependency>
-</dependencies>
-```
-
 ## 컨트롤러
 ```java
 @WebServlet("*.do") // 주소창이 .do로 끝나면 실행
