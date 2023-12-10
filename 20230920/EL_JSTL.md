@@ -41,6 +41,18 @@ EL scope: ${scope}
 
 ## JSTL
 - EL을 활용한 조건식 등이 가능
+
+### pom.xml 설정
+```xml
+<dependencies>
+    <dependency>
+    	<groupId>javax.servlet</groupId>
+    	<artifactId>jstl</artifactId>
+    	<version>1.2</version>
+	</dependency>
+</dependencies>
+```
+
 ```jsp
 
 ```
