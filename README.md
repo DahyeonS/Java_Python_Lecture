@@ -276,6 +276,10 @@
 [main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#2023128)
 [page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#2023128)
 
+2023.12.11
+[main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#20231211)
+[page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#20231211)
+
 </div>
 </details>
 
@@ -1642,7 +1646,9 @@
 ## 2023.9.20
 > **[MVC](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230920/MVC.md)와 [EL / JSTL](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20230920/EL_JSTL.md)**
 > ```jsp
->
+> <c:if test="${member != null}">
+> ${member.id}, ${member.pw}, ${member.name}, ${member.age}
+> </c:if>
 > ```
 >
 > ### *output*
@@ -1897,3 +1903,12 @@
 >> #### jupyter
 >> - 231208.ipynb 
 >> - 231208-2.ipynb 
+
+## 2023.12.11
+> **[셀레니움](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231211/Selenium.md)**
+> ```python
+>
+> ```
+> ### *output*
+>> #### jupyter
+>> - 231211.ipynb 
