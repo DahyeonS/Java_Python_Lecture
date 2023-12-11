@@ -125,7 +125,7 @@ sqlSession.delete("membermapper.delete", dto); // DELETE
         <![CDATA[
         select idx, id, pw, name, role, regdate from member where 1 = 1
         ]]>
-        <if test="name != null"> 
+        <if test="name != null"> <!-- 조건문을 사용해서 쿼리문을 변경 가능 -->
             and name like CONCAT('%',#{name},'%')
         </if>
         <![CDATA[
