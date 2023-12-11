@@ -40,7 +40,7 @@ EL scope: ${scope}
 ```
 
 ## JSTL
-- EL을 활용한 조건식 등이 가능
+- EL을 활용한 제어문(반복문, 조건문)이 가능
 
 ### pom.xml 설정
 ```xml
