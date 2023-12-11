@@ -2,6 +2,7 @@
 - 데이터베이스 처리를 Java가 아닌 XML로 처리
 - XML 방식, 인터페이스 방식 2가지로 나뉨
 
+## 실행 과정
 ### pom.xml 설정
 ```xml
 <dependencies>
@@ -75,23 +76,6 @@ public class SqlSessionManager {
 }
 ```
 
-## XML 방식
-DAO - XML 연동으로 처리
-### Java
-#### 변수 설정
-```java
-SqlSessionFactory sqlSessionFactory = SqlSessionManager.getSqlSession(); // SQL 연결
-SqlSession sqlSession = sqlSessionFactory.openSession(true); // SQL 세션 관리 (true는 AutoCommit)
-```
-#### 메소드 실행
-```java
-sqlSession.selectOne("memberxml.getMember", dto); // SELECT(단일 갯수)
-sqlSession.selectList("memberxml.getMemberList"); // SELECT(다수)
-sqlSession.insert("memberxml.insert", dto); // INSERT
-sqlSession.update("memberxml.update", dto); // UPDATE
-sqlSession.delete("membermapper.delete", dto); // DELETE
-```
-
 ### XML
 - {}는 쿼리문에 동적으로 삽입될 변수(SQL Injection을 방지하기 위해 #{} 형태를 씀)
 - <![CDATA[ ]]>는 태그, 특수문자 등을 문자열로 인식하게 함
@@ -135,13 +119,31 @@ sqlSession.delete("membermapper.delete", dto); // DELETE
 </mapper>
 ```
 
-## 인터페이스 방식
-### Java
+## 처리 방식
+### XML 방식
+DAO - XML 연동으로 처리
+#### Java
+##### 변수 설정
+```java
+SqlSessionFactory sqlSessionFactory = SqlSessionManager.getSqlSession(); // SQL 연결
+SqlSession sqlSession = sqlSessionFactory.openSession(true); // SQL 세션 관리 (true는 AutoCommit)
+```
+##### 메소드 실행
+```java
+sqlSession.selectOne("memberxml.getMember", dto); // SELECT(단일 갯수)
+sqlSession.selectList("memberxml.getMemberList"); // SELECT(다수)
+sqlSession.insert("memberxml.insert", dto); // INSERT
+sqlSession.update("memberxml.update", dto); // UPDATE
+sqlSession.delete("membermapper.delete", dto); // DELETE
+```
+
+### 인터페이스 방식
+#### Java
 ```java
 
 ```
 
-### XML
+#### XML
 ```xml
 
 ```
