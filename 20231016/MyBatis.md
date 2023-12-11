@@ -21,7 +21,7 @@ MyBatis에서 사용할 Type의 별칭을 설정
     <typeAlias alias="memberDTO" type="member.dto.MemberDTO" />
 </typeAliases>
 ```
-#### environment
+#### *environment*
 데이터베이스 연결 설정
 ```xml
 <environments default="develpment">
@@ -36,7 +36,7 @@ MyBatis에서 사용할 Type의 별칭을 설정
     </environment>
 </environments>
 ```
-#### mapper
+#### *mapper*
 SQL 쿼리문을 저장한 파일과 연동
 ```xml
 <mappers>
@@ -46,6 +46,33 @@ SQL 쿼리문을 저장한 파일과 연동
 ```
 
 ## XML 방식
-### 
+### Java
+#### 변수 설정
+```java
+SqlSessionFactory sqlSessionFactory = SqlSessionManager.getSqlSession(); // SQL 연결
+SqlSession sqlSession = sqlSessionFactory.openSession(true); // SQL 세션 관리 (true는 AutoCommit)
+```
+#### 메소드 실행
+```java
+sqlSession.selectOne("memberxml.getMember", dto); // SELECT(단일 갯수)
+sqlSession.selectList("memberxml.getMemberList"); // SELECT(다수)
+sqlSession.insert("memberxml.insert",dto); // INSERT
+sqlSession.update("memberxml.update",dto); // UPDATE
+sqlSession.delete("membermapper.delete",dto); // DELETE
+```
+
+### XML
+```xml
+
+```
 
 ## 인터페이스 방식
+### Java
+```java
+
+```
+
+### XML
+```xml
+
+```
