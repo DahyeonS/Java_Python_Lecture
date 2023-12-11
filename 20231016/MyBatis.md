@@ -126,7 +126,7 @@ DAO - XML 연동으로 처리
 ##### 변수 설정
 ```java
 SqlSessionFactory sqlSessionFactory = SqlSessionManager.getSqlSession(); // SQL 연결
-SqlSession sqlSession = sqlSessionFactory.openSession(true); // SQL 세션 관리 (true는 AutoCommit)
+SqlSession sqlSession = sqlSessionFactory.openSession(true); // SQL 세션 관리 (true는 오토커밋)
 ```
 ##### 메소드 실행
 ```java
