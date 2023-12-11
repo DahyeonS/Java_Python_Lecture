@@ -54,5 +54,16 @@ EL scope: ${scope}
 ```
 
 ```jsp
+<!-- 반복문 -->
+<c:forEach var="n" items="${nameArray}">
+${n}
+</c:forEach> <br>
+<c:forEach var="dto" items="${list}">
+${dto.id}, ${dto.pw}, ${dto.name}, ${dto.age} <br>
+</c:forEach>
 
+<!-- 조건문 -->
+<c:if test="${member != null}">
+${member.id}, ${member.pw}, ${member.name}, ${member.age}
+</c:if>
 ```
