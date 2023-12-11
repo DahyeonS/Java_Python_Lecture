@@ -1,4 +1,6 @@
 # MyBatis
+- 데이터베이스 처리를 Java가 아닌 XML로 처리
+- XML 방식, 인터페이스 방식 2가지로 나뉨
 
 ### pom.xml 설정
 ```xml
@@ -10,3 +12,7 @@
 	</dependency>
 </dependencies>
 ```
+
+## XML 방식
+
+## 인터페이스 방식
