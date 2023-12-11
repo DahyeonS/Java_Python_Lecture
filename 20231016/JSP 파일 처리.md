@@ -1,4 +1,4 @@
-# JSP 파일 업로드
+# JSP 파일 처리
 ### pom.xml 설정
 ```xml
 <dependencies>
@@ -78,3 +78,12 @@ catch (Exception e) {
 ```
 
 ## 파일 다운로드
+### HTML
+```html
+
+```
+
+### Java
+```java
+
+```
