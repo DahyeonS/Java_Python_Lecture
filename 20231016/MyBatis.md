@@ -45,7 +45,38 @@ SQL 쿼리문을 저장한 파일과 연동
 </mappers>
 ```
 
+### Java
+#### SQLSession 설정
+```java
+public class SqlSessionManager {
+    public static SqlSessionFactory sqlSession;
+    
+    static {
+    	String config = "member/mybatis/mybatis-config.xml";
+        Reader reader = null;
+        
+        try {
+            reader = Resources.getResourceAsReader(config);
+            sqlSession = new SqlSessionFactoryBuilder().build(reader);
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                reader.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }       
+    }
+    
+    public static SqlSessionFactory getSqlSession() {
+        return sqlSession;
+    }
+}
+```
+
 ## XML 방식
+DAO - XML 연동으로 처리
 ### Java
 #### 변수 설정
 ```java
@@ -56,14 +87,52 @@ SqlSession sqlSession = sqlSessionFactory.openSession(true); // SQL 세션 관�
 ```java
 sqlSession.selectOne("memberxml.getMember", dto); // SELECT(단일 갯수)
 sqlSession.selectList("memberxml.getMemberList"); // SELECT(다수)
-sqlSession.insert("memberxml.insert",dto); // INSERT
-sqlSession.update("memberxml.update",dto); // UPDATE
-sqlSession.delete("membermapper.delete",dto); // DELETE
+sqlSession.insert("memberxml.insert", dto); // INSERT
+sqlSession.update("memberxml.update", dto); // UPDATE
+sqlSession.delete("membermapper.delete", dto); // DELETE
 ```
 
 ### XML
+- {}는 쿼리문에 동적으로 삽입될 변수(SQL Injection을 방지하기 위해 #{} 형태를 씀)
+- <![CDATA[ ]]>는 태그, 특수문자 등을 문자열로 인식하게 함
 ```xml
+<mapper namespace="memberxml">
+    <select id="getMember" resultType="memberDTO">
+        <![CDATA[
+        select idx, id, pw, name, role, regdate from member where id = #{id}
+        ]]>
+    </select>
+    
+    <select id="getMemberList" resultType="memberDTO">
+        <![CDATA[
+        select idx, id, pw, name, role, regdate from member order by idx desc 
+        ]]>
+    </select>     
+    
+    <insert id="insert" parameterType="memberDTO">
+        insert into member(id, pw, name, role) values (#{id}, #{pw}, #{name}, #{role})        
+    </insert>
 
+    <update id="update" parameterType="memberDTO">
+        update member set pw = #{pw}, name = #{name}, role = #{role} where id = #{id}
+    </update>
+
+    <delete id="delete" parameterType="memberDTO">
+        delete from member where id = #{id}
+    </delete> 
+    
+    <select id="getMemberSearchNameList" parameterType="memberDTO" resultType="memberDTO">
+        <![CDATA[
+        select idx, id, pw, name, role, regdate from member where 1 = 1
+        ]]>
+        <if test="name != null"> 
+            and name like CONCAT('%',#{name},'%')
+        </if>
+        <![CDATA[
+        order by idx desc
+        ]]>
+    </select>  
+</mapper>
 ```
 
 ## 인터페이스 방식
