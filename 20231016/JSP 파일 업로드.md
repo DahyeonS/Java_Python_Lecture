@@ -12,8 +12,9 @@
 
 ## HTML
 ```html
-<form name="fileForm" method="post" enctype="multipart/form-data" action="fileUploadAction.jsp" onsubmit="return validateForm(this);">
-    첨부파일 : <input type="file" name="attachedFile" />
+<form name="fileForm" method="post" enctype="multipart/form-data"
+action="fileUploadAction.jsp" onsubmit="return validateForm(this);"> <!-- onsubmit - submit 버튼 클릭 시 함수 실행 -->
+    첨부파일 : <input type="file" name="attachedFile" /> <!-- 파일 첨부 -->
     <input type="submit" value="전송하기" />
 </form>
 ```
