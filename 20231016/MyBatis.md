@@ -14,14 +14,36 @@
 ```
 
 ### mybatis.conifg.xml 설정
-#### typeAlias
+#### *typeAlias*
 MyBatis에서 사용할 Type의 별칭을 설정
 ```xml
 <typeAliases>
     <typeAlias alias="memberDTO" type="member.dto.MemberDTO" />
 </typeAliases>
 ```
-####
+#### environment
+데이터베이스 연결 설정
+```xml
+<environments default="develpment">
+    <environment id="develpment">
+        <transactionManager type="JDBC" />
+        <dataSource type="POOLED">
+            <property name="driver" value="com.mysql.cj.jdbc.Driver" /> <!-- 데이터베이스 드라이버 -->
+            <property name="url" value="jdbc:mysql://localhost:3306/javaweb" /> <!-- 데이터베이스 위치 -->
+            <property name="username" value="root" /> <!-- 유저명 -->
+            <property name="password" value="rpass" /> <!-- 비밀번호 -->
+        </dataSource>
+    </environment>
+</environments>
+```
+#### mapper
+SQL 쿼리문을 저장한 파일과 연동
+```xml
+<mappers>
+    <mapper resource="member/mybatis/mapper/member.xml"/>
+    <mapper resource="member/mybatis/mapper/MemberMapper.xml"/>
+</mappers>
+```
 
 ## XML 방식
 ### 
