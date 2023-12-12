@@ -280,6 +280,10 @@
 [main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#20231211)
 [page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#20231211)
 
+2023.12.12
+[main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#20231212)
+[page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#20231212)
+
 </div>
 </details>
 
@@ -1671,8 +1675,12 @@
 
 ## 2023.10.16
 > **[JSP 파일 처리](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231016/JSP%20%ED%8C%8C%EC%9D%BC%20%EC%B2%98%EB%A6%AC.md)와 [MyBatis](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231016/MyBatis.md)**
-> ```jsp
->
+> ```xml
+> <select id="getMember" resultType="memberDTO">
+>   <![CDATA[
+>   select idx, id, pw, name, role, regdate from member where id = #{id}
+>   ]]>
+> </select>
 > ```
 
 ## 2023.10.17
@@ -1914,3 +1922,12 @@
 >> - 231211.ipynb
 >> - 231211-2.ipynb
 >> - 231211-3.ipynb
+
+## 2023.12.12
+> **[공공데이터 활용]()**
+> ```python
+>
+> ```
+> ### *output*
+>> #### jupyter
+>> - 231212.ipynb
