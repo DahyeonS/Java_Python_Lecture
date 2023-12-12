@@ -24,3 +24,4 @@
 	<url-pattern>/*</url-pattern>
 </filter-mapping>
 ```
+5. pom.xml의 dependencies에서 lombok 추가(편리한 작동을 위함)
