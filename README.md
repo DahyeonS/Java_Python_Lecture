@@ -1924,7 +1924,7 @@
 >> - 231211-3.ipynb
 
 ## 2023.12.12
-> **[공공데이터 활용]()**
+> **[공공데이터 활용](https://github.com/DahyeonS/Java_Python_Lecture/tree/main/20231212)**
 > ```python
 >
 > ```
