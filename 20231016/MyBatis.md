@@ -1,6 +1,7 @@
 # MyBatis
 - 데이터베이스 처리를 Java가 아닌 XML로 처리
 - XML 방식, 인터페이스 방식 2가지로 나뉨
+- 입출력 타입을 정확하게 맞춰야 함
 
 ## 실행 과정
 ### pom.xml 설정
@@ -121,8 +122,9 @@ public class SqlSessionManager {
 
 ## 처리 방식
 ### XML 방식
-DAO - XML 연동으로 처리
-#### 변수 설정
+- 클래스 - XML 연동으로 처리
+- DAO단에서 메소드를 통해 쿼리를 실행함
+#### 변수 선언
 ```java
 SqlSessionFactory sqlSessionFactory = SqlSessionManager.getSqlSession(); // SQL 연결
 SqlSession sqlSession = sqlSessionFactory.openSession(true); // SQL 세션 관리 (true는 오토커밋)
@@ -137,7 +139,11 @@ sqlSession.delete("membermapper.delete", dto); // DELETE
 ```
 
 ### 인터페이스 방식
-#### Java
+- 인터페이스 - XML 연동으로 처리
+- 별도의 메소드 처리 없이 인터페이스에서 선언 후 연동하여 쿼리 실행
+#### 변수 선언(서비스)
 ```java
-
+SqlSessionFactory sqlSessionFactory = SqlSessionManager.getSqlSession(); 
+SqlSession sqlSession = sqlSessionFactory.openSession(true);
+MemberMapper dao = sqlSession.getMapper(MemberMapper.class); // 클래스(파일에서) 바로 DAO 연동
 ```
