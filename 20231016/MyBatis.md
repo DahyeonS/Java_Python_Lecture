@@ -141,7 +141,7 @@ sqlSession.delete("membermapper.delete", dto); // DELETE
 ### 인터페이스 방식
 - 인터페이스 - XML 연동으로 처리
 - 별도의 메소드 처리 없이 인터페이스에서 선언 후 연동하여 쿼리 실행
-#### 변수 선언(서비스)
+#### 변수 선언
 ```java
 SqlSessionFactory sqlSessionFactory = SqlSessionManager.getSqlSession(); 
 SqlSession sqlSession = sqlSessionFactory.openSession(true);
