@@ -122,13 +122,12 @@ public class SqlSessionManager {
 ## 처리 방식
 ### XML 방식
 DAO - XML 연동으로 처리
-#### Java
-##### 변수 설정
+#### 변수 설정
 ```java
 SqlSessionFactory sqlSessionFactory = SqlSessionManager.getSqlSession(); // SQL 연결
 SqlSession sqlSession = sqlSessionFactory.openSession(true); // SQL 세션 관리 (true는 오토커밋)
 ```
-##### 메소드 실행
+#### 메소드 실행
 ```java
 sqlSession.selectOne("memberxml.getMember", dto); // SELECT(단일 갯수)
 sqlSession.selectList("memberxml.getMemberList"); // SELECT(다수)
@@ -140,10 +139,5 @@ sqlSession.delete("membermapper.delete", dto); // DELETE
 ### 인터페이스 방식
 #### Java
 ```java
-
-```
-
-#### XML
-```xml
 
 ```
