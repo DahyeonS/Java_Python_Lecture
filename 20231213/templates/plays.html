@@ -9,16 +9,25 @@
     ('plays.html', title='PLAYS', games=t1, sports=l1)
     <!-- 전달받은 값을 출력 -->
     <h1>title: {{title}}</h1>
-    <h1>games</h1>
+
+    <h2>games</h2>
     <ul>
         {% for g in games %}
             <li>{{g}}</li>
         {% endfor %}
     </ul>
-    <h1>sports</h1>
+
+    <h2>sports</h2>
     <ul>
         {% for s in sports %}
             <li>{{s}}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>nums</h2>
+    <ul>
+        {% for k, v in nums.items() %}
+            <li>{{k}}, {{v}}</li>
         {% endfor %}
     </ul>
 </body>
