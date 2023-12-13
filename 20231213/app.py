@@ -1,5 +1,5 @@
 # app.py
-from flask import Flask, redirect, url_for
+from flask import Flask, redirect, url_for, render_template, request
 app = Flask(__name__)
 
 @app.route('/')
@@ -28,6 +28,26 @@ def user(name) :
         return redirect(url_for('admin')) # 메소드명에 속한 링크로 이동
     else :
         return redirect(url_for('guest', guest=name)) # name을 매개변수 guest로 넣어서 리다이렉트
+
+@app.route('/login_form')
+def login_form() :
+    return render_template('form.html') # html 파일을 실행
+
+@app.route('/login_proc_get', methods=['GET']) # GET 방식
+def login_proc_get() :
+    user_id = request.args.get('user_id') # 파라미터 값을 요청해서 전달받음
+    user_pwd = request.args.get('user_pwd')
+    print(user_id, user_pwd)
+
+    return f'login user id {user_id}, login user pwd {user_pwd}'
+
+@app.route('/login_proc_post', methods=['POST']) # POST 방식
+def login_proc_post() :
+    user_id = request.form['user_id'] # 파라미터 값을 요청해서 전달받음
+    user_pwd = request.form['user_pwd']
+    print(user_id, user_pwd)
+
+    return f'login user id {user_id}, login user pwd {user_pwd}'
 
 if __name__ == '__main__' :
     app.run(debug=True)
