@@ -53,8 +53,15 @@ def login_proc_post() :
 def plays() :
     t1 = ('갤러그', '너구리', '리니지')
     l1 = ['야구', '축구', '농구']
+    d1 = {'one':1, 'two':2, 'three':3}
 
-    return render_template('plays.html', title='PLAYS', games=t1, sports=l1) # html에 값 전달
+    return render_template( # html에 값 전달
+        'plays.html',
+        title='PLAYS',
+        games=t1,
+        sports=l1,
+        nums=d1
+        )
 
 if __name__ == '__main__' :
     app.run(debug=True)
