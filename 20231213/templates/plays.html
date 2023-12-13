@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>templates/plays.html</title>
+</head>
+<body>
+    ('plays.html', title='PLAYS', games=t1, sports=l1)
+    <!-- 전달받은 값을 출력 -->
+    <h1>title: {{title}}</h1>
+    <h1>games</h1>
+    <ul>
+        {% for g in games %}
+            <li>{{g}}</li>
+        {% endfor %}
+    </ul>
+    <h1>sports</h1>
+    <ul>
+        {% for s in sports %}
+            <li>{{s}}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
