@@ -49,5 +49,12 @@ def login_proc_post() :
 
     return f'login user id {user_id}, login user pwd {user_pwd}'
 
+@app.route('/plays') # POST 방식
+def plays() :
+    t1 = ('갤러그', '너구리', '리니지')
+    l1 = ['야구', '축구', '농구']
+
+    return render_template('plays.html', title='PLAYS', games=t1, sports=l1) # html에 값 전달
+
 if __name__ == '__main__' :
     app.run(debug=True)
