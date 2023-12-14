@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>question/question_list.html</title>
+</head>
+<body>
+    <h1>{{question}}</h1>
+    {% if question %}
+        <ul>
+            <li>{{question.id}}</li>
+            <li>{{question.subject}}</li>
+            <li>{{question.content}}</li>
+            <li>{{question.create_date}}</li>
+        </ul>
+    {% endif %}
+</body>
+</html>

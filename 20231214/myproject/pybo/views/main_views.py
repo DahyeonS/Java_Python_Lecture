@@ -1,12 +1,16 @@
 # main_views.py
-from flask import Blueprint
+from flask import Blueprint, render_template
+from pybo.models import Question
 
 bp = Blueprint('main', __name__, url_prefix='/')
 
 @bp.route('/')
 def index() :
-    return '<h1>Hello, pybo main!</h1>'
+    question_list = Question.query.order_by(Question.create_date.desc())
 
-@bp.route('/hello')
-def hello() :
-    return '<h1>Hello, pybo hello!</h1>'
+    return render_template('question/question_list.html', title='question list', question_list=question_list)
+
+@bp.route('/detail/<int:question_id>')
+def detail(question_id) :
+    question = Question.query.get(question_id)
+    return render_template('question/question_detail.html', question=question)
