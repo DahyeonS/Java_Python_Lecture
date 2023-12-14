@@ -1943,6 +1943,7 @@
 > **[플라스크](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231213/Flask.md)**
 > ### *output*
 > - app.py
+>
 >> #### templates
 >> - form.html
 >> - plays.html
@@ -1951,6 +1952,19 @@
 > **[플라스크]()**
 > ### *output*
 > - myproject.cmd
+>
 >> #### myproject
+>> - config.py
+>> - pybo.db
+>>
 >>> ##### pybo
 >>> - __init__.py
+>>> - models.py
+>>>
+>>>> ###### views
+>>>> - main_views.py
+>>>>
+>>>> ###### templates
+>>>>> ###### questions
+>>>>> - question_list.html
+>>>>> - question_detail.html
