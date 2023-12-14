@@ -1958,7 +1958,7 @@
 >> - pybo.db
 >>
 >>> ##### pybo
->>> - \__init__.py
+>>> - \_\_init\_\_.py
 >>> - models.py
 >>>
 >>>> ###### views
