@@ -26,3 +26,19 @@
 ```
 
 ## lombok
+어노테이션을 사용해서 생성자, Getter & Setter, toString 작업을 간단하게 만들어줌
+
+### pom.xml 설정
+```xml
+<dependency>
+    <groupId>org.projectlombok</groupId>
+    <artifactId>lombok</artifactId>
+    <version>1.18.30</version>
+    <scope>provided</scope>
+</dependency>
+```
+
+### 사용 예시
+```java
+
+```
