@@ -1976,18 +1976,19 @@
 ## 2023.12.15
 > **[플라스크]()**
 > ### *output*
->
 >> #### myproject
->> 
 >>> ##### pybo
 >>> - forms.py
 >>>
 >>>> ###### views
 >>>> - answer_views.py
 >>>> - question_views.py
+>>>> - answer_views.py
 >>>>
 >>>> ###### templates
 >>>> - base.html
+>>>> - navbar.html
+>>>> 
 >>>>> ###### question
 >>>>> - question_form.html
 >>>>
