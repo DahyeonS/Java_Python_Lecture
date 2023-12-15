@@ -1969,7 +1969,7 @@
 >>>> - main_views.py
 >>>>
 >>>> ###### templates
->>>>> ###### questions
+>>>>> ###### question
 >>>>> - question_list.html
 >>>>> - question_detail.html
 
@@ -1978,15 +1978,18 @@
 > ### *output*
 >
 >> #### myproject
->>
+>> 
 >>> ##### pybo
+>>> - forms.py
 >>>
 >>>> ###### views
 >>>> - answer_views.py
 >>>> - question_views.py
 >>>>
 >>>> ###### templates
->>>>> ###### 
-
+>>>> - base.html
+>>>>> ###### question
+>>>>> - question_form.html
+>>>>
 >>>> ###### static
 >>>>> - style.css
