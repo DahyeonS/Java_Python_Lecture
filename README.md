@@ -292,6 +292,10 @@
 [main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#20231214)
 [page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#20231214)
 
+2023.12.15
+[main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#20231215)
+[page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#20231215)
+
 </div>
 </details>
 
@@ -1968,3 +1972,18 @@
 >>>>> ###### questions
 >>>>> - question_list.html
 >>>>> - question_detail.html
+
+## 2023.12.15
+> **[플라스크]()**
+> ### *output*
+>
+>> #### myproject
+>>
+>>> ##### pybo
+>>>
+>>>> ###### views
+>>>> - answer_views.py
+>>>> - question_views.py
+>>>>
+>>>> ###### templates
+>>>>> ###### 
