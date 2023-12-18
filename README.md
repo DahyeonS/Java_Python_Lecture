@@ -1997,7 +1997,7 @@
 >>>>> - question_form.html
 >>>
 >>>> ###### static
->>>>> - style.css
+>>>> - style.css
 
 ## 2023.12.18
 > **[플라스크]()**
