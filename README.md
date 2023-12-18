@@ -1971,7 +1971,7 @@
 >>>
 >>>> ###### views
 >>>> - main_views.py
->>>>
+>>>
 >>>> ###### templates
 >>>>> ###### question
 >>>>> - question_list.html
@@ -1988,14 +1988,14 @@
 >>>> - answer_views.py
 >>>> - question_views.py
 >>>> - answer_views.py
->>>>
+>>>
 >>>> ###### templates
 >>>> - base.html
 >>>> - navbar.html
 >>>> 
 >>>>> ###### question
 >>>>> - question_form.html
->>>>
+>>>
 >>>> ###### static
 >>>>> - style.css
 
@@ -2016,5 +2016,8 @@
 >>>>> - signup.html
 >>>>> - login.html
 >>>>
+>>>>> ###### answer
+>>>>> - answer_form.html
+>>>
 >>>> ###### static
 >>>>> - style.css
