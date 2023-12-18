@@ -57,4 +57,4 @@ def delete(answer_id) :
     else :
         db.session.delete(answer)
         db.session.commit()
-        return redirect(url_for('main.index'))
+        return redirect(url_for('question.detail', question_id=question_id))
