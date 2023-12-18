@@ -1994,3 +1994,23 @@
 >>>>
 >>>> ###### static
 >>>>> - style.css
+
+## 2023.12.18
+> **[플라스크]()**
+> ### *output*
+>> #### myproject
+>>> ##### pybo
+>>> - filter.py
+>>>
+>>>> ###### views
+>>>> - auth_views.py
+>>>>
+>>>> ###### templates
+>>>> - form_errors.html
+>>>> 
+>>>>> ###### auth
+>>>>> - signup.html
+>>>>> - login.html
+>>>>
+>>>> ###### static
+>>>>> - style.css
