@@ -39,6 +39,21 @@
 ```
 
 ### 사용 예시
+클래스 위에 어노테이션을 입력
 ```java
-
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class Hello {
+	private int num;
+}
 ```
+
+### 종류
+- @Getter - 모든 필드의 Getter 메소드 생성
+- @Setter - 모든 필드의 Setter 메소드 생성
+- @ToString - toString 메소드 생성
+- @Data - 위 메소드를 모두 생성
+- @NoArgsConstructor - 빈 생성자를 생성
+- @AllArgsConstructor - 모든 필드가 들어간 생성자를 생성
+- @Builder - 생성자 제작 (위 두 어노테이션과 중복 불가)
