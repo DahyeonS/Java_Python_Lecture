@@ -2040,7 +2040,7 @@
 >>> ##### pybo
 >>> - \_\_init\_\_.py
 >>
->>> ##### views
+>>> ##### config
 >>> - \_\_init\_\_.py
 >>> - default.py
 >>> - development.py
