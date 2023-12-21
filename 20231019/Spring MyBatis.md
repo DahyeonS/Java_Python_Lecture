@@ -43,8 +43,8 @@ Type의 별칭을 설정
 </configuration>
 ```
 
-
-## Mapper
+## Java
+### Mapper
 별도의 SqlSessionFactory 선언 없이 실행
 ```java
 @Mapper
