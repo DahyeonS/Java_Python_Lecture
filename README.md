@@ -308,6 +308,10 @@
 [main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#20231220)
 [page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#20231220)
 
+2023.12.21
+[main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#20231221)
+[page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#20231221)
+
 </div>
 </details>
 
@@ -1709,7 +1713,14 @@
 
 ## 2023.10.17
 > **[Spring](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231017/Spring.md)**
-> 
+> ```java
+> @Data
+> @NoArgsConstructor
+> @AllArgsConstructor
+> public class Hello {
+> 	private int num;
+> }
+> ```
 > ### *output*
 >> #### springweb
 >> - pom.xml
@@ -2045,3 +2056,9 @@
 >>> - default.py
 >>> - development.py
 >>> - production.py
+
+## 2023.12.21
+> **[R]()**
+> ```R
+>
+> ```
