@@ -4,8 +4,7 @@ install.packages('readxl')
 library(foreign)
 library(dplyr)
 library(ggplot2)
-library(readxml)
-library('readxl')
+library(readxl)
 
 raw_df <- read.spss(file = './Lecture/RMD/Koweps_hpc10_2015_beta1.sav', to.data.frame = T)
 df <- raw_df
@@ -255,3 +254,60 @@ remotes::install_github('haven-jeon/KoNLP', upgrade='never', INSTALL_opts=c('--n
 
 library(KoNLP)
 useNIADic()
+
+extractNoun('대한민국의 영토는 한반도와 그 부속도서로 한다')
+
+txt <- readLines('./Lecture/RMD/hiphop-utf8.txt')
+txt
+
+library(stringr)
+txt <- str_replace_all(txt, '\\W', ' ')
+nouns <- extractNoun(txt)
+
+class(nouns)
+wordcount <- table(unlist(nouns))
+df_word <- as.data.frame(wordcount, stringsAsFactors = F)
+df_word <- rename(df_word, word=Var1, freq=Freq)
+
+head(df_word)
+str(df_word)
+
+df_word$word <- as.character(df_word$word)
+df_word <- filter(df_word, nchar(word) >= 2)
+str(df_word)
+
+top20 <- df_word %>%
+  arrange(desc(freq)) %>%
+  head(20)
+
+top20
+
+install.packages('wordcloud')
+library(RColorBrewer)
+library(wordcloud)
+pal <- brewer.pal(8, 'Dark2')
+
+set.seed(42)
+wordcloud(
+  words=df_word$word,
+  freq=df_word$freq,
+  min.preq=2,
+  max.words=200,
+  random.order=F,
+  ror.per=.1,
+  scale=c(4, 0.3),
+  colors=pal
+)
+
+pal2 <- brewer.pal(9, "Blues")[5:9]
+set.seed(42)
+wordcloud(
+  words=df_word$word,
+  freq=df_word$freq,
+  min.preq=2,
+  max.words=200,
+  random.order=F,
+  ror.per=.1,
+  scale=c(4, 0.3),
+  colors=pal2
+)
