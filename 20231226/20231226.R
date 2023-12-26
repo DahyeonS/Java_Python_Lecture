@@ -235,3 +235,23 @@ region_ageg <- df %>%
 
 head(region_ageg, 3)
 ggplot(data = region_ageg, aes(x = region, y = pct, fill = ageg)) + geom_col() + coord_flip()
+
+list_order_old <- region_ageg %>%
+  filter(ageg == 'old') %>%
+  arrange(pct)
+
+list_order_old
+
+# 워드 클라우드
+R.version.string
+
+install.packages('rJava')
+install.packages('memoise')
+install.packages('multilinguer')
+install.packages(c('stringr','hash','tau','Sejong','RSQLite','devtools', type='binary'))
+install.packages('remotes')
+
+remotes::install_github('haven-jeon/KoNLP', upgrade='never', INSTALL_opts=c('--no-multiarch'))
+
+library(KoNLP)
+useNIADic()
