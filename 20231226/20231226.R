@@ -40,7 +40,7 @@ g1 <- ggplot(data = sex_income, aes(x=sex, y=mean_income))
 g2 <- geom_col()
 g1 + g2
 
-class(df$birth)
+class(df$birth) # "numeric"
 summary(df$birth)
 qplot(df$birth)
 
@@ -93,7 +93,7 @@ age_sex_income
 ggplot(data = age_sex_income, aes(x=age, y=mean_income, col=sex)) + geom_line()
 
 # 직업별 월급 차이
-class(df$code_job)
+class(df$code_job) # "numeric"
 table(df$code_job)
 
 list_job <- read_excel('./Lecture/RMD/Koweps_Codebook.xlsx', col_names = T, sheet = 2)
@@ -264,7 +264,7 @@ library(stringr)
 txt <- str_replace_all(txt, '\\W', ' ')
 nouns <- extractNoun(txt)
 
-class(nouns)
+class(nouns) # "list"
 wordcount <- table(unlist(nouns))
 df_word <- as.data.frame(wordcount, stringsAsFactors = F)
 df_word <- rename(df_word, word=Var1, freq=Freq)
