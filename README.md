@@ -2113,7 +2113,7 @@
 > - 20231226.R
 
 ## 2023.12.27
-> **[판다스]()**
+> **[판다스](https://github.com/DahyeonS/Java_Python_Lecture/tree/main/20231227)**
 > ```python
 >
 > ```
