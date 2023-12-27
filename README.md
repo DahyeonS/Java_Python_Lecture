@@ -2115,7 +2115,9 @@
 ## 2023.12.27
 > **[판다스](https://github.com/DahyeonS/Java_Python_Lecture/tree/main/20231227)**
 > ```python
+> import pandas as pd
 >
+> pd.DataFrame({'a':[1, 2, 3], 'b':[4, 5, 6]}, index=['one', 'two', 'three'])
 > ```
 > ### *output*
 > - pandas01.ipynb
