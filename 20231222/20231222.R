@@ -194,7 +194,7 @@ test2 <- data.frame(id = c(1, 2, 3, 4, 5),
 test1
 test2
 
-total <- left_join(test1, test2, by = "id") # 상따옴표 입력
+total <- left_join(test1, test2, by = 'id')
 total
 
 name <- data.frame(class = c(1, 2, 3, 4, 5),
@@ -259,3 +259,19 @@ midwest %>%
   arrange(desc(ratio_asian)) %>%
   select(state, county, ratio_asian) %>%
   tail(10)
+
+
+
+# 데이터 정제
+df <- data.frame(sex = c('M', 'F', NA, 'M', 'F'),
+                 score = c(5, 4, 3, 4, NA))
+df
+
+is.na(df)
+table(is.na(df))
+
+table(is.na(df$sex))
+table(is.na(df$score))
+
+mean(df$score) # NA
+sum(df$score) # NA
