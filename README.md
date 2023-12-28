@@ -2136,3 +2136,4 @@
 > ```
 > ### *output*
 > - pandas05.ipynb
+> - pandas06.ipynb
