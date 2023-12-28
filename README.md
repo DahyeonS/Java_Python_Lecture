@@ -324,6 +324,10 @@
 [main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#20231227)
 [page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#20231227)
 
+2023.12.28
+[main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#20231228)
+[page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#20231228)
+
 </div>
 </details>
 
@@ -2124,3 +2128,11 @@
 > - pandas02.ipynb
 > - pandas03.ipynb
 > - pandas04.ipynb
+
+## 2023.12.28
+> **[판다스](https://github.com/DahyeonS/Java_Python_Lecture/tree/main/20231228)**
+> ```python
+>
+> ```
+> ### *output*
+> - pandas05.ipynb
