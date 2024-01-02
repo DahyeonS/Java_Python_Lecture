@@ -371,3 +371,66 @@ mpg %>%
   filter(!is.na(drv)) %>%
   group_by(drv) %>%
   summarise(mean_cty = mean(cty, na.rm = T))
+
+
+
+# 그래프 만들기
+mpg = ggplot2::mpg
+
+ggplot(data = mpg, aes(x = displ, y = hwy))
+ggplot(data = mpg, aes(x = displ, y = hwy)) + geom_point()
+ggplot(data = mpg, aes(x = displ, y = hwy)) + geom_point() + xlim(3, 6)
+ggplot(data = mpg, aes(x = displ, y = hwy)) + geom_point() + xlim(3, 6) + ylim(10, 30)
+
+ggplot(data = mpg, aes(x = displ, y = hwy)) +
+  geom_point() +
+  xlim(3, 6) +
+  ylim(10, 30)
+
+# 1번 문제
+ggplot(data = mpg, aes(x=cty, y=hwy)) + geom_point()
+
+# 2번 문제
+options(scipen = 99) # 10만 단위가 넘는 숫자를 정수로 표현
+#options(scipen = 0) # 10만 단위가 넘는 숫자를 지수로 표현
+ggplot(data = ggplot2::midwest, aes(x=poptotal, y=popasian)) +
+  geom_point() + xlim(0, 500000) + ylim(0, 10000)
+
+
+df_mpg <- mpg %>%
+  group_by(drv) %>%
+  summarise(mean_hwy = mean(hwy))
+df_mpg
+
+ggplot(data = df_mpg, aes(x=drv, y=mean_hwy)) + geom_col() # 평균 막대 그래프
+ggplot(data = df_mpg, aes(x=reorder(drv, -mean_hwy), y=mean_hwy)) + geom_col()
+
+ggplot(data = mpg, aes(x=drv)) + geom_bar() # 빈도 막대 그래프
+ggplot(data = mpg, aes(x=hwy)) + geom_bar()
+
+# 1번 문제
+manu_list <- mpg %>%
+  filter(class == 'suv') %>%
+  group_by(manufacturer) %>%
+  summarise(mean_cty = mean(cty)) %>%
+  arrange(desc(mean_cty)) %>%
+  head(5)
+
+ggplot(data = manu_list, aes(x=reorder(manufacturer, -mean_cty), y=mean_cty)) + geom_col()
+
+# 2번 문제
+ggplot(data = mpg, aes(x=class)) + geom_bar()
+
+
+ggplot(data = economics, aes(x=date, y=unemploy)) + geom_line()
+
+# 선 그래프 문제
+ggplot(data = economics, aes(x=date, y=psavert)) + geom_line()
+
+
+ggplot(data = mpg, aes(x=drv, y=hwy)) + geom_boxplot()
+
+# 박스 그림 문제
+mpg_class <- mpg %>%
+  filter(class %in% c('compact', 'subcompact', 'suv'))
+ggplot(data = mpg_class, aes(x=class, y=cty)) + geom_boxplot()
