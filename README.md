@@ -2154,8 +2154,11 @@
 > - pandas08.ipynb
 
 ## 2024.1.2
+> **[판다스](https://github.com/DahyeonS/Java_Python_Lecture/tree/main/202412)**
 > ```python
 > ~df['choice_description'].str.contains('Vegetables') # ~로 NOT 처리
 > # ffill - 앞의 값으로 채움, bfill - 뒤의 값으로 채움
 > df = df.fillna(method='ffill').fillna(method='bfill')
 > ```
+> ### *output*
+> - preprocess_datamanim.ipynb
