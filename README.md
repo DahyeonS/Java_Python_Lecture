@@ -2154,3 +2154,6 @@
 > - pandas08.ipynb
 
 ## 2024.1.2
+> ```python
+> ~df['choice_description'].str.contains('Vegetables') # ~로 NOT 처리
+> ```
