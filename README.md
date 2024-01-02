@@ -2156,4 +2156,5 @@
 ## 2024.1.2
 > ```python
 > ~df['choice_description'].str.contains('Vegetables') # ~로 NOT 처리
+> df = df.fillna(method='ffill').fillna(method='bfill') # ffill - 앞의 값으로 채움, bfill - 뒤의 값으로 채움
 > ```
