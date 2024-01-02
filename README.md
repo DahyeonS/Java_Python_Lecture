@@ -339,7 +339,9 @@
 <summary>1월</summary>
 <div markdown="1">
 
-
+2024.1.2
+[main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#202412)
+[page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#202412)
 
 </div>
 </details>
@@ -2150,3 +2152,5 @@
 > ### *output*
 > - pandas07.ipynb
 > - pandas08.ipynb
+
+## 2024.1.2
