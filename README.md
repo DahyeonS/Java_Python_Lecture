@@ -343,6 +343,10 @@
 [main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#202412)
 [page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#202412)
 
+2024.1.3
+[main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#202413)
+[page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#202413)
+
 </div>
 </details>
 
@@ -2162,3 +2166,11 @@
 > ```
 > ### *output*
 > - preprocess_datamanim.ipynb
+
+## 2024.1.3
+> **[판다스](https://github.com/DahyeonS/Java_Python_Lecture/tree/main/20240103)**
+> ```python
+> 
+> ```
+> ### *output*
+> - 
