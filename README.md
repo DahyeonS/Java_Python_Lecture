@@ -2168,7 +2168,7 @@
 > - preprocess_datamanim.ipynb
 
 ## 2024.1.3
-> **[판다스](https://github.com/DahyeonS/Java_Python_Lecture/tree/main/20240103)**
+> **[판다스와 넘파이](https://github.com/DahyeonS/Java_Python_Lecture/tree/main/20240103)**
 > ```python
 > 
 > ```
