@@ -2182,17 +2182,29 @@
 > - numpy05.ipynb
 
 ## 2024.1.4
-> **[시각화와 머신러닝]()**
+> **[시각화](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20240104/%EC%8B%9C%EA%B0%81%ED%99%94.md)와 [머신러닝](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20240104/%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D.md)**
 > ```python
 > for ch in text :
 >    n = ord(ch)
 >    if code_a <= n <= code_z :
 >        cnt[n-code_a] += 1
 >
-> x_train, x_test, y_train, y_test = train_test_split(data, label, test_size = 0.25, random_state=42)
+> x_train, x_test, y_train, y_test = train_test_split(data, label, 
+> test_size = 0.25, random_state=42)
 > dtc = DecisionTreeClassifier(random_state=42)
 > pred = dtc.predict(X_test)
 > accuracy_score(y_test, pred)
 > ```
 > ### *output*
 > - 240104.ipynb
+> - 240104.py
+> - lang_predict.py
+> 
+>> #### flask
+>> - app.py
+>>
+>>> ##### model
+>>> - lang.pick
+>>
+>>> ##### templates
+>>> - lang_result.html
