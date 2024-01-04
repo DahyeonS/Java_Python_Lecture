@@ -114,23 +114,3 @@ accuracy_score(y_train, pred) # 1.0
 #%%
 pred = dtc.predict(X_test)
 accuracy_score(y_test, pred) * 100
-
-#%%
-
-
-#%%
-
-
-#%%
-
-
-#%%
-
-
-#%%
-
-
-#%%
-
-
-
