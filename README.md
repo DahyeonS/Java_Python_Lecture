@@ -2188,6 +2188,11 @@
 >    n = ord(ch)
 >    if code_a <= n <= code_z :
 >        cnt[n-code_a] += 1
+>
+> x_train, x_test, y_train, y_test = train_test_split(data, label, test_size = 0.25, random_state=42)
+> dtc = DecisionTreeClassifier(random_state=42)
+> pred = dtc.predict(X_test)
+> accuracy_score(y_test, pred)
 > ```
 > ### *output*
 > - 240104.ipynb
