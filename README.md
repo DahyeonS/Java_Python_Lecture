@@ -347,6 +347,10 @@
 [main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#202413)
 [page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#202413)
 
+2024.1.4
+[main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#202414)
+[page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#202414)
+
 </div>
 </details>
 
@@ -2110,8 +2114,6 @@
 
 ## 2023.12.22
 > **[R]()**
->
-> *챕터6 ~ 챕터8*
 > ```R
 >
 > ```
@@ -2178,3 +2180,11 @@
 > - numpy03.ipynb
 > - numpy04.ipynb
 > - numpy05.ipynb
+
+## 2024.1.4
+> **[시각화와 머신러닝]()**
+> ```python
+> 
+> ```
+> ### *output*
+> - 240104.ipynb
