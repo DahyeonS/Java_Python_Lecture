@@ -2184,7 +2184,10 @@
 ## 2024.1.4
 > **[시각화와 머신러닝]()**
 > ```python
-> 
+> for ch in text :
+>    n = ord(ch)
+>    if code_a <= n <= code_z :
+>        cnt[n-code_a] += 1
 > ```
 > ### *output*
 > - 240104.ipynb
