@@ -75,25 +75,45 @@ iris_data.keys() # dict_keys(['data', 'target', 'frame', 'target_names', 'DESCR'
 iris_data['target_names'] # array(['setosa', 'versicolor', 'virginica'], dtype='<U10')
 
 #%%
-
-
-#%%
-
+iris_data.feature_names # ['sepal length (cm)', 'sepal width (cm)', 'petal length (cm)', 'petal width (cm)']
 
 #%%
-
-
-#%%
-
+iris_data.data
+iris_data.target
 
 #%%
-
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.model_selection import train_test_split
+import pandas as pd
 
 #%%
-
+iris = load_iris()
+data = iris.data
+label = iris.target
 
 #%%
+df = pd.DataFrame(data, columns=iris.feature_names)
+df['label'] = label
+df
 
+#%%
+X_train, X_test, y_train, y_test = train_test_split(data, label, test_size=0.25, random_state=42)
+
+#%%
+len(X_train), len(X_test), len(y_train), len(y_test) # (112, 38, 112, 38)
+
+#%%
+dtc = DecisionTreeClassifier(random_state=42)
+dtc.fit(X_train, y_train)
+pred = dtc.predict(X_train)
+
+#%%
+from sklearn.metrics import accuracy_score
+accuracy_score(y_train, pred) # 1.0
+
+#%%
+pred = dtc.predict(X_test)
+accuracy_score(y_test, pred) * 100
 
 #%%
 
