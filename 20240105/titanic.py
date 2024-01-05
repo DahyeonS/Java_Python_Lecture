@@ -282,97 +282,153 @@ for data in train_test_data :
     data[ft] = data[ft].map(mapping)
 
 #%%
-
-
-#%%
-
+train.Cabin.unique(), test.Cabin.unique()
 
 #%%
-
-
-#%%
-
+for data in train_test_data :
+    data.Cabin.fillna(0.2, inplace = True)
 
 #%%
-
-
-#%%
-
+train.Cabin.isnull().sum(), test.Cabin.isnull().sum() # (0, 0)
 
 #%%
-
-
-#%%
-
+train.head(2).T
 
 #%%
-
-
-#%%
-
+train.SibSp.value_counts()
 
 #%%
-
-
-#%%
-
+test.SibSp.value_counts()
 
 #%%
-
-
-#%%
-
+for data in train_test_data :
+    data['FamilySize'] = data.SibSp + data.Parch + 1
 
 #%%
-
-
-#%%
-
+sorted(train.FamilySize.unique())
 
 #%%
-
-
-#%%
-
+sorted(test.FamilySize.unique())
 
 #%%
-
-
-#%%
-
+train.FamilySize.value_counts()
 
 #%%
-
-
-#%%
-
+test.FamilySize.value_counts()
 
 #%%
-
-
-#%%
-
-
-#%%
-
-
-#%%
-
+ft = 'FamilySize'
+mapping = {
+    1:0, 2:0.1, 3:0.2, 4:0.3, 5:0.4, 6:0.5, 7:0.6, 8:0.7, 11:0.8
+} # 소수점으로 라벨링
+for data in train_test_data :
+    data[ft] = data[ft].map(mapping)
 
 #%%
-
-
-#%%
-
+train.FamilySize.value_counts()
 
 #%%
-
-
-#%%
-
+test.FamilySize.value_counts()
 
 #%%
+for data in train_test_data :
+    data.drop(['PassengerId', 'SibSp', 'Parch', 'Ticket'], axis = 1, inplace = True)
 
+#%%
+train.head(5).T
+
+#%%
+train.isna().sum()
+
+#%%
+test.isna().sum()
+
+#%%
+target = train.Survived
+train_data = train.drop('Survived', axis=1)
+
+#%%
+train_data.shape, target.shape # ((891, 8), (891,))
+
+#%%
+train_data.head()
+
+#%%
+from sklearn.ensemble import RandomForestClassifier
+
+#%%
+model = RandomForestClassifier()
+model.fit(train_data, target)
+
+#%%
+round(model.score(train_data, target), 2) * 100 # 90.0
+
+#%%
+pred = model.predict(test)
+
+#%%
+submission = pd.DataFrame(
+    {
+    'PassengerId':pd.read_csv(data_files[1])['PassengerId'],
+    'Survived':pred
+    }
+)
+
+#%%
+submission.to_csv('submission_rf_240105.csv', index=False)
+
+#%%
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.ensemble import AdaBoostClassifier
+from xgboost import XGBClassifier
+from sklearn.metrics import accuracy_score
+
+#%%
+# RandomForestClassifier
+model1 = RandomForestClassifier()
+model1.fit(train_data, target)
+predict = model1.predict(train_data)
+accuracy = round(model1.score(train_data, target) * 100, 2)
+print("Accuracy : ", accuracy, "%")
+print("Accuracy : ", accuracy_score(predict,target))
+
+#%%
+# DecisionTreeClassifier
+model2 = DecisionTreeClassifier()
+model2.fit(train_data, target)
+predict = model2.predict(train_data)
+accuracy = round(model2.score(train_data, target) * 100, 2)
+print("Accuracy : ", accuracy, "%")
+print("Accuracy : ", accuracy_score(predict,target))
+
+#%%
+# LogisticRegression
+model3 = LogisticRegression()
+model3.fit(train_data, target)
+predict = model3.predict(train_data)
+accuracy = round(model3.score(train_data, target) * 100, 2)
+print("Accuracy : ", accuracy, "%")
+print("Accuracy : ", accuracy_score(predict,target))
+
+#%%
+# AdaBoostClassifier
+model4 = AdaBoostClassifier()
+model4.fit(train_data, target)
+predict = model4.predict(train_data)
+accuracy = round(model4.score(train_data, target) * 100, 2)
+print("Accuracy : ", accuracy, "%")
+print("Accuracy : ", accuracy_score(predict,target))
+
+#%%
+# XGBClassifier
+model5 = XGBClassifier()
+model5.fit(train_data, target)
+predict = model5.predict(train_data)
+accuracy = round(model5.score(train_data, target) * 100, 2)
+print("Accuracy : ", accuracy, "%")
+print("Accuracy : ", accuracy_score(predict,target))
 
 #%%
 
