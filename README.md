@@ -351,6 +351,10 @@
 [main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#202414)
 [page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#202414)
 
+2024.1.4
+[main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#202415)
+[page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#202415)
+
 </div>
 </details>
 
@@ -2197,8 +2201,10 @@
 > ```
 > ### *output*
 > - 240104.ipynb
-> - 240104.py
-> - lang_predict.py
+>
+>> #### ml
+>> - 240104.py
+>> - lang_predict.py
 > 
 >> #### flask
 >> - app.py
@@ -2208,3 +2214,12 @@
 >>
 >>> ##### templates
 >>> - lang_result.html
+
+## 2024.1.5
+> **[머신러닝]()**
+> ```python
+> 
+> ```
+> ### *output*
+>> #### ml
+>> - titanic.py
