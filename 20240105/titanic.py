@@ -222,10 +222,11 @@ for data in train_test_data :
 test.Fare.isnull().sum()
 
 #%%
-
+train.Fare.min(), train.Fare.max()
 
 #%%
-
+cond1 = data['Fare'] <= 17
+cond2 = (data['Fare'] > 17) & (data['Fare'] >= 27)
 
 #%%
 
