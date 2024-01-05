@@ -163,7 +163,7 @@ for data in train_test_data :
     cond2 = (data['Age'] > 16) & (data['Age'] <= 26)
     cond3 = (data['Age'] > 26) & (data['Age'] <= 36)
     cond4 = (data['Age'] > 36) & (data['Age'] <= 46)
-    cond5 = (data['Age'] > 46) & (data['Age'] <= 56)
+    cond5 = data['Age'] > 46
     
     data.loc[cond1, 'Age'] = 0
     data.loc[cond2, 'Age'] = 1
@@ -225,11 +225,19 @@ test.Fare.isnull().sum()
 train.Fare.min(), train.Fare.max()
 
 #%%
-cond1 = data['Fare'] <= 17
-cond2 = (data['Fare'] > 17) & (data['Fare'] >= 27)
+for data in train_test_data :
+    cond1 = data['Fare'] <= 17
+    cond2 = (data['Fare'] > 17) & (data['Fare'] <= 30)
+    cond3 = (data['Fare'] > 30) & (data['Fare'] <= 100)
+    cond4 = data['Fare'] > 100
+    
+    data.loc[cond1, 'Fare'] = 0
+    data.loc[cond2, 'Fare'] = 1
+    data.loc[cond3, 'Fare'] = 2
+    data.loc[cond4, 'Fare'] = 3
 
 #%%
-
+train.Fare.value_counts()
 
 #%%
 
