@@ -2230,7 +2230,7 @@
 >> - submission_rf_240105.csv
 
 ## 2024.1.8
-> **[머신러닝]()**
+> **[머신러닝](https://github.com/DahyeonS/Java_Python_Lecture/tree/main/20240108)**
 > ```python
 > 
 > ```
