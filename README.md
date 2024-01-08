@@ -351,9 +351,13 @@
 [main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#202414)
 [page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#202414)
 
-2024.1.4
+2024.1.5
 [main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#202415)
 [page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#202415)
+
+2024.1.8
+[main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#202418)
+[page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#202418)
 
 </div>
 </details>
@@ -2224,3 +2228,12 @@
 >> #### ml
 >> - titanic.py
 >> - submission_rf_240105.csv
+
+## 2024.1.8
+> **[머신러닝]()**
+> ```python
+> 
+> ```
+> ### *output*
+>> #### ml
+>> - 
