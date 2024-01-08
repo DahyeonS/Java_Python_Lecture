@@ -2232,7 +2232,28 @@
 ## 2024.1.8
 > **[머신러닝](https://github.com/DahyeonS/Java_Python_Lecture/tree/main/20240108)**
 > ```python
+> # K-NN - 분류
+> from sklearn.neighbors import KNeighborsClassifier
 > 
+> kn = KNeighborsClassifier()
+> kn.fit(fish_data, fish_target)
+> kn.score(fish_data, fish_target)
+>
+> # K-NN - 회귀
+> from sklearn.neighbors import KNeighborsRegressor
+> from sklearn.metrics import mean_absolute_error
+>
+> knr = KNeighborsRegressor()
+> knr.n_neighbors = 3
+> knr.fit(train_input, train_target)
+> test_prediction = knr.predict(test_input)
+> mae = mean_absolute_error(test_target, test_prediction)
+>
+> # 선형 회귀
+> from sklearn.linear_model import LinearRegression
+>
+> lr = LinearRegression()
+> lr.fit(train_input, train_target)
 > ```
 > ### *output*
 > - hg_01_01.ipynb
