@@ -2270,7 +2270,7 @@
 > **[머신러닝](https://github.com/DahyeonS/Java_Python_Lecture/tree/main/20240109)**
 > ```python
 > # 정규화는 분리 후, train에만 fit를 적용
-> # 결정트리, 앙상블 기법은 정규화 불필요
+> # 결정트리, 앙상블 기법(랜덤 포레스트)은 정규화 불필요
 > ss = StandardScaler()
 >
 > train_scaled = ss.fit_transform(train_input)
