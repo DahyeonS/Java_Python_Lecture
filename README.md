@@ -1923,7 +1923,19 @@
 ## 2023.11.30
 > **[파이썬 입문](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231129/%ED%8C%8C%EC%9D%B4%EC%8D%AC%20%EC%9E%85%EB%AC%B8.md#for)과 [주피터 노트북](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231130/%EC%A3%BC%ED%94%BC%ED%84%B0%20%EB%85%B8%ED%8A%B8%EB%B6%81.md), [자료구조](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231130/%ED%8C%8C%EC%9D%B4%EC%8D%AC%20%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0.md)**
 > ```python
-> 
+> for i in range(1, 101) :
+>   print('Fizz' * (i % 3 == 0) + 'Buzz' * (i % 5 == 0) or i)
+>
+> s2 = {3, 6}
+> s.union(s2), s.intersection(s2), s.difference(s2) # 합집합, 교집합, 차집합
+> # ({1, 3, 5, 6}, {3}, {1, 5})
+>
+> s2.add(7)
+> print(s2) # {3, 6, 7}
+> s2.update([5, '다섯'])
+> print(s2) # {3, 5, 6, 7, '다섯'}
+> s2.update([9, '아홉'])
+> print(s2) # {3, 5, 6, 7, 9, '다섯', '아홉'}
 > ```
 > ### *output*
 > - random_var.py
