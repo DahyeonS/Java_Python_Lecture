@@ -359,6 +359,10 @@
 [main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#202418)
 [page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#202418)
 
+2024.1.9
+[main](https://github.com/DahyeonS/Java_Python_Lecture/tree/main#202419)
+[page](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/README.md#202419)
+
 </div>
 </details>
 
@@ -2261,3 +2265,10 @@
 > - hg_02_02.ipynb
 > - hg_03_01.ipynb
 > - hg_03_02.ipynb
+
+## 2024.1.9
+> **[머신러닝](https://github.com/DahyeonS/Java_Python_Lecture/tree/main/20240109)**
+> ```python
+> 
+> ```
+> ### *output*
