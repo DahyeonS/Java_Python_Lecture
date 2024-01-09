@@ -2275,6 +2275,45 @@
 >
 > train_scaled = ss.fit_transform(train_input)
 > test_scaled = ss.transform(test_input)
+>
+> # 선형 회귀(다항)
+> poly = PolynomialFeatures(include_bias=False)
+>
+> poly.fit(train_input)
+> train_poly = poly.transform(train_input)
+>
+> lr = LinearRegression()
+> lr.fit(train_poly, train_target)
+>
+> # 릿지 회귀
+> from sklearn.linear_model import Ridge
+>
+> ridge = Ridge()
+> ridge.fit(train_scaled, train_target)
+>
+> # 라쏘 회귀
+> from sklearn.linear_model import Lasso
+>
+> lasso = Lasso()
+> lasso.fit(train_scaled, train_target)
+>
+> # 로지스틱 회귀(분류)
+> from sklearn.linear_model import LogisticRegression
+>
+> lr = LogisticRegression()
+> lr.fit(train_scaled, train_target)
+>
+> # 확률적 경사하강법
+> from sklearn.linear_model import SGDClassifier
+>
+> sc = SGDClassifier(loss='log_loss', max_iter=100, tol=None, random_state=42) # 로지스틱 회귀
+> sc.fit(train_scaled, train_target)
+>
+> # 결정 트리 - 분류
+> from sklearn.tree import DecisionTreeClassifier
+>
+> dt = DecisionTreeClassifier(max_depth=3, random_state=42)
+> dt.fit(train_input, train_target)
 > ```
 > ### *output*
 > - hg_03_03.ipynb
