@@ -2269,7 +2269,11 @@
 ## 2024.1.9
 > **[머신러닝](https://github.com/DahyeonS/Java_Python_Lecture/tree/main/20240109)**
 > ```python
-> 
+> # 정규화는 분리 후, train에만 fit를 적용
+> ss = StandardScaler()
+>
+> train_scaled = ss.fit_transform(train_input)
+> test_scaled = ss.transform(test_input)
 > ```
 > ### *output*
 > - hg_03_03.ipynb
