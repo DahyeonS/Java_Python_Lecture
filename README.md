@@ -2421,6 +2421,12 @@
 > lgb = LGBMClassifier(random_state=42)
 > scores = cross_validate(lgb, train_input, train_target, return_train_score=True, n_jobs=-1)
 > print(np.mean(scores['train_score']), np.mean(scores['test_score']))
+>
+> # K-평균(비지도학습)
+> from sklearn.cluster import KMeans
+>
+> km = KMeans(n_clusters=3, random_state=42)
+> km.fit(fruits_2d)
 > ```
 > ### *output*
 > - hg_05_02.ipynb
