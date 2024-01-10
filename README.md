@@ -2325,8 +2325,8 @@
 > sc = SGDClassifier(loss='log_loss', max_iter=100, tol=None, random_state=42) # 로지스틱 회귀
 > sc.fit(train_scaled, train_target)
 >
-> # 결정 트리 - 분류
-> from sklearn.tree import DecisionTreeClassifier
+> # 결정 트리
+> from sklearn.tree import DecisionTreeClassifier # 분류
 >
 > dt = DecisionTreeClassifier(max_depth=3, random_state=42)
 > dt.fit(train_input, train_target)
@@ -2340,7 +2340,87 @@
 ## 2024.1.10
 > **[머신러닝](https://github.com/DahyeonS/Java_Python_Lecture/tree/main/20240110)**
 > ```python
+> # 교차 검증
+> from sklearn.model_selection import cross_validate
 >
+> scores = cross_validate(dt, train_input, train_target, cv=10)
+> print(np.mean(scores['test_score']))
+>
+> from sklearn.model_selection import StratifiedKFold
+>
+> splitter = StratifiedKFold(n_splits=10, shuffle=True, random_state=42)
+> scores = cross_validate(dt, train_input, train_target, cv=splitter)
+> print(np.mean(scores['test_score']))
+>
+> # 그리드 서치
+> from sklearn.model_selection import GridSearchCV
+>
+> params = {
+>    'min_impurity_decrease': np.arange(0.0001, 0.001, 0.0001),
+>    'max_depth': range(5, 20, 1),
+>    'min_samples_split': range(2, 100, 10)
+> }
+> gs = GridSearchCV(DecisionTreeClassifier(random_state=42), params, n_jobs=-1)
+> gs.fit(train_input, train_target)
+> dt = gs.best_estimator_
+> print(dt.score(train_input, train_target))
+>
+> # 랜덤 서치
+> from sklearn.model_selection import RandomizedSearchCV
+>
+> params = {
+>    'min_impurity_decrease': uniform(0.0001, 0.001),
+>    'max_depth': randint(20, 50),
+>    'min_samples_split': randint(2, 25),
+>    'min_samples_leaf': randint(1, 25),
+> }
+> gs = RandomizedSearchCV(DecisionTreeClassifier(random_state=42), 
+>   params, n_iter=100, n_jobs=-1, random_state=42)
+> gs.fit(train_input, train_target)
+> dt = gs.best_estimator_
+> print(dt.score(test_input, test_target))
+>
+> # 랜덤 포레스트
+> from sklearn.ensemble import RandomForestClassifier # 분류
+>
+> rf = RandomForestClassifier(n_jobs=-1, random_state=42, max_depth=5)
+> scores = cross_validate(rf, train_input, train_target, return_train_score=True, n_jobs=-1)
+> print(np.mean(scores['train_score']), np.mean(scores['test_score']))
+>
+> # 엑스트라 트리
+> from sklearn.ensemble import ExtraTreesClassifier # 분류
+>
+> et = ExtraTreesClassifier(n_jobs=-1, random_state=42)
+> scores = cross_validate(et, train_input, train_target, return_train_score=True, n_jobs=-1)
+> print(np.mean(scores['train_score']), np.mean(scores['test_score']))
+>
+> # 그래디언트 부스팅
+> from sklearn.ensemble import GradientBoostingClassifier # 분류
+>
+> gb = GradientBoostingClassifier(n_estimators=500, learning_rate=0.2, random_state=42)
+> scores = cross_validate(gb, train_input, train_target, return_train_score=True, n_jobs=-1)
+> print(np.mean(scores['train_score']), np.mean(scores['test_score']))
+>
+> # 히스토그램 기반 부스팅
+> from sklearn.ensemble import HistGradientBoostingClassifier # 분류
+>
+> hgb = HistGradientBoostingClassifier(random_state=42)
+> scores = cross_validate(hgb, train_input, train_target, return_train_score=True, n_jobs=-1)
+> print(np.mean(scores['train_score']), np.mean(scores['test_score']))
+>
+> # XGBoost
+> from xgboost import XGBClassifier # 분류
+>
+> xgb = XGBClassifier(tree_method='hist', random_state=42)
+> scores = cross_validate(xgb, train_input, train_target, return_train_score=True, n_jobs=-1)
+> print(np.mean(scores['train_score']), np.mean(scores['test_score']))
+>
+> # LightGBM
+> from lightgbm import LGBMClassifier # 분류
+>
+> lgb = LGBMClassifier(random_state=42)
+> scores = cross_validate(lgb, train_input, train_target, return_train_score=True, n_jobs=-1)
+> print(np.mean(scores['train_score']), np.mean(scores['test_score']))
 > ```
 > ### *output*
 > - hg_05_02.ipynb
