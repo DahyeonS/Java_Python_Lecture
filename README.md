@@ -1951,7 +1951,11 @@
 ## 2023.12.1
 > **[자료구조](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231130/%ED%8C%8C%EC%9D%B4%EC%8D%AC%20%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0.md#dict)와 [함수](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231201/%ED%95%A8%EC%88%98.md)**
 > ```python
-> 
+> import copy
+> b = copy.deepcopy(a)
+>
+> def refFunc(x) :
+>   pass
 > ```
 > ### *output*
 > - baseball_game.py
@@ -1961,7 +1965,7 @@
 >> - 231201.ipynb
 
 ## 2023.12.4
-> **[함수]()와 [클래스](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231204/%ED%81%B4%EB%9E%98%EC%8A%A4.md)와 [파일 처리](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231204/%ED%8C%8C%EC%9D%BC%20%EC%B2%98%EB%A6%AC.md)**
+> **[함수](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231201/%ED%95%A8%EC%88%98.md#%EA%B0%80%EB%B3%80%EC%9D%B8%EC%88%98-%ED%95%A8%EC%88%98)와 [클래스](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231204/%ED%81%B4%EB%9E%98%EC%8A%A4.md)와 [파일 처리](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231204/%ED%8C%8C%EC%9D%BC%20%EC%B2%98%EB%A6%AC.md)**
 > ```python
 > 
 > ```
