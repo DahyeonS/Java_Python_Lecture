@@ -2449,6 +2449,16 @@
 > # 아래 문장과 이어서 쓰기
 > (train_input, train_target), (test_input, test_target) = \ 
 >   keras.datasets.fashion_mnist.load_data()
+>
+> # 텐서플로우
+> import tensorflow as tf
+> from tensorflow import keras
+>
+> dense = keras.layers.Dense(10, activation='softmax', input_shape=(784,)) # 분류
+> model = keras.Sequential(dense)
+> model.compile(loss='sparse_categorical_crossentropy', metrics='accuracy')
+> model.fit(train_scaled, train_target, epochs=5)
+> model.evaluate(val_scaled, val_target)
 > ```
 > ### *output*
 > - hg_07_01.ipynb
