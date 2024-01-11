@@ -2446,7 +2446,9 @@
 ## 2024.1.11
 > **[머신러닝](https://github.com/DahyeonS/Java_Python_Lecture/tree/main/20240111)**
 > ```python
->
+> # 아래 문장과 이어서 쓰기
+> (train_input, train_target), (test_input, test_target) = \ 
+>   keras.datasets.fashion_mnist.load_data()
 > ```
 > ### *output*
 > - hg_07_01.ipynb
