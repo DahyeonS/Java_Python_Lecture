@@ -2450,14 +2450,22 @@
 > (train_input, train_target), (test_input, test_target) = \ 
 >   keras.datasets.fashion_mnist.load_data()
 >
-> # 텐서플로우
+> # 텐서플로우 인공 신경망
 > import tensorflow as tf
 > from tensorflow import keras
 >
-> dense = keras.layers.Dense(10, activation='softmax', input_shape=(784,)) # 분류
-> model = keras.Sequential(dense)
-> model.compile(loss='sparse_categorical_crossentropy', metrics='accuracy')
-> model.fit(train_scaled, train_target, epochs=5)
+> tf.keras.utils.set_random_seed(42) # 시드 설정
+> tf.config.experimental.enable_op_determinism()
+>
+> model = keras.Sequential() # 레이어 설정
+> model.add(keras.layers.Flatten(input_shape=(28, 28)))
+> model.add(keras.layers.Dense(100, activation='relu'))
+> model.add(keras.layers.Dense(10, activation='softmax'))
+>
+> dam = keras.optimizers.Adam() # 컴파일
+> model.compile(optimizer=adam, loss='sparse_categorical_crossentropy', metrics='accuracy')
+>
+> model.fit(train_scaled, train_target, epochs=5) # 모델 적용
 > model.evaluate(val_scaled, val_target)
 > ```
 > ### *output*
