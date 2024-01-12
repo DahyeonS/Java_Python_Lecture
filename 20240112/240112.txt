@@ -1,0 +1,170 @@
+PUT index2/_doc/1
+{
+  "name":"mike",
+  "age":25,
+  "gender":"male"
+}
+
+GET index2
+
+GET index2/_doc/1
+
+GET index2/_search
+
+PUT index2/_doc/1
+{
+  "name":"park",
+  "age":45
+}
+
+POST index2/_update/1
+{
+  "doc": {
+    "name":"kim"
+  }
+}
+
+PUT index2/_doc/2
+{
+  "name":"park",
+  "age":22,
+  "gender":"female"
+}
+
+GET index2/_doc/2
+
+DELETE index2/_doc/2
+
+
+PUT index1/_doc/1
+{
+  "name":"park",
+  "age":22,
+  "gender":"female"
+}
+
+GET index1/_doc/1
+
+GET index1/_mapping
+
+PUT index3
+{
+    "mappings":{
+      "properties": {
+        "age":{"type": "short"},
+        "name":{"type": "text"},
+        "gender":{"type": "keyword"}
+    }
+  }
+}
+
+PUT text_index
+{
+  "mappings":{
+    "properties":{
+      "content":{
+        "type": "text"
+      }
+    }
+  }
+}
+
+PUT text_index/_doc/1
+{
+  "content":"beautiful day"
+}
+
+GET text_index/_doc/1
+
+GET text_index/_search
+{
+  "query": {
+    "match": {
+      "content": "day"
+    }
+  }
+}
+
+PUT multifield_index
+{
+  "mappings": {
+    "properties": {
+      "message":{
+        "type": "text"
+      },
+      "contents":{
+        "type": "text",
+        "fields": {
+          "keyword":{
+            "type":"keyword"
+          }
+        }
+      }
+    }
+  }
+}
+
+PUT multifield_index/_doc/1
+{
+  "message":"1 document",
+  "contents":"beautiful day"
+}
+
+PUT multifield_index/_doc/2
+{
+  "message":"2 document",
+  "contents":"beautiful day"
+}
+
+PUT multifield_index/_doc/3
+{
+  "message":"3 document",
+  "contents":"wonderful day"
+}
+
+GET multifield_index/_mapping
+
+GET multifield_index/_search
+{
+  "query": {
+    "match": {
+      "contents": "day"
+    }
+  }
+}
+
+GET multifield_index/_search
+{
+  "query": {
+    "match": {
+      "contents": "beautiful"
+    }
+  }
+}
+
+GET multifield_index/_search
+{
+  "query": {
+    "match": {
+      "contents": "wonderful"
+    }
+  }
+}
+
+GET multifield_index/_search
+{
+  "query": {
+    "term": {
+      "contents.keyword": "beautiful day"
+    }
+  }
+}
+
+GET multifield_index/_search
+{
+  "query": {
+    "term": {
+      "contents.keyword": "wonderful day"
+    }
+  }
+}
