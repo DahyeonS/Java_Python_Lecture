@@ -6,10 +6,17 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script>
     const getJson = function (type) {
+        // const param = {
+        //     "query": {
+        //         "match": {
+        //             "content": "day"
+        //         }
+        //     }
+        // }
         const param = {
             "query": {
-                "match": {
-                    "content": "day"
+                "term": {
+                "contents.keyword": "wonderful day"
                 }
             }
         }
@@ -17,7 +24,8 @@
             type:'POST',
             contentType:'application/json',
             // url:'http://localhost:9200',
-            url:'http://localhost:9200/text_index/_search',
+            // url:'http://localhost:9200/text_index/_search',
+            url:'http://localhost:9200/multifield_index/_search',
             dataType:'json',
             data:JSON.stringify(param),
             success: function (data) {
