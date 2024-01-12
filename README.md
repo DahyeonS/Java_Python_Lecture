@@ -2505,7 +2505,7 @@
 > - hg_08_02.ipynb
 
 ## 2024.1.12
-> **[엘라스틱 서치]()**
+> **[엘라스틱 서치](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20240112/%EC%97%98%EB%9D%BC%EC%8A%A4%ED%8B%B1%20%EC%84%9C%EC%B9%98.md)**
 > ```
 >
 > ```
