@@ -29,8 +29,15 @@
             dataType:'json',
             data:JSON.stringify(param),
             success: function (data) {
-                console.log(data);
-                $('#area').text(data);
+                // console.log(data);
+                const result = data['hits']['hits']
+                let text = ''
+                for (r of result) {
+                    text += `message: <span id="message">${r['_source']['message']}</span><br>`
+                    text += `contents: <span id="contents">${r['_source']['contents']}</span><br>`
+                }
+                // $('#area').text(data);
+                $('#area').html(text);
             },
             error: function (request, status, error) {
                 console.log(request, status,error);
@@ -45,7 +52,10 @@
     </script>
 </head>
 <body>
-    <p id="area"></p>
+    <p id="area">
+        message: <span id="message"></span>
+        contents: <span id="contents"></span>
+    </p>
     <button id="btn">es</button>
     
 </body>
