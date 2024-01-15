@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax-jquery.html</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+    const getJson = function (type) {
+        const param = {
+            "query": {
+                "match": {
+                    "category": "clothing"
+                }
+            }
+        }
+        $.ajax({
+            type:'POST',
+            contentType:'application/json',
+            // url:'http://localhost:9200/kibana_sample_data_ecommerce/_search',
+            url:'http://localhost:9200/kibana_sample_data_ecommerce/_search?q=customer_full_name:Mary',
+            dataType:'json',
+            // data:JSON.stringify(param),
+            success: function (data) {
+                console.log(data);
+            },
+            error: function (request, status, error) {
+                console.log(request, status,error);
+            }
+        });
+    }  
+    
+    $(function () {
+        $('#btn').on('click',getJson);
+    })
+
+    </script>
+</head>
+<body>
+    <p id="area">
+        message: <span id="message"></span>
+        contents: <span id="contents"></span>
+    </p>
+    <button id="btn">es</button>
+    
+</body>
+</html>
