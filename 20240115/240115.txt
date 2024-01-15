@@ -1,0 +1,586 @@
+GET kibana_sample_data_ecommerce/_search
+{
+  "query": {
+    "match": {
+      "category": "clothing"
+    }
+  }
+}
+
+GET kibana_sample_data_ecommerce/_search
+{
+  "query": {
+    "bool": {
+      "filter": [
+        {
+          "term": {
+            "day_of_week": "Friday"
+          }
+        }
+      ]
+    }
+  }
+}
+
+GET kibana_sample_data_ecommerce/_mapping
+
+GET kibana_sample_data_ecommerce/_search?q=customer_full_name:Mary
+
+GET kibana_sample_data_ecommerce/_search
+{
+  "query": {
+    "match": {
+      "customer_full_name": "Mary"
+    }
+  }
+}
+
+GET kibana_sample_data_ecommerce/_search
+{
+  "query": {
+    "match": {
+      "customer_full_name": "mary bailey"
+    }
+  }
+}
+
+GET kibana_sample_data_ecommerce/_search
+{
+  "query": {
+    "match": {
+      "customer_full_name": {
+        "query": "mary bailey",
+        "operator": "and"
+      }
+    }
+  }
+}
+
+GET kibana_sample_data_ecommerce/_search
+{
+  "_source": ["customer_full_name"], 
+  "query": {
+    "match_phrase": {
+      "customer_full_name": "mary bailey"
+    }
+  }
+}
+
+GET kibana_sample_data_ecommerce/_search
+{
+  "_source": ["customer_full_name"], 
+  "query": {
+    "term": {
+      "customer_full_name.keyword": "Mary Bailey"
+    }
+  }
+}
+
+GET kibana_sample_data_ecommerce/_search
+{
+  "_source": ["day_of_week"], 
+  "query": {
+    "terms": {
+      "day_of_week": ["Monday", "Sunday"]
+    }
+  }
+}
+
+GET kibana_sample_data_ecommerce/_search
+{
+  "query": {
+    "terms": {
+      "day_of_week": ["Monday", "Sunday"]
+    }
+  }
+}
+
+GET kibana_sample_data_ecommerce/_search
+{
+  "_source": ["customer_first_name", "customer_last_name",
+  "customer_full_name"],
+  "query": {
+    "multi_match": {
+      "query": "mary",
+      "fields": ["customer_first_name", "customer_last_name",
+      "customer_full_name"]
+    }
+  }
+}
+
+GET kibana_sample_data_ecommerce/_search
+{
+  "_source": ["customer_first_name", "customer_last_name",
+  "customer_full_name"],
+  "query": {
+    "multi_match": {
+      "query": "mary",
+      "fields": ["customer_*_name"]
+    }
+  }
+}
+
+GET kibana_sample_data_ecommerce/_search
+{
+  "_source": ["customer_first_name", "customer_last_name",
+  "customer_full_name"],
+  "query": {
+    "multi_match": {
+      "query": "mary",
+      "fields": ["customer_first_name^2", "customer_last_name",
+      "customer_full_name"]
+    }
+  }
+}
+
+GET kibana_sample_data_ecommerce/_search
+{
+  "_source": ["day_of_week", "currency"], 
+  "query": {
+    "terms": {
+      "day_of_week": ["Monday", "Sunday"]
+    }
+  }
+}
+
+GET kibana_sample_data_ecommerce/_search
+{
+  "_source": ["day_of_week", "day_of_week_i"], 
+  "query": {
+    "range": {
+      "day_of_week_i": {
+        "gte":3
+      }
+    }
+  }
+}
+
+GET kibana_sample_data_ecommerce/_search
+{
+  "_source": ["day_of_week", "day_of_week_i"], 
+  "query": {
+    "range": {
+      "day_of_week_i": {
+        "gt":3
+      }
+    }
+  }
+}
+
+GET kibana_sample_data_ecommerce/_search
+{
+  "_source": ["day_of_week", "day_of_week_i"], 
+  "query": {
+    "range": {
+      "day_of_week_i": {
+        "lt":3
+      }
+    }
+  }
+}
+
+GET kibana_sample_data_ecommerce/_search
+{
+  "_source": ["day_of_week", "day_of_week_i"], 
+  "query": {
+    "range": {
+      "day_of_week_i": {
+        "lte":3
+      }
+    }
+  }
+}
+
+GET kibana_sample_data_ecommerce/_search
+{
+  "query": {
+    "bool": {
+      "must": [
+        {"match": {
+          "customer_first_name": "Mary"
+        }}
+      ]
+    }
+  }
+}
+
+GET kibana_sample_data_ecommerce/_search
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "match": {
+            "customer_first_name": "Mary"
+          }
+        },
+        {
+          "term": {
+            "day_of_week": {
+              "value": "Monday"
+            }
+          }
+        }
+      ]
+    }
+  }
+}
+
+GET kibana_sample_data_ecommerce/_search
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "match": {
+            "customer_first_name": "Mary"
+          }
+        }
+      ],
+      "must_not": [
+        {
+          "term": {
+            "customer_full_name": "bailey"
+          }
+        }
+      ]
+    }
+  }
+}
+
+
+GET kibana_sample_data_ecommerce/_search
+{
+  "query": {
+    "bool": {
+      "should": [
+        {
+          "match": {
+            "customer_first_name": "Mary"
+          }
+        },
+        {
+          "term": {
+            "day_of_week": {
+              "value": "Monday"
+            }
+          }
+        }
+      ]
+    }
+  }
+}
+
+GET kibana_sample_data_ecommerce/_search
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "match": {
+            "customer_first_name": "Mary"
+          }
+        }
+      ],
+      "should": [
+        {
+          "term": {
+            "customer_full_name": "bailey"
+          }
+        }
+      ]
+    }
+  }
+}
+
+GET kibana_sample_data_ecommerce/_search
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "match": {
+            "customer_first_name": "Mary"
+          }
+        }
+      ],
+      "should": [
+        {
+          "term": {
+            "day_of_week": "Sunday"
+          }
+        }
+      ]
+    }
+  }
+}
+
+GET kibana_sample_data_ecommerce/_search
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "match": {
+            "customer_first_name": "Mary"
+          }
+        }
+      ],
+      "filter": [
+        {
+          "term": {
+            "day_of_week": "Sunday"
+          }
+        }
+      ]
+    }
+  }
+}
+
+GET kibana_sample_data_ecommerce/_search
+{
+  "size": 0,
+  "aggs": {
+    "stats_avg": {
+      "avg": {
+        "field": "products.base_price"
+      }
+    }
+  }
+}
+
+GET kibana_sample_data_ecommerce/_search
+{
+  "size": 0,
+  "aggs": {
+    "stats_aggs": {
+      "percentiles": {
+        "field": "products.base_price",
+        "percents": [25, 50, 75]
+      }
+    }
+  }
+}
+
+GET kibana_sample_data_ecommerce/_search
+{
+  "size": 0,
+  "aggs": {
+    "stats_aggs": {
+      "cardinality": {
+        "field": "day_of_week"
+      }
+    }
+  }
+}
+
+GET kibana_sample_data_ecommerce/_search
+{
+  "size": 0,
+  "aggs": {
+    "stats_aggs": {
+      "terms": {
+        "field": "day_of_week"
+      }
+    }
+  }
+}
+
+GET kibana_sample_data_ecommerce/_search
+{
+  "size": 0,
+  "query": {
+    "term": {
+      "day_of_week": {
+        "value": "Monday"
+      }
+    }
+  }, 
+  "aggs": {
+    "stats_aggs": {
+      "terms": {
+        "field": "day_of_week"
+      }
+    }
+  }
+}
+
+GET kibana_sample_data_ecommerce/_search
+{
+  "size": 0,
+  "query": {
+    "term": {
+      "day_of_week": {
+        "value": "Monday"
+      }
+    }
+  }, 
+  "aggs": {
+    "stats_aggs": {
+      "sum": {
+        "field": "products.base_price"
+      }
+    }
+  }
+}
+
+GET kibana_sample_data_ecommerce/_search
+{
+  "size": 0,
+  "aggs": {
+    "histogram_aggs": {
+      "histogram": {
+        "field": "products.base_price",
+        "interval": 100
+      }
+    }
+  }
+}
+
+GET kibana_sample_data_ecommerce/_search
+{
+  "size": 0,
+  "aggs": {
+    "histogram_aggs": {
+      "range": {
+        "field": "products.base_price",
+        "ranges":[
+          {"from":0, "to":50},
+          {"from":50, "to":100},
+          {"from":100, "to":500},
+          {"from":500, "to":1100}
+        ]
+      }
+    }
+  }
+}
+
+GET kibana_sample_data_ecommerce/_search
+{
+  "size": 0,
+  "aggs": {
+    "stats_aggs": {
+      "terms": {
+        "field": "day_of_week"
+      },
+      "aggs": {
+        "avg_aggs": {
+          "avg": {
+            "field": "products.base_price"
+          }
+        }
+      }
+    }
+  }
+}
+
+GET kibana_sample_data_ecommerce/_search
+{
+  "size": 0,
+  "aggs": {
+    "histogram_aggs": {
+      "histogram": {
+        "field": "products.base_price",
+        "interval": 100
+      }, 
+      "aggs": {
+        "term_aggs": {
+          "terms": {
+            "field": "day_of_week",
+            "size": 2
+          }
+        }
+      }
+    }
+  }
+}
+
+GET kibana_sample_data_ecommerce/_search
+{
+  "size": 0,
+  "aggs": {
+    "histogram_aggs": {
+      "histogram": {
+        "field": "products.base_price",
+        "interval": 100
+      }, 
+      "aggs": {
+        "sum_aggs": {
+          "sum": {
+            "field": "taxful_total_price"
+          }
+        }
+      }
+    }
+  }
+}
+
+GET kibana_sample_data_ecommerce/_search
+{
+  "size": 0,
+  "aggs": {
+    "histogram_aggs": {
+      "histogram": {
+        "field": "products.base_price",
+        "interval": 100
+      }, 
+      "aggs": {
+        "sum_aggs": {
+          "sum": {
+            "field": "taxful_total_price"
+          }
+        },
+        "cum_sum":{
+          "cumulative_sum": {
+            "buckets_path": "sum_aggs"
+          }
+        }
+      }
+    }
+  }
+}
+
+GET kibana_sample_data_ecommerce/_search
+{
+  "size": 0,
+  "aggs": {
+    "term_aggs": {
+      "terms": {
+        "field": "day_of_week",
+        "size": 2
+      },
+      "aggs": {
+        "sum_aggs": {
+          "sum": {
+            "field": "products.base_price"
+          }
+        }
+      }
+    }
+  }
+}
+
+GET kibana_sample_data_ecommerce/_search
+{
+  "size": 0,
+  "aggs": {
+    "term_aggs": {
+      "terms": {
+        "field": "day_of_week",
+        "size": 2
+      },
+      "aggs": {
+        "sum_aggs": {
+          "sum": {
+            "field": "products.base_price"
+          }
+        }
+      }
+    },
+    "sum_total_price":{
+      "sum_bucket": {
+        "buckets_path": "term_aggs > sum_aggs"
+      }
+    }
+  }
+}
