@@ -602,3 +602,12 @@ GET titanic_dataset/_search
     "match_all": {}
   }
 }
+
+GET member_index/_search
+{
+  "query": {
+    "match_all": {
+      
+    }
+  }
+}
