@@ -584,3 +584,21 @@ GET kibana_sample_data_ecommerce/_search
     }
   }
 }
+
+GET titanic_dataset/_search
+{
+  "query": {
+    "range": {
+      "Age": {
+        "gte": 30
+      }
+    }
+  }
+}
+
+GET titanic_dataset/_search
+{
+  "query": {
+    "match_all": {}
+  }
+}
