@@ -382,24 +382,6 @@
 </div>
 </details>
 
-<details>
-<summary>2월</summary>
-<div markdown="1">
-
-
-
-</div>
-</details>
-
-<details>
-<summary>3월</summary>
-<div markdown="1">
-
-
-
-</div>
-</details>
-
 ## 2023.7.24
 >
 > **마크다운 예시**
