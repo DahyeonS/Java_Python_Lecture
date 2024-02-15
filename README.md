@@ -1969,6 +1969,7 @@
 >> - my_module.py
 >> - test.py
 >> - test2.py
+>> - test3.py
 >>
 >>> ##### my_package
 >>> - my_module2.py
