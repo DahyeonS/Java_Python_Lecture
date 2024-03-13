@@ -1961,7 +1961,29 @@
 ## 2023.12.4
 > **[함수](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231201/%ED%95%A8%EC%88%98.md#%EA%B0%80%EB%B3%80%EC%9D%B8%EC%88%98-%ED%95%A8%EC%88%98)와 [클래스](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231204/%ED%81%B4%EB%9E%98%EC%8A%A4.md)와 [파일 처리](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231204/%ED%8C%8C%EC%9D%BC%20%EC%B2%98%EB%A6%AC.md)**
 > ```python
-> 
+> # 클래스
+> class CalcClass :
+>    def __init__(self) :
+>        self.x = 0
+>        self.y = 0
+>        
+>    def plus(self) :
+>        return self.x + self.y
+>    
+>    def minus(self) :
+>        return self.x - self.y
+>
+> obj1 = CalcClass(10, 20)
+> obj2 = CalcClass(100, 200)
+> obj1.plus(), obj2.minus()
+>
+> # 파일 처리
+> try :
+>     f = open('c/test.txt')
+> except FileNotFoundError as e :
+>     print(e)
+> finally :
+>     print('end')
 > ```
 > ### *output*
 >> #### jupyter
