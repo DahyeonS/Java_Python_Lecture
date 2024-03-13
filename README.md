@@ -1998,7 +1998,7 @@
 >>> - scattering.py
 
 ## 2023.12.5
-> **[파일 처리]()와 [DB 연결](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231205/DB%20%EC%97%B0%EA%B2%B0.md)**
+> **[파일 처리](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231204/%ED%8C%8C%EC%9D%BC%20%EC%B2%98%EB%A6%AC.md#%ED%8C%A8%ED%82%A4%EC%A7%80-%EB%AF%B8%EC%82%AC%EC%9A%A9)와 [DB 연결](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231205/DB%20%EC%97%B0%EA%B2%B0.md)**
 > ```python
 >
 > ```
