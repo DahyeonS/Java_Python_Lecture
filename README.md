@@ -2003,6 +2003,19 @@
 > # 파일 처리
 > with open('./data/row_file_231205.pickle', mode='rb') as f :
 >     pickle.load(f)
+>
+> # DB 연결
+> try :
+>     with pymysql.connect(host='localhost',
+>                            user='root',
+>                            password='rpass',
+>                            db='kdigital2307') as conn :
+>         with conn.cursor() as cursor :
+>             sql = 'SELECT COUNT(*) FROM users'
+>             cursor.execute(sql)
+>             cnt = cursor.fetchone()
+> except Exception as e :
+>     print(e)
 > ```
 > ### *output*
 >> #### jupyter
