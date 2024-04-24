@@ -90,3 +90,55 @@ def select_pandas() :
 ```
 
 ## NoSQL
+tinydb 패키지를 이용
+```python
+from tinydb import TinyDB
+
+db = TinyDB('./data/db.json') # DB 생성(json 파일 형태)
+
+# INSERT
+db.insert({'type':'apple', 'count':7})
+
+# SELECT
+db.all() # 모든 데이터
+db.all()[0] # 첫번째 데이터
+
+from tinydb import Query # 조건문 처리를 위한 패키지
+
+q = Query()
+
+search_type = db.search(q.type == 'peach') # type가 peach인 대상을 선택
+print(search_type) # [{'type': 'peach', 'count': 3}]
+
+search_count = db.search(q.count > 2) # count가 2보다 큰 대상을 선택
+print(search_count) # [{'type': 'apple', 'count': 7}, {'type': 'peach', 'count': 3}]
+
+# UPDATE
+db.update({'count':10}, q.type == 'apple') # type가 apple인 대상의 count를 10으로 변경
+
+# DELETE
+db.remove(q.count < 5) # count가 5보다 작은 대상 삭제
+
+# TRUNCATE
+db.truncate() # 데이터 모두 삭제
+
+# 테이블 생성
+fruits = db.table('fruits') # fruits 테이블 생성
+fruits.insert({'type':'apple', 'count':7}) # fruits 테이블에 데이터 추가
+
+fruits.all() # [{'type': 'apple', 'count': 7}]
+db.all() # [] - 테이블에는 데이터가 출력되나 전체 DB에는 출력되지 않음
+
+# 테이블 삭제
+db.drop_table('fruits')
+
+# 외부 API 저장
+import requests
+response = requests.get(url) # 특정 주소에서 응답을 요청
+
+if response.status_code == 200 :
+    rs = response.json() # 응답받은 데이터를 JSON으로 변환
+    db = TinyDB('./data/lotto.json') 
+    table = db.table('lotto')
+    table.insert(rs) # 변환한 데이터를 저장
+```
