@@ -2032,7 +2032,14 @@
 ## 2023.12.6
 > **[정규표현식](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231206/%EC%A0%95%EA%B7%9C%ED%91%9C%ED%98%84%EC%8B%9D.md)**
 > ```python
->
+> jumin = '123456-3234567'
+> pt = '[0-9]{6}-[1-4][0-9]{6}'
+> rs = match(pt, jumin)
+> if rs :
+>     print('일치')
+> else :
+>     print('불일치')
+> rs.group()
 > ```
 > ### *output*
 >> #### jupyter
