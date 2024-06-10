@@ -2049,7 +2049,20 @@
 ## 2023.12.7
 > **[크롤링](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231207/%ED%81%AC%EB%A1%A4%EB%A7%81.md)**
 > ```python
+> import requests
+> from bs4 import BeautifulSoup
+> 
+> url = 'https://movie.daum.net/search'
+> params = {
+>     'q':'서울의 봄#tab=all'
+> }
 >
+> response = requests.get(url, params=params) # GET 방식으로 요청
+> raw_data = response.text # 응답을 가공 가능한 HTML 텍스트 형태로 변환
+> 
+> soup = BeautifulSoup(raw_data)
+> first_a = soup.find_all('a')[0]
+> first_a.string, first_a.attrs['href']
 > ```
 > ### *output*
 >> #### jupyter
