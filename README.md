@@ -2057,8 +2057,8 @@
 >     'q':'서울의 봄#tab=all'
 > }
 >
-> response = requests.get(url, params=params) # GET 방식으로 요청
-> raw_data = response.text # 응답을 가공 가능한 HTML 텍스트 형태로 변환
+> response = requests.get(url, params=params)
+> raw_data = response.text
 > 
 > soup = BeautifulSoup(raw_data)
 > first_a = soup.find_all('a')[0]
