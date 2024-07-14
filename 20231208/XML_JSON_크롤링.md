@@ -26,3 +26,20 @@ soup = BeautifulSoup(text, 'html.parser')
 ```
 
 ## JSON
+- json() 함수를 이용<i>(예시 - request.get(url).json())</i>
+- XML과 마찬가지로 보안 관련 처리가 필요한 경우가 있음
+```python
+url = 'https://weather.kweather.co.kr/weather/life_weather/get_life_factor_list/11B00000'
+
+response = requests.get(url, verify=False) # SSL 인증과정 생략
+data = response.json()
+
+factors = []
+discs = []
+
+for k in data :
+    if re.findall('Factor$', k) : # Factor로 끝나는 문자열
+        factors.append(k)
+    if re.findall('Discription$', k) or re.findall('Discrption$', k) : # Discrption로 끝나는 문자열
+        discs.append(k)
+```
