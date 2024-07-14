@@ -26,7 +26,7 @@ soup = BeautifulSoup(text, 'html.parser')
 ```
 
 ## JSON
-- json() 함수를 이용<i>(예시 - request.get(url).json())</i>
+- json() 함수를 이용 <i>(예시 - request.get(url).json())</i>
 - XML과 마찬가지로 보안 관련 처리가 필요한 경우가 있음
 ```python
 url = 'https://weather.kweather.co.kr/weather/life_weather/get_life_factor_list/11B00000'
