@@ -42,4 +42,14 @@ for k in data :
         factors.append(k)
     if re.findall('Discription$', k) or re.findall('Discrption$', k) : # Discrption로 끝나는 문자열
         discs.append(k)
+
+factors
+# (['picnicFactor', 'lundaryFactor', 'carWashFactor', 'fireFactor',
+# 'fitnessFactor', 'pollutionFactor', 'spoilageFactor',
+# 'uvFactor','coldFactor','heatFactor','discomfortFactor','influFactor'],
+discs
+#  ['picnicDiscription', 'lundaryDiscription', 'carWashDiscription',
+# 'fireDiscrption', 'fitnessDiscription', 'pollutionDiscription',
+# 'spoilageDiscription', 'uvDiscription', 'coldDiscription',
+# 'heatDiscription', 'discomfortDiscription', 'influDiscription'])
 ```
