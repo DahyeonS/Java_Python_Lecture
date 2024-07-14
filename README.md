@@ -2039,7 +2039,6 @@
 >     print('일치')
 > else :
 >     print('불일치')
-> rs.group()
 > ```
 > ### *output*
 >> #### jupyter
@@ -2071,7 +2070,8 @@
 ## 2023.12.8
 > **[XML / JSON 크롤링](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231208/XML_JSON_%ED%81%AC%EB%A1%A4%EB%A7%81.md)**
 > ```python
->
+> response = requests.get(url, verify=False)
+> raw_json = response.json()
 > ```
 > ### *output*
 >> #### jupyter
