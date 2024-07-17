@@ -2,7 +2,7 @@
 - 마찬가지로 requests, BeautifulSoup 등을 이용해 스크래핑
 #### SSL 보안 관련 처리
 ```python
-import urllib3 # urllib의 개선된 패키지
+import urllib3 # urllib의 개선된 라이브러리
 
 urllib3.disable_warnings() # 경고 문구 무시
 urllib3.util.ssl_.DEFAULT_CIPHERS += ':HIGH:!DH:!aNULL' 
