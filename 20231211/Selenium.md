@@ -27,14 +27,45 @@ driver = webdriver.Chrome(options=options) # 해당 설정들을 적용
 ```
 
 ## 동작
+### 창 열기
 ```python
-driver.implicitly_wait(3) # 3초 대기 - time.sleep()에 비해 시간복잡도 개선
-driver.get(url) # 페이지 로드(--headless 미적용시 창 열림)
+driver = webdriver.Chrome() # --headless 미적용시 창 열림
+```
+
+### 대기
+- time.sleep()에 비해 시간복잡도 개선
+```python
+driver.implicitly_wait(3) # 3초 대기
+```
+
+### 페이지 로드
+```python
+driver.get(url)
+```
+
+### 선택자
+```python
+# 구버전
 search = driver.find_element_by_css_selector('#query') # 검색창 선택
+posts = driver.find_elements_by_css_selector('a.area_text_title') # 클릭할 부분 선택
+
+# 최신버전
+search = driver.find_elements('css selector', '#query') # 검색창 선택
+posts = dirver.find_elements('css selector', 'a.area_text_title') # 클릭할 부분 선택
+```
+
+### 키보드 입력
+```python
 search.send_keys('삽살개') # 검색창에 검색어 입력
 search.send_keys(Keys.ENTER) # Enter키 동작
+```
 
-posts = driver.find_elements_by_css_selector('a.area_text_title') # 클릭할 부분 선택
-posts[0].click() # 클릭 동작
-driver.close() # 창 닫기
+### 클릭 동작
+```python
+posts[0].click()
+```
+
+### 창 닫기
+```python
+driver.close() 
 ```
