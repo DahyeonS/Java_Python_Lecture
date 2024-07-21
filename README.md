@@ -2079,7 +2079,7 @@
 >> - 231208-2.ipynb 
 
 ## 2023.12.11
-> **[셀레니움](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231211/Selenium.md)과 [API 활용](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231211/API%20%ED%99%9C%EC%9A%A9.md)**
+> **[셀레니움](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231211/Selenium.md), [세션과 API 활용](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231211/%EC%84%B8%EC%85%98%EA%B3%BC%20API%20%ED%99%9C%EC%9A%A9.md)**
 > ```python
 >
 > ```
