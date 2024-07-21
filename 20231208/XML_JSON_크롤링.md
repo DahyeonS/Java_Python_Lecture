@@ -15,7 +15,7 @@ except AttributeError:
 ```
 ## XML
 - 사이트 주소가 .xml로 끝나는 경우 XML 페이지에 해당
-- HTML과는 형식이 다소 다르나, 같은 방식으로 처리 가능
+- HTML과는 형식이 다소 다르나, BeautifulSoup를 이용해 같은 방식으로 처리 가능
 ```python
 url = f'https://wwwnew.kweather.co.kr/data/JISU/{xml_path}' # xml 페이지 링크
 response = requests.get(url) # url 요청
