@@ -2081,7 +2081,19 @@
 ## 2023.12.11
 > **[셀레니움](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231211/Selenium.md), [세션과 API 활용](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231211/%EC%84%B8%EC%85%98%EA%B3%BC%20API%20%ED%99%9C%EC%9A%A9.md)**
 > ```python
+> from selenium import webdriver
 >
+> driver = webdriver.Chrome()
+> driver.get(url)
+>
+> search = driver.find_elements('css selector', '#query')
+> search.send_keys('삽살개')
+> search.send_keys(Keys.ENTER)
+>
+> posts = dirver.find_elements('css selector', 'a.area_text_title')
+> posts[0].click()
+> 
+> driver.close() 
 > ```
 > ### *output*
 >> #### jupyter
