@@ -11,7 +11,8 @@
 # 패키지 임포트
 from flask import Flask
 
-app = Flask(__name__) # 플라스크 어플리케이션 선언
+# 플라스크 어플리케이션 선언
+app = Flask(__name__)
 
 # 페이지 생성
 @app.route('/') # route() 데코레이터를 통해 페이지 경로 설정
