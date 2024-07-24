@@ -2122,7 +2122,7 @@
 >> - plays.html
 
 ## 2023.12.14
-> **[플라스크]()**
+> **[플라스크](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231213/Flask.md#%EB%9D%BC%EC%9A%B0%ED%8C%85)**
 > ### *output*
 > - myproject.cmd
 >
