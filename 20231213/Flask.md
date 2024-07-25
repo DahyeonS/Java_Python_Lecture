@@ -42,12 +42,16 @@ def create_app() :
 ## 페이지 출력
 - render_template 함수를 통해 HTML 파일을 랜더링(실행)
 ```python
+from flask import render_template
+
 @app.route('/login_form')
 def login_form() :
     return render_template('form.html')
 ```
 - redirect 함수를 통해 특정 경로로 이동
 ```python
+from flask import redirect, url_for
+
 @app.route('/user/<name>')
 def user(name) :
     if name == 'admin' :
@@ -88,6 +92,8 @@ def guest(guest) : # 매개변수 guest에 name을 전달받음
 ```
 *app.py* - 전송받은 값 처리 & 라우팅
 ```python
+from flask import request
+
 # GET 방식
 @app.route('/login_proc_get', methods=['GET'])
 def login_proc_get() :
