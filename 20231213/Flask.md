@@ -45,15 +45,6 @@ def create_app() :
 @app.route('/login_form')
 def login_form() :
     return render_template('form.html')
-
-@app.route('/plays') # POST 방식
-def plays() :
-    t1 = ('갤러그', '너구리', '리니지')
-    l1 = ['야구', '축구', '농구']
-    d1 = {'one':1, 'two':2, 'three':3}
-
-    return render_template('plays.html', title='PLAYS', games=t1,
-    sports=l1, nums=d1) # html에 값 전달
 ```
 - redirect 함수를 통해 특정 경로로 이동
 ```python
@@ -79,7 +70,7 @@ def guest(guest) : # 매개변수 guest에 name을 전달받음
 - Java의 JSP와 비슷하게 HTML 안에서 Python 관련 작업 처리 가능
 - Python에서 값을 받거나 전송하고 HTML애서 전달받은 값을 표시
 
-*form.html* - 값 전송
+*templates/form.html* - 값 전송
 ```HTML
 <!-- GET 방식 -->
 <form action="/login_proc_get" method="get">
@@ -97,11 +88,51 @@ def guest(guest) : # 매개변수 guest에 name을 전달받음
 ```
 *app.py* - 전송받은 값 처리 & 라우팅
 ```python
+# GET 방식
+@app.route('/login_proc_get', methods=['GET'])
+def login_proc_get() :
+    user_id = request.args.get('user_id') # 파라미터 값을 요청해서 전달받음
+    user_pwd = request.args.get('user_pwd')
+    print(user_id, user_pwd)
 
+    return f'login user id {user_id}, login user pwd {user_pwd}'
+
+# POST 방식
+@app.route('/login_proc_post', methods=['POST'])
+def login_proc_post() :
+    user_id = request.form['user_id'] # 파라미터 값을 요청해서 전달받음
+    user_pwd = request.form['user_pwd']
+    print(user_id, user_pwd)
+
+    return f'login user id {user_id}, login user pwd {user_pwd}'
 ```
-*plays.html* - 전달받은 값 출력
-```HTML
+- render_template 함수를 통해서도 값 전송 가능
+```python
+@app.route('/plays') # POST 방식
+def plays() :
+    t1 = ('갤러그', '너구리', '리니지')
+    l1 = ['야구', '축구', '농구']
+    d1 = {'one':1, 'two':2, 'three':3}
 
+    return render_template('plays.html', title='PLAYS', games=t1,
+    sports=l1, nums=d1) # html에 값 전달
+```
+*templates/plays.html* - 전달받은 값 출력
+```HTML
+<h1>title: {{title}}</h1> <!-- title: PLAYS -->
+
+<!-- 반복문 활용 -->
+<ul>
+    {% for g in games %}
+        <li>{{g}}</li> <!-- 각 줄 마다 갤러그, 너구리, 리니지 출력 -->
+    {% endfor %}
+</ul>
+
+<ul>
+    {% for k, v in nums.items() %}
+        <li>{{k}}, {{v}}</li> <!-- 각 줄 마다 키, 값 출력 -->
+    {% endfor %}
+</ul>
 ```
 
 ## 라우팅
