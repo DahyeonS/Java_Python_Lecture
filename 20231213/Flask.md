@@ -44,9 +44,16 @@ def create_app() :
 ### jinja2
 - Java의 JSP와 비슷하게 HTML 안에서 Python 관련 작업 처리 가능
 - Python에서 값을 받거나 전송하고 HTML애서 전달받은 값을 표시
+
+*form.html* - 값 전송
+```HTML
+
+```
+*app.py* - 전송받은 값 처리 & 라우팅
 ```python
 
 ```
+*plays.html* - 전달받은 값 출력
 ```HTML
 
 ```
