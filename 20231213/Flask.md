@@ -32,10 +32,38 @@ if __name__ == '__main__' :
 
 ### jinja2
 - Java의 JSP와 비슷하게 HTML 안에서 Python 관련 작업 처리 가능
+- Python에서 값을 받거나 전송하고 HTML애서 전달받은 값을 표시
+```python
+
+```
+```HTML
+
+```
 
 ## 라우팅
 - 페이지 경로 별 처리 방식 설정
 - 블루프린트를 통해 app.py와 작업 분리 가능
+*app.py*
+```python
+def create_app() :
+    app = Flask(__name__)
+
+    # Route
+    from .views import main_views
+    app.register_blueprint(main_views.bp)
+
+    return app
+```
+
+*main_views.py*
+```python
+from flask import Blueprint
+
+bp = Blueprint('main', __name__, url_prefix='/')
+@bp.route('/')
+def index() :
+    return render_template('index.html')
+```
 
 ## 작업 분리
 *views/main_views.py*
