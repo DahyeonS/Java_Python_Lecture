@@ -168,7 +168,27 @@ def index() :
 
 *app.py*
 ```python
+from flask_migrate import Migrate
+from flask_sqlalchemy import SQLAlchemy
+import config
 
+db = SQLAlchemy()
+migrate = Migrate() # DB 마이그레이션
+
+def create_app() :
+    app = Flask(__name__)
+    app.config.from_object(config)
+
+    # ORM - DB 작업
+    db.init_app(app)
+    migrate.init_app(app, db)
+    from . import models
+
+    # Route
+    from .views import main_views
+    app.register_blueprint(main_views.bp)
+
+    return app
 ```
 *config.py*
 ```python
