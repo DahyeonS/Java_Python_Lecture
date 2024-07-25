@@ -249,5 +249,5 @@ Lorem ipsum dolor <sup> sit amet</sup>
 ```
 
 #### vscode로 입력 시 단축키
-- 태그\*숫자 - 해당 태그를 숫자 갯수만큼 생성 *ex)input*5*
+- 태그\*숫자 - 해당 태그를 숫자 갯수만큼 생성 *ex)input\*5*
 - 태그>태그 - 부모/자식 태그를 순차적으로 생성 *ex)ul>li*
