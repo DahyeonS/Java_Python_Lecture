@@ -22,13 +22,14 @@ const c = 30;
 
 ### 날짜형 변수
 ```javascript
-const date = new Date();
-const year = date.getFullYear(); // 연
-const month = date.getMonth(); // 월
-const day = date.getDay(); // 일
-const hours = date.getHours(); // 시
-const minutes = date.getMinutes(); // 분
-const seconds = date.getSeconds(); // 초
+const dt = new Date(); // 현재 시
+const year = dt.getFullYear(); // 연
+const month = dt.getMonth(); // 월(0~11)
+const date = dt.getDate(); // 일
+const day = dt.getDay(); // 요일 (일(1)~토(6))
+const hours = dt.getHours(); // 시
+const minutes = dt.getMinutes(); // 분
+const seconds = dt.getSeconds(); // 초
 ```
 
 ### 배열
