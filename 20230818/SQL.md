@@ -5,7 +5,7 @@
 CREATE TABLE account (
 	user_id SERIAL PRIMARY KEY,
 	-- SERIAL - PostgreSQL에서만 쓸 수 있는 자동 증가 정수
-	-- PRIMARY KEY - 기본키(중복 불가, NULL 불가
+	-- PRIMARY KEY - 기본키(중복 불가, NULL 불가)
 	username VARCHAR(50) UNIQUE NOT NULL,
 	-- VARCHAR - 가변형 문자열
 	-- TEXT - 크기 제한이 없는 가변형 문자열
