@@ -39,6 +39,7 @@ def create_app() :
 
     return app
 ```
+## 페이지 출력
 - render_template 함수를 통해 HTML 파일을 랜더링(실행)
 ```python
 @app.route('/login_form')
