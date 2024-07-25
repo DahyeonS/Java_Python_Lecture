@@ -6,6 +6,10 @@
 - *[점프 투 플라스크](https://wikidocs.net/book/4542)를 참고하며 작업하였습니다.*
 
 ## 시작
+- 접속 링크는 *http://127.0.0.1:5000*
+- debug를 True로 설정 시 수정사항이 실시간으로 반영됨
+- 명령 프롬프트의 FLASK_APP 설정을 통해 app 외의 다른 파일명으로 설정 가능
+
 *app.py*
 ```python
 # 패키지 임포트
@@ -24,9 +28,6 @@ def index() : # View 함수
 if __name__ == '__main__' :
     app.run(debug=True)
 ```
-- 접속 링크는 *http://127.0.0.1:5000*
-- debug를 True로 설정 시 수정사항이 실시간으로 반영됨
-- 명령 프롬프트의 FLASK_APP 설정을 통해 app 외의 다른 파일명으로 설정 가능
 
 ## 값 전송 / 처리
 
