@@ -43,6 +43,7 @@ if __name__ == '__main__' :
 ## 라우팅
 - 페이지 경로 별 처리 방식 설정
 - 블루프린트를 통해 app.py와 작업 분리 가능
+
 *app.py*
 ```python
 def create_app() :
