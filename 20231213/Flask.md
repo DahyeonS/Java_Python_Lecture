@@ -165,6 +165,7 @@ def index() :
 - 플라스크의 SQLAlchemy 설치 필요
 - 개발 단계에서는 비교적 가벼운 SQLite를 사용
 - 배포 단계에서는 실제 서버를 운영하기 때문에 MySQL, PostgreSQL 등을 사용
+- 도중에 사용하는 데이터베이스가 달라져도 설정만 수정하면 호환 가능
 
 *app.py*
 ```python
@@ -192,9 +193,28 @@ def create_app() :
 ```
 *config.py*
 ```python
+import os
 
+BASE_DIR = os.path.dirname(__file__) # 현재 디렉토리
+db_path = os.path.join(BASE_DIR, 'pybo.db') # pybo.db라는 DB 사용(마이그레이트 시 자동생성)
+SQLALCHEMY_DATABASE_URI = f'sqlite:///{db_path}' # SQLite 데이터베이스 사용
+SQLALCHEMY_TRACK_MODIFICATIONS = False # SQLAlchemy 이벤트 처리 옵션(불필요)
 ```
 *models.py*
 ```python
 from app import db
+
+class Question(db.Model): # Question 테이블 생성
+    id = db.Column(db.Integer, primary_key=True) # 숫자형, 기본키
+    subject = db.Column(db.String(200), nullable=False) # 200자 제한 문자형, NULL 비허용
+    content = db.Column(db.Text(), nullable=False) # 글자 수 제한이 없는 문자형, NULL 비허용
+    create_date = db.Column(db.DateTime(), nullable=False) # 날짜형, NULL 비허용
+
+class Answer(db.Model): # Answer 테이블 생성
+    id = db.Column(db.Integer, primary_key=True) # 숫자형, 기본키
+    question_id = db.Column(db.Integer, db.ForeignKey('question.id', ondelete='CASCADE')) # 숫자형, Question 테이블의 id의 외래키(삭제 시 같이 삭제)
+    question = db.relationship('Question', backref=db.backref('answer_set')) # Question 테이블과 양방향 참조
+    content = db.Column(db.Text(), nullable=False) # 글자 수 제한이 없는 문자형, NULL 비허용
+    create_date = db.Column(db.DateTime(), nullable=False) # 날짜형, NULL 비허용
+
 ```
