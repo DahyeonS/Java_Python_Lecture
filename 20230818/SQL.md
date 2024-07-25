@@ -223,6 +223,7 @@ SELECT staff_id, COUNT(payment_id) FROM payment p GROUP BY staff_id;
 ```
 
 #### GROUPING SET
+그룹 칼럼의 개별 합계
 ```SQL
 SELECT brand, segment, SUM(quantity) FROM sales GROUP BY GROUPING SETS ((brand, segment), (brand), (segment), ());
 ```
