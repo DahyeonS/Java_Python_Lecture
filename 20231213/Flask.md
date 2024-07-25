@@ -39,6 +39,40 @@ def create_app() :
 
     return app
 ```
+## 라우팅
+- render_template 함수를 통해 HTML 파일을 랜더링(실행)
+```python
+@app.route('/login_form')
+def login_form() :
+    return render_template('form.html')
+
+@app.route('/plays') # POST 방식
+def plays() :
+    t1 = ('갤러그', '너구리', '리니지')
+    l1 = ['야구', '축구', '농구']
+    d1 = {'one':1, 'two':2, 'three':3}
+
+    return render_template('plays.html', title='PLAYS', games=t1,
+    sports=l1, nums=d1) # html에 값 전달
+```
+- redirect 함수를 통해 특정 경로로 이동
+```python
+@app.route('/user/<name>')
+def user(name) :
+    if name == 'admin' :
+        return redirect(url_for('admin')) # 메소드명에 속한 링크로 이동
+    else :
+        return redirect(url_for('guest', guest=name)) # name을 매개변수 guest로 넣어서 리다이렉트
+
+@app.route('/admin')
+def admin() :
+    return 'Hello Admin' # name이 admin일 때 출력
+
+@app.route('/guest/<guest>')
+def guest(guest) : # 매개변수 guest에 name을 전달받음
+    return f'Hello {guest}' # name이 guest일 때 출력
+```
+
 ## 값 전송 / 처리
 
 ### jinja2
@@ -47,7 +81,19 @@ def create_app() :
 
 *form.html* - 값 전송
 ```HTML
+<!-- GET 방식 -->
+<form action="/login_proc_get" method="get">
+    ID <input type="text" name="user_id"> <br>
+    PW <input type="text" name="user_pwd"> <br>
+    <input type="submit" value="Submit">
+</form>
 
+<!-- POST 방식 -->
+<form action="/login_proc_post" method="post">
+    ID <input type="text" name="user_id"> <br>
+    PW <input type="text" name="user_pwd"> <br>
+    <input type="submit" value="Submit">
+</form>
 ```
 *app.py* - 전송받은 값 처리 & 라우팅
 ```python
