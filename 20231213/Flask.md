@@ -28,7 +28,17 @@ def index() : # View 함수
 if __name__ == '__main__' :
     app.run(debug=True)
 ```
+- create_app() 함수를 선언하는 방식으로도 플라스크 실행 가능
+```python
+def create_app() :
+    app = Flask(__name__)
 
+    @app.route('/')
+    def hello() :
+        return 'Hello, World!'
+
+    return app
+```
 ## 값 전송 / 처리
 
 ### jinja2
