@@ -162,3 +162,19 @@ def index() :
 
 ## 모델
 - 데이터베이스 관련 작업
+- 플라스크의 SQLAlchemy 설치 필요
+- 개발 단계에서는 비교적 가벼운 SQLite를 사용
+- 배포 단계에서는 실제 서버를 운영하기 때문에 MySQL, PostgreSQL 등을 사용
+
+*app.py*
+```python
+
+```
+*config.py*
+```python
+
+```
+*models.py*
+```python
+from app import db
+```
