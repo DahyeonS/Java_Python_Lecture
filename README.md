@@ -2112,7 +2112,14 @@
 ## 2023.12.13
 > **[플라스크](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231213/Flask.md)**
 > ```python
->
+> def create_app() :
+>     app = Flask(__name__)
+> 
+>     @app.route('/')
+>     def hello() :
+>         return 'Hello, World!'
+> 
+>     return app
 > ```
 > ### *output*
 > - app.py
