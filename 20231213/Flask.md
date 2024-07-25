@@ -150,8 +150,7 @@ def create_app() :
 
     return app
 ```
-
-*main_views.py*
+*views/main_views.py*
 ```python
 from flask import Blueprint
 
@@ -159,12 +158,6 @@ bp = Blueprint('main', __name__, url_prefix='/')
 @bp.route('/')
 def index() :
     return render_template('index.html')
-```
-
-## 작업 분리
-*views/main_views.py*
-```python
-
 ```
 
 ## 모델
