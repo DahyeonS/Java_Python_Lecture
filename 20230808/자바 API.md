@@ -306,7 +306,7 @@ today.get(Calendar.SECOND);
 ```java
 today.get(Calendar.MILLISECOND);
 ```
-#### 타임존(12 ~ 12)
+#### 타임존(-12 ~ +12)
 ```java
 today.get(Calendar.ZONE_OFFSET) / (60 * 60 * 1000);
 ```
