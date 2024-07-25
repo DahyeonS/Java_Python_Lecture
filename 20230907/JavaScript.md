@@ -22,7 +22,7 @@ const c = 30;
 
 ### 날짜형 변수
 ```javascript
-const dt = new Date(); // 현재 시
+const dt = new Date(); // 현재 시각
 const year = dt.getFullYear(); // 연
 const month = dt.getMonth(); // 월(0~11)
 const date = dt.getDate(); // 일
