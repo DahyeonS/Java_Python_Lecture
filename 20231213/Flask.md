@@ -216,5 +216,8 @@ class Answer(db.Model): # Answer 테이블 생성
     question = db.relationship('Question', backref=db.backref('answer_set')) # Question 테이블과 양방향 참조
     content = db.Column(db.Text(), nullable=False) # 글자 수 제한이 없는 문자형, NULL 비허용
     create_date = db.Column(db.DateTime(), nullable=False) # 날짜형, NULL 비허용
-
 ```
+- 첫 사용시 명령 프롬프트에서 flask db init로 DB 초기화(필요한 경우만)
+- DB 초기화 시 db 파일이 자동 생성됨
+- 테이블 추가/변경 시 명령 프롬프트에서 flask db migrate 입력
+- 마이그레이트 후 명령 프롬프트에서 flask db upgrade를 입력해 변경 사항을 실제 DB에 적용
