@@ -238,6 +238,8 @@ from app import db
 - 새 데이터 객체 생성 후 db.session.add()로 데이터 추가
 - 반드시 커밋해야 수정사항이 실제로 적용됨
 ```python
+from models import Question
+
 q = Question(
     subject='질문입니다.', content='오늘은 무슨 요일인가요?', create_date=datetime.now()
     ) # 새 데이터 객체 생성
