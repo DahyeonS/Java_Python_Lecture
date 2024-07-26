@@ -227,3 +227,55 @@ class Answer(db.Model): # Answer 테이블 생성
 - DB 초기화 시 db 파일이 자동 생성됨
 - 테이블 추가/변경 시 명령 프롬프트에서 flask db migrate 입력
 - 마이그레이트 후 명령 프롬프트에서 flask db upgrade를 입력해 변경 사항을 실제 DB에 적용
+
+### DB 데이터 처리
+- 명령 프롬프트에 flask shell을 입력해 쉘로 작업하거나, 함수 또는 파일로 코드를 작성
+```python
+from app import db
+```
+
+#### 데이터 추가
+- 새 데이터 객체 생성 후 db.session.add()로 데이터 추가
+- 반드시 커밋해야 수정사항이 실제로 적용됨
+```python
+q = Question(
+    subject='질문입니다.', content='오늘은 무슨 요일인가요?', create_date=datetime.now()
+    ) # 새 데이터 객체 생성
+db.session.add() # 데이터 추가
+
+db.session.commit() # 커밋
+```
+
+#### 데이터 조회
+- SELECT문에 해당
+```python
+Question.query.all() # Question 테이블의 모든 칼럼 조회
+
+Question.query.filter(Question.id==1).all() # Question 테이블의 id가 1인 모든 칼럼 조회
+
+Question.query.get(1) # Question 테이블의 키본키의 값이 1인 칼럼 조회
+
+Question.query.filter(Question.subject.like('%플라스크%')).all()
+# Question 테이블의 subject의 값에 '플라스크'가 포함된 칼럼 조회
+
+q.id # 1
+# (데이터 객체.로우 이름) 형식으로 로우 값을 불러오기 가능
+```
+
+#### 데이터 수정
+- 반드시 커밋해야 수정사항이 실제로 적용됨
+```python
+q = Question.query.get(2) # Question 테이블의 키본키의 값이 2인 칼럼
+q.subject = 'Flask Model Question' # subject를 수정
+
+db.session.commit() # 커밋
+```
+
+#### 데이터 삭제
+- 반드시 커밋해야 수정사항이 실제로 적용됨
+```python
+q = Question.query.get(1) # Question 테이블의 키본키의 값이 1인 칼럼
+db.session.delete(q) # 데이터 삭제
+
+db.session.commit() # 커밋
+```
