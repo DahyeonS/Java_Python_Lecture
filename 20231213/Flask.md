@@ -262,6 +262,8 @@ Question.query.filter(Question.subject.like('%플라스크%')).all()
 
 q.id # 1
 # (데이터 객체.로우 이름) 형식으로 로우 값을 불러오기 가능
+
+Question.query.order_by(Question.create_date.desc()) # 생성날짜 별로 내림차순 정렬
 ```
 
 #### 데이터 수정
