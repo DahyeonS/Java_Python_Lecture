@@ -2161,7 +2161,10 @@
 >>>>> - question_detail.html
 
 ## 2023.12.15
-> **[플라스크]()**
+> **[플라스크](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231213/Flask.md#%ED%8F%BC)**
+> ```python
+> 
+> ```
 > ### *output*
 >> #### myproject
 >>> ##### pybo
