@@ -9,6 +9,7 @@
 - 접속 링크는 *http://127.0.0.1:5000*
 - debug를 True로 설정 시 수정사항이 실시간으로 반영됨
 - 명령 프롬프트의 FLASK_APP 설정을 통해 app 외의 다른 파일명으로 설정 가능
+- 명령 프롬프트에서 FLASK_DEBUG=true를 입력하면 코드 수정 시 자동으로 새로고침이 됨
 
 *app.py*
 ```python
@@ -26,7 +27,7 @@ def index() : # View 함수
 
 # 실행
 if __name__ == '__main__' :
-    app.run(debug=True)
+    app.run(debug=True) # 코드 수정 시 자동 새로고침
 ```
 - create_app() 함수를 선언하는 방식으로도 플라스크 실행 가능
 ```python
@@ -39,6 +40,11 @@ def create_app() :
 
     return app
 ```
+
+##### cmd 파일
+- 명령 프롬프트에 입력할 문구를 저장한 뒤, 해당 파일을 실행하는 방식으로 명령 자동화
+- *@echo off* - 실행 시 입력 문구가 출력되지 않은 채로 실행
+
 ## 페이지 출력
 - render_template 함수를 통해 HTML 파일을 랜더링(실행)
 ```python
@@ -283,3 +289,5 @@ db.session.delete(q) # 데이터 삭제
 
 db.session.commit() # 커밋
 ```
+
+## 폼
