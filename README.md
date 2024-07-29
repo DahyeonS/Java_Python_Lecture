@@ -2131,7 +2131,15 @@
 ## 2023.12.14
 > **[플라스크](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231213/Flask.md#%EB%9D%BC%EC%9A%B0%ED%8C%85)**
 > ```python
+> from app import db
+> from models import Question
 >
+> q = Question(subject='제목', content='내용', create_date=datetime.now())
+> db.session.add()
+> db.session.commit()
+>
+> result = Question.query.filter(Question.id==1).all()
+> result[0].id # 1
 > ```
 > ### *output*
 > - myproject.cmd
