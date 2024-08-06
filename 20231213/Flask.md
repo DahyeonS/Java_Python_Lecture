@@ -188,7 +188,7 @@ def create_app() :
 ```
 *views/main_views.py*
 ```python
-from flask import Blueprint
+from flask import Blueprint, render_template
 
 bp = Blueprint('main', __name__, url_prefix='/') # main이라는 이름의 블루프린트로 등록, URL 접두사 없음
 @bp.route('/')
@@ -202,6 +202,15 @@ bp = Blueprint('main', __name__, url_prefix='/')
 @bp.route('/')
 def index() :
     return redirect(url_for('question._list')) # question 블루프린트로 등록된 뷰의 _list 함수로 이동
+```
+*views/question_views.py*
+```python
+from flask import Blueprint, render_template
+
+bp = Blueprint('question', __name__, url_prefix='/question') # question이라는 이름의 블루프린트로 등록, URL 접두사는 question
+@bp.route('/list')
+def _list() :
+    return render_template('question/question_list.html')
 ```
 
 ## 모델
