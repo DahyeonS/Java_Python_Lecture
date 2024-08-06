@@ -137,14 +137,31 @@ def plays() :
 <ul>
     {% for g in games %}
         <li>{{g}}</li> <!-- 각 줄 마다 갤러그, 너구리, 리니지 출력 -->
-    {% endfor %}
+    {% endfor %} <!-- 반드시 반복문을 닫아야 함 -->
 </ul>
 
 <ul>
     {% for k, v in nums.items() %}
         <li>{{k}}, {{v}}</li> <!-- 각 줄 마다 키, 값 출력 -->
-    {% endfor %}
+    {% endfor %} <!-- 반드시 반복문을 닫아야 함 -->
 </ul>
+
+<!-- 조건문 활용 -->
+{% if games %}
+    <ul>
+        {% for g in games %}
+            <li>{{g}}</li>
+        {% endfor %}
+    </ul>
+{% elif nums %}
+    <ul>
+        {% for k, v in nums.items() %}
+            <li>{{k}}, {{v}}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <h3>데이터 없음</h3>
+{% endif %} <!-- 반드시 조건문을 닫아야 함 -->
 ```
 
 ## 라우팅
