@@ -146,10 +146,10 @@ def plays() :
     {% endfor %} <!-- 반드시 반복문을 닫아야 함 -->
 </ul>
 
-{% for item in list %}
+{% for g in games %}
     <p>0부터 순서: {{ loop.index() }} </p> <!-- 0부터 1씩 증가하는 반복 순서 -->
     <p>1부터 순서: {{ loop.index }} </p> <!-- 1부터 1씩 증가하는 반복 순서 -->
-    <p>{{ item }}</p>
+    <p>{{ g }}</p>
 {% endfor %}
 
 <!-- 조건문 활용 -->
@@ -172,7 +172,8 @@ def plays() :
 
 ## 라우팅
 - 페이지 경로 별 처리 방식 설정
-- 블루프린트를 통해 app.py와 작업 분리 가능
+- 블루프린트를 통해 라우팅 함수의 URL을 등록, app.py와 작업 분리 가능
+- url_for을 이용해 라우팅 함수로 등록되어 있는 URL을 찾아줌
 
 *app.py*
 ```python
@@ -189,10 +190,18 @@ def create_app() :
 ```python
 from flask import Blueprint
 
-bp = Blueprint('main', __name__, url_prefix='/')
+bp = Blueprint('main', __name__, url_prefix='/') # main이라는 이름의 블루프린트로 등록, URL 접두사 없음
 @bp.route('/')
 def index() :
     return render_template('index.html')
+```
+```python
+from flask import Blueprint, url_for, redirect
+
+bp = Blueprint('main', __name__, url_prefix='/')
+@bp.route('/')
+def index() :
+    return redirect(url_for('question._list')) # question 블루프린트로 등록된 뷰의 _list 함수로 이동
 ```
 
 ## 모델
@@ -285,6 +294,7 @@ Question.query.all() # Question 테이블의 모든 칼럼 조회
 Question.query.filter(Question.id==1).all() # Question 테이블의 id가 1인 모든 칼럼 조회
 
 Question.query.get(1) # Question 테이블의 키본키의 값이 1인 칼럼 조회
+Question.query.get_or_404(1) # 해당 데이터를 찾을 수 없는 경우 404 오류 페이지 출력
 
 Question.query.filter(Question.subject.like('%플라스크%')).all()
 # Question 테이블의 subject의 값에 '플라스크'가 포함된 칼럼 조회
