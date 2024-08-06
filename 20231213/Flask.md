@@ -175,6 +175,7 @@ def plays() :
 - 블루프린트를 통해 라우팅 함수의 URL을 등록, app.py와 작업 분리 가능
 - url_for을 이용해 라우팅 함수로 등록되어 있는 URL을 찾아줌
 
+##### Case 1
 *app.py*
 ```python
 def create_app() :
@@ -195,6 +196,21 @@ bp = Blueprint('main', __name__, url_prefix='/') # main이라는 이름의 블�
 def index() :
     return render_template('index.html')
 ```
+
+##### Case 2
+*app.py*
+```python
+def create_app() :
+    app = Flask(__name__)
+
+    # Route
+    from .views import main_views, question_views
+    app.register_blueprint(main_views.bp)
+    app.register_blueprint(question_views.bp)
+
+    return app
+```
+*views/main_views.py*
 ```python
 from flask import Blueprint, url_for, redirect
 
