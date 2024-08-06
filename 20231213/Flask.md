@@ -146,6 +146,12 @@ def plays() :
     {% endfor %} <!-- 반드시 반복문을 닫아야 함 -->
 </ul>
 
+{% for item in list %}
+    <p>0부터 순서: {{ loop.index() }} </p> <!-- 0부터 1씩 증가하는 반복 순서 -->
+    <p>1부터 순서: {{ loop.index }} </p> <!-- 1부터 1씩 증가하는 반복 순서 -->
+    <p>{{ item }}</p>
+{% endfor %}
+
 <!-- 조건문 활용 -->
 {% if games %}
     <ul>
