@@ -186,6 +186,10 @@ def plays() :
 
 <!-- 아이콘(반드시 Head 태그 안에 입력) -->
 <link rel="icon" href="{{ url_for('static', filename='img/favicon.ico') }}" type="image/x-icon">
+
+<!-- a태그(라우팅) -->
+<a href="{{url_for('question.detail', question_id=q.id)}}">{{q.subject}}</a>
+<!-- question_id에 값을 담은 채 question 블루프린트로 등록된 뷰의 detail 함수로 이동 -->
 ```
 ##### 템플릿 상속
 ```HTML
