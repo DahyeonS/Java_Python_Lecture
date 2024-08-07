@@ -196,21 +196,60 @@ def plays() :
 - extends와 include를 사용해서 다른 HTML 파일을 연결
 ###### extends
 - extends는 block content 부분에 상속한 템플릿(HTML 파일)이 삽임됨
-- 상속되는 템플릿(HTML 파일)은 별도의 Head 태그 등을 생략하고 <i>extends '파일명.html'</i>로 대체함
+- 상속되는 템플릿(HTML 파일)은 별도의 Head 태그 등을 생략하고 <i>extends '파일명.html'</i>로 대체한 뒤, block content 안에 내용이 들어감
 ###### include
 - <i>include '파일명.html'</i>로 다른 템플릿(HTML 파일)의 내용을 삽입함
 - 삽입되는 템플릿(HTML 파일)은 별도의 Head 태그 등을 생략하고 입력하고자 하는 코드만 작성하면 됨
+
 *base.html*
 ```HTML
+<body>
+    {% include "navbar.html" %} <!-- navbar.html이 삽입 -->
 
+    {% block content %} <!-- 해당 부분에 상속되는 템플릿의 내용이 삽입 -->
+
+    {% endblock %} <!-- 반드시 블록을 닫아야 함 -->
+</body>
 ```
 *navbar.html*
 ```HTML
-
+<nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="{{ url_for('main.index') }}">Pybo</a>
+    </div>
+</nav>
 ```
 *question_list.html*
 ```HTML
-
+{% extends 'base.html' %} <!-- base.html에서 상속받은 템플릿 -->
+{% block content %} <!-- base.html에서 출력하고자 하는 내용 -->
+<div class="container my-3">
+    <table class="table">
+        <thead>
+            <tr class="table-dark">
+                <th>번호</th>
+                <th>제목</th>
+                <th>날짜</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% if question_list %}
+            {% for q in question_list.items %}
+            <tr>
+                <td>{{q.id}}</td>
+                <td><a href="{{url_for('question.detail', question_id=q.id)}}">{{q.subject}}</a></td>
+                <td>{{q.create_date}}</td>
+            </tr>
+            {% endfor %}
+            {% else %}
+            <tr>
+                <td colspan="3">File Not Found!!</td>
+            </tr>
+            {% endif %}
+        </tbody>
+    </table>
+</div>
+{% endblock %} <!-- 반드시 블록을 닫아야 함 -->
 ```
 
 ## 라우팅
