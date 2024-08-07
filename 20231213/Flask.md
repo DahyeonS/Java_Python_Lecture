@@ -171,8 +171,21 @@ def plays() :
 
 #### 디렉토리 연결 및 템플릿 상속
 ##### 디렉토리 연결
+- Head 또는 Body 태그 안에 url_for 함수 사용
+- 연결할 수 있는 파일은 js, css, 이미지, 아이콘 등이 있음
+- a태그와 url_for 함수를 활용하면 특정 위치로 라우팅 가능
 ```HTML
+<!-- 스크립트 -->
+<script src="{{ url_for('static', filename='js/index.js') }}"></script> <!-- js 폴더에 위치한 index.js 연결 -->
 
+<!-- 스타일 CSS -->
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> <!-- 현재 디렉토리에 위치한 style.css 연결 -->
+
+<!-- 이미지 -->
+<img src="{{ url_for('static', filename='img/image.png') }}"> <!-- img 폴더에 위치한 image.png 연결 -->
+
+<!-- 아이콘 -->
+<link rel="icon" href="{{ url_for('static', filename='img/favicon.ico') }}" type="image/x-icon"> <!-- img 폴더에 위치한 favicon.ico 연결(반드시 Head 태그 안에 입력) -->
 ```
 ##### 템플릿 상속
 ```HTML
