@@ -184,8 +184,8 @@ def plays() :
 <!-- 이미지 -->
 <img src="{{ url_for('static', filename='img/image.png') }}"> <!-- img 폴더에 위치한 image.png 연결 -->
 
-<!-- 아이콘 -->
-<link rel="icon" href="{{ url_for('static', filename='img/favicon.ico') }}" type="image/x-icon"> <!-- 반드시 Head 태그 안에 입력 -->
+<!-- 아이콘(반드시 Head 태그 안에 입력) -->
+<link rel="icon" href="{{ url_for('static', filename='img/favicon.ico') }}" type="image/x-icon">
 ```
 ##### 템플릿 상속
 ```HTML
