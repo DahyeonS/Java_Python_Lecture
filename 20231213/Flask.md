@@ -196,9 +196,9 @@ def plays() :
 - extends와 include를 사용해서 다른 HTML 파일을 연결
 ###### extends
 - extends는 block content 부분에 상속한 템플릿(HTML 파일)이 삽임됨
-- 상속되는 템플릿(HTML 파일)은 별도의 Head 태그 등을 생략하고 *extends '파일명.html'*로 대체함
+- 상속되는 템플릿(HTML 파일)은 별도의 Head 태그 등을 생략하고 <i>extends '파일명.html'</i>로 대체함
 ###### include
-- *include '파일명.html'*로 다른 템플릿(HTML 파일)의 내용을 삽입함
+- <i>include '파일명.html'</i>로 다른 템플릿(HTML 파일)의 내용을 삽입함
 - 삽입되는 템플릿(HTML 파일)은 별도의 Head 태그 등을 생략하고 입력하고자 하는 코드만 작성하면 됨
 *base.html*
 ```HTML
