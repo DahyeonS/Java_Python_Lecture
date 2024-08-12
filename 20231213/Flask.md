@@ -431,4 +431,4 @@ db.session.commit() # 커밋
 ```
 
 ## 폼
-- flask-wtf 설치 필요
+- flask-wtf 설치 및 환경 변수 SECRET_KEY 설정 필요(CSRF 방지)
