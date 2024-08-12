@@ -431,3 +431,4 @@ db.session.commit() # 커밋
 ```
 
 ## 폼
+- flask-wtf 설치 필요
