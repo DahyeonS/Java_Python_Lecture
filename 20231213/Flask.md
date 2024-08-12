@@ -9,9 +9,10 @@
 - 접속 링크는 *http://127.0.0.1:5000*
 - debug를 True로 설정 시 수정사항이 실시간으로 반영됨
 - 명령 프롬프트의 FLASK_APP 설정을 통해 app 외의 다른 파일명으로 설정 가능
+- app.py가 아닌 폴더명으로 사용할 경우 해당 폴더 안에 \_\_init\_\_.py로 파일명을 설정해야 함
 - 명령 프롬프트에서 FLASK_DEBUG=true를 입력하면 코드 수정 시 자동으로 새로고침이 됨
 
-*app.py*
+*app.py* 
 ```python
 # 패키지 임포트
 from flask import Flask
@@ -432,3 +433,11 @@ db.session.commit() # 커밋
 
 ## 폼
 - flask-wtf 설치 및 환경 변수 SECRET_KEY 설정 필요(CSRF 방지)
+*config.py*
+```python
+
+```
+*forms.py*
+```python
+
+```
