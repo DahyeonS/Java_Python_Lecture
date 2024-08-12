@@ -433,9 +433,10 @@ db.session.commit() # 커밋
 
 ## 폼
 - flask-wtf 설치 및 환경 변수 SECRET_KEY 설정 필요(CSRF 방지)
+
 *config.py*
 ```python
-
+SECRET_KEY = 'dev' # 개발용 한정, 배포용의 경우 보다 복잡한 문자열로 설정해야 함
 ```
 *forms.py*
 ```python
