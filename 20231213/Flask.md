@@ -432,6 +432,8 @@ db.session.commit() # 커밋
 ```
 
 ## 폼
+- 입력 값의 양식을 설정하여 적합한 값이 전달됐을 때만 처리할 수 있게 함
+- 데이터의 필수 여부, 형식, 길이, 양식 미충족 시 메시지 등을 설정할 수 있음
 - flask-wtf 설치 및 환경 변수 SECRET_KEY 설정 필요(CSRF 방지)
 
 *config.py*
@@ -440,5 +442,25 @@ SECRET_KEY = 'dev' # 개발용 한정, 배포용의 경우 보다 복잡한 문�
 ```
 *forms.py*
 ```python
+from flask_wtf import FlaskForm
+from wtforms import StringField # 데이터 형식
+from wtforms.validators import DataRequired # 데이터 필수 여부
+
+class QuestionForm(FlaskForm) : # FlaskForm을 상속받아 새로운 폼 작성
+    msg = '필수항목입니다.' # 오류 메시지 문자열
+    subject = StringField('제목', validators=[DataRequired(msg)])
+    # 라벨명 '제목', 문자열 형식, 필수 데이터(미충족 시 msg 메시지를 띄움)
+    content = StringField('내용', validators=[DataRequired(msg)])
+    # 라벨명 '내용', 문자열 형식, 필수 데이터(미충족 시 msg 메시지를 띄움)
+```
+
+### 폼 활용
+*views/question_views.py*
+```python
+
+```
+
+*templates/question_form.html*
+```HTML
 
 ```
