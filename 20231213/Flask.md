@@ -483,5 +483,32 @@ def create() :
 
 *templates/question_form.html*
 ```HTML
-
+<form method="post" class="my-3">
+    {{form.csrf_token}} <!-- 폼을 다룰 때는 반드시 CSRF 토큰이 필요함 -->
+    {% if form.errors %} <!-- 폼에 빈 공간이 있을 때 -->
+    <div class="alert alert-danger" role="alert">
+        {% for f, errors in form.errors.items() %}
+        <strong>{{form[f].label}}</strong> <!-- 폼의 데이터 라벨명 -->
+        <ul>
+            {% for e in errors %}
+            <li>{{e}}</li> <!-- 에러 메시지 -->
+            {% endfor %}
+        </ul>
+        {% endfor %}
+    </div>
+    {% endif %}
+    <div class="mb-3">
+        <label for="subject">제목</label>
+        <input type="text" class="form-control" name="subject" id="subject" value="{{form.subject.data or ''}}">
+        <!-- 폼에 저장된 데이터 또는 빈 값 -->
+    </div>
+    <div class="mb-3">
+        <label for="content">내용</label>
+        <textarea type="text" class="form-control" name="content" id="content" rows="10">{{form.content.data or ''}}</textarea>
+        <!-- 폼에 저장된 데이터 또는 빈 값 -->
+    </div>
+    <button type="submit" class="btn btn-primary">저장하기</button>
+</form>
 ```
+
+## 페이징
