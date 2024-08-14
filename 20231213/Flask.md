@@ -457,7 +457,28 @@ class QuestionForm(FlaskForm) : # FlaskForm을 상속받아 새로운 폼 작성
 ### 폼 활용
 *views/question_views.py*
 ```python
+from flask import request, redirect, url_for
+from datetime import datetime
+from ..forms import QuestionForm
+from .. import db
 
+@bp.route('/create', methods=['GET', 'POST']) # GET과 POST 모두 처리
+def create() :
+    form = QuestionForm() # Qustsion 테이블에 넣을 폼 생성
+
+    # 요청을 POST로 전달받고 데이터가 폼의 양식에 알맞을 때 실행
+    if request.method == 'POST' and form.validate_on_submit() :
+        subject = form.subject.data # 폼의 subject 값
+        content = form.content.data # 폼의 content 값
+        question = Question(subject=subject, content=content, create_date=datetime.now())
+        # 현재 시각과 폼의 값들이 담긴 Question 테이블의 새로운 데이터 생성
+
+        db.session.add(question) # db에 해당 데이터를 추가
+        db.session.commit() # 커밋
+        return redirect(url_for('main.index')) # 메인 화면으로 리다이렉트
+        
+    # GET으로 요청받았을 때
+    return render_template('question/question_form.html', form=form) # 빈 폼을 전송
 ```
 
 *templates/question_form.html*
