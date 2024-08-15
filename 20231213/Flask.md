@@ -512,3 +512,9 @@ def create() :
 ```
 
 ## 페이징
+- 플라스크의 SQLAlchemy에 내장된 paginate 함수를 사용
+```python
+page = request.args.get('page', type=int, default=1) # 요청받은 값의 자료형은 int로 한정, 기본값은 1
+question_list = Question.query.order_by(Question.create_date.desc())
+question_list = question_list.paginate(page=page, per_page=10) # 페이지마다 10개씩의 데이터를 리턴
+```
