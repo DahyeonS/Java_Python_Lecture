@@ -2199,6 +2199,9 @@
 
 ## 2023.12.18
 > **[플라스크](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231213/Flask.md#%ED%8E%98%EC%9D%B4%EC%A7%95-%ED%95%84%ED%84%B0)**
+> ```python
+>
+> ```
 > ### *output*
 >> #### myproject
 >>> ##### pybo
