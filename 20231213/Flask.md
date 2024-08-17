@@ -521,7 +521,7 @@ def create() :
 - total	- 전체 데이터 수 *(int)*
 - per_page - 페이지당 데이터 수 *(int)*
 - page - 현재 페이지 번호 *(int)*
-- iter_pages - 페이지 범위 *(배열)*
+- iter_pages - 페이지 범위 *(list화가 가능한 객체)*
 - prev_num - 이전 페이지 번호 *(int)*
 - next_num - 다음 페이지 번호 *(int)*
 - has_prev - 이전 페이지 존재 여부 *(boolean)*
@@ -533,5 +533,48 @@ question_list = Question.query.order_by(Question.create_date.desc())
 question_list = question_list.paginate(page=page, per_page=10) # 페이지마다 10개씩의 데이터를 리턴
 ```
 ```HTML
-
+<!-- 페이징처리 시작 -->
+<ul class="pagination justify-content-center">
+    <!-- 이전페이지 -->
+    {% if question_list.has_prev %}
+    <li class="page-item">
+        <a class="page-link" href="?page={{ question_list.prev_num }}">이전</a>
+    </li>
+    {% else %}
+    <li class="page-item disabled">
+        <a class="page-link" tabindex="-1" aria-disabled="true" href="javascript:void(0)">이전</a>
+    </li>
+    {% endif %}
+    <!-- 페이지번호 -->
+    {% for page_num in question_list.iter_pages() %}
+    {% if page_num %}
+    {% if page_num != question_list.page %}
+    <li class="page-item">
+        <a class="page-link" href="?page={{ page_num }}">{{ page_num }}</a>
+    </li>
+    {% else %}
+    <li class="page-item active" aria-current="page">
+        <a class="page-link" href="javascript:void(0)">{{ page_num }}</a>
+    </li>
+    {% endif %}
+    {% else %}
+    <li class="disabled">
+        <a class="page-link" href="javascript:void(0)">...</a>
+    </li>
+    {% endif %}
+    {% endfor %}
+    <!-- 다음페이지 -->
+    {% if question_list.has_next %}
+    <li class="page-item">
+        <a class="page-link" href="?page={{ question_list.next_num }}">다음</a>
+    </li>
+    {% else %}
+    <li class="page-item disabled">
+        <a class="page-link" tabindex="-1" aria-disabled="true" href="javascript:void(0)">다음</a>
+    </li>
+    {% endif %}
+</ul>
+<!-- 페이징처리 끝 -->
 ```
+
+## 페이징 필터
