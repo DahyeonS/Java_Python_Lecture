@@ -2163,7 +2163,19 @@
 ## 2023.12.15
 > **[플라스크](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231213/Flask.md#%ED%8F%BC)**
 > ```python
-> 
+> @bp.route('/create', methods=['GET', 'POST'])
+> def create() :
+>     form = QuestionForm()
+>     if request.method == 'POST' and form.validate_on_submit() :
+>         subject = form.subject.data
+>         content = form.content.data
+>         question = Question(subject=subject, content=content, create_date=datetime.now())
+>
+>         db.session.add(question)
+>         db.session.commit()
+>         return redirect(url_for('main.index'))
+>        
+>     return render_template('question/question_form.html', form=form)
 > ```
 > ### *output*
 >> #### myproject
@@ -2186,7 +2198,7 @@
 >>>> - style.css
 
 ## 2023.12.18
-> **[플라스크]()**
+> **[플라스크](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231213/Flask.md#%ED%8E%98%EC%9D%B4%EC%A7%95-%ED%95%84%ED%84%B0)**
 > ### *output*
 >> #### myproject
 >>> ##### pybo
