@@ -515,6 +515,18 @@ def create() :
 - 플라스크의 SQLAlchemy에 내장된 paginate 함수를 사용
 - jinja2를 통해 전송할 경우 Paginate 객체 그대로 보내면 됨
 - Ajax나 Axios와 같은 비동기 방식의 경우 JSON으로 변환하여 전송
+
+#### Paginate 객체
+- items	- 데이터베이스에서 가져온 데이터들 *(models 객체)*
+- total	- 전체 데이터 수 *(int)*
+- per_page - 페이지당 데이터 수 *(int)*
+- page - 현재 페이지 번호 *(int)*
+- iter_pages - 페이지 범위 *(배열)*
+- prev_num - 이전 페이지 번호 *(int)*
+- next_num - 다음 페이지 번호 *(int)*
+- has_prev - 이전 페이지 존재 여부 *(boolean)*
+- has_next - 다음 페이지 존재 여부 *(boolean)*
+
 ```python
 page = request.args.get('page', type=int, default=1) # 요청받은 값의 자료형은 int로 한정, 기본값은 1
 question_list = Question.query.order_by(Question.create_date.desc())
