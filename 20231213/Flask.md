@@ -147,7 +147,7 @@ def plays() :
 </ul>
 
 {% for g in games %}
-    <p>0부터 순서: {{ loop.index() }} </p> <!-- 0부터 1씩 증가하는 반복 순서 -->
+    <p>0부터 순서: {{ loop.index0 }} </p> <!-- 0부터 1씩 증가하는 반복 순서 -->
     <p>1부터 순서: {{ loop.index }} </p> <!-- 1부터 1씩 증가하는 반복 순서 -->
     <p>{{ g }}</p>
 {% endfor %}
@@ -578,3 +578,5 @@ question_list = question_list.paginate(page=page, per_page=10) # 페이지마다
 ```
 
 ## 페이징 필터
+- jinja2에서 값을 원하는 형태로 볼 수 있게 하며, |로 해당 기능을 수행함
+- *length* 등의 내장 필터와 사용자 지정 필터 모두 가능
