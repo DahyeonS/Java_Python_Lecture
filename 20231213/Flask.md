@@ -633,3 +633,119 @@ def create_app() :
     </div>
 </div>
 ```
+
+## 회원관리
+### 회원가입
+*model.py*
+```python
+class User(db.Model) :
+    id = db.Column(db.Integer, primary_key=True) # 일련번호 - 기본키
+    username = db.Column(db.String(150), unique=True, nullable=False) # 사용자명(아이디)
+    password = db.Column(db.String(200), nullable=False) # 비밀번호
+    email = db.Column(db.String(120), unique=True, nullable=False) # 이메일
+```
+*forms.py*
+- Email()을 사용하기 위해선 email-validator를 설치해야 함
+```python
+from wtforms import PasswordField, EmailField
+from wtforms.validators import Length, EqualTo, Email
+
+class UserCreateForm(FlaskForm) :
+    username = StringField('사용자이름', validators=[DataRequired(), Length(min=3, max=25)]) # 길이제한 3~25자
+    password1 = PasswordField('비밀번호', validators=[DataRequired(), EqualTo('password2', '비밀번호 불일치')])
+    # password1은 password2와 값이 일치해야 유효
+    password2 = PasswordField('비밀번호 확인', validators=[DataRequired()])
+    email = EmailField('이메일', validators=[DataRequired(), Email()])
+```
+*views/auth_views.py*
+- generate_password_hash 함수는 비밀번호를 암호화시키며, 복호화가 불가능함
+```python
+# auth_views.py
+from flask import Blueprint, redirect, url_for, session
+from flask import render_template, flash, request
+from werkzeug.security import generate_password_hash
+
+from pybo import db
+from pybo.forms import UserCreateForm
+from pybo.models import User
+
+bp = Blueprint('auth', __name__, url_prefix='/auth')
+
+@bp.route('/signup', methods=['POST', 'GET'])
+def signup() :
+    form = UserCreateForm() # 회원가입 폼 생성
+
+    # 요청을 POST로 전달받고 데이터가 폼의 양식에 알맞을 때 실행
+    if request.method == 'POST' and form.validate_on_submit() :
+        user = User.query.filter_by(username=form.username.data).first()
+        if not user : # 중복되는 유저명(아이디)이 없을 경우 실행
+            email = User.query.filter_by(email=form.email.data).first()
+            if not email : # 중복되는 이메일이 없을 경우 실행
+                user = User(username=form.username.data,
+                            password=generate_password_hash(form.password1.data),
+                            email=form.email.data)
+                db.session.add(user) # 새로운 유저 데이터 추가
+                db.session.commit()
+                return redirect(url_for('main.index')) # 메인화면으로 리다이렉트
+            else : # 중복되는 이메일이 있을 경우 실행
+                flash('이미 존재하는 이메일입니다.') # 오류 메시지 전송
+        else : # 중복되는 유저명(아이디)이 있을 경우 실행
+            flash('이미 존재하는 사용자입니다.') # 오류 메시지 전송
+```
+*templates/auth/signup.html*
+```HTML
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <h5 class="my-3 border-bottom pb-2">계정생성</h5>
+    <form method="post">
+        {{form.csrf_token}}
+        {% include "form_errors.html" %}
+        <div class="mb-3">
+            <label for="username">사용자 이름</label>
+            <input type="text" class="form-control" name="username" id="username" value="{{form.username.data or ''}}">
+        </div>
+        <div class="mb-3">
+            <label for="password1">비밀번호</label>
+            <input type="password" class="form-control" name="password1" id="password1" value="{{form.password1.data or ''}}">
+        </div>
+        <div class="mb-3">
+            <label for="password2">비밀번호 확인</label>
+            <input type="password" class="form-control" name="password2" id="password2" value="{{form.password2.data or ''}}">
+        </div>
+        <div class="mb-3">
+            <label for="email">이메일</label>
+            <input type="text" class="form-control" name="email" id="email" value="{{form.email.data or ''}}">
+        </div>
+        <button type="submit" class="btn btn-primary">생성하기</button>
+    </form>
+</div>
+{% endblock %}
+```
+
+#### 오류 메시지 출력
+- 폼이나 flash를 통해 전송받은 오류 메시지를 표시
+*templates/form_errors.html*
+```HTML
+<!-- 폼에 에러 메시지가 있을 때만 작동 -->
+{% if form.errors %}
+    <div class="alert alert-danger" role="alert">
+        {% for f, errors in form.errors.items() %}
+        <strong>{{form[f].label}}</strong> <!-- 오류가 난 데이터의 라벨명 -->
+        <ul>
+            {% for e in errors %}
+            <li>{{e}}</li> <!-- 오류 메시지 출력 -->
+            {% endfor %}
+        </ul>
+        {% endfor %}
+    </div>
+{% endif %}
+<!-- flash 메시지가 있을 때만 작동 -->
+{% for msg in get_flashed_messages() %}
+<div class="alert alert-danger" role="alert">
+    {{msg}}
+</div>
+{% endfor %}
+```
+
+### 로그인
