@@ -202,7 +202,7 @@ def plays() :
 - <i>include '파일명.html'</i>로 다른 템플릿(HTML 파일)의 내용을 삽입함
 - 삽입되는 템플릿(HTML 파일)은 별도의 Head 태그 등을 생략하고 입력하고자 하는 코드만 작성하면 됨
 
-*base.html*
+*templates/base.html*
 ```HTML
 <body>
     {% include "navbar.html" %} <!-- navbar.html이 삽입 -->
@@ -212,7 +212,7 @@ def plays() :
     {% endblock %} <!-- 반드시 블록을 닫아야 함 -->
 </body>
 ```
-*navbar.html*
+*templates/navbar.html*
 ```HTML
 <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
     <div class="container-fluid">
@@ -220,7 +220,7 @@ def plays() :
     </div>
 </nav>
 ```
-*question_list.html*
+*templates/question/question_list.html*
 ```HTML
 {% extends 'base.html' %} <!-- base.html에서 상속받은 템플릿 -->
 {% block content %} <!-- base.html에서 출력하고자 하는 내용 -->
@@ -481,7 +481,7 @@ def create() :
     return render_template('question/question_form.html', form=form) # 빈 폼을 전송
 ```
 
-*templates/question_form.html*
+*templates/question/question_form.html*
 ```HTML
 <form method="post" class="my-3">
     {{form.csrf_token}} <!-- 폼을 다룰 때는 반드시 CSRF 토큰이 필요함 -->
@@ -527,11 +527,16 @@ def create() :
 - has_prev - 이전 페이지 존재 여부 *(boolean)*
 - has_next - 다음 페이지 존재 여부 *(boolean)*
 
+*views/question_views.py*
 ```python
-page = request.args.get('page', type=int, default=1) # 요청받은 값의 자료형은 int로 한정, 기본값은 1
-question_list = Question.query.order_by(Question.create_date.desc())
-question_list = question_list.paginate(page=page, per_page=10) # 페이지마다 10개씩의 데이터를 리턴
+@bp.route('/list')
+def _list() :
+    page = request.args.get('page', type=int, default=1) # 요청받은 값의 자료형은 int로 한정, 기본값은 1
+    question_list = Question.query.order_by(Question.create_date.desc())
+    question_list = question_list.paginate(page=page, per_page=10) # 페이지마다 10개씩의 데이터를 리턴
+    return render_template('question/question_list.html', question_list=question_list)
 ```
+*templates/question/question_list/html*
 ```HTML
 <!-- 페이징처리 시작 -->
 <ul class="pagination justify-content-center">
@@ -580,3 +585,17 @@ question_list = question_list.paginate(page=page, per_page=10) # 페이지마다
 ## 페이징 필터
 - jinja2에서 값을 원하는 형태로 볼 수 있게 하며, |로 해당 기능을 수행함
 - *length* 등의 내장 필터와 사용자 지정 필터 모두 가능
+
+*filter.py*
+```python
+def format_datetime(value, fmt='%Y년 %m월 %d일 %p %I:%M') :
+    return value.strftime(fmt)
+```
+*app.py*
+```python
+
+```
+*templates/question/question_list.html*
+```HTML
+
+```
