@@ -477,8 +477,8 @@ def create() :
         db.session.commit() # 커밋
         return redirect(url_for('main.index')) # 메인 화면으로 리다이렉트
         
-    # GET으로 요청받았을 때
-    return render_template('question/question_form.html', form=form) # 빈 폼을 전송
+    # GET으로 요청받았거나 데이터가 폼의 양식에 알맞지 않을 때
+    return render_template('question/question_form.html', form=form) # 빈 폼 또는 작성 중인 폼을 전송
 ```
 
 *templates/question/question_form.html*
@@ -658,16 +658,16 @@ class UserCreateForm(FlaskForm) :
     email = EmailField('이메일', validators=[DataRequired(), Email()])
 ```
 *views/auth_views.py*
-- generate_password_hash 함수는 비밀번호를 암호화시키며, 복호화가 불가능함
+- generate_password_hash 함수는 문자열을 암호화시키며, 복호화가 불가능함
 ```python
 # auth_views.py
 from flask import Blueprint, redirect, url_for, session
 from flask import render_template, flash, request
 from werkzeug.security import generate_password_hash
 
-from pybo import db
-from pybo.forms import UserCreateForm
-from pybo.models import User
+from app import db
+from app.forms import UserCreateForm
+from app.models import User
 
 bp = Blueprint('auth', __name__, url_prefix='/auth')
 
@@ -691,6 +691,9 @@ def signup() :
                 flash('이미 존재하는 이메일입니다.') # 오류 메시지 전송
         else : # 중복되는 유저명(아이디)이 있을 경우 실행
             flash('이미 존재하는 사용자입니다.') # 오류 메시지 전송
+
+    # GET으로 요청받았거나 데이터가 폼의 양식에 알맞지 않을 때
+    return render_template('auth/signup.html', form=form) # 빈 폼 또는 작성 중인 폼을 전송
 ```
 *templates/auth/signup.html*
 ```HTML
@@ -750,3 +753,81 @@ def signup() :
 ```
 
 ### 로그인
+- 로그인 성공시 session에 회원 정보를 담아 만료되기 전까지 활용 가능
+
+*forms.py*
+```python
+class UserLoginForm(FlaskForm) :
+    username = StringField('사용자이름', validators=[DataRequired(), Length(min=3, max=25)])
+    password = PasswordField('비밀번호', validators=[DataRequired()])
+```
+*views/auth_views.py*
+- check_password_hash 함수는 암호화된 문자열과 비교하여 비밀번호 일치 여부를 리턴
+```python
+from flask import session
+from werkzeug.security import check_password_hash
+from app.forms import UserLoginForm
+
+@bp.route('/login', methods=['GET', 'POST'])
+def login() :
+    form = UserLoginForm() # 로그인 폼 생성
+
+    # 요청을 POST로 전달받고 데이터가 폼의 양식에 알맞을 때 실행
+    if request.method == 'POST' and form.validate_on_submit() :
+        error = None
+        user = User.query.filter_by(username=form.username.data).first()
+        if not user : # 조회되는 유저가 없을 때 실행
+            error = '존재하지 않는 사용자입니다.'
+        # 비밀번호가 일치하지 않을 때 실행
+        elif not check_password_hash(user.password, form.password.data) :
+            error = '비밀번호가 올바르지 않습니다.'
+        if error is None : # else :
+            session.clear() # 기존 세션 제거
+            session['user_id'] = user.id # 세션에 유저 일련번호 저장
+            session['username'] = user.username # 세션에 유저명(아이디) 저장
+            _next = request.args.get('next', '')
+            if _next : # 리다이렉트할 페이지가 지정됐을 때
+                return redirect(_next) # 지정된 페이지로 리다이렉트
+            else : # 지정되지 않았을 때
+                return redirect(url_for('main.index')) # 메인화면으로 리다이렉트         
+        flash(error) # 에러 메시지 전송
+
+    # GET으로 요청받았거나 데이터가 폼의 양식에 알맞지 않을 때
+    return render_template('auth/login.html', form=form) # 빈 폼 또는 작성 중인 폼을 전송
+```
+*templates/auth/login.html*
+```HTML
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <h5 class="ny-3 border-bottom pb-2">로그인</h5>
+    <form method="post">
+        {{form.csrf_token}}
+        {% include "form_errors.html" %}
+        <div class="mb-3">
+            <label for="username">사용자 이름</label>
+            <input type="text" class="form-control" name="username" id="username" value="{{form.username.data or ''}}">
+        </div>
+        <div class="mb-3">
+            <label for="password">비밀번호</label>
+            <input type="password" class="form-control" name="password" id="password" value="{{form.password.data or ''}}">
+        </div>
+        <button type="submit" class="btn btn-primary">로그인</button>
+    </form>
+</div>
+{% endblock %}
+```
+#### 로그인 제약
+*views/auth_views.py*
+```python
+
+```
+
+### 로그아웃
+*views/auth_views.py*
+```python
+@bp.route('/logout')
+def logout() :
+    session.clear() # 세션 제거
+    return redirect(url_for('main.index')) # 메인 화면으로 리다이렉트
+```
