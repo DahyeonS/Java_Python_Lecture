@@ -762,7 +762,7 @@ class UserLoginForm(FlaskForm) :
     password = PasswordField('비밀번호', validators=[DataRequired()])
 ```
 *views/auth_views.py*
-- check_password_hash 함수는 암호화된 문자열과 비교하여 비밀번호 일치 여부를 리턴
+- check_password_hash 함수는 문자열을 암호화시킨 후 암호화된 문자열과 비교
 ```python
 from flask import session
 from werkzeug.security import check_password_hash
