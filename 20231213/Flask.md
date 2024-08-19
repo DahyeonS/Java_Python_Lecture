@@ -725,6 +725,7 @@ def signup() :
 
 #### 오류 메시지 출력
 - 폼이나 flash를 통해 전송받은 오류 메시지를 표시
+
 *templates/form_errors.html*
 ```HTML
 <!-- 폼에 에러 메시지가 있을 때만 작동 -->
