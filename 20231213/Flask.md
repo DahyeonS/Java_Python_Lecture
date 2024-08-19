@@ -536,7 +536,7 @@ def _list() :
     question_list = question_list.paginate(page=page, per_page=10) # 페이지마다 10개씩의 데이터를 리턴
     return render_template('question/question_list.html', question_list=question_list)
 ```
-*templates/question/question_list/html*
+*templates/question/question_list.html*
 ```HTML
 <!-- 페이징처리 시작 -->
 <ul class="pagination justify-content-center">
