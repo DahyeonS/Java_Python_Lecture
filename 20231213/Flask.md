@@ -587,15 +587,49 @@ def _list() :
 - *length* 등의 내장 필터와 사용자 지정 필터 모두 가능
 
 *filter.py*
+##### 사용된 포멧 코드
+- %Y - 년
+- %m - 월
+- %d - 일
+- %p - AM / PM 표시
+- %I - 시간(12시간 단위)
+- %M - 분
 ```python
 def format_datetime(value, fmt='%Y년 %m월 %d일 %p %I:%M') :
-    return value.strftime(fmt)
+    return value.strftime(fmt) # 값을 '년 월 일 AM/PM 시:분' 형태로 출력
 ```
 *app.py*
 ```python
+def create_app() :
+    app = Flask(__name__)
+    app.config.from_object(config)
 
+    # filter
+    from .filter import format_datetime
+    app.jinja_env.filters['datetime'] = format_datetime
+
+    return app
 ```
-*templates/question/question_list.html*
+*templates/question/question_detail.html*
 ```HTML
-
+<h2 class="border-bottom py-2">{{question.subject}}</h2>
+<div class="card my-3">
+    <div class="card-body">
+        <div class="card-text" style="white-space: pre-line;">
+            {{question.content}}
+        </div>
+        <div class="d-flex justify-content-end">
+            <div class="badge bg-light text-dark p-2 text-start">
+                <div class="mb-2">{{question.user_id}}</div>
+                <div>{{question.create_date|datetime}}</div> <!-- 날짜를 지정된 형식으로 출력 -->
+            </div>
+        </div>
+        <div class="my-3">
+            {% if g.user == question.user %}
+                <a href="{{url_for('question.modify', question_id=question.id)}}" class="btn btn-sm btn-outline-secondary">수정</a>
+                <a href="{{url_for('question.delete', question_id=question.id)}}" class="btn btn-sm btn-outline-secondary">삭제</a>
+            {% endif %}
+        </div>
+    </div>
+</div>
 ```
