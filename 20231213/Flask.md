@@ -841,6 +841,8 @@ def login_required(view) :
             return redirect(url_for('auth.login', next=_next)) # 현재 페이지를 로그인 후 디렉토리 설정
         return view(*args, **kwargs)
     return wrapper_view
+
+# 이후 다른 함수에서 @login_required로 활용
 ```
 
 ### 로그아웃
