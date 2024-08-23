@@ -2185,7 +2185,6 @@
 >>>> ###### views
 >>>> - answer_views.py
 >>>> - question_views.py
->>>> - answer_views.py
 >>>
 >>>> ###### templates
 >>>> - base.html
@@ -2246,7 +2245,23 @@
 >>>> - style.css
 
 ## 2023.12.19
-> **[플라스크]()**
+> **[플라스크](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231213/Flask.md#%EA%B2%80%EC%83%89-%EA%B8%B0%EB%8A%A5)**
+> ### *output*
+>> #### myproject
+>>> ##### pybo
+>>> - \_\_init\_\_.py
+>>> - models.py
+>>>
+>>>> ###### views
+>>>> - question_views.py
+>>>> - answer_views.py
+>>>>
+>>>> ###### templates
+>>>> - base.html
+>>>>
+>>>>> ###### question
+>>>>> - question_list.html
+>>>>> - question_detail.html
 
 ## 2023.12.20
 > **[플라스크]()**
