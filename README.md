@@ -2200,7 +2200,29 @@
 ## 2023.12.18
 > **[플라스크](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231213/Flask.md#%ED%8E%98%EC%9D%B4%EC%A7%95-%ED%95%84%ED%84%B0)**
 > ```python
+> @bp.route('/login', methods=['GET', 'POST'])
+> def login() :
+>     form = UserLoginForm() 
 >
+>     if request.method == 'POST' and form.validate_on_submit() :
+>         error = None
+>         user = User.query.filter_by(username=form.username.data).first()
+>         if not user : 
+>             error = '존재하지 않는 사용자입니다.'
+>         elif not check_password_hash(user.password, form.password.data) :
+>             error = '비밀번호가 올바르지 않습니다.'
+>         if error is None :
+>             session.clear()
+>             session['user_id'] = user.id
+>             session['username'] = user.username
+>             _next = request.args.get('next', '')
+>             if _next :
+>                 return redirect(_next)
+>             else :
+>                 return redirect(url_for('main.index'))         
+>         flash(error)
+>
+>     return render_template('auth/login.html', form=form)
 > ```
 > ### *output*
 >> #### myproject
