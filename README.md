@@ -2246,6 +2246,9 @@
 
 ## 2023.12.19
 > **[플라스크](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231213/Flask.md#%EA%B2%80%EC%83%89-%EA%B8%B0%EB%8A%A5)**
+> ```pytnon
+>
+> ```
 > ### *output*
 >> #### myproject
 >>> ##### pybo
@@ -2264,7 +2267,10 @@
 >>>>> - question_detail.html
 
 ## 2023.12.20
-> **[플라스크]()**
+> **[플라스크](https://github.com/DahyeonS/Java_Python_Lecture/blob/main/20231213/Flask.md#%ED%99%98%EA%B2%BD-%EB%B6%84%EB%A6%AC)**
+> ```python
+>
+> ```
 > ### *output*
 >> #### myproject
 >>> ##### pybo
