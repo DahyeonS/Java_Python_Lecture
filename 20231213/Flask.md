@@ -820,7 +820,27 @@ def login() :
 #### 로그인 제약
 *views/auth_views.py*
 ```python
+from flask import g
+import functools
 
+# 로그인 여부 확인
+@bp.before_app_request # 가장 먼저 실행하는 함수
+def load_logged_in_user() :
+    user_id = session.get('user_id')
+    if user_id is None :
+        g.user = None # 비로그인시 정보 없음
+    else :
+        g.user = User.query.get(user_id) # 로그인 상태인 경우 해당 정보 저장
+
+# 로그인 제한
+def login_required(view) :
+    @functools.wraps(view) # 데코레이터 함수로 정의
+    def wrapper_view(*args, **kwargs) :
+        if g.user is None : # 비로그인시 실행
+            _next = request.url if request.method == 'GET' else ''
+            return redirect(url_for('auth.login', next=_next)) # 현재 페이지를 로그인 후 디렉토리 설정
+        return view(*args, **kwargs)
+    return wrapper_view
 ```
 
 ### 로그아웃
